@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Révisions · Édito A2</title><style>:root{
+  --bg:#f7f8f6; --panel:#ffffff; --ink:#1f2a2b; --muted:#66706f; --line:#dfe5e2;
+  --accent:#0f7b6c; --accent-2:#0a5c51; --accent-soft:#dcf2ee;
+  --bleu:#2b59c3; --rouge:#d62839;
+  --good:#2f8a4f; --good-soft:#dff3e5; --bad:#c2402a; --bad-soft:#fbe3de;
+  --m:#2f6db5; --m-soft:#e2eefb; --f:#c2185b; --f-soft:#fbe3ee; --pl:#7b4fb5; --pl-soft:#efe6fb;
+  --radius:14px; --shadow:0 1px 2px rgba(20,40,40,.06),0 4px 14px rgba(20,40,40,.07);
+  --ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; --serif:Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141a1a; --panel:#1d2525; --ink:#e9f0ee; --muted:#9fb0ac; --line:#304040;
+  --accent:#3fbfa8; --accent-2:#7fe0cc; --accent-soft:#183731;
+  --good:#5cc27f; --good-soft:#1d3324; --bad:#ef7a64; --bad-soft:#3d221d;
+  --m:#7fb0ef; --m-soft:#1e2b3b; --f:#f07aa8; --f-soft:#3a2030; --pl:#b896ee; --pl-soft:#2c2340;
+  --shadow:none;
+}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);line-height:1.5}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--accent-2)}
+.fr{font-weight:600;line-height:1.4}
+.pr{color:var(--muted);font-style:italic;font-size:14px}
+.en{color:var(--muted)}
+body.no-pr .pr{display:none} body.no-en .en{display:none}
+b.say{color:var(--accent-2);cursor:pointer;border-bottom:1px dotted var(--accent)}
+b.say:hover{background:var(--accent-soft)}
+/* gender colours (switchable) */
+.g-m{color:var(--m)!important} .g-f{color:var(--f)!important} .g-pl{color:var(--pl)!important}
+b.say.g-m{border-bottom-color:var(--m)} b.say.g-f{border-bottom-color:var(--f)} b.say.g-pl{border-bottom-color:var(--pl)}
+body.no-gc .g-m,body.no-gc .g-f,body.no-gc .g-pl{color:inherit!important}
+.gdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:-3px}.gdot.m{background:var(--m)}.gdot.f{background:var(--f)}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top::before{content:"";display:block;height:4px;background:linear-gradient(90deg,var(--bleu) 33.3%,#fff 33.3% 66.6%,var(--rouge) 66.6%)}
+.top-inner{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;min-width:0;flex:1}
+.brand small{color:var(--muted);font-size:12px}
+.brand b{font-size:17px}
+.toggles{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:5px 11px;font-size:13px;display:inline-flex;gap:6px;align-items:center}
+.chip.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-2);font-weight:600}
+.progress{height:4px;background:var(--line)} .progress>div{height:100%;background:var(--accent);transition:width .4s}
+nav.tabs{max-width:1080px;margin:0 auto;padding:8px 12px 0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{flex:none;text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:10px 10px 0 0;font-size:14px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a.active{color:var(--ink);font-weight:600;border-bottom-color:var(--accent)}
+nav.tabs a .tick{color:var(--good);margin-inline-start:4px}
+
+main{max-width:1080px;margin:0 auto;padding:18px 16px 80px}
+h2{margin:6px 0 4px;font-size:24px} h3{margin:18px 0 8px;font-size:18px}
+.h2en{font-size:16px;font-weight:400}
+.lead{color:var(--muted);margin:0 0 16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.stack>*+*{margin-top:14px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:1px solid var(--line);background:var(--panel);padding:8px 14px;border-radius:10px;font-weight:500}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-2)}
+.btn.small{padding:4px 10px;font-size:13px}
+.play{border:none;background:var(--accent-soft);color:var(--accent-2);width:34px;height:34px;border-radius:50%;flex:none;display:inline-grid;place-items:center;font-size:14px;vertical-align:middle}
+.play:hover{background:var(--accent);color:#fff}
+.play.speaking{background:var(--accent);color:#fff;animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.1)}}
+.banner{background:var(--accent-soft);border:1px solid var(--accent);border-radius:12px;padding:10px 14px;font-size:14px;margin-bottom:14px}
+.done-btn{margin-top:22px}
+.muted{color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 16px}
+
+/* illustrations */
+.scene-svg{width:100%;height:auto;display:block;border-radius:12px}
+.scene-wrap{margin:10px 0 4px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.actor .bob{transform-box:fill-box;transform-origin:50% 100%}
+.actor.talking .bob{animation:talk .55s ease-in-out infinite alternate}
+@keyframes talk{from{transform:translateY(0)}to{transform:translateY(-5px)}}
+.actor.talking{filter:drop-shadow(0 0 6px rgba(255,205,0,.9))}
+.av{flex:none;border-radius:50%}
+
+/* overview */
+.hero2{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:center;padding:12px}
+.hero-art{border-radius:12px;overflow:hidden}
+.hero-txt .fr.big{font-family:var(--serif);font-size:32px;color:var(--accent-2);line-height:1.2;margin:6px 0}
+.rub-badge{display:inline-block;color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:700;letter-spacing:.03em}
+.r1{background:#0f7b6c}.r2{background:#2b59c3}.r3{background:#b5652b}.r4{background:#a3407e}.r5{background:#5b4fb5}.r6{background:#c0392b}
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.glance{display:flex;flex-direction:column;gap:10px}
+.gl{display:flex;gap:10px;align-items:flex-start}.gl-ic{font-size:24px;width:34px;text-align:center}
+.goals li{margin:4px 0}
+.path{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.path a{text-decoration:none;color:var(--ink)}
+.path .step{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--panel);display:flex;gap:10px;align-items:center;line-height:1.25}
+.path .step.done{border-color:var(--good);background:var(--good-soft)}
+.path .num{width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent-2);display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.path .done .num{background:var(--good);color:#fff}
+
+/* dialogue */
+.dlg-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.dtitle{font-size:20px;font-family:var(--serif)}
+.sit-n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px}
+.sit-n:empty{display:none}
+.bubbles{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.bub{display:flex;gap:10px;align-items:flex-start;max-width:88%}
+.bub.right{align-self:flex-end;flex-direction:row-reverse}
+.bub .body{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:8px 12px;cursor:pointer;transition:background .2s}
+.bub .who{font-size:12px;color:var(--muted);font-weight:600}
+.bub .fr.line{font-size:19px;display:block}
+.bub.active .body{background:var(--accent-soft);border-color:var(--accent)}
+.bub.m .who{color:var(--m)} .bub.f .who{color:var(--f)}
+.stage-dir{align-self:center;font-style:italic;color:var(--muted);font-size:14px;background:var(--bg);border-radius:999px;padding:2px 14px}
+.hidetext .bub .fr.line,.hidetext .bub .en{filter:blur(7px)} .hidetext .bub.revealed .fr.line,.hidetext .bub.revealed .en{filter:none}
+.roleplay .bub.mine:not(.revealed) .fr.line,.roleplay .bub.mine:not(.revealed) .en{filter:blur(7px)}
+.roleplay .bub.mine .body{border:2px dashed var(--accent)}
+.shadow-cue{font-size:14px;color:var(--accent-2);font-weight:700;min-height:22px;margin-top:6px}
+.dgloss{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
+.gchip{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:14px;cursor:pointer;background:var(--bg)}
+
+/* vocabulary */
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.picdict{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.picdict.small{grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+.pd{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);border-top:5px solid var(--line);border-radius:14px;background:var(--panel);padding:10px 6px;text-align:center;box-shadow:var(--shadow);transition:transform .15s}
+.pd:hover{transform:translateY(-2px)}
+.pd .pd-pic{font-size:42px;line-height:1.15}
+.picdict.small .pd .pd-pic{font-size:34px}
+.pd .fr{font-size:16px}.pd .en{font-size:12px}
+.pd-m{border-top-color:var(--m)}.pd-f{border-top-color:var(--f)}.pd-pl{border-top-color:var(--pl)}
+body.no-gc .pd{border-top-color:var(--line)}
+.vcard{display:flex;flex-direction:column;gap:2px;position:relative;cursor:pointer;border-left:5px solid var(--line)}
+.vc-m{border-left-color:var(--m)}.vc-f{border-left-color:var(--f)}.vc-pl{border-left-color:var(--pl)}
+.vcard .pic{font-size:30px;line-height:1.2}
+.vcard .fr{font-size:20px}
+.vcard .play{position:absolute;top:12px;right:12px}
+.vcard .box{position:absolute;top:54px;right:14px;font-size:11px;color:var(--muted)}
+.tag{display:inline-block;font-size:11px;background:var(--accent-soft);color:var(--accent-2);border-radius:6px;padding:1px 6px;margin-top:4px;width:max-content}
+.g-tag-m{background:var(--m-soft);color:var(--m)}.g-tag-f{background:var(--f-soft);color:var(--f)}.g-tag-pl{background:var(--pl-soft);color:var(--pl)}
+.flash-wrap{max-width:440px;margin:0 auto;text-align:center}
+.flash{perspective:1000px;height:270px;cursor:pointer;margin:10px 0}
+.flash-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flash.flipped .flash-inner{transform:rotateY(180deg)}
+.flash .face{position:absolute;inset:0;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-radius:18px;border:1px solid var(--line);border-top:8px solid var(--line);background:var(--panel);box-shadow:var(--shadow);padding:16px}
+.flash.gb-m .face{border-top-color:var(--m)}.flash.gb-f .face{border-top-color:var(--f)}.flash.gb-pl .face{border-top-color:var(--pl)}
+.flash .back{transform:rotateY(180deg);background:var(--accent-soft)}
+.flash .fr{font-size:32px}
+.flash .pic{font-size:50px}
+
+/* grammar + infographics */
+.gblock h3{margin-top:0;font-size:20px}
+.gblock p{margin:8px 0}
+.after{border-top:1px dashed var(--line);margin-top:12px}
+table.g{border-collapse:collapse;width:100%;margin-top:10px}
+table.g td,table.g th{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+table.g td.frcell{font-size:18px;white-space:nowrap}
+figure.info{margin:14px 0;padding:14px;border-radius:14px;background:linear-gradient(180deg,var(--bg),var(--panel));border:1px solid var(--line)}
+figure.info figcaption{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-2);font-weight:800;margin-bottom:10px}
+.gnote{margin-top:10px;font-size:14px;background:var(--accent-soft);border-radius:10px;padding:8px 12px}
+.schip{display:inline-block;margin:3px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:3px 12px;cursor:pointer;font-weight:600}
+.schip .en{font-weight:400;font-size:13px}
+.end{color:var(--rouge);font-weight:800}
+/* gender columns */
+.gcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.gcol{border-radius:12px;padding:10px;border:2px solid}
+.gc-m{border-color:var(--m);background:var(--m-soft)}.gc-f{border-color:var(--f);background:var(--f-soft)}.gc-pl{border-color:var(--pl);background:var(--pl-soft)}
+.ghead{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+.gbadge{font-family:var(--serif);font-size:22px;font-weight:800;border-radius:10px;padding:0 10px;color:#fff}
+.gc-m .gbadge{background:var(--m)}.gc-f .gbadge{background:var(--f)}.gc-pl .gbadge{background:var(--pl)}
+/* merges */
+.merges{display:flex;flex-direction:column;gap:8px}
+.mrow,.eq{display:flex;gap:6px;align-items:center;flex-wrap:wrap;cursor:pointer}
+.eq{justify-content:center;margin:12px 0 0}
+.mb{display:inline-grid;place-items:center;min-width:48px;padding:4px 10px;border-radius:10px;font-weight:800;font-size:18px;color:#fff;font-family:var(--serif)}
+.mb-p{background:#555}.mb-m{background:var(--m)}.mb-f{background:var(--f)}.mb-pl{background:var(--pl)}.mb-x{background:#888}
+.mb-r{background:var(--panel);color:var(--ink);border:2px dashed var(--muted)}
+.mb-r.fused{background:var(--rouge);color:#fff;border:2px solid var(--rouge);box-shadow:0 0 0 4px rgba(214,40,57,.15)}
+.op{font-weight:800;color:var(--muted);font-size:18px}
+.mex{margin-left:8px}
+.nomerge .mb-r{opacity:.9}
+/* scale */
+.scale{position:relative;height:196px;margin:0 50px}
+.sbar{position:absolute;left:0;right:0;top:80px;height:12px;border-radius:6px}
+.smark{position:absolute;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;text-align:center;cursor:pointer;width:120px;font-size:14px;line-height:1.2}
+.smark.up{top:0;justify-content:flex-end;height:78px}
+.smark.dn{top:94px}
+.smark .spic{font-size:20px}
+.smark.up::after{content:"";width:2px;height:8px;background:var(--muted)}
+.smark.dn::before{content:"";width:2px;height:8px;background:var(--muted)}
+.smark .en{font-size:12px}
+.sends{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase}
+/* ladder */
+.ladder{display:flex;flex-direction:column;gap:8px}
+.rung{display:flex;gap:10px;align-items:center;border-left:6px solid;border-radius:10px;background:var(--panel);padding:6px 10px}
+.rname{color:#fff;border-radius:8px;padding:2px 10px;font-weight:700;display:flex;flex-direction:column;line-height:1.2;min-width:96px}
+.rname small{font-weight:400;opacity:.85}
+/* conjugation */
+.conj{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.cverb{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+.cinf{background:var(--accent);color:#fff;padding:6px 10px;cursor:pointer}.cinf .fr{color:#fff;font-size:18px}.cinf .en{color:#e8fffa}
+.cform{display:flex;gap:8px;padding:4px 10px;border-top:1px solid var(--line);cursor:pointer}
+.cform:hover{background:var(--accent-soft)}
+.cform .cp{color:var(--muted);width:64px;flex:none;font-size:13px;padding-top:2px}
+.cform .fr{font-size:17px}
+.qzbox{display:inline-flex;gap:6px;align-items:center;flex-wrap:wrap}
+/* compare */
+.cmp{display:grid;gap:10px}
+.cmpcol{border:2px solid;border-radius:12px;overflow:hidden;background:var(--panel)}
+.cmphead{color:#fff;font-weight:800;padding:6px 10px;font-size:18px;font-family:var(--serif);display:flex;flex-direction:column;line-height:1.2}
+.cmphead small{font-family:var(--ui);font-weight:400;font-size:12px;opacity:.9}
+.cmppic{text-align:center;padding:6px}.cmppic.emo{font-size:46px}
+.cmplines{padding:4px 10px 10px}.cl{padding:3px 0;cursor:pointer;display:flex;flex-direction:column}.cl .en{font-size:13px}
+@media (max-width:640px){.cmp{grid-template-columns:1fr!important}}
+/* documents */
+.doc-fig{display:flex;flex-direction:column;align-items:center}
+.doc{width:min(100%,420px);border-radius:10px;padding:16px 18px;box-shadow:0 6px 20px rgba(0,0,0,.18);position:relative}
+.doc-title{font-weight:800;font-size:20px;text-align:center}
+.doc-sub{text-align:center;font-size:13px;opacity:.8;margin-bottom:6px}
+.doc-row{display:flex;gap:6px;align-items:baseline;padding:3px 0;cursor:pointer}
+.doc-row .dots{flex:1;border-bottom:2px dotted currentColor;opacity:.35}
+.doc-foot{text-align:center;font-size:13px;margin-top:8px;opacity:.85}
+.doc-chalk{background:#2c3a2f;color:#f2f2e8;font-family:"Comic Sans MS","Chalkboard SE",cursive;border:8px solid #8a5a2b}
+.doc-board{background:#111;color:#ffcd00;font-family:ui-monospace,Menlo,monospace}.doc-board .doc-title{color:#fff;letter-spacing:.2em}
+.doc-ticket{background:#fffbe8;color:#222;border:2px dashed #b99a2b;font-family:ui-monospace,Menlo,monospace}
+.doc-receipt{background:#fff;color:#222;font-family:ui-monospace,Menlo,monospace;clip-path:polygon(0 0,100% 0,100% 96%,95% 100%,90% 96%,85% 100%,80% 96%,75% 100%,70% 96%,65% 100%,60% 96%,55% 100%,50% 96%,45% 100%,40% 96%,35% 100%,30% 96%,25% 100%,20% 96%,15% 100%,10% 96%,5% 100%,0 96%)}
+.doc-menu{background:#fdf6e3;color:#3a2a1e;font-family:var(--serif);border:3px double #7a3b1d}
+.doc-form{background:#fff;color:#222;border:1px solid #bbb;border-top:10px solid var(--bleu)}
+.doc-label{background:#fff8d6;color:#3a2a1e;border:2px solid #e0b100;border-radius:16px}
+/* minis + pattern */
+.minis{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.minic{display:flex;flex-direction:column;align-items:center;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--panel);cursor:pointer;min-width:120px}
+.minic .en{font-size:12px}
+.pattern{display:flex;flex-direction:column;gap:8px}
+.prow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pfix{background:var(--accent);color:#fff;border-radius:10px;padding:6px 12px;font-weight:700;cursor:pointer}
+.pslot{display:inline-flex;flex-direction:column;border:2px dashed var(--accent);border-radius:10px;padding:2px 8px;font-weight:600}
+.pslot span{cursor:pointer;padding:1px 0}.pslot span:hover{text-decoration:underline}
+/* flow (conversation map) */
+.flow{position:relative;display:flex;flex-direction:column;gap:6px}
+.flow::before{content:"";position:absolute;left:50%;top:44px;bottom:6px;width:3px;background:var(--line);transform:translateX(-50%)}
+.lane-heads{display:flex;justify-content:space-between;font-weight:700;margin-bottom:6px}
+.lane-heads span{display:flex;gap:6px;align-items:center}
+.fstep{display:flex;position:relative}
+.fstep.l{justify-content:flex-start}.fstep.r{justify-content:flex-end}
+.fcard{width:calc(50% - 22px);display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 10px;cursor:pointer;box-shadow:var(--shadow)}
+.fstep.l .fcard{border-left:5px solid var(--bleu)}.fstep.r .fcard{border-right:5px solid var(--rouge)}
+.fn{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px}
+.fcard .en{font-size:13px}.fcard .alt{font-size:12px;color:var(--muted);margin-top:2px}
+@media (max-width:640px){.flow::before{display:none}.fcard{width:92%}}
+
+/* widgets */
+.widget{margin-top:14px;padding:14px;border-radius:12px;background:var(--bg);border:2px dashed var(--accent)}
+.widget .label{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent-2);font-weight:800;margin-bottom:8px}
+.result{font-size:40px;text-align:center;margin:8px 0;min-height:60px}
+.cap{font-size:15px}
+.spool{display:flex;flex-wrap:wrap;gap:6px;min-height:46px;padding:8px;border-radius:10px;background:var(--panel);border:1px solid var(--line);margin-bottom:8px}
+.scols{display:grid;gap:8px}
+.scol2{border:2px solid;border-radius:12px;min-height:110px;cursor:pointer;background:var(--panel);overflow:hidden}
+.sch{color:#fff;font-weight:700;padding:4px 10px;text-align:center}
+.sin{display:flex;flex-wrap:wrap;gap:4px;padding:6px}
+.tile.small{font-size:14px;padding:1px 8px}
+.pricetag{display:flex;justify-content:center;margin:6px 0}
+.pt-num{background:#ffcd00;color:#1f2a2b;font-weight:800;font-size:34px;padding:4px 22px 4px 30px;border-radius:6px 30px 30px 6px;position:relative;font-family:var(--serif)}
+.pt-num::before{content:"";position:absolute;left:10px;top:50%;width:10px;height:10px;border-radius:50%;background:var(--bg);transform:translateY(-50%)}
+.money{display:inline-flex;flex-wrap:wrap;gap:4px;justify-content:center;margin:4px 0}
+.note{display:inline-grid;place-items:center;width:54px;height:30px;border-radius:4px;font-size:12px;font-weight:800;color:#fff}
+.n50{background:#e07b39}.n20{background:#3b78c2}.n10{background:#c0392b}.n5{background:#7f8c8d}
+.coin{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:radial-gradient(#f5d68a,#c9a227);font-size:10px;font-weight:800;color:#5a4400;border:2px solid #b0901a}
+.coin.small{width:24px;height:24px;background:radial-gradient(#e8b48a,#b5652b);color:#fff;border-color:#8a4a1a;font-size:9px}
+.clockrow{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:center}
+.ck-big{font-size:36px;font-weight:800;font-family:ui-monospace,Menlo,monospace}
+.ck-words .fr{font-size:20px}
+
+/* expressions */
+.xhead{display:flex;gap:10px;align-items:center;margin-bottom:8px;font-size:17px}
+.xic{font-size:26px}
+.xitems{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.xitem{display:flex;justify-content:space-between;gap:8px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:8px 12px;cursor:pointer;background:var(--bg)}
+.xitem:hover{border-color:var(--accent)}
+.xitem .fr{font-size:17px}.xitem .en{font-size:13px}
+.reg{font-size:11px;font-weight:700;border-radius:8px;padding:2px 8px;display:flex;flex-direction:column;align-items:center;line-height:1.15;flex:none}
+.reg small{font-weight:400;font-size:10px}
+.reg-poli{background:#e2eefb;color:#2b59c3}.reg-std{background:#e5f4e8;color:#2f8a4f}.reg-fam{background:#fdecd8;color:#b5652b}.reg-sout{background:#efe6fb;color:#7b4fb5}
+.xreply{margin-top:8px;font-size:14px;color:var(--muted)}
+
+/* sounds */
+.letter{display:flex;gap:14px}
+.letter .glyph{font-size:30px;font-weight:800;line-height:1.1;min-width:90px;height:80px;padding:0 8px;display:grid;place-items:center;border-radius:16px;background:var(--accent-soft);color:var(--accent-2);flex:none;cursor:pointer;text-align:center;font-family:var(--serif)}
+.ex{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:2px 4px 2px 12px;margin:3px;cursor:pointer;background:var(--panel)}
+.ex .fr{font-size:17px}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.pair .side{text-align:center;padding:10px;border:1px solid var(--line);border-radius:12px;cursor:pointer;background:var(--panel)}
+.pair .side .fr{font-size:26px;display:block}
+.vs{color:var(--muted);font-size:12px;text-align:center;max-width:160px}
+
+/* quiz */
+.quiz{max-width:680px;margin:0 auto}
+.qhead{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:8px}
+.qtag{background:var(--accent-soft);color:var(--accent-2);border-radius:6px;padding:0 6px;font-weight:600}
+.qbar{height:6px;border-radius:6px;background:var(--line);overflow:hidden;margin-bottom:14px}.qbar>div{height:100%;background:var(--accent);transition:width .3s}
+.qtext{font-size:18px;font-weight:600;margin-bottom:10px}
+.qpic{font-size:54px;text-align:center}
+.qsentence{font-size:24px;text-align:center;margin:10px 0}
+.qsentence .blank{display:inline-block;min-width:70px;border-bottom:3px solid var(--accent);color:var(--accent-2)}
+.opts{display:grid;gap:8px}
+.opt{text-align:start;border:2px solid var(--line);background:var(--panel);border-radius:12px;padding:10px 14px;font-size:16px}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt.correct{border-color:var(--good);background:var(--good-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.feedback{margin-top:12px;padding:10px 14px;border-radius:12px;font-size:15px}
+.feedback.good{background:var(--good-soft);color:var(--good)} .feedback.bad{background:var(--bad-soft);color:var(--bad)}
+.feedback .ex-text{color:var(--ink);display:block;margin-top:4px}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:56px;padding:8px;border-radius:12px}
+.tiles.lines{flex-direction:column;align-items:stretch}.tiles.lines .tile{text-align:left;font-size:16px}
+.tiles.answer{border:2px dashed var(--line);margin-bottom:8px}
+.tile{font-size:18px;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:2px 14px}
+.big-play{width:72px;height:72px;font-size:28px;margin:6px auto 14px;display:grid}
+.score{font-size:48px;font-weight:800;text-align:center;color:var(--accent-2)}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.match .mi{border:2px solid var(--line);background:var(--panel);border-radius:10px;padding:8px;text-align:center;min-height:52px}
+.match .mi .fr{font-size:17px}
+.match .mi.sel{border-color:var(--accent);background:var(--accent-soft)}
+.match .mi.ok{border-color:var(--good);background:var(--good-soft);opacity:.55}
+.match .mi.no{border-color:var(--bad);background:var(--bad-soft)}
+.tin{font:inherit;font-size:18px;padding:8px 10px;border-radius:10px;border:2px solid var(--accent);background:var(--panel);color:var(--ink);min-width:120px}
+.tin.ok{border-color:var(--good);background:var(--good-soft)} .tin.no{border-color:var(--bad);background:var(--bad-soft)}
+.frkeys{margin:8px 0}.frkeys .chip{font-size:16px;font-weight:700;padding:3px 11px}
+
+/* role-play */
+.rp{display:flex;flex-direction:column;gap:10px}
+.rp-body{display:flex;flex-direction:column;gap:10px}
+.memo{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.memo span{background:#fff8d6;color:#5a4400;border:1px solid #e0b100;border-radius:6px;padding:1px 8px;font-size:13px;transform:rotate(-1deg)}
+.yourturn{background:var(--accent-soft);border-radius:10px;padding:8px 12px}
+.rec{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rec .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--bad);animation:pulse 1s infinite}
+
+/* culture */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.ccard{display:flex;gap:12px;border-top:5px solid var(--bleu)}
+.ccard:nth-child(3n+2){border-top-color:var(--rouge)}.ccard:nth-child(3n){border-top-color:var(--accent)}
+.cic{font-size:34px;flex:none}
+.ckind{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.tipcard{display:flex;gap:12px}
+.tipcard .ic{font-size:28px;flex:none}
+.mist{display:flex;flex-direction:column;gap:6px}
+.mrow2{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:10px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.no-say{color:var(--bad);text-decoration:line-through;text-decoration-thickness:1px}
+.yes-say{color:var(--good);cursor:pointer}
+@media (max-width:640px){.mrow2{grid-template-columns:1fr}}
+
+/* tests */
+.tile.sel{border-color:var(--accent);background:var(--accent-soft)}
+.tile.ok{border-color:var(--good);background:var(--good-soft)}
+.tile.no{border-color:var(--bad);background:var(--bad-soft)}
+.titems{padding-inline-start:22px;margin:6px 0} .titems li{margin:10px 0}
+.qsent .fr{font-size:17px}
+.qsent select{font-size:16px;max-width:100%;padding:2px 6px;border-radius:8px;border:2px solid var(--accent);background:var(--panel);color:var(--ink);margin:0 4px}
+.qsent select.ok{border-color:var(--good);background:var(--good-soft)} .qsent select.no{border-color:var(--bad);background:var(--bad-soft)}
+.blank{display:inline-block;min-width:60px;border-bottom:2px solid var(--accent);color:var(--accent-2);text-align:center}
+.fb{font-size:14px;margin-top:2px}
+.markbox{border:2px solid var(--accent);border-radius:10px;min-width:56px;text-align:center;display:flex;flex-direction:column;line-height:1.2;padding:4px}
+.markbox .got{font-weight:800;font-size:18px;color:var(--accent-2);border-bottom:1px solid var(--line)} .markbox .of{font-size:13px;color:var(--muted)}
+.tsec.full{border-color:var(--good)} .tsec.part{border-color:var(--accent)}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:4px 20px}
+.tgrid .qsent{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.tgrid .tin{min-width:0;width:140px;font-size:16px;padding:4px 8px}
+.mini{background:var(--bg);border-radius:10px;padding:8px 12px;border:1px solid var(--line)}
+.opt-l{font-size:16px;text-align:left}
+
+/* course home */
+.home-hero{display:grid;grid-template-columns:1fr 1.1fr;gap:18px;align-items:center}
+.home-hero h1{font-family:var(--serif);font-size:34px;margin:0;line-height:1.15;color:var(--accent-2)}
+.rubrique{margin-top:26px}
+.rubrique h2{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.rnum{color:#fff;border-radius:10px;padding:0 12px;font-family:var(--serif)}
+.chapters{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:10px}
+.lesson-link{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink)}
+.lesson-link .n{font-size:22px;font-weight:800;color:var(--accent-2);width:40px;text-align:center;flex:none}
+.lesson-link .thumb{width:120px;flex:none;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.lesson-link .frt{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--accent-2)}
+.lesson-link:hover{border-color:var(--accent)}
+.soon{opacity:.55}
+.soon .frt{color:var(--muted)}
+.test-link{border-color:var(--accent);background:var(--accent-soft)}
+
+@media (max-width:760px){
+  .brand{flex-basis:100%}
+  .toggles{width:100%}
+  .hero2,.ov-grid,.home-hero{grid-template-columns:1fr}
+  .bub{max-width:100%}
+  .bub .fr.line{font-size:17px}
+  .flash{height:240px}
+  .lesson-link .thumb{width:84px}
+}
+
+.speedbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:8px 0 4px;font-size:13px}
+.speedbar .chip{padding:3px 10px}
+
+/* ===== Édito A1 additions ===== */
+:root{--unit:#0f7b6c}
+.opener{margin-top:10px;font-family:var(--serif);font-size:19px;background:var(--panel);border-left:5px solid var(--unit);border-radius:8px;padding:8px 12px;cursor:pointer;box-shadow:var(--shadow)}
+.opener .en{display:block;font-family:var(--ui);font-size:13px}
+.sits{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.sit{display:flex;gap:10px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--unit);border-radius:12px;padding:10px 12px}
+.sit-ic{font-size:28px}
+/* maps */
+.map-fig .mapwrap{background:#f3efe6;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.map-svg,.metro-svg{width:100%;height:auto;display:block}
+.map-svg .route{animation:dash 1.6s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-34}}
+.map-svg .mplace{cursor:pointer}.map-svg .mplace:hover circle{fill:#fff3c4}
+.map-svg .pulse{animation:pulse 1.6s ease-out infinite;transform-origin:center}
+@keyframes pulse{0%{opacity:1;r:9}100%{opacity:0;r:22}}
+.metro-svg .mstation{cursor:pointer}
+.msteps{margin:10px 0 0;padding:0;list-style:none;counter-reset:st;display:grid;gap:6px}
+.msteps li{counter-increment:st;display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:6px 10px;cursor:pointer;background:var(--panel)}
+.msteps li::before{content:counter(st);flex:none;width:24px;height:24px;border-radius:50%;background:var(--rouge);color:#fff;font-weight:800;display:grid;place-items:center;font-size:13px}
+.msteps li:hover{background:var(--accent-soft)}
+.msteps .mic{font-size:22px}
+.mquiz{margin-top:10px}
+/* bars */
+.bars{display:grid;gap:8px}
+.barrow{display:grid;grid-template-columns:minmax(150px,34%) 1fr;gap:10px;align-items:center;cursor:pointer}
+.blab{display:flex;flex-direction:column}.blab .bpic{font-size:22px;float:left}
+.blab .en{font-size:12px}
+.btrack{position:relative;background:var(--bg);border-radius:8px;height:28px;display:flex;align-items:center}
+.bfill{height:100%;border-radius:8px;transition:width .8s}
+.btrack b{position:absolute;right:8px;font-size:14px}
+/* number tiles */
+.numtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.numt{display:flex;flex-direction:column;align-items:center;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:8px 4px}
+.numt .nd{font-size:28px;font-weight:800;color:var(--unit);line-height:1.1}
+.numt .nw{font-size:13px;font-weight:600}
+.numt .nm{font-size:11px;color:var(--muted)}
+.numt.hl{border:2px solid var(--unit);background:var(--accent-soft)}
+/* alphabet */
+.alpha{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:7px}
+.alet{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:6px 2px;display:flex;flex-direction:column;align-items:center}
+.alet b{font-size:26px;color:var(--m)}.alet small{color:var(--muted);font-family:var(--serif)}
+.alet.vow b{color:var(--f)}
+.accs{margin-top:8px}
+/* calendar */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:10px}
+.wday{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:6px 2px;display:flex;flex-direction:column;align-items:center}
+.wday b{font-size:18px;text-transform:capitalize;color:var(--unit)}.wday span{font-size:12px}
+.wday.we{background:var(--accent-soft)}
+.seasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.season{border-radius:12px;padding:8px 10px;color:#1f2a2b}.season .sh{font-weight:700;margin-bottom:4px;cursor:pointer}
+.season .schip{background:rgba(255,255,255,.75);color:#1f2a2b}
+.season .en{color:#556}
+/* timeline */
+.tline{position:relative;height:200px;margin:10px 6px}
+.tl-axis{position:absolute;left:0;right:0;top:96px;height:6px;border-radius:3px;background:linear-gradient(90deg,#9fb7d6,#f0c419 50%,#9fd6b0);display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--muted)}
+.tl-axis span{margin-top:10px}
+.tl-now{position:relative}.tl-now::before{content:"";position:absolute;left:50%;top:-18px;width:3px;height:22px;background:var(--rouge)}
+.tl-it{position:absolute;transform:translateX(-50%);width:150px;text-align:center;display:flex;flex-direction:column;align-items:center;cursor:pointer;font-size:14px}
+.tl-it.up{top:0}.tl-it.dn{top:122px}
+.tl-it .tl-pic{font-size:24px}.tl-it .en{font-size:12px}
+/* flags */
+.flags{display:grid;grid-template-columns:repeat(auto-fill,minmax(122px,1fr));gap:8px}
+.flagt{border:1px solid var(--line);border-top:5px solid var(--line);border-radius:12px;background:var(--panel);padding:8px 4px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.flagt .flag{border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.flagt .ftc{font-weight:700;font-size:14px}.flagt .ftp{font-size:13px;color:var(--accent-2);font-weight:700}.flagt .ftn{font-size:12px;color:var(--muted)}
+.ft-m{border-top-color:var(--m)}.ft-f{border-top-color:var(--f)}.ft-pl{border-top-color:var(--pl)}.ft-v{border-top-color:#e0a526}
+body:not(.no-gc) .ft-m .ftc{color:var(--m)} body:not(.no-gc) .ft-f .ftc{color:var(--f)} body:not(.no-gc) .ft-pl .ftc{color:var(--pl)}
+/* phone / sms */
+.phone{width:min(100%,330px);margin:0 auto;background:#ece5dd;border:10px solid #1f2a2b;border-radius:28px;padding:0 10px 14px;display:flex;flex-direction:column;gap:6px}
+.ph-top{background:#1f2a2b;color:#fff;margin:0 -10px 6px;padding:4px 0 8px;text-align:center;font-size:13px;font-weight:700}
+.smsb{max-width:85%;background:#fff;color:#1f2a2b;border-radius:14px 14px 14px 4px;padding:6px 10px;cursor:pointer;font-size:14px;display:flex;flex-direction:column}
+.smsb.me{align-self:flex-end;background:#dcf8c6;border-radius:14px 14px 4px 14px}
+.smsb .fr{font-weight:500}.smsb .en{font-size:12px;color:#667}
+/* forms / ID cards */
+.idform{width:min(100%,460px);border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.16);overflow:hidden;background:#fff;color:#1f2a2b}
+.idf-head{padding:8px 14px;font-weight:800;letter-spacing:.06em;font-size:13px;display:flex;justify-content:space-between;align-items:center;color:#fff;background:#2b59c3}
+.idf-body{display:flex;gap:14px;padding:12px 14px}
+.idf-photo{flex:none;background:#eef2f6;border-radius:8px;padding:4px;align-self:flex-start}
+.idf-fields{flex:1;display:grid;gap:4px}
+.idf-row{display:grid;grid-template-columns:120px 1fr;gap:8px;border-bottom:1px dotted #ccd;cursor:pointer;font-size:14px}
+.idf-l{color:#667;font-size:12px;text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+.idf-v{font-weight:700;font-family:var(--serif)}
+.idf-mrz{font-family:monospace;font-size:11px;background:#f4f4ee;padding:6px 14px;letter-spacing:.08em;color:#445;word-break:break-all}
+.idf-id{background:linear-gradient(135deg,#e7f0fa,#fdf3f4)}.idf-id .idf-head{background:linear-gradient(90deg,#0055a4,#0055a4 33%,#fff 33%,#fff 66%,#ef4135 66%);color:#0b2a5b;text-shadow:0 0 3px #fff}
+.idf-badge{border:3px solid var(--unit)}.idf-badge .idf-head{background:var(--unit)}
+.idf-fiche .idf-head{background:#5b6b7c}
+.idf-web .idf-head{background:#a3407e}
+/* atelier & DELF */
+.atelier{border-top:5px solid var(--unit)}
+.at-head{display:flex;gap:12px;align-items:flex-start;margin-bottom:8px}
+.at-n{flex:none;width:36px;height:36px;border-radius:50%;color:#fff;font-weight:900;display:grid;place-items:center;font-size:18px}
+.at-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.at-step{background:var(--bg);border-radius:12px;padding:8px 12px}.at-step ul{margin:4px 0 0;padding-left:18px;font-size:14px}
+.at-sh{font-weight:700}
+.at-ph{margin-top:10px;font-size:14px}
+.delf{border-top:5px solid #0b5f8a;position:relative}
+.delf-badge{display:inline-block;background:#0b5f8a;color:#fff;font-weight:800;border-radius:6px;padding:2px 10px;font-size:13px;margin-bottom:6px}
+.delf-tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-bottom:10px}.dtip{font-size:14px;background:#e6f1f7;border-radius:8px;padding:6px 10px;color:#123}
+.detente{border-top:5px solid #e0a526}
+/* culture kinds */
+.ccard.cliche{border-top-color:#e0474f;background:linear-gradient(180deg,#fff4f4,var(--panel) 60%)}
+.ccard.cliche .ckind{color:#e0474f}
+.ccard.franco{border-top-color:#e0a526}
+.ccard.franco .ckind{color:#b5791d}
+@media (prefers-color-scheme:dark){.ccard.cliche{background:var(--panel)}.season{color:#1f2a2b}}
+/* date card */
+.datecard{width:130px;margin:0 auto 6px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:#fff;color:#1f2a2b;text-align:center;border:1px solid var(--line)}
+.dc-top{background:var(--rouge);color:#fff;font-weight:800;text-transform:uppercase;font-size:13px;padding:3px}
+.dc-num{font-size:46px;font-weight:900;line-height:1.1}.dc-wd{font-size:13px;color:#667;padding-bottom:4px}
+.flag{vertical-align:middle}
+@media (max-width:640px){.barrow{grid-template-columns:1fr}.idf-row{grid-template-columns:96px 1fr}.tl-it{width:110px;font-size:12px}}
+.ubadge{display:inline-block;color:#fff;border-radius:999px;padding:0 9px;font-size:12px;font-weight:800}
+.legend .lgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px;margin-top:6px;font-size:14px}
+.legend{margin-bottom:16px}
+.map-fig .mapwrap{max-width:680px;margin:0 auto}
+/* family tree, agenda */
+.ftree{display:flex;flex-direction:column;align-items:center;gap:0}
+.fgen{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+.fcouple{display:flex;align-items:center;gap:4px;background:var(--bg);border-radius:14px;padding:6px 8px}
+.fperson{display:flex;flex-direction:column;align-items:center;min-width:84px;cursor:pointer;font-size:14px}
+.fperson.me{background:#fff3c4;border-radius:12px;padding:2px 4px;color:#1f2a2b}
+.frel{font-size:12px;font-weight:700;color:var(--accent-2)}
+.fheart{color:#e0474f;font-size:14px}
+.flink{width:3px;height:22px;background:var(--line);margin:2px auto}
+.agenda{display:grid;gap:6px}
+.ag-row{display:grid;grid-template-columns:128px 40px 1fr;gap:10px;align-items:center;border:1px solid var(--line);border-left:5px solid var(--unit);border-radius:12px;padding:6px 10px;cursor:pointer;background:var(--panel)}
+.ag-clock{display:flex;align-items:center;gap:6px}.ag-clock b{font-size:14px;white-space:nowrap}
+.ag-pic{font-size:26px;text-align:center}
+.ckopt{padding:4px}
+/* signs, postcard */
+.signs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.sign{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.sg-ic{position:relative;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;border:6px solid #d62839;background:#fff}
+.sign-yes .sg-ic{border-color:#2b59c3;background:#2b59c3}
+.sg-pic{font-size:30px}
+.sg-bar{position:absolute;width:62px;height:6px;background:#d62839;transform:rotate(-45deg);border-radius:3px}
+.sign .fr{font-size:14px}.sign .en{font-size:12px}
+.postcard{width:min(100%,620px);display:grid;grid-template-columns:1.4fr 1fr;background:#fffdf6;color:#2b2118;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.18);overflow:hidden}
+.pc-left{padding:12px 14px;border-right:2px dashed #ccc;font-family:"Segoe Print","Comic Sans MS",cursive}
+.pc-photo{font-size:40px;display:flex;align-items:center;gap:8px;margin-bottom:6px}.pc-photo span{font-size:13px;font-weight:800;font-family:var(--ui);color:#a0703c}
+.pc-text p{margin:0 0 4px;cursor:pointer;font-size:14px;line-height:1.35}.pc-text .en{display:block;font-size:11px;color:#778;font-family:var(--ui)}
+.pc-text .fr{font-weight:500}
+.pc-right{padding:12px;display:flex;flex-direction:column;justify-content:space-between}
+.pc-stamp{align-self:flex-end;font-size:34px;border:3px dotted #c2508e;padding:4px 8px;border-radius:4px}
+.pc-to{border-top:1px solid #bbb;padding-top:6px;font-size:14px;line-height:1.9}.pc-to div{border-bottom:1px solid #ddd}
+@media (max-width:640px){.postcard{grid-template-columns:1fr}}
+
+/* ---------- Révisions page ---------- */
+.rv-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:0;z-index:5}
+.rv-bar input[type=search]{flex:1 1 260px;font-size:16px;padding:9px 12px;border:1px solid var(--line);border-radius:10px}
+.rv-bar select{font-size:15px;padding:8px;border:1px solid var(--line);border-radius:10px;max-width:280px}
+.rv-weak{font-size:14px;display:flex;gap:6px;align-items:center}
+.rv-sec h2{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.rv-sec h3{margin:14px 0 0;font-size:15px;color:var(--accent-2)}
+.rv-voc{table-layout:fixed}.rv-voc td{padding:6px 8px;vertical-align:top}.rv-voc td:nth-child(2){width:46%}.rv-voc tr{border-left:4px solid transparent}
+.rv-voc .rv-pic{width:34px;font-size:22px;text-align:center}.rv-voc .rv-box{width:70px;color:var(--accent);letter-spacing:1px;font-size:11px;white-space:nowrap}
+.rv-u{text-decoration:none}
+.rv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.rv-g h3{margin:6px 0;font-size:17px}.rv-g p{margin:6px 0;font-size:14px;line-height:1.5}
+.rv-ex{margin:6px 0 0;padding-left:18px}.rv-ex li{margin:4px 0}
+.rv-mis td{vertical-align:top}
+@media print{
+  .noprint,nav.tabs,footer,.rv-box{display:none!important}
+  header.top{position:static;box-shadow:none}
+  .card{box-shadow:none;border:1px solid #ccc;break-inside:avoid-page}
+  .rv-sec{break-inside:auto}.rv-voc tr{break-inside:avoid}
+  b.say{text-decoration:none}
+}
+</style></head>
+<body><script>window.LESSONS=[];window.COURSE_HOME="index.html";window.UCOL=["#2f9c8a", "#c2508e", "#4f9d4f", "#9b4fb0", "#e86a2e", "#2f9c8a", "#e0474f", "#3a6fd8", "#9b4fb0", "#7d9a2e", "#e86a2e", "#3a4f8a", "#4f9d4f"];</script><script>// Unité 1 · Nouvelles vies (Édito A2, 2e édition, book pp. 13–26)
+// Situations: raconter son parcours · une histoire d'amour · un week-end en famille · proposer une sortie · les Journées du patrimoine
+// Grammar: le passé composé (auxiliaires, accords, participes irréguliers) · la phrase négative (rien, personne, jamais, plus) · il y a, pendant, depuis
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u01", rubrique: 1, num: 1,
+  title: "New lives",
+  titleFr: "Nouvelles vies",
+  pages: "Book pp. 13–26",
+  opener: { fr: "Faites des expériences uniques !", en: "Have unique experiences!" },
+  hero: { scene: "cafe", staff: "Le serveur", people: { "Le serveur": "m7", "Chiara": "f4", "Hugo": "m2" } },
+  situations: [
+    ["🧭", "Mon parcours", "your life path: [[Je suis née près de Rome, j'ai fait mes études à Bordeaux, puis je me suis installée à Lyon.]]"],
+    ["💘", "Une histoire d'amour", "how a couple met: [[Ils se sont rencontrés en 2008 et ils se sont mariés deux ans après.]]"],
+    ["🛶", "Le week-end", "tastes and activities: [[Je suis fan de kayak.]] · [[Je n'ai rien fait de spécial.]]"],
+    ["🎶", "On sort ?", "suggest an outing: [[Ça te dit, un concert samedi ?]] · [[Ça marche !]] · [[Désolée, je ne peux pas.]]"],
+    ["🏰", "Les Journées du patrimoine", "culture for free: [[Le château est ouvert depuis ce matin.]]"]
+  ],
+  goals: [
+    "Talk about your life path: [[Je suis né(e) à…]], [[J'ai grandi en…]], [[J'ai fait mes études à…]], [[Je suis devenu(e)…]]",
+    "Say what you intend to do: [[Je compte chercher du travail.]], [[J'ai l'intention de rester en France.]], [[C'est décidé !]]",
+    "Talk about your tastes: [[Je suis fan de jazz.]], [[Ce n'est pas du tout mon truc.]], [[Ma passion, c'est…]]",
+    "Suggest, accept or refuse an outing: [[Ça te dit ?]], [[Ça marche !]], [[Je suis désolé(e), je ne peux pas.]]",
+    "Use the passé composé with avoir and être, with the right past participle and agreement",
+    "Use the negative: [[ne… rien]], [[ne… personne]], [[ne… jamais]], [[ne… plus]], before and in the passé composé",
+    "Place an event in time: [[il y a onze ans]], [[pendant deux semaines]], [[depuis hier]]"
+  ],
+  glance: [
+    ["🗣️", "Communication", "life path · intentions · tastes · suggesting, accepting and refusing an outing"],
+    ["🧩", "Grammaire", "passé composé (review +) · rien, personne, jamais, plus · il y a, pendant, depuis"],
+    ["🗂️", "Vocabulaire", "life events · personal life · studies and career · artistic professions · leisure: places, outings, outdoor and indoor activities"],
+    ["🔊", "Phonie-graphie", "[y] (tu) / [u] (tout) and how they're written"],
+    ["⭐", "The phrase to learn first", "[[Ça te dit ? — Ça marche !]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "My life path", titleFr: "Au café · Ma vie en France",
+      note: "Chiara, a new colleague, tells Hugo her story. Listen to the passé composé with [[être]] (agreement!) and to her intentions.",
+      scene: "cafe", staff: "Le serveur", people: { "Le serveur": "m7", "Hugo": "m2", "Chiara": "f4" },
+      lines: [
+        ["Hugo", "Alors, Chiara, tu viens d'où exactement ? Tu parles très bien français !", "So, Chiara, where exactly are you from? You speak French really well!"],
+        ["Chiara", "Merci ! Je suis née en Italie et j'ai grandi près de Rome.", "Thanks! I was born in Italy and I grew up near Rome."],
+        ["Hugo", "Et tu as appris le français où ?", "And where did you learn French?"],
+        ["Chiara", "À l'université. Pendant mes études, je suis partie en Erasmus à Bordeaux. Je suis tombée amoureuse de la France !", "At university. During my studies I went to Bordeaux on Erasmus. I fell in love with France!"],
+        ["Hugo", "Et après ?", "And then?"],
+        ["Chiara", "J'ai fini mes études à Rome, puis je suis revenue. Je me suis installée à Lyon il y a trois ans.", "I finished my studies in Rome, then I came back. I settled in Lyon three years ago."],
+        ["Hugo", "Tu comptes rester ici ?", "Are you planning to stay here?"],
+        ["Chiara", "Oui, c'est décidé ! J'ai l'intention de demander la nationalité française. Et je compte apprendre à faire du kayak sur la Saône !", "Yes, it's decided! I intend to apply for French nationality. And I'm planning to learn kayaking on the Saône!"]
+      ],
+      glossary: [["Je suis née / j'ai grandi", "I was born / I grew up"], ["tomber amoureux, amoureuse de", "to fall in love with"], ["Je compte + infinitif", "I'm planning to…"], ["avoir l'intention de", "to intend to"]]
+    },
+    {
+      id: "d2", n: 2, title: "A love story", titleFr: "À un mariage · Leur rencontre",
+      note: "At a wedding party, two guests talk about how the couple met. Listen to the life events in the passé composé.",
+      scene: "fete", people: { "Inès": "f2", "Malik": "m3" },
+      lines: [
+        ["Malik", "Tu sais comment Léa et Sami se sont rencontrés ?", "Do you know how Léa and Sami met?"],
+        ["Inès", "Oui ! Ils ont fait connaissance sur le tournage d'un film, il y a six ans. C'était un vrai coup de foudre !", "Yes! They met on a film shoot six years ago. It was love at first sight!"],
+        ["Malik", "Ah bon ? Mais ils ne se sont pas mariés tout de suite…", "Really? But they didn't get married straight away…"],
+        ["Inès", "Non, ils ont choisi de prendre leur temps. D'abord, ils ont déménagé ensemble à Nantes.", "No, they chose to take their time. First, they moved in together in Nantes."],
+        ["Malik", "Et le petit Noé ?", "And little Noé?"],
+        ["Inès", "Il est né l'année dernière. Et aujourd'hui, enfin, ils se marient !", "He was born last year. And today, at last, they're getting married!"],
+        ["Malik", "Moi, je suis encore célibataire… Je n'ai jamais eu de coup de foudre !", "Me, I'm still single… I've never had love at first sight!"],
+        ["Inès", "Attends, la soirée commence, tu vas peut-être rencontrer quelqu'un !", "Wait, the evening is starting, you might meet someone!"]
+      ],
+      glossary: [["faire connaissance", "to get to know each other, to meet"], ["un coup de foudre", "love at first sight"], ["prendre son temps", "to take one's time"], ["célibataire", "single"]]
+    },
+    {
+      id: "d3", n: 3, title: "What did you do this weekend?", titleFr: "Le lundi au bureau · Nos activités du week-end",
+      note: "Two colleagues compare their weekends. Listen to how they talk about their tastes, and to the negatives [[rien]], [[personne]], [[jamais]], [[plus]].",
+      scene: "bureau", people: { "Christophe": "m4", "Lucie": "f3" },
+      lines: [
+        ["Christophe", "Alors, Lucie, ce week-end ?", "So, Lucie, how was the weekend?"],
+        ["Lucie", "Super ! On est sortis avec les enfants : on a fait de l'accrobranche et du canoë. Nous nous sommes bien amusés !", "Great! We went out with the kids: we did tree-top adventure and canoeing. We had a great time!"],
+        ["Christophe", "Ouah, quelle énergie ! Nous, on est restés à la maison. Il a plu tout le week-end.", "Wow, what energy! We stayed at home. It rained all weekend."],
+        ["Lucie", "Et vous avez fait quoi ?", "And what did you do?"],
+        ["Christophe", "Rien de spécial. Les enfants ne veulent plus jouer aux jeux de société, ils jouent aux jeux vidéo. Et ils ne voient personne !", "Nothing special. The kids don't want to play board games any more, they play video games. And they don't see anyone!"],
+        ["Lucie", "Moi, je n'aime pas trop les jeux vidéo. Ce n'est pas du tout mon truc.", "I'm not very keen on video games. It's not my thing at all."],
+        ["Christophe", "Moi non plus. Ma passion, c'est le jazz. Mais je ne vais jamais aux concerts : c'est trop cher !", "Me neither. My passion is jazz. But I never go to concerts: they're too expensive!"]
+      ],
+      glossary: [["s'amuser", "to have fun"], ["ne… rien / ne… personne", "nothing / nobody"], ["ne… plus / ne… jamais", "no longer / never"], ["Ce n'est pas mon truc.", "It's not my thing."]]
+    },
+    {
+      id: "d4", n: 4, title: "Fancy a festival?", titleFr: "Au téléphone · Envie de sortir ?",
+      note: "Julie suggests a music festival to Sarah. Listen to how they suggest, accept, refuse and fix a meeting.",
+      scene: "appartement", people: { "Julie": "f7", "Sarah": "f8" }, phone: ["Julie", "Sarah"],
+      lines: [
+        ["Julie", "Salut Sarah ! Tu es libre samedi ? Ça te dit, un concert au festival ? Les places sont en vente depuis hier.", "Hi Sarah! Are you free on Saturday? Fancy a concert at the festival? Tickets have been on sale since yesterday."],
+        ["Sarah", "Samedi, je suis désolée, je ne peux pas : je travaille.", "On Saturday, I'm sorry, I can't: I'm working."],
+        ["Julie", "Et dimanche ? Il y a un groupe que j'adore à 20 heures.", "And Sunday? There's a band I love at 8 p.m."],
+        ["Sarah", "Dimanche, avec plaisir ! Je ne suis jamais allée à ce festival.", "Sunday, with pleasure! I've never been to this festival."],
+        ["Julie", "Génial ! On se retrouve chez moi à 18 heures ? Ça te va ?", "Great! Shall we meet at my place at 6 p.m.? Is that OK for you?"],
+        ["Sarah", "Ça marche ! J'apporte à manger pour le pique-nique.", "Deal! I'll bring food for the picnic."],
+        ["Julie", "Parfait. J'achète les places tout de suite !", "Perfect. I'll buy the tickets right away!"]
+      ],
+      glossary: [["Ça te dit ?", "Do you fancy it?"], ["Ça te va ? · C'est bon pour toi ?", "Does that suit you?"], ["Ça marche !", "Deal! (casual)"], ["depuis hier", "since yesterday"]]
+    },
+    {
+      id: "d5", n: 5, title: "Heritage Days", titleFr: "Au château · Les Journées du patrimoine",
+      note: "During Heritage Days, a guide welcomes visitors to a château. Listen to [[il y a]], [[pendant]] and [[depuis]].",
+      scene: "ville", staff: "La guide", people: { "La guide": "f6", "Paul": "m6", "Zoé": "k1" },
+      lines: [
+        ["La guide", "Bienvenue au château ! Pendant les Journées du patrimoine, la visite est gratuite.", "Welcome to the château! During Heritage Days, the visit is free."],
+        ["Paul", "Super ! Il est ouvert depuis quelle heure ?", "Great! Since what time has it been open?"],
+        ["La guide", "Depuis neuf heures ce matin. Il y a déjà eu mille visiteurs !", "Since nine this morning. There have already been a thousand visitors!"],
+        ["Zoé", "Le château est très vieux ?", "Is the château very old?"],
+        ["La guide", "Oui, les rois y ont habité pendant plusieurs siècles. La dernière famille est partie il y a cent ans.", "Yes, kings lived here for several centuries. The last family left a hundred years ago."],
+        ["Paul", "Et qu'est-ce qu'il y a au programme aujourd'hui ?", "And what's on the programme today?"],
+        ["La guide", "Une visite guidée inédite des cuisines, et à 15 heures, vous pouvez apprendre le jeu de paume. C'est une expérience unique !", "A brand-new guided tour of the kitchens, and at 3 p.m. you can learn real tennis. It's a unique experience!"]
+      ],
+      glossary: [["les Journées du patrimoine", "Heritage Days (free visits, September)"], ["depuis + heure", "since…"], ["il y a + durée", "… ago"], ["inédit(e)", "new, never seen before"]]
+    }
+  ],
+
+  vocab: [
+    { t: "naître", en: "to be born", pic: "👶", cat: "Parcours de vie", note: "[[je suis né(e)]]" },
+    { t: "grandir", en: "to grow up", pic: "🌱", cat: "Parcours de vie" },
+    { t: "déménager", en: "to move house", pic: "📦", cat: "Parcours de vie" },
+    { t: "s'installer", en: "to settle", pic: "🏠", cat: "Parcours de vie" },
+    { t: "faire connaissance", en: "to get to know each other", pic: "🤝", cat: "Parcours de vie" },
+    { t: "rencontrer quelqu'un, se rencontrer", en: "to meet someone, to meet", pic: "👋", cat: "Parcours de vie" },
+    { t: "se faire des amis", en: "to make friends", pic: "🧑‍🤝‍🧑", cat: "Parcours de vie" },
+    { t: "avoir un coup de foudre", en: "to fall in love at first sight", pic: "⚡", cat: "Parcours de vie" },
+    { t: "tomber amoureux, amoureuse de", en: "to fall in love with", pic: "💘", cat: "Parcours de vie" },
+    { t: "se marier avec", en: "to marry", pic: "💍", cat: "Parcours de vie" },
+    { t: "se séparer de", en: "to split up with", pic: "💔", cat: "Parcours de vie" },
+    { t: "avoir un enfant", en: "to have a child", pic: "🍼", cat: "Parcours de vie" },
+    { t: "célibataire", en: "single", pic: "🙋", cat: "La vie personnelle" },
+    { t: "être en couple", en: "to be in a relationship", pic: "👫", cat: "La vie personnelle" },
+    { t: "le conjoint, la conjointe", en: "the spouse, partner", pic: "💑", cat: "La vie personnelle" },
+    { t: "le mari", en: "the husband", pic: "🤵", cat: "La vie personnelle", g: "m" },
+    { t: "la femme", en: "the wife, the woman", pic: "👰", cat: "La vie personnelle", g: "f" },
+    { t: "la rencontre", en: "the meeting, encounter", pic: "✨", cat: "La vie personnelle", g: "f" },
+    { t: "la vie de famille", en: "family life", pic: "👨‍👩‍👧", cat: "La vie personnelle", g: "f" },
+    { t: "faire ses études", en: "to study", pic: "🎓", cat: "Études et travail" },
+    { t: "partir en Erasmus", en: "to go on Erasmus", pic: "🇪🇺", cat: "Études et travail" },
+    { t: "faire un stage", en: "to do an internship", pic: "💼", cat: "Études et travail" },
+    { t: "obtenir un diplôme", en: "to get a degree", pic: "📜", cat: "Études et travail" },
+    { t: "chercher du travail", en: "to look for work", pic: "🔎", cat: "Études et travail" },
+    { t: "devenir", en: "to become", pic: "🦋", cat: "Études et travail", note: "[[Je suis devenue écrivaine.]]" },
+    { t: "l'acteur, l'actrice", en: "the actor, actress", pic: "🎭", cat: "Les professions artistiques" },
+    { t: "le chanteur, la chanteuse", en: "the singer", pic: "🎤", cat: "Les professions artistiques" },
+    { t: "le compositeur, la compositrice", en: "the composer", pic: "🎼", cat: "Les professions artistiques" },
+    { t: "l'écrivain(e)", en: "the writer", pic: "✍️", cat: "Les professions artistiques" },
+    { t: "l'interprète", en: "the performer", pic: "🎻", cat: "Les professions artistiques", note: "plays, sings or acts a work by someone else" },
+    { t: "le / la musicien(ne)", en: "the musician", pic: "🎸", cat: "Les professions artistiques" },
+    { t: "le / la scénariste", en: "the screenwriter", pic: "🎬", cat: "Les professions artistiques" },
+    { t: "le château", en: "the castle, château", pic: "🏰", cat: "Les lieux culturels", g: "m" },
+    { t: "le monument", en: "the monument", pic: "🗿", cat: "Les lieux culturels", g: "m" },
+    { t: "le musée", en: "the museum", pic: "🏛️", cat: "Les lieux culturels", g: "m" },
+    { t: "le cirque", en: "the circus", pic: "🎪", cat: "Les lieux culturels", g: "m" },
+    { t: "le théâtre", en: "the theatre", pic: "🎭", cat: "Les lieux culturels", g: "m" },
+    { t: "faire une balade", en: "to go for a walk / ride", pic: "🚶", cat: "Sortir" },
+    { t: "faire une visite guidée", en: "to go on a guided tour", pic: "🧑‍🏫", cat: "Sortir" },
+    { t: "visiter une exposition", en: "to visit an exhibition", pic: "🖼️", cat: "Sortir" },
+    { t: "voir une pièce de théâtre", en: "to see a play", pic: "🎟️", cat: "Sortir" },
+    { t: "aller à un festival", en: "to go to a festival", pic: "🎶", cat: "Sortir" },
+    { t: "l'accrobranche", en: "tree-top adventure course", pic: "🌳", cat: "En plein air", g: "f" },
+    { t: "le canoë-kayak", en: "canoeing, kayaking", pic: "🛶", cat: "En plein air", g: "m" },
+    { t: "le stand-up paddle", en: "stand-up paddleboarding", pic: "🏄", cat: "En plein air", g: "m" },
+    { t: "la via ferrata", en: "via ferrata (protected climbing route)", pic: "🧗", cat: "En plein air", g: "f" },
+    { t: "la randonnée", en: "hiking", pic: "🥾", cat: "En plein air", g: "f" },
+    { t: "le jardinage", en: "gardening", pic: "🌷", cat: "En plein air", g: "m" },
+    { t: "le bricolage", en: "DIY", pic: "🔨", cat: "À l'intérieur", g: "m" },
+    { t: "les jeux de société", en: "board games", pic: "🎲", cat: "À l'intérieur", g: "pl" },
+    { t: "les jeux vidéo", en: "video games", pic: "🎮", cat: "À l'intérieur", g: "pl" },
+    { t: "la peinture", en: "painting", pic: "🎨", cat: "À l'intérieur", g: "f" },
+    { t: "amateur, amatrice ≠ professionnel(le)", en: "amateur ≠ professional", pic: "🏅", cat: "À l'intérieur" }
+  ],
+
+  grammar: [
+    {
+      id: "g-pc",
+      title: "The passé composé: [[avoir]] or [[être]], and agreement",
+      body: [
+        "Use: a <b>one-off, finished</b> action in the past. Form: [[avoir]] or [[être]] in the present + past participle.",
+        "Most verbs take [[avoir]], and the participle <b>doesn't agree</b>: [[Elle a décidé de revenir en France.]] · [[Ils ont fait connaissance en 2018.]]",
+        "17 verbs of <b>movement or change</b> take [[être]] (aller, arriver, descendre, devenir, entrer, monter, mourir, naître, partir, passer, rentrer, rester, retourner, revenir, sortir, tomber, venir), and the participle <b>agrees</b> with the subject: [[Elle est rentrée à Rome.]] · [[Ils sont tombés amoureux.]]",
+        "<b>All</b> pronominal verbs take [[être]]: [[Je me suis installée à Lyon.]] · [[Nous nous sommes séparés.]]"
+      ],
+      info: [
+        { type: "compare", title: "🔀 avoir or être?", cols: [
+          { head: "avoir · no agreement", en: "most verbs", color: "#3a6fd8", lines: [["Elle a grandi en Italie.", "She grew up in Italy."], ["Ils ont choisi de prendre leur temps.", "They chose to take their time."], ["Nous avons fini nos études.", "We finished our studies."]] },
+          { head: "être · agreement", en: "17 verbs + all pronominal verbs", color: "#e0474f", lines: [["Elle est partie en Erasmus.", "She went on Erasmus."], ["Ils se sont mariés en 2010.", "They got married in 2010."], ["Nous sommes restées à Lyon.", "We (f.) stayed in Lyon."]] }
+        ] },
+        { type: "card", style: "board", caption: "📋 Irregular past participles · tap a line", title: "PARTICIPES PASSÉS", sub: "-er → é · -ir → i · -re / -oir → u … and the irregulars", rows: [
+          ["avoir → eu", "être → été", "J'ai eu dix-huit ans. J'ai été malade."], ["faire → fait", "dire → dit", "Elle a fait une fête. Il a dit oui."], ["prendre → pris", "mettre → mis", "J'ai pris le train. J'ai mis un manteau."],
+          ["naître → né", "mourir → mort", "Il est né en 1982."], ["venir → venu", "devenir → devenu", "Elle est devenue célèbre."], ["vouloir → voulu", "devoir → dû", "Ils n'ont pas voulu dire son prénom."],
+          ["vivre → vécu", "écrire → écrit", "Il a vécu au Burundi. Il a écrit un roman."], ["ouvrir → ouvert", "recevoir → reçu", "Le musée a ouvert. J'ai reçu un prix."]
+        ], foot: "regular: jouer → joué · choisir → choisi · perdre → perdu" }
+      ],
+      widget: {
+        type: "combo", label: "Build the passé composé · pick a subject and a verb",
+        rows: [{ k: "je", label: "je (Chiara)" }, { k: "ils", label: "ils (Léa et Sami)" }, { k: "elles", label: "elles (mes sœurs)" }],
+        cols: [{ k: "grandir", label: "🌱 grandir à Rome" }, { k: "partir", label: "✈️ partir en Erasmus" }, { k: "marier", label: "💍 se marier" }, { k: "faire", label: "🤝 faire connaissance" }],
+        out: {
+          "je|grandir": ["J'ai grandi à Rome.", "I grew up in Rome.", "avoir: no agreement"], "je|partir": ["Je suis partie en Erasmus.", "I went on Erasmus.", "être: partie (Chiara = f.)"], "je|marier": ["Je me suis mariée.", "I got married.", "pronominal → être + agreement"], "je|faire": ["J'ai fait connaissance avec Hugo.", "I got to know Hugo.", "faire → fait"],
+          "ils|grandir": ["Ils ont grandi à Rome.", "They grew up in Rome."], "ils|partir": ["Ils sont partis en Erasmus.", "They went on Erasmus.", "être: partis (m. pl.)"], "ils|marier": ["Ils se sont mariés.", "They got married."], "ils|faire": ["Ils ont fait connaissance.", "They met."],
+          "elles|grandir": ["Elles ont grandi à Rome.", "They (f.) grew up in Rome."], "elles|partir": ["Elles sont parties en Erasmus.", "They (f.) went on Erasmus.", "être: parties (f. pl.)"], "elles|marier": ["Elles se sont mariées.", "They (f.) got married."], "elles|faire": ["Elles ont fait connaissance.", "They (f.) met."]
+        }
+      }
+    },
+    {
+      id: "g-parcours",
+      title: "Talking about your life path and your intentions",
+      body: [
+        "Your path: [[Je suis né(e) à / en / au…]] · [[J'ai grandi à…]] · [[Je suis venu(e) ici en 2019.]] · [[J'ai fait mes études à…]] · [[Je suis devenu(e) architecte.]]",
+        "Your intentions: [[Je compte chercher du travail.]] · [[J'ai l'intention de rester en France.]] · [[Je pense rentrer en Italie.]] · [[C'est décidé !]] (compter / penser + infinitive, avoir l'intention <b>de</b> + infinitive)"
+      ],
+      info: { type: "timeline", title: "🧭 Chiara's life path", ends: ["passé", "aujourd'hui", "futur"], items: [
+        { x: 6, fr: "Elle est née en Italie.", en: "She was born in Italy.", pic: "👶" },
+        { x: 18, fr: "Elle a grandi près de Rome.", en: "She grew up near Rome.", pic: "🇮🇹" },
+        { x: 32, fr: "Elle est partie en Erasmus à Bordeaux.", en: "She went on Erasmus to Bordeaux.", pic: "🎓" },
+        { x: 50, fr: "Elle s'est installée à Lyon il y a trois ans.", en: "She settled in Lyon three years ago.", pic: "🏠" },
+        { x: 84, fr: "Elle compte demander la nationalité française.", en: "She plans to apply for French nationality.", pic: "🇫🇷" }
+      ] },
+      widget: {
+        type: "combo", label: "Say your intention · pick an expression and a plan",
+        rows: [{ k: "compte", label: "Je compte…" }, { k: "intention", label: "J'ai l'intention de / d'…" }, { k: "pense", label: "Je pense…" }],
+        cols: [{ k: "travail", label: "🔎 chercher du travail" }, { k: "rester", label: "🇫🇷 rester en France" }, { k: "erasmus", label: "🇪🇺 faire un séjour Erasmus" }],
+        out: {
+          "compte|travail": ["Je compte chercher du travail.", "I'm planning to look for work."], "intention|travail": ["J'ai l'intention de chercher du travail.", "I intend to look for work."], "pense|travail": ["Je pense chercher du travail.", "I'm thinking of looking for work."],
+          "compte|rester": ["Je compte rester en France.", "I'm planning to stay in France."], "intention|rester": ["J'ai l'intention de rester en France.", "I intend to stay in France."], "pense|rester": ["Je pense rester en France.", "I'm thinking of staying in France."],
+          "compte|erasmus": ["Je compte faire un séjour Erasmus.", "I'm planning to do an Erasmus stay."], "intention|erasmus": ["J'ai l'intention de faire un séjour Erasmus.", "I intend to do an Erasmus stay."], "pense|erasmus": ["Je pense faire un séjour Erasmus.", "I'm thinking of doing an Erasmus stay."]
+        }
+      }
+    },
+    {
+      id: "g-negation",
+      title: "The negative: [[ne… rien]], [[ne… personne]], [[ne… jamais]], [[ne… plus]]",
+      body: [
+        "[[quelque chose]] ≠ [[ne… rien]] · [[quelqu'un, tout le monde]] ≠ [[ne… personne]] · [[toujours, souvent, déjà]] ≠ [[ne… jamais]] · [[toujours, encore]] (it continues) ≠ [[ne… plus]] (it has stopped).",
+        "<b>Present</b>: around the verb: [[Je ne danse jamais.]] <b>Passé composé</b>: with pas, plus, rien, jamais, around the <b>auxiliary</b>: [[Il n'a rien mangé.]] · [[Je ne suis jamais allée à ce festival.]] But [[personne]] goes <b>after the participle</b>: [[Je n'ai rencontré personne.]]",
+        "[[personne]] as subject comes first: [[Personne n'est venu.]] After a negative, [[un, une, du, de la, des]] → [[de / d']]: [[Je ne fais jamais de sport.]] · [[Il n'a plus d'argent.]]"
+      ],
+      info: [
+        { type: "compare", title: "➕ / ➖ Affirmative and negative", cols: [
+          { head: "Forme affirmative", en: "", color: "#2f9c8a", lines: [["Elle boit quelque chose.", "something"], ["Je connais tout le monde ici.", "everyone"], ["Nous allons souvent au théâtre.", "often"], ["Il fait toujours de la boxe.", "still"]] },
+          { head: "Forme négative", en: "", color: "#e0474f", lines: [["Elle ne boit rien.", "nothing"], ["Je ne connais personne ici.", "nobody"], ["Nous n'allons jamais au théâtre.", "never"], ["Il ne fait plus de boxe.", "no longer"]] }
+        ] },
+        { type: "pattern", title: "🥪 The negative sandwich in the passé composé", rows: [
+          ["Je", "n'", "ai", { opts: ["rien", "jamais", "plus", "pas"] }, "fait de sport."],
+          ["Je", "n'", "ai", "vu", "personne."]
+        ], note: "rien / jamais / plus / pas: before the participle. personne: after it." }
+      ],
+      widget: {
+        type: "sort", label: "Which negative? Sort the answers",
+        cols: [{ k: "rien", label: "ne… rien", color: "#3a6fd8" }, { k: "personne", label: "ne… personne", color: "#9b4fb0" }, { k: "jamais", label: "ne… jamais", color: "#e0a526" }, { k: "plus", label: "ne… plus", color: "#e0474f" }],
+        items: [
+          { t: "Tu fais quelque chose ce soir ? — Non, je…", k: "rien", say: "Non, je ne fais rien." }, { t: "Il y a quelqu'un au musée ? — Non, il…", k: "personne", say: "Non, il n'y a personne." },
+          { t: "Tu vas souvent au cirque ? — Non, je…", k: "jamais", say: "Non, je ne vais jamais au cirque." }, { t: "Tu fais encore du judo ? — Non, je…", k: "plus", say: "Non, je ne fais plus de judo." },
+          { t: "Vous avez vu quelqu'un ? — Non, nous…", k: "personne", say: "Non, nous n'avons vu personne." }, { t: "Elle a déjà fait de l'escalade ? — Non, elle…", k: "jamais", say: "Non, elle n'a jamais fait d'escalade." }
+        ]
+      }
+    },
+    {
+      id: "g-gouts",
+      title: "Talking about your tastes · suggesting an outing",
+      body: [
+        "Tastes: [[J'adore ce concert.]] · [[Je suis fan de jazz.]] / [[Je ne suis pas fan de…]] · [[J'aime bien sortir.]] · [[Je n'aime pas trop les sports aquatiques.]] · [[C'est pas du tout mon truc.]] (casual) · [[Ma passion, c'est les jeux vidéo.]]",
+        "Suggesting: [[Ça te dit ?]] · [[Tu es libre ?]] · [[On se retrouve chez moi à 19 h ?]] · [[Ça te va ?]] / [[C'est bon pour toi ?]] Accepting: [[Avec plaisir !]] · [[D'accord !]] · [[Ça marche !]] · [[Ça me va !]] Refusing: [[Je suis désolé(e).]] · [[Je m'excuse, mais je ne peux pas.]] · [[Ce n'est pas possible.]]"
+      ],
+      info: { type: "scale", title: "❤️ How much do you like it?", colors: ["#e0474f", "#2f9c8a"], items: [
+        { v: 6, fr: "Ce n'est pas du tout mon truc.", en: "not my thing at all", pic: "🙅" }, { v: 30, fr: "Je n'aime pas trop ça.", en: "I'm not very keen", pic: "😕" },
+        { v: 62, fr: "J'aime bien.", en: "I quite like it", pic: "🙂" }, { v: 82, fr: "Je suis fan !", en: "I'm a fan!", pic: "🤩" }, { v: 96, fr: "C'est ma passion !", en: "it's my passion!", pic: "❤️" }
+      ], ends: ["−", "+ + +"] },
+      widget: {
+        type: "combo", label: "Answer an invitation · pick an answer and an outing",
+        rows: [{ k: "oui", label: "✅ accept" }, { k: "non", label: "❌ refuse" }],
+        cols: [{ k: "concert", label: "🎶 un concert samedi" }, { k: "expo", label: "🖼️ une expo dimanche" }, { k: "kayak", label: "🛶 du kayak demain" }],
+        out: {
+          "oui|concert": ["Un concert samedi ? Avec plaisir ! On se retrouve où ?", "A concert on Saturday? With pleasure! Where shall we meet?"], "non|concert": ["Samedi ? Je suis désolée, je ne peux pas, je travaille.", "Saturday? I'm sorry, I can't, I'm working."],
+          "oui|expo": ["Une expo dimanche ? Ça marche ! Ça me va très bien.", "An exhibition on Sunday? Deal! That suits me fine."], "non|expo": ["Je m'excuse, mais dimanche, ce n'est pas possible.", "Sorry, but Sunday isn't possible."],
+          "oui|kayak": ["Du kayak demain ? D'accord, je suis fan !", "Kayaking tomorrow? OK, I'm a fan!"], "non|kayak": ["Le kayak ? Ce n'est pas du tout mon truc, désolé !", "Kayaking? It's not my thing at all, sorry!"]
+        }
+      }
+    },
+    {
+      id: "g-temps",
+      title: "Time words: [[il y a]], [[pendant]], [[depuis]]",
+      body: [
+        "[[il y a]] + duration: the time between a <b>finished</b> event and now (= ago): [[J'ai fait ma première compétition il y a onze ans.]]",
+        "[[pendant]] + duration: how <b>long</b> an action lasted: [[Pendant deux semaines, j'ai rencontré beaucoup d'athlètes.]]",
+        "[[depuis]] + starting point or duration: an action that <b>started in the past and continues now</b> (present tense): [[Les places sont en vente depuis hier.]] · [[J'habite à Lyon depuis trois ans.]]"
+      ],
+      info: { type: "timeline", title: "⏳ Three time words", ends: ["passé", "maintenant", "futur"], items: [
+        { x: 10, fr: "J'ai fait du judo il y a dix ans.", en: "I did judo ten years ago.", pic: "🥋" },
+        { x: 30, fr: "J'ai fait du judo pendant deux ans.", en: "I did judo for two years.", pic: "⏱️" },
+        { x: 56, fr: "Je fais de l'escalade depuis 2021.", en: "I've been climbing since 2021.", pic: "🧗" }
+      ] },
+      widget: {
+        type: "sort", label: "il y a, pendant or depuis?",
+        cols: [{ k: "ilya", label: "il y a (= ago)", color: "#9b4fb0" }, { k: "pendant", label: "pendant (duration)", color: "#e0a526" }, { k: "depuis", label: "depuis (still going)", color: "#2f9c8a" }],
+        items: [
+          { t: "Mon frère est au festival … mardi.", k: "depuis", say: "Mon frère est au festival depuis mardi." }, { t: "Hier, nous avons fait du canoë … quatre heures.", k: "pendant", say: "Hier, nous avons fait du canoë pendant quatre heures." },
+          { t: "J'ai fait cette randonnée … deux ans.", k: "ilya", say: "J'ai fait cette randonnée il y a deux ans." }, { t: "Elle est en couple … 2019.", k: "depuis", say: "Elle est en couple depuis 2019." },
+          { t: "Ils se sont rencontrés … six ans.", k: "ilya", say: "Ils se sont rencontrés il y a six ans." }, { t: "J'ai vécu à Rome … dix ans.", k: "pendant", say: "J'ai vécu à Rome pendant dix ans." }
+        ]
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour parler de son parcours", fnEn: "your life path", icon: "🧭", items: [
+      ["Je suis né(e) à Lagos.", "I was born in Lagos.", "std", true],
+      ["J'ai grandi au Sénégal.", "I grew up in Senegal.", "std", true],
+      ["Je suis venu(e) ici en 2019.", "I came here in 2019.", "std"],
+      ["J'ai fait mes études à Paris.", "I studied in Paris.", "std"],
+      ["Je suis devenu(e) ingénieur(e).", "I became an engineer.", "std"]
+    ] },
+    { fn: "Pour exprimer son intention", fnEn: "intentions", icon: "🎯", items: [
+      ["Je compte chercher du travail.", "I'm planning to look for work.", "std", true],
+      ["J'ai l'intention de rester en France.", "I intend to stay in France.", "std", true],
+      ["Je pense rentrer en Italie.", "I'm thinking of going back to Italy.", "std"],
+      ["C'est décidé !", "It's decided!", "std"]
+    ] },
+    { fn: "Pour parler de ses goûts", fnEn: "tastes", icon: "❤️", items: [
+      ["J'adore ce concert.", "I love this concert.", "std"],
+      ["Je (ne) suis (pas) fan de jazz.", "I'm (not) a fan of jazz.", "std", true],
+      ["J'aime bien sortir.", "I quite like going out.", "std"],
+      ["Je n'aime pas trop les sports aquatiques.", "I'm not very keen on water sports.", "std"],
+      ["C'est pas du tout mon truc.", "It's not my thing at all.", "fam", true],
+      ["Ma passion, c'est les jeux vidéo.", "My passion is video games.", "fam"]
+    ] },
+    { fn: "Pour proposer, accepter, refuser une sortie", fnEn: "outings", icon: "🎶", items: [
+      ["Ça te dit ? · Tu es libre ?", "Do you fancy it? · Are you free?", "fam", true],
+      ["On se retrouve chez moi à 19 h ?", "Shall we meet at my place at 7?", "std"],
+      ["Ça te va ? · C'est bon pour toi ?", "Does that suit you?", "fam"],
+      ["Avec plaisir ! · D'accord ! · Ça marche !", "With pleasure! · OK! · Deal!", "std", true],
+      ["Je suis désolé(e), je ne peux pas.", "I'm sorry, I can't.", "std", true],
+      ["Ce n'est pas possible.", "It's not possible.", "std"]
+    ] },
+    { fn: "Pour proposer une activité (atelier)", fnEn: "presenting an outing", icon: "📣", items: [
+      ["Nous vous proposons une balade en kayak.", "We're offering a kayak trip.", "poli"],
+      ["C'est l'occasion de prendre l'air.", "It's a chance to get some fresh air.", "std"],
+      ["C'est un bon plan pour…", "It's a great deal for…", "fam"],
+      ["Le tarif est de 16,50 € par personne.", "The price is €16.50 per person.", "std"],
+      ["Inscriptions à l'avance.", "Book in advance.", "std"]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · suggesting an outing", lanes: ["Julie", "Sarah"], av: ["f7", "f8"], steps: [
+    { s: 0, fr: "Tu es libre samedi ? Ça te dit, un concert ?", en: "Are you free on Saturday? Fancy a concert?" },
+    { s: 1, fr: "Désolée, samedi, je ne peux pas.", en: "Sorry, on Saturday I can't." },
+    { s: 0, fr: "Et dimanche ?", en: "And Sunday?" },
+    { s: 1, fr: "Dimanche, avec plaisir !", en: "Sunday, with pleasure!" },
+    { s: 0, fr: "On se retrouve chez moi à 18 heures ? Ça te va ?", en: "Shall we meet at my place at 6? Does that suit you?" },
+    { s: 1, fr: "Ça marche !", en: "Deal!" }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: [y] as in [[tu]] and [u] as in [[tout]]. Both have rounded lips; for [y], the tongue is at the front (say “ee” and round your lips), for [u] at the back.",
+    letters: [
+      { l: "u · û · eu (in avoir)", name: "[y] · tu", tip: "Say “ee”, then round your lips without moving your tongue: [[tu]], [[sûr]], [[j'ai eu]] (eu = [y] in the past participle of avoir!).", ex: ["tu as vu", "tu as bu", "j'ai eu", "sûr"] },
+      { l: "ou · où · oû", name: "[u] · tout", tip: "Lips rounded and pushed forward, tongue back: [[nous]], [[où]], [[le mois d'août]].", ex: ["vous", "c'est fou", "où", "août"] }
+    ],
+    pairs: [
+      { a: ["tu", "you"], b: ["tout", "all"], note: "[y] / [u]" },
+      { a: ["vu", "seen"], b: ["vous", "you"], note: "[y] / [u]" },
+      { a: ["le dessus", "the top"], b: ["le dessous", "the underneath"], note: "[y] / [u]" },
+      { a: ["la rue", "the street"], b: ["la roue", "the wheel"], note: "[y] / [u]" },
+      { a: ["Je n'ai rien fait.", "I did nothing."], b: ["Je n'ai vu personne.", "I saw nobody."], note: "rien / personne" },
+      { a: ["il y a deux ans", "two years ago"], b: ["depuis deux ans", "for two years (still)"], note: "il y a / depuis" }
+    ]
+  },
+  classify: {
+    label: "👄 [y] ou [u] ?", q: "Listen: do you hear [y] (tu) or [u] (tout)?",
+    options: ["[y] tu", "[u] tout"],
+    items: [
+      { say: "su", a: 0 }, { say: "sous", a: 1 }, { say: "lu", a: 0 }, { say: "loup", a: 1 },
+      { say: "la rue", a: 0 }, { say: "la roue", a: 1 }, { say: "dû", a: 0 }, { say: "doux", a: 1 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "Chiara a grandi près de Rome.", ok: true },
+    { type: "mcq", tag: "Dialogue 1", q: "Chiara s'est installée à Lyon…", options: ["il y a trois ans", "depuis trois mois", "pendant ses études"], answer: 0 },
+    { type: "tf", tag: "Dialogue 1", s: "Chiara compte rentrer en Italie.", ok: false, explain: "She intends to stay and apply for French nationality." },
+    { type: "tf", tag: "Dialogue 2", s: "Léa et Sami se sont mariés tout de suite.", ok: false, explain: "They took their time." },
+    { type: "mcq", tag: "Dialogue 3", q: "Ce week-end, Lucie et sa famille…", options: ["sont sortis", "sont restés à la maison", "ont joué aux jeux vidéo"], answer: 0 },
+    { type: "tf", tag: "Dialogue 3", s: "Christophe va souvent aux concerts de jazz.", ok: false, explain: "« Je ne vais jamais aux concerts. »" },
+    { type: "mcq", tag: "Dialogue 4", q: "Julie et Sarah vont au festival…", options: ["dimanche", "samedi", "vendredi"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "Pendant les Journées du patrimoine, la visite est gratuite.", ok: true },
+    { type: "fill", tag: "Passé composé", sentence: "Ma sœur ___ partie en Angleterre pour finir ses études.", options: ["est", "a", "s'est"], answer: 0 },
+    { type: "fill", tag: "Passé composé", sentence: "Ils ___ fait connaissance en 2018.", options: ["ont", "sont", "se sont"], answer: 0 },
+    { type: "fill", tag: "Passé composé", sentence: "Marine et Éric se sont ___ le week-end dernier.", options: ["mariés", "marié", "mariées"], answer: 0 },
+    { type: "fill", tag: "Passé composé", sentence: "Tu as ___ le roman de Gaël Faye ?", options: ["lu", "lit", "lire"], answer: 0 },
+    { type: "fill", tag: "Passé composé", sentence: "Elle est ___ en 1977.", options: ["née", "naît", "naquis"], answer: 0 },
+    { type: "type", tag: "Passé composé", q: "Passé composé: « Elle devient célèbre. »", answers: ["Elle est devenue célèbre.", "Elle est devenue célèbre"] },
+    { type: "fill", tag: "Négation", sentence: "Tu veux encore faire du vélo ? — Non, je ne veux ___ faire de vélo.", options: ["plus", "rien", "personne"], answer: 0 },
+    { type: "fill", tag: "Négation", sentence: "Il y a quelqu'un dans la salle ? — Non, il n'y a ___.", options: ["personne", "rien", "jamais"], answer: 0 },
+    { type: "fill", tag: "Négation", sentence: "Je n'ai ___ fait de spécial ce week-end.", options: ["rien", "personne", "plus"], answer: 0 },
+    { type: "fill", tag: "Négation", sentence: "Je ne suis ___ allé à ce festival.", options: ["jamais", "personne", "rien"], answer: 0 },
+    { type: "fill", tag: "Négation", sentence: "Je ne fais jamais ___ sport.", options: ["de", "du", "le"], answer: 0 },
+    { type: "type", tag: "Négation", q: "Make it negative: « Ils ont invité tout le monde à leur mariage. »", answers: ["Ils n'ont invité personne à leur mariage.", "Ils n'ont invité personne à leur mariage"] },
+    { type: "fill", tag: "Indicateurs de temps", sentence: "Les places sont en vente ___ hier.", options: ["depuis", "il y a", "pendant"], answer: 0 },
+    { type: "fill", tag: "Indicateurs de temps", sentence: "J'ai fait ma première compétition ___ onze ans.", options: ["il y a", "depuis", "pendant"], answer: 0 },
+    { type: "fill", tag: "Indicateurs de temps", sentence: "Hier, nous avons fait du canoë ___ quatre heures.", options: ["pendant", "il y a", "depuis"], answer: 0 },
+    { type: "fill", tag: "Intention", sentence: "J'ai l'intention ___ rester en France.", options: ["de", "à", "—"], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Ça te dit, une expo dimanche ?", options: ["Avec plaisir ! On se retrouve où ?", "Je n'ai rien fait.", "Je suis né à Lyon."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Tu aimes les jeux vidéo ?", options: ["Non, ce n'est pas du tout mon truc.", "Il y a deux ans.", "Ça marche !"], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Qu'est-ce que tu comptes faire après tes études ?", options: ["Je compte chercher du travail à Montréal.", "J'ai grandi à Rome.", "Je ne vois personne."], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Une personne qui n'est pas en couple est…", options: ["célibataire", "mariée", "amoureuse"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["la via ferrata", "le canoë-kayak", "le vélo", "le château"], answer: 3, explain: "le château is a place to visit; the others are outdoor activities." },
+    { type: "mcq", tag: "Vocabulaire", q: "Un(e) scénariste…", options: ["écrit des films", "joue dans des films", "chante"], answer: 0 },
+    { type: "mcq", tag: "Langue familière", q: "« le ciné » = …", options: ["le cinéma", "la cinéaste", "la cuisine"], answer: 0 },
+    { type: "order", tag: "Construisez", en: "I've never been to this festival.", words: ["Je", "ne", "suis", "jamais", "allé", "à", "ce", "festival."] },
+    { type: "listen", tag: "Écoute", q: "When did they meet?", say: "Ils ont fait connaissance il y a six ans, sur le tournage d'un film.", options: ["six years ago", "for six years", "six months ago"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "🧭 Raconte ton parcours", brief: "A new friend asks about your life. Tell your path and your plans.", memo: ["Je suis né(e)…", "J'ai grandi…", "Je me suis installé(e)…", "Je compte…"], partner: "m2", you: "f4",
+      turns: [
+        { them: "Tu viens d'où ?", themEn: "Where are you from?", hint: "Born in Nigeria, grew up in Lagos.", you: "Je suis née au Nigeria et j'ai grandi à Lagos.", youEn: "I was born in Nigeria and I grew up in Lagos." },
+        { them: "Et tu es en France depuis quand ?", themEn: "And how long have you been in France?", hint: "You came two years ago for your master's.", you: "Je suis venue il y a deux ans pour faire un master.", youEn: "I came two years ago to do a master's." },
+        { them: "Tu vas rester ici ?", themEn: "Will you stay here?", hint: "You intend to look for work in Lyon.", you: "Oui, j'ai l'intention de chercher du travail à Lyon.", youEn: "Yes, I intend to look for work in Lyon." }
+      ] },
+    { title: "🎶 Propose une sortie", brief: "Call a friend and suggest going out. Agree on a day, a time and a place.", memo: ["Ça te dit ?", "Tu es libre… ?", "On se retrouve… ?", "Ça marche !"], partner: "f8", you: "f7",
+      turns: [
+        { them: "Allô ?", themEn: "Hello?", hint: "Ask if she's free on Friday evening; suggest a play.", you: "Salut ! Tu es libre vendredi soir ? Ça te dit, une pièce de théâtre ?", youEn: "Hi! Are you free on Friday evening? Fancy a play?" },
+        { them: "Vendredi, je ne peux pas, désolée. Samedi ?", themEn: "Friday I can't, sorry. Saturday?", hint: "Accept Saturday.", you: "Samedi, ça marche !", youEn: "Saturday, deal!" },
+        { them: "On se retrouve où ?", themEn: "Where shall we meet?", hint: "In front of the theatre at 7.30. Ask if that suits her.", you: "Devant le théâtre à 19 h 30. Ça te va ?", youEn: "In front of the theatre at 7.30. Does that suit you?" },
+        { them: "Parfait !", themEn: "Perfect!", hint: "Say you'll buy the tickets.", you: "Super, j'achète les places !", youEn: "Great, I'll buy the tickets!" }
+      ] },
+    { title: "😴 Un week-end tranquille", brief: "A colleague asks about your weekend. You did nothing special. Use the negative.", memo: ["ne… rien", "ne… personne", "ne… jamais", "ne… plus"], partner: "f3", you: "m4",
+      turns: [
+        { them: "Tu as fait quoi ce week-end ?", themEn: "What did you do this weekend?", hint: "Nothing special.", you: "Je n'ai rien fait de spécial.", youEn: "I didn't do anything special." },
+        { them: "Tu as vu des amis ?", themEn: "Did you see friends?", hint: "No, nobody.", you: "Non, je n'ai vu personne.", youEn: "No, I didn't see anyone." },
+        { them: "Tu ne fais plus de foot le dimanche ?", themEn: "Don't you play football on Sundays any more?", hint: "No, not any more. You never have time.", you: "Non, je ne fais plus de foot. Je n'ai jamais le temps !", youEn: "No, I don't play football any more. I never have time!" }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Organiser une activité de loisir", intro: "In groups, organise an outing for your class: find information, agree together, then present it with all the practical details.",
+      steps: [["Préparation", ["Choose a field: cultural heritage, food, outdoors, shows, creative hobbies, sports and games…", "Look for activities in your town or region and agree on one outing and its organisation (date…)."]], ["Réalisation", ["Prepare your oral presentation: describe the activity and why it's fun or interesting.", "Note the practical details: date and times, meeting place, transport, price, how to book. Find pictures (photos, map)."]], ["Présentation", ["Present your outing to the class with your written support. Answer questions.", "At the end, vote for your favourite outing."]]],
+      phrases: ["Nous vous proposons…", "Au programme : …", "C'est l'occasion de…", "Le tarif est de… par personne.", "Rendez-vous à…"],
+      model: { type: "card", style: "board", caption: "🛶 Example · tap a line", title: "BALADE EN KAYAK SUR LA SAÔNE", sub: "Lyon · une expérience unique", rows: [["Quand ?", "jeudi 8 septembre, de 14 h à 16 h", "Jeudi huit septembre, de quatorze heures à seize heures."], ["Rendez-vous", "13 h 30, à l'arrêt de tram « Confluence » (T1)", "Rendez-vous à treize heures trente à l'arrêt de tram Confluence."], ["Tarif", "16,50 € par personne", "Le tarif est de seize euros cinquante par personne."], ["Inscriptions", "3 jours à l'avance", "Inscriptions trois jours à l'avance."], ["Pourquoi ?", "découvrir les monuments et les paysages de Lyon, prendre l'air", "C'est l'occasion de découvrir Lyon et de prendre l'air !"]], foot: "Kayaks à deux places" } }
+  ],
+  delf: {
+    skill: "Compréhension de l'oral", title: "The DELF A2 listening paper: strategies",
+    about: "The DELF A2 <b>compréhension de l'oral</b> lasts about 25 minutes and has 4 exercises: <b>1.</b> 6 public announcements (airport, station, shop…); <b>2.</b> the main information in 3 radio documents (news flash, weather, ad…); <b>3.</b> the key information in a recorded message (personal or professional); <b>4.</b> 4 informal dialogues where you identify what people are doing (suggesting, refusing, thanking…). You hear each document <b>twice</b>.",
+    tips: ["Read the questions <b>before</b> listening: they tell you the topic.", "1st listening: spot the information. 2nd listening: complete, check, correct.", "Listen for figures, places, times, people.", "For exercise 4, recognise the function: [[Ça te dit ?]] = suggesting, [[Désolé, je ne peux pas]] = refusing."],
+    items: [
+      { type: "listen", q: "Exercise 1 · What must you do?", say: "Mesdames et messieurs, le spectacle va commencer. Merci d'éteindre vos téléphones portables.", options: ["switch off your phone", "switch on your phone", "put away your bag"], answer: 0 },
+      { type: "listen", q: "Exercise 1 · What is forbidden near the pools?", say: "Pour votre sécurité, il est interdit de courir autour des bassins.", options: ["running", "jumping", "walking"], answer: 0 },
+      { type: "listen", q: "Exercise 3 · When is the meeting?", say: "Bonjour, c'est Marc. Le rendez-vous de demain est déplacé à quinze heures, au café de la gare. Rappelle-moi !", options: ["tomorrow at 3 p.m.", "today at 5 p.m.", "tomorrow at 5 p.m."], answer: 0 },
+      { type: "listen", q: "Exercise 4 · What is the person doing?", say: "Ça te dit, une balade au parc cet après-midi ?", options: ["suggesting an outing", "refusing", "thanking"], answer: 0 },
+      { type: "listen", q: "Exercise 4 · What is the person doing?", say: "Je suis désolée, mais ce soir, je ne peux vraiment pas.", options: ["refusing", "accepting", "apologising for being late"], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Les mots coupés",
+    intro: "In casual French, speakers cut words short. What are the full words?",
+    items: [
+      { type: "mcq", q: "« le foot »", options: ["le football", "le footing", "la fourchette"], answer: 0 },
+      { type: "mcq", q: "« le ciné »", options: ["le cinéma", "la cinéaste", "le cirque"], answer: 0 },
+      { type: "mcq", q: "« un(e) ado »", options: ["un(e) adolescent(e)", "un(e) adulte", "un(e) adorateur, adoratrice"], answer: 0 },
+      { type: "mcq", q: "« une expo »", options: ["une exposition", "une expérience", "une explosion"], answer: 0 },
+      { type: "mcq", q: "« le resto »", options: ["le restaurant", "le reste", "la restauration rapide"], answer: 0 },
+      { type: "mcq", q: "« la fac »", options: ["la faculté (l'université)", "la facture", "la façade"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "card", style: "board", caption: "🏰 Les Journées du patrimoine · tap a line", title: "JOURNÉES DU PATRIMOINE", sub: "chaque année en septembre · le bon plan de la rentrée", rows: [["Quoi ?", "musées, monuments, théâtres, châteaux ouverts gratuitement", "Des musées, des monuments, des théâtres et des châteaux ouvrent leurs portes gratuitement."], ["Au programme", "visites guidées, animations, expositions", "Au programme : des visites guidées, des animations et des expositions."], ["Pour qui ?", "en famille, entre amis, en couple ou en solitaire", "En famille, entre amis, en couple ou en solitaire : tout le monde y trouve son bonheur !"], ["Exemple", "le jeu de paume au château de Fontainebleau", "Au château de Fontainebleau, on peut apprendre le jeu de paume."]], foot: "« Tout le monde y trouve son bonheur ! »" },
+    { type: "pics", title: "🗼 Oh, le cliché ! « Les Français sont fiers de Paris » · the favourite monuments of the French (Odoxa poll quoted by the book)", items: [
+      { t: "1. le mont Saint-Michel", pic: "🏝️", en: "in Normandy, not Paris" }, { t: "2. le château de Versailles", pic: "👑", en: "near Paris, not in it" }, { t: "3. la tour Eiffel", pic: "🗼", en: "only third!" }
+    ] }
+  ],
+  culture: [
+    { icon: "🗼", kind: "Oh, le cliché !", t: "« Les Français sont fiers de Paris. »", d: "The French are very proud of Paris's cultural heritage, but according to the Odoxa poll quoted by the book, their two favourite monuments, the <b>mont Saint-Michel</b> and the <b>château de Versailles</b>, aren't in the capital. The Eiffel Tower only comes third." },
+    { icon: "🏰", kind: "Civilisation", t: "Les Journées du patrimoine", d: "Every September, museums, monuments, theatres and châteaux all over France open their doors <b>for free</b>, with guided tours, shows and exhibitions. In Paris you can visit the Panthéon or the backstage of the Cirque d'hiver Bouglione, described by the book as the oldest circus still in activity in the world." },
+    { icon: "🎾", kind: "Au fait !", t: "Le jeu de paume", d: "<b>Real tennis</b>, played for centuries: you hit the ball back with the palm (<i>paume</i>) of your hand, like Basque pelota; today you can also use a racket. It's the ancestor of tennis." },
+    { icon: "🏅", kind: "Francophonie", t: "Les Jeux de la Francophonie", d: "Every four years, in a different French-speaking city, young people from all over the world meet for sports and cultural competitions (song, dance, literature, photography, painting…). In 2017 in Abidjan (Côte d'Ivoire), Swiss athlete Pascale Stöcklin won gold in the women's pole vault." },
+    { icon: "🎤", kind: "Francophonie", t: "Des artistes francophones", d: "Gaël Faye (singer, writer, born in Burundi, author of <i>Petit Pays</i>), Mohamed Mbougar Sarr (Senegalese writer), Aya Nakamura (singer of Malian origin), Virginie Efira (Belgian-French actress), Manu Katché (drummer)… French is a language of artists on every continent." },
+    { icon: "✂️", kind: "Langue", t: "Des mots coupés", d: "French speakers shorten words in casual speech: <b>foot</b> (football), <b>ciné</b> (cinéma), <b>ado</b> (adolescent), <b>expo</b>, <b>resto</b>, <b>la fac</b>, <b>un apéro</b>…" }
+  ],
+  tips: [
+    { icon: "🔀", t: "être or avoir?", d: "Movement / change verbs (the 17) and all pronominal verbs → être, with agreement. Everything else → avoir." },
+    { icon: "🥪", t: "personne goes last", d: "[[Je n'ai rien vu.]] but [[Je n'ai vu personne.]]" },
+    { icon: "⏳", t: "depuis = still true", d: "[[J'habite ici depuis trois ans]] (I still live here). [[J'ai habité ici pendant trois ans]] (finished)." }
+  ],
+  mistakes: [
+    ["Elle a partie en Erasmus.", "Elle est partie en Erasmus.", "partir → être"],
+    ["Ils se sont marié.", "Ils se sont mariés.", "être → agreement"],
+    ["Elle a décidée de rester.", "Elle a décidé de rester.", "avoir → no agreement"],
+    ["Je n'ai personne vu.", "Je n'ai vu personne.", "personne after the participle"],
+    ["Je ne fais jamais du sport.", "Je ne fais jamais de sport.", "negative → de"],
+    ["J'habite ici il y a trois ans.", "J'habite ici depuis trois ans.", "still true → depuis"],
+    ["J'ai l'intention rester.", "J'ai l'intention de rester.", "avoir l'intention de"],
+    ["Il a naît en 1990.", "Il est né en 1990.", "naître → être + né"]
+  ]
+});
+</script><script>// Unité 2 · Je me souviens (Édito A2, 2e édition, book pp. 27–40)
+// Situations: souvenirs d'enfance · les vieilles photos · un souvenir de voyage · parler de la météo · les souvenirs de vacances
+// Grammar: l'imparfait (formation, description, habitude) · les pronoms y et en (lieux) · la place de l'adjectif
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u02", rubrique: 1, num: 2,
+  title: "I remember",
+  titleFr: "Je me souviens",
+  pages: "Book pp. 27–40",
+  opener: { fr: "Ce sont des souvenirs inoubliables !", en: "These are unforgettable memories!" },
+  hero: { scene: "maison", people: { "Mamie": "f6", "Lina": "f7", "Théo": "k2" } },
+  situations: [
+    ["🍓", "Mes souvenirs d'enfance", "tastes, smells, sounds: [[Je me souviens des confitures de ma grand-mère. Ça sentait bon !]]"],
+    ["📸", "Les vieilles photos", "liking and not liking: [[Ça me plaît bien de revoir ces photos !]] · [[J'ai horreur de ça !]]"],
+    ["🎭", "Avec mon grand-père", "describing the past: [[Il venait me chercher à l'école, ça me rendait heureux.]]"],
+    ["🏝️", "Un voyage inoubliable", "asking about a memory: [[Quels souvenirs vous gardez de votre voyage ?]] · [[J'en reviens enchanté !]]"],
+    ["🌦️", "Il fait quel temps ?", "weather and landscapes: [[Il fait un temps gris…]] · [[Au sommet, la vue est magnifique.]]"]
+  ],
+  goals: [
+    "Tell a memory: [[Je me souviens de…]], [[Je me rappelle…]], [[Ça me rappelle…]], [[C'est gravé dans ma mémoire.]]",
+    "Use the imparfait to describe a past scene and past habits: [[Le matin, je mangeais mes tartines.]]",
+    "Say you like or dislike something: [[Ça me plaît bien.]], [[J'adore !]], [[Je n'aime pas du tout !]], [[J'ai horreur de ça !]]",
+    "Ask about someone's memory: [[Quels souvenirs vous gardez de votre expérience ?]], [[Vous allez recommencer ?]]",
+    "Replace a place with [[y]] (where you are / go) or [[en]] (where you come from): [[J'y vais.]] · [[J'en reviens.]]",
+    "Put adjectives in the right place: [[un petit hôtel]], [[une affiche rétro]], [[de jolies affiches touristiques]]",
+    "Describe landscapes and the weather: [[la plage]], [[le sommet]], [[la canicule]], [[un temps sec]]"
+  ],
+  glance: [
+    ["🗣️", "Communication", "telling and asking about memories · likes and dislikes · landscapes · the weather"],
+    ["🧩", "Grammaire", "the imparfait · y and en for places · the position of adjectives"],
+    ["🗂️", "Vocabulaire", "memory · types of memories · the five senses · sea, countryside, mountains · the weather"],
+    ["🔊", "Phonie-graphie", "compulsory liaisons: [z], [n], [t], [ʁ]"],
+    ["⭐", "The phrase to learn first", "[[Je me souviens de…]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "Grandma's jam", titleFr: "Chez Mamie · Saveurs d'enfance",
+      note: "Lina visits her grandmother and remembers her childhood holidays in Corsica. Listen to the imparfait for <b>habits</b> and <b>descriptions</b>.",
+      scene: "maison", people: { "Lina": "f7", "Mamie": "f6" },
+      lines: [
+        ["Lina", "Hum… Ça sent la confiture d'abricots ! Ça me rappelle la Corse.", "Mmm… It smells of apricot jam! It reminds me of Corsica."],
+        ["Mamie", "Tu te souviens de notre maison là-bas ?", "Do you remember our house there?"],
+        ["Lina", "Bien sûr ! Je me souviens des confitures que tu faisais. Le matin, je mangeais mes tartines et je te tenais la main.", "Of course! I remember the jams you used to make. In the morning I ate my bread and jam and held your hand."],
+        ["Mamie", "Et tu me demandais toujours de tremper ton pain dans mon café !", "And you always asked me to dip your bread in my coffee!"],
+        ["Lina", "Oui ! Et le soir, avec Papi, on regardait les étoiles, allongés dans l'herbe. C'est gravé dans ma mémoire.", "Yes! And in the evening, with Grandpa, we'd look at the stars, lying in the grass. It's etched in my memory."],
+        ["Mamie", "Il adorait ça. Il te montrait la Grande Ourse…", "He loved that. He used to show you the Great Bear…"],
+        ["Lina", "Cette confiture, c'est ma madeleine de Proust !", "This jam is my madeleine de Proust!"]
+      ],
+      glossary: [["Ça me rappelle…", "It reminds me of…"], ["Je me souviens de…", "I remember…"], ["la tartine", "bread with butter / jam"], ["une madeleine de Proust", "something that brings back a childhood memory"]]
+    },
+    {
+      id: "d2", n: 2, title: "Old photos", titleFr: "Le dimanche · Revivre de beaux moments",
+      note: "Mélina finds an old photo album. Her sister Aurore hates old photos; Nino loves them. Listen to how they say they like or dislike something.",
+      scene: "appartement", people: { "Mélina": "f3", "Aurore": "f8", "Nino": "m3" },
+      lines: [
+        ["Mélina", "Regardez ce que j'ai trouvé : notre vieil album photos !", "Look what I found: our old photo album!"],
+        ["Aurore", "Oh non… J'ai horreur de ça, les vieilles photos !", "Oh no… I hate that, old photos!"],
+        ["Nino", "Moi, j'adore ! Montre-moi Mélina petite !", "I love it! Show me Mélina as a little girl!"],
+        ["Mélina", "Là, c'est nous à la plage. On partait tous les étés en Bretagne. Ça me plaît bien de revoir ces photos !", "There, that's us at the beach. We went to Brittany every summer. I really like seeing these photos again!"],
+        ["Aurore", "Et ça, c'est la photo de classe… J'avais des lunettes énormes. Je n'aime pas du tout cette photo !", "And that's the class photo… I had enormous glasses. I don't like this photo at all!"],
+        ["Mélina", "Mais si, elle est mignonne ! Et là, le jour de ta compétition de natation : tu as gagné !", "Oh yes it is, it's cute! And there, the day of your swimming competition: you won!"],
+        ["Aurore", "Pour toi c'est un bon souvenir ; moi, j'avais très peur ce jour-là !", "For you it's a good memory; I was really scared that day!"],
+        ["Nino", "Les albums, c'est génial : avec le téléphone, on ne regarde jamais nos photos !", "Albums are great: with our phones, we never look at our photos!"]
+      ],
+      glossary: [["J'ai horreur de ça !", "I hate that!"], ["Ça me plaît bien.", "I really like it."], ["On partait tous les étés.", "We went every summer (habit)."], ["la photo de classe", "the school photo"]]
+    },
+    {
+      id: "d3", n: 3, title: "Off to see Guignol", titleFr: "Au café · Souvenirs de famille",
+      note: "Bastien tells a friend about his grandfather, who took him to the puppet show in Lyon. The imparfait describes the scene and the habits.",
+      scene: "cafe", staff: "La serveuse", people: { "La serveuse": "f5", "Bastien": "m2", "Inès": "f2" },
+      lines: [
+        ["Inès", "Tu as l'air ému. Tu penses à quoi ?", "You look moved. What are you thinking about?"],
+        ["Bastien", "À mon grand-père. Le mercredi, il venait me chercher à l'école. Ça me rendait heureux !", "My grandfather. On Wednesdays he'd come and pick me up from school. It made me happy!"],
+        ["Inès", "Et vous faisiez quoi ?", "And what did you do?"],
+        ["Bastien", "On allait voir Guignol. On prenait le bus, on traversait toute la ville : pour moi, c'était une expédition !", "We went to see Guignol. We took the bus, we crossed the whole city: for me, it was an expedition!"],
+        ["Inès", "Tu étais un aventurier !", "You were an adventurer!"],
+        ["Bastien", "Oui ! Et je demandais à chaque minute : « On arrive bientôt ? » Il regardait sa montre, il était toujours en retard. On courait pour ne pas rater le début !", "Yes! And I asked every minute: “Are we nearly there?” He'd look at his watch, he was always late. We ran so as not to miss the beginning!"],
+        ["Inès", "Il était comment, ton grand-père ?", "What was your grandfather like?"],
+        ["Bastien", "Il changeait de métier tout le temps. Il ressemblait plus à un acteur qu'à un homme ordinaire.", "He changed jobs all the time. He looked more like an actor than an ordinary man."]
+      ],
+      glossary: [["il venait me chercher", "he used to pick me up"], ["Guignol", "a Lyon puppet character (c. 1808)"], ["rater", "to miss"], ["ressembler à", "to look like"]]
+    },
+    {
+      id: "d4", n: 4, title: "An unforgettable trip", titleFr: "À la radio · Quelle expérience !",
+      note: "A radio host interviews Emmanuel about his trip to Mauritius. Listen to the questions about a memory, and to [[y]] (there) and [[en]] (from there).",
+      scene: "plage", staff: "L'animatrice", people: { "L'animatrice": "f5", "Emmanuel": "m1" },
+      lines: [
+        ["L'animatrice", "Emmanuel, vous rentrez de l'île Maurice. Quels souvenirs vous gardez de votre voyage ?", "Emmanuel, you've just come back from Mauritius. What memories do you keep of your trip?"],
+        ["Emmanuel", "Des souvenirs inoubliables ! C'est une île très touristique, mais on y trouve des endroits calmes et magiques.", "Unforgettable memories! It's a very touristy island, but you find calm, magical places there."],
+        ["L'animatrice", "Quel est votre plus beau souvenir ?", "What's your best memory?"],
+        ["Emmanuel", "Le Morne Brabant. On y monte en quelques heures, la randonnée est assez facile. Au sommet, la vue sur la barrière de corail est magnifique.", "The Morne Brabant. You climb it in a few hours, the hike is fairly easy. At the top, the view over the coral reef is magnificent."],
+        ["L'animatrice", "Et le climat ?", "And the climate?"],
+        ["Emmanuel", "Il y fait chaud, mais il y a du vent. On en revient enchanté !", "It's hot there, but there's wind. You come back from it enchanted!"],
+        ["L'animatrice", "Vous allez recommencer l'expérience ?", "Will you do it again?"],
+        ["Emmanuel", "Oui ! J'y retourne l'année prochaine, avec ma famille cette fois.", "Yes! I'm going back there next year, with my family this time."]
+      ],
+      glossary: [["on y trouve…", "you find… there"], ["on en revient…", "you come back from there…"], ["le sommet", "the summit"], ["la barrière de corail", "the coral reef"]]
+    },
+    {
+      id: "d5", n: 5, title: "Weather talk", titleFr: "À l'arrêt de bus · Parlons météo !",
+      note: "Two neighbours wait for the bus and talk about the weather: the classic French small talk!",
+      scene: "arret", people: { "Mme Petit": "f6", "M. Diallo": "m4" },
+      lines: [
+        ["Mme Petit", "Tu as vu cette pluie ? On va avoir ce temps gris tout le week-end ?", "Have you seen this rain? Are we going to have this grey weather all weekend?"],
+        ["M. Diallo", "D'après la météo, oui. Et des orages dimanche !", "According to the forecast, yes. And storms on Sunday!"],
+        ["Mme Petit", "Quand j'étais petite, l'été, il faisait toujours beau…", "When I was little, it was always sunny in summer…"],
+        ["M. Diallo", "Moi, je préfère la fraîcheur. Le mois dernier, avec la canicule, il faisait quarante degrés à Paris !", "I prefer it cool. Last month, with the heatwave, it was forty degrees in Paris!"],
+        ["Mme Petit", "C'est vrai. Ma fille est partie dans le Cotentin : il y faisait quinze degrés de moins !", "True. My daughter went to the Cotentin: it was fifteen degrees cooler there!"],
+        ["M. Diallo", "Ah, le bus arrive enfin ! Bon week-end, même sous la pluie !", "Ah, the bus is finally coming! Have a good weekend, even in the rain!"]
+      ],
+      glossary: [["un temps gris / humide / sec", "grey / humid / dry weather"], ["l'orage", "the storm"], ["la canicule", "the heatwave"], ["la fraîcheur ≠ la chaleur", "coolness ≠ heat"]]
+    },
+    {
+      id: "d6", n: 6, title: "Holiday souvenirs", titleFr: "À Carcassonne · La boutique de souvenirs",
+      note: "Clara and her dad shop for souvenirs in Carcassonne. Listen to where the adjectives go: before or after the noun?",
+      scene: "grandmagasin", staff: "La vendeuse", people: { "La vendeuse": "f5", "Clara": "f7", "Le père": "m6" },
+      lines: [
+        ["Clara", "Papa, regarde ces affiches rétro ! Elles sont super jolies.", "Dad, look at these retro posters! They're really pretty."],
+        ["La vendeuse", "Ce sont de vieilles affiches touristiques des années 1930. On les réimprime : elles ont beaucoup de succès !", "They're old tourist posters from the 1930s. We reprint them: they're very popular!"],
+        ["Le père", "J'aime bien celle-là : la cité médiévale avec un grand ciel bleu.", "I like that one: the medieval city with a big blue sky."],
+        ["Clara", "Et pour Mamie ? Un petit mug ou un magnet ?", "And for Grandma? A little mug or a magnet?"],
+        ["Le père", "Non, plutôt une spécialité locale. Elle adore les bons produits.", "No, rather a local speciality. She loves good produce."],
+        ["La vendeuse", "Nous avons d'excellentes confitures régionales et de délicieux biscuits.", "We have excellent regional jams and delicious biscuits."],
+        ["Clara", "Parfait ! Et moi, je prends cette affiche : je vais l'accrocher dans ma propre chambre !", "Perfect! And I'll take this poster: I'm going to hang it in my own bedroom!"]
+      ],
+      glossary: [["une affiche rétro", "a retro poster"], ["de vieilles affiches", "old posters (de before a plural adjective)"], ["la cité médiévale", "the medieval citadel"], ["ma propre chambre", "my own bedroom"]]
+    }
+  ],
+
+  vocab: [
+    { t: "se souvenir de", en: "to remember", pic: "💭", cat: "La mémoire", note: "[[Je me souviens de mon enfance.]]" },
+    { t: "se rappeler", en: "to remember, recall", pic: "🧠", cat: "La mémoire", note: "[[Je me rappelle ce jour.]] (no de)" },
+    { t: "oublier", en: "to forget", pic: "❓", cat: "La mémoire" },
+    { t: "raconter un souvenir", en: "to tell a memory", pic: "🗣️", cat: "La mémoire" },
+    { t: "replonger dans son enfance", en: "to go back to one's childhood", pic: "🧸", cat: "La mémoire" },
+    { t: "l'album photos", en: "the photo album", pic: "📔", cat: "La mémoire", g: "m" },
+    { t: "un souvenir d'enfance", en: "a childhood memory", pic: "🧒", cat: "Les souvenirs", g: "m" },
+    { t: "un souvenir d'école", en: "a school memory", pic: "🏫", cat: "Les souvenirs", g: "m" },
+    { t: "un souvenir de vacances", en: "a holiday memory / souvenir", pic: "🏖️", cat: "Les souvenirs", g: "m" },
+    { t: "un souvenir de famille", en: "a family memory", pic: "👨‍👩‍👧", cat: "Les souvenirs", g: "m" },
+    { t: "un souvenir de jeunesse", en: "a memory from one's youth", pic: "🛼", cat: "Les souvenirs", g: "m" },
+    { t: "inoubliable", en: "unforgettable", pic: "🌟", cat: "Qualifier un souvenir" },
+    { t: "heureux, heureuse · joyeux, joyeuse", en: "happy · joyful", pic: "😊", cat: "Qualifier un souvenir" },
+    { t: "agréable", en: "pleasant", pic: "🙂", cat: "Qualifier un souvenir" },
+    { t: "triste", en: "sad", pic: "😢", cat: "Qualifier un souvenir" },
+    { t: "difficile", en: "difficult", pic: "😣", cat: "Qualifier un souvenir" },
+    { t: "mauvais", en: "bad", pic: "👎", cat: "Qualifier un souvenir" },
+    { t: "la vue, voir, regarder", en: "sight, to see, to look", pic: "👀", cat: "Les sens", g: "f" },
+    { t: "l'odeur, sentir bon ≠ sentir mauvais", en: "smell, to smell good ≠ bad", pic: "👃", cat: "Les sens", g: "f" },
+    { t: "le parfum", en: "the scent, perfume", pic: "🌸", cat: "Les sens", g: "m" },
+    { t: "le goût, goûter", en: "taste, to taste", pic: "👅", cat: "Les sens", g: "m" },
+    { t: "la saveur", en: "the flavour", pic: "🍯", cat: "Les sens", g: "f" },
+    { t: "le bruit", en: "the noise, sound", pic: "🔊", cat: "Les sens", g: "m" },
+    { t: "le chant des oiseaux", en: "birdsong", pic: "🐦", cat: "Les sens", g: "m" },
+    { t: "tenir la main", en: "to hold someone's hand", pic: "🤝", cat: "Les sens" },
+    { t: "la plage", en: "the beach", pic: "🏖️", cat: "À la mer", g: "f" },
+    { t: "le sable", en: "sand", pic: "⏳", cat: "À la mer", g: "m" },
+    { t: "la côte", en: "the coast", pic: "🌊", cat: "À la mer", g: "f" },
+    { t: "le port", en: "the harbour", pic: "⚓", cat: "À la mer", g: "m" },
+    { t: "l'île", en: "the island", pic: "🏝️", cat: "À la mer", g: "f" },
+    { t: "la dune", en: "the dune", pic: "🏜️", cat: "À la mer", g: "f" },
+    { t: "la mouette", en: "the seagull", pic: "🕊️", cat: "À la mer", g: "f" },
+    { t: "à marée basse ≠ à marée haute", en: "at low tide ≠ at high tide", pic: "🌊", cat: "À la mer" },
+    { t: "la barrière de corail", en: "the coral reef", pic: "🪸", cat: "À la mer", g: "f" },
+    { t: "le champ", en: "the field", pic: "🌾", cat: "À la campagne", g: "m" },
+    { t: "la ferme", en: "the farm", pic: "🚜", cat: "À la campagne", g: "f" },
+    { t: "la prairie", en: "the meadow", pic: "🌼", cat: "À la campagne", g: "f" },
+    { t: "le chalet", en: "the chalet", pic: "🛖", cat: "À la montagne", g: "m" },
+    { t: "le lac", en: "the lake", pic: "🏞️", cat: "À la montagne", g: "m" },
+    { t: "le sommet", en: "the summit", pic: "🏔️", cat: "À la montagne", g: "m" },
+    { t: "le climat", en: "the climate", pic: "🌍", cat: "La météo", g: "m" },
+    { t: "la température, les degrés", en: "temperature, degrees", pic: "🌡️", cat: "La météo", g: "f" },
+    { t: "la canicule", en: "the heatwave", pic: "🥵", cat: "La météo", g: "f" },
+    { t: "la chaleur ≠ la fraîcheur", en: "heat ≠ coolness", pic: "☀️", cat: "La météo", g: "f" },
+    { t: "l'orage", en: "the thunderstorm", pic: "⛈️", cat: "La météo", g: "m" },
+    { t: "la pluie", en: "rain", pic: "🌧️", cat: "La météo", g: "f" },
+    { t: "le vent", en: "wind", pic: "💨", cat: "La météo", g: "m" },
+    { t: "le ciel bleu, gris", en: "blue, grey sky", pic: "🌤️", cat: "La météo", g: "m" },
+    { t: "un temps humide ≠ un temps sec", en: "humid ≠ dry weather", pic: "💧", cat: "La météo", g: "m" }
+  ],
+
+  grammar: [
+    {
+      id: "g-souvenir",
+      title: "Telling a memory · the five senses",
+      body: [
+        "[[Je me souviens de]] + noun: [[Je me souviens des confitures de ma grand-mère.]] · [[Je me rappelle]] + noun (no <i>de</i>): [[Je me rappelle ses mots.]] · [[Ça me rappelle la Corse.]] · [[C'est gravé dans ma mémoire.]] · [[Impossible d'oublier !]]",
+        "Memories come through the senses: [[Ça sentait bon !]] (smell) · [[Quelles saveurs !]] (taste) · [[le chant des oiseaux]] (hearing) · [[la vue sur la mer]] (sight) · [[Je lui tenais la main.]] (touch)."
+      ],
+      info: { type: "pics", title: "🖐️ The five senses · tap to hear", items: [
+        { t: "la vue · voir, regarder", pic: "👀", en: "sight" }, { t: "l'odorat · sentir, l'odeur", pic: "👃", en: "smell" }, { t: "le goût · goûter, la saveur", pic: "👅", en: "taste" },
+        { t: "l'ouïe · entendre, le bruit", pic: "👂", en: "hearing" }, { t: "le toucher · tenir la main", pic: "✋", en: "touch" }
+      ] }
+    },
+    {
+      id: "g-imparfait",
+      title: "The imparfait: describing the past and past habits",
+      body: [
+        "Use: to <b>describe a past scene</b> ([[Il était excité.]] · [[Ça sentait bon.]]) or a <b>past habit</b> ([[Le matin, je mangeais mes tartines.]]).",
+        "Form: the <b>nous</b> stem of the present + <b>-ais, -ais, -ait, -ions, -iez, -aient</b>: nous <b>chang</b>eons → je changeais; nous <b>fais</b>ons → je faisais. Only exception: [[être]] → [[j'étais]].",
+        "Habit words: [[à cette époque]], [[souvent]], [[chaque jour]], [[tous les jours]], [[toutes les semaines]], [[de temps en temps]], [[parfois]], [[toujours]], [[tout le temps]]."
+      ],
+      info: [
+        { type: "conj", title: "🔁 The imparfait", verbs: [
+          { inf: "avoir", en: "to have", forms: ["j'avais", "tu avais", "il / elle / on avait", "nous avions", "vous aviez", "ils / elles avaient"] },
+          { inf: "être", en: "to be (irregular stem ét-)", forms: ["j'étais", "tu étais", "il / elle / on était", "nous étions", "vous étiez", "ils / elles étaient"] },
+          { inf: "se déplacer", en: "to get around (ç before a)", forms: ["je me déplaçais", "tu te déplaçais", "il / elle / on se déplaçait", "nous nous déplacions", "vous vous déplaciez", "ils / elles se déplaçaient"] }
+        ] },
+        { type: "merge", title: "⚙️ From the nous form to the imparfait", rows: [
+          { a: "nous aimons", b: "-ais", g: "x", r: "j'aimais", ex: "J'aimais les confitures.", en: "aim-" },
+          { a: "nous faisons", b: "-ait", g: "x", r: "il faisait", ex: "Il faisait toujours beau.", en: "fais-" },
+          { a: "nous allons", b: "-ions", g: "x", r: "nous allions", ex: "Nous allions voir Guignol.", en: "all-" },
+          { a: "nous prenons", b: "-aient", g: "x", r: "ils prenaient", ex: "Ils prenaient le bus.", en: "pren-" },
+          { a: "nous sommes", b: "→ ét-", g: "x", r: "j'étais", ex: "J'étais un aventurier.", en: "the only exception", no: true }
+        ] }
+      ],
+      widget: {
+        type: "combo", label: "Past habits · pick a subject and a habit",
+        rows: [{ k: "je", label: "je / j'" }, { k: "nous", label: "nous" }, { k: "ils", label: "mes grands-parents" }],
+        cols: [{ k: "partir", label: "🏖️ partir en Bretagne tous les étés" }, { k: "manger", label: "🍓 manger des confitures le matin" }, { k: "aller", label: "🎭 aller voir Guignol le mercredi" }],
+        out: {
+          "je|partir": ["Je partais en Bretagne tous les étés.", "I went to Brittany every summer."], "je|manger": ["Je mangeais des confitures le matin.", "I ate jam in the morning.", "mangeons → je mangeais (keep the e)"], "je|aller": ["J'allais voir Guignol le mercredi.", "I went to see Guignol on Wednesdays."],
+          "nous|partir": ["Nous partions en Bretagne tous les étés.", "We went to Brittany every summer."], "nous|manger": ["Nous mangions des confitures le matin.", "We ate jam in the morning.", "nous: no e before -ions"], "nous|aller": ["Nous allions voir Guignol le mercredi.", "We went to see Guignol on Wednesdays."],
+          "ils|partir": ["Mes grands-parents partaient en Bretagne tous les étés.", "My grandparents went to Brittany every summer."], "ils|manger": ["Mes grands-parents mangeaient des confitures le matin.", "My grandparents ate jam in the morning."], "ils|aller": ["Mes grands-parents allaient voir Guignol le mercredi.", "My grandparents went to see Guignol on Wednesdays."]
+        }
+      }
+    },
+    {
+      id: "g-aimer",
+      title: "Liking and not liking · asking about a memory",
+      body: [
+        "Liking: [[Ça me plaît (bien).]] · [[J'aime bien.]] · [[J'adore !]] Not liking: [[Ça ne me plaît pas.]] · [[Je n'aime pas beaucoup.]] · [[Je n'aime pas du tout !]] · [[J'ai horreur de ça !]]",
+        "Asking about a memory: [[Quels souvenirs vous gardez de votre expérience ?]] · [[Vous êtes content(e) de votre expérience ?]] · [[Vous allez recommencer l'expérience ?]]"
+      ],
+      info: { type: "scale", title: "📸 Old photos: love them or hate them?", colors: ["#e0474f", "#2f9c8a"], items: [
+        { v: 4, fr: "J'ai horreur de ça !", en: "I hate it!", pic: "😖" }, { v: 22, fr: "Je n'aime pas du tout !", en: "I don't like it at all!", pic: "🙅" }, { v: 40, fr: "Ça ne me plaît pas.", en: "I don't like it.", pic: "😕" },
+        { v: 66, fr: "Ça me plaît bien.", en: "I really like it.", pic: "🙂" }, { v: 94, fr: "J'adore !", en: "I love it!", pic: "😍" }
+      ], ends: ["−", "+"] }
+    },
+    {
+      id: "g-y-en",
+      title: "[[y]] and [[en]] for places: there / from there",
+      body: [
+        "[[y]] replaces a place introduced by [[à, en, dans, sur, sous, chez]]…: where you <b>are</b> or <b>go</b>: [[Le climat est agréable sur cette île ? — Oui, il y est très agréable.]] · [[Tu te promènes au bord de l'eau ? — Oui, je m'y promène souvent.]]",
+        "[[en]] replaces a place introduced by [[de]]: where you <b>come from</b>: [[Tu reviens de la plage ? — Oui, j'en reviens à l'instant.]] · [[Il est parti du chalet à 6 h ? — Il en est parti à 6 h.]]",
+        "Adverbs: [[ici]] (close), [[là]], [[là-bas]] (far): [[Tu vas à l'île Maurice ? — Oui, je vais là-bas tous les étés.]] = [[J'y vais tous les étés.]]"
+      ],
+      info: { type: "compare", title: "📍 y = there · en = from there", cols: [
+        { head: "y · à, en, dans, sur…", en: "you're there / you go there", color: "#2f9c8a", lines: [["On y trouve des endroits calmes.", "You find calm places there."], ["J'y retourne l'année prochaine.", "I'm going back there next year."], ["Il y fait chaud.", "It's hot there."]] },
+        { head: "en · de", en: "you come from there", color: "#9b4fb0", lines: [["On en revient enchanté !", "You come back from there enchanted!"], ["J'en reviens à l'instant.", "I've just come back from there."], ["Il en est parti à 6 h.", "He left (from) there at 6."]] }
+      ] },
+      widget: {
+        type: "sort", label: "y or en? Replace the place",
+        cols: [{ k: "y", label: "y (there)", color: "#2f9c8a" }, { k: "en", label: "en (from there)", color: "#9b4fb0" }],
+        items: [
+          { t: "Il part en Australie avec sa sœur.", k: "y", say: "Il y part avec sa sœur." }, { t: "Elle rentre de Bruxelles très contente.", k: "en", say: "Elle en rentre très contente." },
+          { t: "Nous nous baladons au bord de la mer.", k: "y", say: "Nous nous y baladons." }, { t: "L'avion repart de Bordeaux dans une heure.", k: "en", say: "L'avion en repart dans une heure." },
+          { t: "Elle s'installe à Québec.", k: "y", say: "Elle s'y installe." }, { t: "Tu sors de l'eau ?", k: "en", say: "Tu en sors ?" }
+        ]
+      }
+    },
+    {
+      id: "g-adjectif",
+      title: "Where does the adjective go?",
+      body: [
+        "In general, <b>after</b> the noun: [[une affiche rétro]], [[des endroits calmes]]. Always after: <b>nationality, colour, shape</b>: [[un plat marocain]], [[un ciel bleu]], [[une table ronde]].",
+        "Some short, common adjectives go <b>before</b>: [[beau, bon, gros, grand, petit, jeune, vieux, joli, nouveau]]: [[un petit hôtel]], [[une jolie paire d'espadrilles]]. Before a noun for emphasis: [[les incroyables boutiques]].",
+        "⚠️ Plural adjective <b>before</b> a noun: [[des]] → [[de / d']]: [[de jolies affiches]], [[d'excellentes épices]]. Meaning can change: [[mon propre mug]] (my own) ≠ [[un mug propre]] (clean)."
+      ],
+      info: { type: "pattern", title: "🧩 Adjective before + noun + adjective after", rows: [
+        ["de", { opts: ["jolies", "vieilles", "belles"] }, "affiches", { opts: ["touristiques.", "rétro.", "colorées."] }],
+        ["un", { opts: ["petit", "grand", "bon"] }, "restaurant", { opts: ["toulousain.", "italien.", "familial."] }]
+      ], note: "The “BAGS” adjectives (Beauty, Age, Goodness, Size) usually go before the noun." },
+      widget: {
+        type: "sort", label: "Before or after the noun?",
+        cols: [{ k: "avant", label: "avant le nom", color: "#e0a526" }, { k: "apres", label: "après le nom", color: "#3a6fd8" }],
+        items: [
+          { t: "petit (un … hôtel)", k: "avant", say: "un petit hôtel" }, { t: "espagnol (une île …)", k: "apres", say: "une île espagnole" }, { t: "bleu (un ciel …)", k: "apres", say: "un ciel bleu" },
+          { t: "vieux (de … photos)", k: "avant", say: "de vieilles photos" }, { t: "touristique (une affiche …)", k: "apres", say: "une affiche touristique" }, { t: "excellent (d'… épices)", k: "avant", say: "d'excellentes épices" },
+          { t: "rond (une table …)", k: "apres", say: "une table ronde" }, { t: "beau (une … chemise)", k: "avant", say: "une belle chemise" }
+        ]
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour raconter un souvenir", fnEn: "telling a memory", icon: "💭", items: [
+      ["Je me souviens des confitures de ma grand-mère.", "I remember my grandmother's jams.", "std", true],
+      ["Je me rappelle ses mots.", "I remember his words.", "std"],
+      ["Ça me rappelle mon enfance.", "It reminds me of my childhood.", "std", true],
+      ["C'est gravé dans ma mémoire.", "It's etched in my memory.", "std"],
+      ["C'est ma madeleine de Proust !", "It's my madeleine de Proust!", "std"]
+    ] },
+    { fn: "Pour exprimer le fait d'aimer", fnEn: "liking", icon: "😍", items: [
+      ["Ça me plaît (bien).", "I (really) like it.", "std", true],
+      ["J'aime bien.", "I quite like it.", "std"],
+      ["J'adore !", "I love it!", "std"]
+    ] },
+    { fn: "… et de ne pas aimer", fnEn: "disliking", icon: "😖", items: [
+      ["Ça ne me plaît pas.", "I don't like it.", "std"],
+      ["Je n'aime pas beaucoup.", "I don't like it much.", "std"],
+      ["Je n'aime pas du tout !", "I don't like it at all!", "std", true],
+      ["J'ai horreur de ça !", "I hate that!", "std", true]
+    ] },
+    { fn: "Pour interroger sur un souvenir", fnEn: "asking about a memory", icon: "🎙️", items: [
+      ["Quels souvenirs vous gardez de votre expérience ?", "What memories do you keep of your experience?", "poli", true],
+      ["Vous êtes content(e) de votre expérience ?", "Are you happy with your experience?", "poli"],
+      ["Vous allez recommencer l'expérience ?", "Will you do it again?", "poli", true]
+    ] },
+    { fn: "Pour parler de la météo", fnEn: "the weather", icon: "🌦️", items: [
+      ["Tu as vu cette pluie ?", "Have you seen this rain?", "fam"],
+      ["Il fait un temps gris / humide / sec.", "The weather is grey / humid / dry.", "std"],
+      ["C'est la canicule !", "It's a heatwave!", "std"],
+      ["La météo annonce des orages.", "The forecast says storms.", "std", true]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · interviewing someone about a memory", lanes: ["L'animatrice", "Le voyageur"], av: ["f5", "m1"], steps: [
+    { s: 0, fr: "Quels souvenirs vous gardez de votre voyage ?", en: "What memories do you keep of your trip?" },
+    { s: 1, fr: "Des souvenirs inoubliables ! On y trouve des endroits magiques.", en: "Unforgettable memories! You find magical places there." },
+    { s: 0, fr: "Vous êtes content de votre expérience ?", en: "Are you happy with your experience?" },
+    { s: 1, fr: "Très content. On en revient enchanté !", en: "Very happy. You come back enchanted!" },
+    { s: 0, fr: "Vous allez recommencer ?", en: "Will you do it again?" },
+    { s: 1, fr: "Oui, j'y retourne l'année prochaine !", en: "Yes, I'm going back there next year!" }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: <b>compulsory liaisons</b>. A silent final consonant is pronounced before a vowel in fixed places: after un, deux, les, des…; after an adjective before its noun; after nous, vous, ils, elles, on; after dans, en, chez; after an object pronoun.",
+    letters: [
+      { l: "s · x · z", name: "liaison [z]", tip: "[[deux_îles]], [[nous_avons]], [[les_enfants]], [[chez_elle]], [[ils_aiment]].", ex: ["deux îles touristiques", "Nous avons regardé.", "Chez elle.", "Ils aiment la mer."] },
+      { l: "n", name: "liaison [n]", tip: "[[un_album]], [[en_automne]], [[on_est]], [[Elle en_est partie.]]", ex: ["un album", "En automne.", "Elle en est partie.", "on arrive"] },
+      { l: "t · d", name: "liaison [t]", tip: "[[un petit_album]], [[un grand_appartement]] (d → [t]!), [[c'est_un souvenir]].", ex: ["un petit album", "un grand appartement", "c'est inoubliable", "quand il pleut"] },
+      { l: "r", name: "liaison [ʁ]", tip: "[[le premier_avril]], [[un dernier_été]].", ex: ["le premier avril", "un dernier été"] }
+    ],
+    pairs: [
+      { a: ["les îles", "the islands"], b: ["les plages", "the beaches"], note: "[z] liaison / none" },
+      { a: ["un petit album", "a small album"], b: ["un petit lac", "a small lake"], note: "[t] liaison / none" },
+      { a: ["j'y vais", "I go there"], b: ["j'en viens", "I come from there"], note: "y / en" },
+      { a: ["je mangeais", "I used to eat"], b: ["j'ai mangé", "I ate"], note: "imparfait / passé composé" },
+      { a: ["mon propre mug", "my own mug"], b: ["un mug propre", "a clean mug"], note: "adjective position" },
+      { a: ["la chaleur", "heat"], b: ["la fraîcheur", "coolness"], note: "météo" }
+    ]
+  },
+  classify: {
+    label: "🔗 Liaison ?", q: "Listen: which liaison sound do you hear?",
+    options: ["[z]", "[n]", "[t]"],
+    items: [
+      { say: "deux îles", a: 0 }, { say: "un album", a: 1 }, { say: "un petit album", a: 2 }, { say: "nous avons", a: 0 },
+      { say: "en automne", a: 1 }, { say: "un grand appartement", a: 2 }, { say: "chez elle", a: 0 }, { say: "on arrive", a: 1 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "La confiture rappelle la Corse à Lina.", ok: true },
+    { type: "mcq", tag: "Dialogue 1", q: "Le soir, avec son grand-père, Lina…", options: ["regardait les étoiles", "regardait la télévision", "faisait de la confiture"], answer: 0 },
+    { type: "tf", tag: "Dialogue 2", s: "Aurore adore regarder les vieilles photos.", ok: false, explain: "« J'ai horreur de ça ! »" },
+    { type: "mcq", tag: "Dialogue 2", q: "Quel souvenir est positif pour Mélina et négatif pour Aurore ?", options: ["la compétition de natation", "la photo de classe", "les vacances en Bretagne"], answer: 0 },
+    { type: "tf", tag: "Dialogue 3", s: "Le grand-père de Bastien était souvent en retard.", ok: true },
+    { type: "mcq", tag: "Dialogue 4", q: "Pour monter au Morne Brabant, la randonnée est…", options: ["assez facile", "très difficile", "impossible"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "Pendant la canicule, il faisait quarante degrés à Paris.", ok: true },
+    { type: "tf", tag: "Dialogue 6", s: "Le père veut acheter un mug pour Mamie.", ok: false, explain: "He prefers a local speciality." },
+    { type: "fill", tag: "Imparfait", sentence: "Quand j'___ petit, je jouais au foot tous les week-ends.", options: ["étais", "été", "avais"], answer: 0 },
+    { type: "fill", tag: "Imparfait", sentence: "Avant, elle ___ tous les jours dans son journal.", options: ["écrivait", "écrit", "a écrit"], answer: 0 },
+    { type: "fill", tag: "Imparfait", sentence: "Nous ___ souvent en Bretagne.", options: ["allions", "allons", "allaient"], answer: 0 },
+    { type: "fill", tag: "Imparfait", sentence: "Ils ___ des matchs le week-end.", options: ["avaient", "avions", "ont"], answer: 0 },
+    { type: "fill", tag: "Imparfait", sentence: "À cette époque, on se ___ beaucoup à vélo.", options: ["déplaçait", "déplacait", "déplaçions"], answer: 0 },
+    { type: "type", tag: "Imparfait", q: "Imparfait: « Gabriel chante souvent devant sa famille. »", answers: ["Gabriel chantait souvent devant sa famille.", "Gabriel chantait souvent devant sa famille"] },
+    { type: "fill", tag: "Souvenir", sentence: "Je me souviens ___ vacances chez ma tante.", options: ["des", "les", "aux"], answer: 0 },
+    { type: "fill", tag: "y / en", sentence: "J'adore cette île : il ___ fait toujours beau.", options: ["y", "en", "le"], answer: 0 },
+    { type: "fill", tag: "y / en", sentence: "Elle rentre de Bruxelles et elle ___ revient très contente.", options: ["en", "y", "là"], answer: 0 },
+    { type: "fill", tag: "y / en", sentence: "Tu vas souvent à la montagne ? — Oui, j'___ vais souvent.", options: ["y", "en", "le"], answer: 0 },
+    { type: "fill", tag: "y / en", sentence: "Il est revenu tôt de la fête : il ___ est parti à 21 heures.", options: ["en", "y", "lui"], answer: 0 },
+    { type: "type", tag: "y / en", q: "Replace with y or en: « Je suis restée une semaine à l'île Maurice. »", answers: ["J'y suis restée une semaine.", "J'y suis restée une semaine"] },
+    { type: "fill", tag: "Adjectif", sentence: "Nous avons dormi dans un ___ hôtel.", options: ["petit", "petits", "petite"], answer: 0 },
+    { type: "fill", tag: "Adjectif", sentence: "Elle a acheté ___ jolies espadrilles.", options: ["de", "des", "les"], answer: 0 },
+    { type: "fill", tag: "Adjectif", sentence: "Ils sont partis sur une île ___ .", options: ["espagnole", "espagnol", "Espagne"], answer: 0 },
+    { type: "type", tag: "Adjectif", q: "Place the adjectives: « J'ai vu des bateaux. » (gros / blanc)", answers: ["J'ai vu de gros bateaux blancs.", "J'ai vu de gros bateaux blancs"] },
+    { type: "reply", tag: "Que répondre ?", prompt: "Quels souvenirs vous gardez de votre voyage ?", options: ["Des souvenirs inoubliables !", "J'y vais demain.", "Il fait gris."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Tu aimes les vieilles photos ?", options: ["Non, j'ai horreur de ça !", "Non, je me souviens.", "Non, j'en reviens."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Vous allez recommencer l'expérience ?", options: ["Oui, j'y retourne l'année prochaine !", "Oui, j'étais content.", "Oui, il fait chaud."], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "La canicule, c'est…", options: ["une période de très grande chaleur", "un orage", "une pluie fine"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Une maison en bois, typique de la montagne :", options: ["un chalet", "une ferme", "un port"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["oublier", "se souvenir", "se rappeler", "goûter"], answer: 3, explain: "goûter is a sense (taste); the others are about memory." },
+    { type: "mcq", tag: "Vocabulaire", q: "« Gravé dans ma mémoire » signifie…", options: ["que je ne vais jamais l'oublier", "que je vais vite l'oublier", "que c'est écrit sur un mur"], answer: 0 },
+    { type: "order", tag: "Construisez", en: "I remember my grandmother's jams.", words: ["Je", "me", "souviens", "des", "confitures", "de", "ma", "grand-mère."] },
+    { type: "listen", tag: "Écoute", q: "What did the speaker do every summer?", say: "Quand j'étais petite, nous partions en Bretagne tous les étés.", options: ["went to Brittany", "went to Corsica", "stayed at home"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "💭 Un souvenir d'enfance", brief: "A friend asks you about a childhood memory linked to a smell or a taste. Use the imparfait.", memo: ["Je me souviens de…", "Quand j'étais petit(e)…", "Ça sentait…", "Ça me rappelle…"], partner: "f3", you: "m2",
+      turns: [
+        { them: "Tu as un souvenir d'enfance lié à une odeur ?", themEn: "Do you have a childhood memory linked to a smell?", hint: "Your mother's bread on Sundays.", you: "Oui, je me souviens du pain de ma mère, le dimanche.", youEn: "Yes, I remember my mother's bread on Sundays." },
+        { them: "Raconte !", themEn: "Tell me!", hint: "When you were small, she made bread every Sunday; it smelt good.", you: "Quand j'étais petit, elle faisait du pain tous les dimanches. Ça sentait bon dans toute la maison !", youEn: "When I was little she made bread every Sunday. It smelt good all through the house!" },
+        { them: "Et aujourd'hui ?", themEn: "And today?", hint: "The smell of a bakery reminds you of your childhood.", you: "Aujourd'hui, l'odeur d'une boulangerie me rappelle mon enfance.", youEn: "Today the smell of a bakery reminds me of my childhood." }
+      ] },
+    { title: "🎙️ Interview : un voyage inoubliable", brief: "You're a radio host. Interview a traveller about a trip (they answer with y and en).", memo: ["Quels souvenirs… ?", "Vous êtes content(e)… ?", "Vous allez recommencer… ?"], partner: "m1", you: "f5",
+      turns: [
+        { them: "Bonjour !", themEn: "Hello!", hint: "Ask what memories they keep of their trip to Québec.", you: "Bonjour ! Quels souvenirs vous gardez de votre voyage au Québec ?", youEn: "Hello! What memories do you keep of your trip to Québec?" },
+        { them: "Des souvenirs inoubliables ! On y trouve des lacs magnifiques.", themEn: "Unforgettable memories! You find magnificent lakes there.", hint: "Ask if they're happy with the experience.", you: "Vous êtes content de votre expérience ?", youEn: "Are you happy with your experience?" },
+        { them: "Très ! J'en suis revenu enchanté.", themEn: "Very! I came back enchanted.", hint: "Ask if they will do it again.", you: "Vous allez recommencer l'expérience ?", youEn: "Will you do it again?" }
+      ] },
+    { title: "📸 Je n'aime pas les photos !", brief: "You love photographing your family; your sibling hates being photographed. Discuss and find an agreement.", memo: ["J'adore…", "J'ai horreur de ça !", "Ça ne me plaît pas.", "D'accord, mais…"], partner: "f8", you: "f3",
+      turns: [
+        { them: "Encore une photo ? J'ai horreur de ça !", themEn: "Another photo? I hate that!", hint: "Say you love photographing the family; it makes good memories.", you: "Mais j'adore prendre la famille en photo ! Ce sont de beaux souvenirs.", youEn: "But I love photographing the family! They're lovely memories." },
+        { them: "Je n'aime pas du tout mes photos.", themEn: "I don't like my photos at all.", hint: "Suggest a deal: one photo, and she chooses it.", you: "D'accord : une seule photo, et c'est toi qui choisis !", youEn: "OK: just one photo, and you choose it!" },
+        { them: "Bon… ça marche.", themEn: "Well… deal.", hint: "Thank her.", you: "Merci ! Tu vas voir, elle va te plaire.", youEn: "Thanks! You'll see, you'll like it." }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Réaliser une exposition photo", intro: "In groups, create a photo exhibition on “Souvenirs d'une époque”: the 1970s, 80s or 90s.",
+      steps: [["Préparation", ["Each group chooses a different decade.", "Each person reads about that decade and notes the objects, activities and habits of the time; then pool your notes."]], ["Réalisation", ["Find photos linked to your notes (you can research more).", "Write a caption under each photo in the imparfait: [[À cette époque, on téléphonait depuis une cabine.]]", "Lay out the exhibition (slideshow or wall) and decide who presents which photo."]], ["Présentation", ["Each group gives a tour of its exhibition.", "Discuss as a class: which decade do you prefer? Why?"]]],
+      phrases: ["Dans les années 80, on…", "À cette époque, c'était…", "Tout le monde portait…", "On adorait…"],
+      model: { type: "card", style: "board", caption: "📼 Example · tap a decade", title: "SOUVENIRS D'UNE ÉPOQUE", sub: "les inoubliables", rows: [["Années 70", "le disco, les pantalons « pattes d'éléphant », la Renault 5", "Dans les années soixante-dix, on dansait sur du disco et on portait des pantalons pattes d'éléphant."], ["Années 80", "les patins à roulettes, les cabines téléphoniques, les pin's", "Dans les années quatre-vingt, on téléphonait depuis une cabine et on collectionnait les pin's."], ["Années 90", "le vidéoclub, les clips à la télé, le premier portable", "Dans les années quatre-vingt-dix, on louait des films au vidéoclub."]], foot: "À cette époque…" } }
+  ],
+  delf: {
+    skill: "Production orale", title: "Asking someone about a holiday memory",
+    about: "A DELF A2-style speaking exchange from this unit: with a partner, ask about one of their holiday memories, then swap roles. You must <b>ask questions</b> (where, when, with whom, what it was like) and <b>react</b>. Use the imparfait to describe and the passé composé for events.",
+    tips: ["Open with a question: [[Quels souvenirs tu gardes de… ?]]", "Ask for details: [[C'était où ? Avec qui ? Il faisait quel temps ?]]", "React: [[Ça a l'air génial !]] · [[Quelle expérience !]]", "Describe with the imparfait: [[Il faisait chaud, la mer était bleue.]]"],
+    items: [
+      { type: "mcq", q: "Which question asks about a memory?", options: ["Quels souvenirs tu gardes de tes vacances ?", "Tu pars quand ?", "Tu as quel âge ?"], answer: 0 },
+      { type: "mcq", q: "To describe the scene, you say:", options: ["Il faisait très chaud et la mer était bleue.", "Il a fait très chaud et la mer a été bleue.", "Il fait très chaud et la mer est bleue."], answer: 0 },
+      { type: "mcq", q: "Your partner says « On a nagé avec des tortues ! ». You react:", options: ["Quelle expérience ! C'était génial ?", "Je n'aime pas du tout.", "J'y vais."], answer: 0 },
+      { type: "mcq", q: "To ask if they'll go back:", options: ["Tu vas y retourner ?", "Tu en reviens ?", "Tu y étais ?"], answer: 0 },
+      { type: "mcq", q: "« Je suis allée en Corse. » Replace « en Corse »:", options: ["J'y suis allée.", "J'en suis allée.", "Je la suis allée."], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "La météo en francophonie",
+    intro: "French-speaking regions have their own weather expressions (quoted by the book). Guess the meaning!",
+    items: [
+      { type: "mcq", q: "En Belgique, « il bise ! » veut dire…", options: ["il fait froid (vent du nord)", "il fait chaud", "il pleut"], answer: 0 },
+      { type: "mcq", q: "En Suisse et au Canada, « il neigeote » veut dire…", options: ["il neige un peu", "il neige beaucoup", "il ne neige plus"], answer: 0 },
+      { type: "mcq", q: "À La Réunion, « il farine ! » veut dire…", options: ["il pleut un peu", "il fait du soleil", "il y a de l'orage"], answer: 0 },
+      { type: "mcq", q: "À Saint-Pierre-et-Miquelon, « il tombe des plumes d'oies ! » veut dire…", options: ["il neige beaucoup", "il pleut des cordes", "il y a du vent"], answer: 0 },
+      { type: "mcq", q: "« Parler de la pluie et du beau temps », c'est…", options: ["parler de choses pas très importantes", "présenter la météo", "se disputer"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "bars", title: "🧳 What the French bring back from holidays (Opinium poll, 2019, quoted by the book)", unit: " %", items: [
+      { fr: "un mug, un porte-clés, un magnet…", en: "a mug, key ring, magnet…", v: 53, pic: "☕" },
+      { fr: "un vêtement typique : marinière, sombrero, paréo…", en: "a typical piece of clothing", v: 40, pic: "👕" },
+      { fr: "une spécialité gastronomique : foie gras, épices…", en: "a food speciality", v: 34, pic: "🌶️" }
+    ] },
+    { type: "timeline", title: "🌦️ Les Français et la météo (facts quoted by the book)", ends: ["1920", "", "aujourd'hui"], items: [
+      { x: 6, fr: "1922 : le bulletin météo à la radio", en: "weather forecast on the radio", pic: "📻" },
+      { x: 30, fr: "1946 : le bulletin météo à la télévision", en: "on TV", pic: "📺" },
+      { x: 62, fr: "1995 : La Chaîne Météo", en: "a weather TV channel", pic: "📡" },
+      { x: 90, fr: "aujourd'hui : les applis", en: "apps", pic: "📱" }
+    ] }
+  ],
+  culture: [
+    { icon: "🌧️", kind: "Oh, le cliché !", t: "« Il pleut dans le Nord de la France, il fait beau dans le Sud. »", d: "Partly true: according to Météo France (quoted by the book), it rains most in the <b>North-West</b>, but the <b>South-West</b> comes second! The sunniest cities are Ajaccio (Corsica), then Nice and Montpellier (South-East)." },
+    { icon: "☁️", kind: "Civilisation", t: "Parlons météo !", d: "The weather is the French small-talk topic par excellence: in a study quoted by the book, <b>86 %</b> of French people say it's their favourite topic at work breaks. It's a universal subject that helps you talk to strangers." },
+    { icon: "🧁", kind: "Au fait !", t: "La madeleine de Proust", d: "The writer Marcel Proust tells how, as a child, his aunt gave him madeleines dipped in tea. Today, <i>une madeleine de Proust</i> is anything (an object, a sound, a colour, a smell) that brings back a childhood memory." },
+    { icon: "🎭", kind: "Au fait !", t: "Guignol", d: "Created in <b>Lyon</b> around 1808, Guignol is the hero of a comic puppet show. It's for children… and for adults too!" },
+    { icon: "🏝️", kind: "Francophonie", t: "Le Morne Brabant, île Maurice", d: "A mountain on the French-speaking island of Mauritius, on the UNESCO World Heritage list. A few hours' hike takes you to the summit for a view over the beaches, the coral reef and the island." },
+    { icon: "🏰", kind: "Civilisation", t: "Carcassonne et les affiches rétro", d: "Retro tourist posters of French towns are popular souvenirs. Carcassonne, a fortified medieval city in the South, uses them to attract visitors." }
+  ],
+  tips: [
+    { icon: "🧠", t: "se souvenir DE, se rappeler (no de)", d: "[[Je me souviens de ce jour.]] · [[Je me rappelle ce jour.]]" },
+    { icon: "🔁", t: "Imparfait = nous stem", d: "nous finissons → je finissais. Just one exception: être → j'étais." },
+    { icon: "📍", t: "y = going/being there, en = coming from there", d: "[[J'y vais.]] · [[J'en reviens.]]" }
+  ],
+  mistakes: [
+    ["Je me souviens mon enfance.", "Je me souviens de mon enfance.", "se souvenir de"],
+    ["Je me rappelle de ce jour.", "Je me rappelle ce jour.", "se rappeler + noun (standard)"],
+    ["Quand j'ai été petit, je jouais…", "Quand j'étais petit, je jouais…", "description → imparfait"],
+    ["Nous mangeions → je mangais", "je mangeais", "keep the e before a / o"],
+    ["Tu reviens de la plage ? — Oui, j'y reviens.", "Oui, j'en reviens.", "coming from → en"],
+    ["un hôtel petit", "un petit hôtel", "petit goes before"],
+    ["des jolies affiches", "de jolies affiches", "plural adjective before the noun → de"],
+    ["une rouge robe", "une robe rouge", "colours go after"]
+  ]
+});
+</script><script>// Révisions: one page to search and revise the whole course (vocabulary, grammar, expressions, common mistakes).
+// Reads window.LESSONS (all units) and the learner's saved word boxes from localStorage. Printable; vocabulary exports to CSV (Anki-friendly).
+(function () {
+  const L = (window.LESSONS || []).slice().sort((a, b) => a.num - b.num);
+  const KEY = "french-edito-a2-v1";
+  let S = {}; try { S = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { S = {}; }
+  const W = S.words || {};
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const tz = h => String(h).replace(/\[\[(?:(m|f|pl):)?([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, g, say, show) => `<b class="say ${g ? "g-" + g : ""}" lang="fr" data-say="${esc(say)}">${show || say}</b>`);
+  const strip = h => String(h).replace(/<[^>]+>/g, "").replace(/\[\[(?:(?:m|f|pl):)?([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => b || a);
+  const bare = s => String(s).toLocaleLowerCase("fr").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/œ/g, "oe").replace(/[’']/g, "'");
+  const G = { m: "masc.", f: "fém.", pl: "plur." };
+  const UC = window.UCOL || [];
+  const boxOf = t => Math.min(5, +W[t] || 0);
+  const home = window.COURSE_HOME ? `<a href="index.html">← Cours</a> · ` : "";
+
+  // ---- speech ----
+  let voice = null, rate = 0.9;
+  const pickVoice = () => { const vs = speechSynthesis.getVoices(); voice = vs.find(v => /^fr(-|_)FR/i.test(v.lang)) || vs.find(v => /^fr/i.test(v.lang)) || null; };
+  if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+  const speak = t => { if (!("speechSynthesis" in window)) return; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.lang = "fr-FR"; if (voice) u.voice = voice; u.rate = rate; speechSynthesis.speak(u); };
+  document.addEventListener("click", e => { const el = e.target.closest("[data-say]"); if (el) speak(el.dataset.say); });
+
+  // ---- data ----
+  const unitName = l => `Unité ${l.num} · ${l.titleFr}`;
+  const VOC = []; L.forEach(l => l.vocab.forEach(v => VOC.push({ l, v })));
+  const GRAM = []; L.forEach(l => l.grammar.forEach(g => GRAM.push({ l, g })));
+  const EXP = []; L.forEach(l => (l.expressions || []).forEach(x => EXP.push({ l, x })));
+  const MIS = []; L.forEach(l => (l.mistakes || []).forEach(m => MIS.push({ l, m })));
+
+  document.title = "Révisions · Édito A2";
+  document.body.innerHTML = `<header class="top"><div class="top-inner"><div class="brand"><small>${home}Édito A2 · the whole course</small><b>Révisions · Revision</b></div>
+    <div class="row noprint" style="gap:6px"><button class="chip" id="rv-rate">🔊 Speed: normal</button><button class="chip" id="rv-print">🖨️ Print</button><button class="chip" id="rv-csv">⬇️ Vocabulary CSV</button></div></div>
+    <nav class="tabs noprint" id="rv-tabs"><a href="#vocab" data-t="vocab">🗂️ Vocabulaire</a><a href="#grammar" data-t="grammar">🧩 Grammaire</a><a href="#expr" data-t="expr">🗨️ Pour communiquer</a><a href="#mistakes" data-t="mistakes">⚠️ Erreurs fréquentes</a></nav></header>
+    <main id="rv-main"><div class="card noprint rv-bar">
+      <input id="rv-q" type="search" placeholder="Search in French or English… (accents optional)" autocomplete="off" spellcheck="false">
+      <select id="rv-u"><option value="">All units</option>${L.map(l => `<option value="${l.id}">${esc(unitName(l))}</option>`).join("")}</select>
+      <label class="rv-weak" id="rv-weak-l"><input type="checkbox" id="rv-weak"> Only words to review</label>
+      <span class="muted" id="rv-count"></span></div><div id="rv-out"></div></main>
+    <footer>Everything from the ${L.length} units in one place. Tap any French word to hear it. Word boxes (●) come from your flashcard reviews in each unit.</footer>`;
+
+  const $ = s => document.querySelector(s);
+  const RATES = [[0.9, "normal"], [0.7, "slow"], [1.05, "fast"]]; let ri = 0;
+  $("#rv-rate").onclick = () => { ri = (ri + 1) % RATES.length; rate = RATES[ri][0]; $("#rv-rate").textContent = "🔊 Speed: " + RATES[ri][1]; };
+  $("#rv-print").onclick = () => window.print();
+  $("#rv-csv").onclick = () => {
+    const rows = [["french", "english", "gender", "unit", "category", "note"]].concat(filtVoc().map(({ l, v }) => [v.t, v.en, v.g || "", unitName(l), v.cat, strip(v.note || "")]));
+    const csv = rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(",")).join("\n");
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" })); a.download = "edito-a2-vocabulaire.csv"; document.body.appendChild(a); a.click(); a.remove();
+  };
+
+  let tab = (location.hash || "#vocab").slice(1);
+  const match = (q, ...fields) => !q || fields.some(f => bare(strip(f || "")).includes(q));
+  const unitOk = l => !$("#rv-u").value || $("#rv-u").value === l.id;
+  const badge = l => `<a class="ubadge rv-u" href="${l.id}.html" style="background:${UC[l.num] || "#2f9c8a"}">U${l.num}</a>`;
+  function filtVoc() { const q = bare($("#rv-q").value.trim()), weak = $("#rv-weak").checked; return VOC.filter(({ l, v }) => unitOk(l) && match(q, v.t, v.en, v.cat, v.note) && (!weak || boxOf(v.t) < 3)); }
+
+  const views = {
+    vocab() {
+      const list = filtVoc(); $("#rv-count").textContent = `${list.length} words`;
+      if (!list.length) return `<div class="card">No word matches.</div>`;
+      const byU = {}; list.forEach(x => (byU[x.l.id] = byU[x.l.id] || []).push(x));
+      return Object.keys(byU).map(id => { const l = byU[id][0].l; const cats = {}; byU[id].forEach(({ v }) => (cats[v.cat] = cats[v.cat] || []).push(v));
+        return `<section class="card rv-sec"><h2>${badge(l)} ${esc(unitName(l))} <span class="muted" style="font-size:14px;font-weight:400">· ${esc(l.title)}</span></h2>${Object.entries(cats).map(([c, vs]) => `<h3>${esc(c)}</h3><table class="g rv-voc">${vs.map(v => `<tr class="${v.g ? "vc-" + v.g : ""}"><td class="rv-pic">${v.pic || ""}</td><td><b class="say ${v.g ? "g-" + v.g : ""}" lang="fr" data-say="${esc(v.t)}">${esc(v.t)}</b>${v.g ? ` <span class="tag g-tag-${v.g}">${G[v.g]}</span>` : ""}${v.note ? `<div class="muted" style="font-size:13px">${tz(v.note)}</div>` : ""}</td><td>${esc(v.en)}</td><td class="rv-box" title="flashcard box">${"●".repeat(boxOf(v.t))}${"○".repeat(5 - boxOf(v.t))}</td></tr>`).join("")}</table>`).join("")}</section>`; }).join("");
+    },
+    grammar() {
+      const q = bare($("#rv-q").value.trim());
+      const list = GRAM.filter(({ l, g }) => unitOk(l) && match(q, g.title, ...(g.body || [])));
+      $("#rv-count").textContent = `${list.length} grammar points`;
+      if (!list.length) return `<div class="card">No grammar point matches.</div>`;
+      return `<div class="rv-grid">${list.map(({ l, g }) => `<div class="card rv-g"><div>${badge(l)} <a class="muted" style="font-size:12px" href="${l.id}.html#grammar">open in the unit ↗</a></div><h3>${tz(g.title)}</h3>${(g.body || []).map(b => `<p>${tz(b)}</p>`).join("")}</div>`).join("")}</div>`;
+    },
+    expr() {
+      const q = bare($("#rv-q").value.trim());
+      const list = EXP.map(({ l, x }) => ({ l, x, items: x.items.filter(it => match(q, it[0], it[1], x.fn, x.fnEn)) })).filter(e => unitOk(e.l) && e.items.length);
+      $("#rv-count").textContent = `${list.reduce((a, e) => a + e.items.length, 0)} expressions`;
+      if (!list.length) return `<div class="card">No expression matches.</div>`;
+      return `<div class="rv-grid">${list.map(({ l, x, items }) => `<div class="card rv-g"><div>${badge(l)}</div><h3>${x.icon || ""} ${esc(x.fn)} <span class="muted" style="font-size:13px;font-weight:400">· ${esc(x.fnEn || "")}</span></h3><ul class="rv-ex">${items.map(([f, e, reg, star]) => `<li>${star ? "⭐ " : ""}<b class="say" lang="fr" data-say="${esc(f)}">${esc(f)}</b> <span class="muted">${esc(e)}</span>${reg && reg !== "std" ? ` <span class="tag">${esc(reg)}</span>` : ""}</li>`).join("")}</ul></div>`).join("")}</div>`;
+    },
+    mistakes() {
+      const q = bare($("#rv-q").value.trim());
+      const list = MIS.filter(({ l, m }) => unitOk(l) && match(q, ...m));
+      $("#rv-count").textContent = `${list.length} common mistakes`;
+      if (!list.length) return `<div class="card">No mistake matches.</div>`;
+      return `<div class="card"><table class="g rv-mis"><tr><th></th><th>✗ Not this</th><th>✓ But this</th><th>Why</th></tr>${list.map(({ l, m: [w, r, why] }) => `<tr><td>${badge(l)}</td><td><s>${esc(w)}</s></td><td><b class="say" lang="fr" data-say="${esc(r)}">${esc(r)}</b></td><td class="muted">${tz(esc(why))}</td></tr>`).join("")}</table></div>`;
+    }
+  };
+  function render() {
+    if (!views[tab]) tab = "vocab";
+    document.querySelectorAll("#rv-tabs a").forEach(a => a.classList.toggle("active", a.dataset.t === tab));
+    $("#rv-weak-l").style.display = tab === "vocab" ? "" : "none";
+    $("#rv-out").innerHTML = views[tab]();
+  }
+  document.querySelectorAll("#rv-tabs a").forEach(a => a.onclick = e => { e.preventDefault(); tab = a.dataset.t; history.replaceState(null, "", "#" + tab); render(); });
+  let timer; $("#rv-q").oninput = () => { clearTimeout(timer); timer = setTimeout(render, 120); };
+  $("#rv-u").onchange = render; $("#rv-weak").onchange = render;
+  render();
+})();
+</script></body></html>
