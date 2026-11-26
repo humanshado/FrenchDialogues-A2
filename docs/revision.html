@@ -3473,6 +3473,921 @@ LESSONS.push({
     ["Qu'est-ce que vous me conseiller ?", "Qu'est-ce que vous me conseillez ?", "vous → -ez"]
   ]
 });
+</script><script>// Unité 7 · À votre santé ! (Édito A2, 2e édition, book pp. 97–110)
+// Situations: bien dormir · le bar à sieste · à la pharmacie · les plantes qui soignent · un accident · les gestes de premiers secours
+// Grammar: les pronoms COD et COI · le superlatif · les pronoms interrogatifs lequel, laquelle, lesquels, lesquelles
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u07", rubrique: 4, num: 7,
+  title: "To your health!",
+  titleFr: "À votre santé !",
+  pages: "Book pp. 97–110",
+  opener: { fr: "Ça va vous faire le plus grand bien !", en: "It'll do you a world of good!" },
+  hero: { scene: "pharmacie", staff: "La pharmacienne", people: { "La pharmacienne": "f5", "M. Rousseau": "m6" } },
+  situations: [
+    ["😴", "Bien dormir", "advice: [[Je vous recommande de dormir sur le côté.]] · [[Je vous déconseille de dormir sur le ventre.]]"],
+    ["🛋️", "Le bar à sieste", "well-being: [[Je me sens léger, reposé, apaisé.]]"],
+    ["💊", "À la pharmacie", "health problems: [[Je suis un peu patraque.]] · [[J'ai le nez bouché.]]"],
+    ["🌿", "Les plantes qui soignent", "superlatives: [[C'est la plante la plus efficace contre le rhume.]]"],
+    ["🚑", "Urgence !", "points of view and choices: [[À mon avis, il faut appeler les secours.]] · [[Lequel tu composes ?]]"]
+  ],
+  goals: [
+    "Give health and well-being advice: [[Je vous recommande de…]], [[Il est conseillé de…]], [[Évitez de…]], [[Pensez à…]]",
+    "Talk about health problems: [[Je suis patraque.]], [[J'ai mal à la gorge.]], [[Je tousse.]], [[J'ai de la fièvre.]]",
+    "Use direct (COD) and indirect (COI) object pronouns: [[je le prends]], [[je lui conseille]], [[l'oreiller leur évite des tensions]]",
+    "Use the superlative: [[le plus / le moins]] + adjective; [[le meilleur]], [[le mieux]]",
+    "Give your point of view: [[Pour moi…]], [[Je trouve que…]], [[À mon avis…]]",
+    "Ask which one: [[lequel]], [[laquelle]], [[lesquels]], [[lesquelles]]",
+    "Know the emergency numbers: [[le 15]], [[le 17]], [[le 18]], [[le 112]], [[le 114]]"
+  ],
+  glance: [
+    ["🗣️", "Communication", "advice · health problems · points of view · emergencies"],
+    ["🧩", "Grammaire", "COD and COI pronouns · the superlative (incl. le meilleur, le mieux) · lequel, laquelle…"],
+    ["🗂️", "Vocabulaire", "the body · sleep · feeling good · pain · positions · ailments · treatments · emergencies"],
+    ["🔊", "Phonie-graphie", "plus: [ply], [plys] or [plyz]?"],
+    ["⭐", "The phrase to learn first", "[[Je suis un peu patraque.]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "How to sleep well", titleFr: "À la radio · Pour bien dormir…",
+      note: "Nicolas, a well-being coach, gives a listener advice on sleeping positions. Listen to the object pronouns: [[vous]], [[le]], [[lui]], [[leur]].",
+      scene: "bureau", staff: "Le coach", people: { "Le coach": "m5", "L'auditrice": "f3" },
+      lines: [
+        ["L'auditrice", "Bonjour, Nicolas. Le matin, je ne suis jamais en pleine forme et j'ai mal au dos. Qu'est-ce que vous me conseillez ?", "Hello, Nicolas. In the morning I'm never on top form and my back hurts. What do you advise?"],
+        ["Le coach", "Vous dormez dans quelle position ?", "Which position do you sleep in?"],
+        ["L'auditrice", "Sur le ventre, en général.", "On my front, usually."],
+        ["Le coach", "Je vous déconseille de dormir sur le ventre : c'est mauvais pour le dos. Évitez les positions qui lui imposent des tensions.", "I advise you not to sleep on your front: it's bad for your back. Avoid positions that put tension on it."],
+        ["L'auditrice", "Alors, sur le côté ?", "On my side, then?"],
+        ["Le coach", "Oui, si vous avez mal au dos, je vous recommande de dormir sur le côté. Posez votre tête au milieu de l'oreiller et mettez un autre oreiller entre vos jambes.", "Yes, if your back hurts, I recommend sleeping on your side. Put your head in the middle of the pillow and another pillow between your legs."],
+        ["L'auditrice", "Et sur le dos ?", "And on my back?"],
+        ["Le coach", "Mettez un oreiller sous vos genoux : il leur évite des tensions inutiles. Et au réveil, restez allongée quelques minutes et étirez-vous !", "Put a pillow under your knees: it saves them unnecessary strain. And when you wake up, stay lying down for a few minutes and stretch!"]
+      ],
+      glossary: [["Je vous recommande / déconseille de…", "I recommend / advise against…"], ["être en pleine forme", "to be on top form"], ["l'oreiller", "the pillow"], ["s'étirer", "to stretch"]]
+    },
+    {
+      id: "d2", n: 2, title: "The nap bar", titleFr: "Au bar à sieste · Faire le vide dans sa tête",
+      note: "Victor sleeps badly and is exhausted at work. A colleague recommends a nap bar. Listen to how he feels afterwards.",
+      scene: "cafe", staff: "L'hôtesse", people: { "L'hôtesse": "f2", "Victor": "m2" },
+      lines: [
+        ["L'hôtesse", "Bonjour ! C'est votre première sieste chez nous ?", "Hello! Is this your first nap with us?"],
+        ["Victor", "Oui. Je manque de sommeil, je bâille toute la journée… Mon collègue m'a conseillé votre bar.", "Yes. I'm short of sleep, I yawn all day… My colleague recommended your bar to me."],
+        ["L'hôtesse", "Vous avez bien fait ! Je vous propose une sieste de vingt minutes dans un fauteuil massant, avec une musique douce.", "You did the right thing! I suggest a twenty-minute nap in a massage chair, with soft music."],
+        ["Victor", "Vingt minutes, ça suffit ?", "Is twenty minutes enough?"],
+        ["L'hôtesse", "Oui. Respirez lentement, relâchez vos muscles et faites le vide dans votre tête.", "Yes. Breathe slowly, relax your muscles and empty your mind."],
+        ["L'hôtesse", "Alors, comment vous sentez-vous ?", "So, how do you feel?"],
+        ["Victor", "Incroyable ! Je me sens léger, reposé… J'ai du mal à redescendre sur terre !", "Incredible! I feel light, rested… I'm finding it hard to come back down to earth!"]
+      ],
+      glossary: [["manquer de sommeil", "to be short of sleep"], ["bâiller", "to yawn"], ["faire le vide dans sa tête", "to empty one's mind"], ["redescendre sur terre", "to come back to reality"]]
+    },
+    {
+      id: "d3", n: 3, title: "At the pharmacy", titleFr: "Chez la pharmacienne · Je suis un peu patraque",
+      note: "M. Rousseau doesn't feel well. The pharmacist asks about his symptoms and advises him. Listen to the health problems and the remedies.",
+      scene: "pharmacie", staff: "La pharmacienne", people: { "La pharmacienne": "f5", "M. Rousseau": "m6" },
+      lines: [
+        ["La pharmacienne", "Bonjour, monsieur. Qu'est-ce qui ne va pas ?", "Hello. What's wrong?"],
+        ["M. Rousseau", "Je suis un peu patraque en ce moment. Je me sens fatigué et j'ai le nez bouché.", "I'm a bit under the weather at the moment. I feel tired and my nose is blocked."],
+        ["La pharmacienne", "Vous toussez ? Vous avez mal à la gorge ?", "Are you coughing? Do you have a sore throat?"],
+        ["M. Rousseau", "Oui, je tousse beaucoup la nuit. Mais je n'ai pas de fièvre.", "Yes, I cough a lot at night. But I don't have a temperature."],
+        ["La pharmacienne", "Vous avez consulté votre médecin ?", "Have you seen your doctor?"],
+        ["M. Rousseau", "Non, pas encore. C'est juste un rhume, je pense.", "No, not yet. It's just a cold, I think."],
+        ["La pharmacienne", "Alors je vous donne ce sirop pour la toux, et des gouttes pour le nez. Mettez-les trois fois par jour. Et buvez une tisane au thym : ça va vous faire le plus grand bien !", "Then I'll give you this cough syrup, and some nose drops. Put them in three times a day. And drink a thyme tea: it'll do you a world of good!"],
+        ["M. Rousseau", "Merci. Et si ça ne va pas mieux ?", "Thank you. And if it doesn't get better?"],
+        ["La pharmacienne", "Dans trois jours, s'il n'y a pas d'amélioration, il faudra consulter.", "In three days, if there's no improvement, you'll need to see a doctor."]
+      ],
+      glossary: [["être patraque", "to be under the weather"], ["avoir le nez bouché", "to have a blocked nose"], ["tousser, la toux", "to cough, the cough"], ["le sirop, les gouttes", "syrup, drops"]]
+    },
+    {
+      id: "d4", n: 4, title: "Healing plants", titleFr: "À l'herboristerie · Les meilleures plantes",
+      note: "Inès, a student before her exams, asks a herbalist for advice. Listen to the superlatives: [[le plus]], [[le moins]], [[la meilleure]], [[le mieux]].",
+      scene: "epicerie", staff: "L'herboriste", people: { "L'herboriste": "m4", "Inès": "f2" },
+      lines: [
+        ["Inès", "Bonjour ! J'ai des examens la semaine prochaine. Je suis stressée et je dors mal. Quelles sont les meilleures plantes pour moi ?", "Hello! I've got exams next week. I'm stressed and I sleep badly. What are the best plants for me?"],
+        ["L'herboriste", "Pour la mémoire et la concentration, c'est le romarin. Il donne du tonus et c'est lui qui soulage le mieux les migraines.", "For memory and concentration, it's rosemary. It gives you energy and it's the best for relieving migraines."],
+        ["Inès", "Et pour dormir ?", "And for sleeping?"],
+        ["L'herboriste", "La lavande aide à s'endormir. Et le millepertuis, c'est peut-être la plante la moins connue, mais c'est un excellent remède contre l'insomnie et l'anxiété.", "Lavender helps you fall asleep. And St John's wort is perhaps the least-known plant, but it's an excellent remedy for insomnia and anxiety."],
+        ["Inès", "Et si j'attrape un rhume ?", "And if I catch a cold?"],
+        ["L'herboriste", "L'eucalyptus, c'est la plus efficace des plantes contre les rhumes et la fièvre.", "Eucalyptus is the most effective plant against colds and fever."],
+        ["Inès", "Lesquelles vous me conseillez de prendre maintenant ?", "Which ones do you recommend I take now?"],
+        ["L'herboriste", "Le romarin le matin et la lavande le soir. Bonne chance pour vos examens !", "Rosemary in the morning and lavender in the evening. Good luck with your exams!"]
+      ],
+      glossary: [["le / la / les plus + adjectif", "the most…"], ["le / la / les moins + adjectif", "the least…"], ["la meilleure", "the best (adjective)"], ["le mieux", "the best (adverb)"]]
+    },
+    {
+      id: "d5", n: 5, title: "An accident", titleFr: "Dans la rue · Appeler les secours",
+      note: "Lucas sees a cyclist fall in the street. He calls the European emergency number. Listen to the emergency vocabulary and the order: protect, alert, help.",
+      scene: "rue", people: { "Lucas": "m3", "L'opératrice": "f6" }, phone: ["Lucas", "L'opératrice"],
+      lines: [
+        ["L'opératrice", "Cent douze, j'écoute.", "112, I'm listening."],
+        ["Lucas", "Bonjour, il y a eu un accident de vélo devant chez moi. Une femme est tombée, elle est blessée à la jambe.", "Hello, there's been a bike accident outside my house. A woman fell, her leg is injured."],
+        ["L'opératrice", "Quelle est l'adresse exacte ?", "What's the exact address?"],
+        ["Lucas", "Douze, rue des Lilas, à Nantes, devant la boulangerie.", "Twelve, rue des Lilas, in Nantes, in front of the bakery."],
+        ["L'opératrice", "La victime est consciente ? Elle respire ?", "Is the victim conscious? Is she breathing?"],
+        ["Lucas", "Oui, elle me parle. Mais elle a très mal et elle ne peut pas se lever.", "Yes, she's talking to me. But she's in a lot of pain and can't get up."],
+        ["L'opératrice", "Ne la bougez pas. Une ambulance arrive. Si possible, envoyez quelqu'un à la rencontre des secours.", "Don't move her. An ambulance is on its way. If possible, send someone to meet the emergency services."],
+        ["Lucas", "D'accord, mon voisin va les attendre au coin de la rue.", "OK, my neighbour will wait for them at the corner of the street."]
+      ],
+      glossary: [["les secours", "the emergency services"], ["le / la blessé(e), la victime", "the injured person, the victim"], ["consciente, respirer", "conscious, to breathe"], ["à la rencontre de", "to go and meet"]]
+    },
+    {
+      id: "d6", n: 6, title: "First aid for everyone?", titleFr: "À la pause · Les gestes qui sauvent",
+      note: "Two colleagues discuss first-aid training. Listen to how they give their point of view, and to [[lequel]] / [[laquelle]].",
+      scene: "bureau", people: { "Sonia": "f4", "Paul": "m6" },
+      lines: [
+        ["Sonia", "Tu savais que seulement vingt pour cent des Français sont formés aux gestes de premiers secours ?", "Did you know only twenty per cent of French people are trained in first aid?"],
+        ["Paul", "Seulement ? Pour moi, ce n'est pas suffisant !", "Only? For me, that's not enough!"],
+        ["Sonia", "Je trouve que les formations gratuites ne sont pas assez nombreuses. À mon avis, il faut les enseigner à l'école.", "I find there aren't enough free courses. In my opinion, they should be taught at school."],
+        ["Paul", "Je suis d'accord. Moi, je ne sais même pas quel numéro appeler. Il y en a trois ou quatre : lequel faut-il composer ?", "I agree. I don't even know which number to call. There are three or four: which one should you dial?"],
+        ["Sonia", "Le 112 marche partout dans l'Union européenne. Sinon, le 15 pour le SAMU, le 18 pour les pompiers…", "112 works everywhere in the European Union. Otherwise 15 for the SAMU, 18 for the fire brigade…"],
+        ["Paul", "Il y a une formation ce samedi à la mairie. Tu veux venir ?", "There's a course this Saturday at the town hall. Do you want to come?"],
+        ["Sonia", "Laquelle ? Celle du matin ou celle de l'après-midi ?", "Which one? The morning one or the afternoon one?"],
+        ["Paul", "Celle du matin. On s'inscrit ensemble ?", "The morning one. Shall we sign up together?"]
+      ],
+      glossary: [["Pour moi…", "For me…"], ["Je trouve que… · À mon avis…", "I find that… · In my opinion…"], ["lequel ? laquelle ?", "which one? (m. / f.)"], ["les gestes de premiers secours", "first-aid techniques"]]
+    }
+  ],
+
+  vocab: [
+    { t: "le cerveau", en: "the brain", pic: "🧠", cat: "Les parties du corps", g: "m" },
+    { t: "le cou", en: "the neck", pic: "🦒", cat: "Les parties du corps", g: "m" },
+    { t: "l'épaule", en: "the shoulder", pic: "💪", cat: "Les parties du corps", g: "f" },
+    { t: "le dos, la colonne vertébrale", en: "the back, the spine", pic: "🦴", cat: "Les parties du corps", g: "m" },
+    { t: "le ventre", en: "the stomach, belly", pic: "🫃", cat: "Les parties du corps", g: "m" },
+    { t: "la cuisse", en: "the thigh", pic: "🦵", cat: "Les parties du corps", g: "f" },
+    { t: "le genou", en: "the knee", pic: "🦵", cat: "Les parties du corps", g: "m", note: "pl. les genoux" },
+    { t: "la cheville", en: "the ankle", pic: "🦶", cat: "Les parties du corps", g: "f" },
+    { t: "le bâillement, bâiller", en: "the yawn, to yawn", pic: "🥱", cat: "Le sommeil", g: "m" },
+    { t: "manquer de sommeil", en: "to be short of sleep", pic: "😪", cat: "Le sommeil" },
+    { t: "le repos, le rêve", en: "rest, the dream", pic: "💤", cat: "Le sommeil", g: "m" },
+    { t: "la respiration, respirer", en: "breathing, to breathe", pic: "🌬️", cat: "Le sommeil", g: "f" },
+    { t: "s'endormir ≠ se réveiller, le réveil", en: "to fall asleep ≠ to wake up, waking", pic: "⏰", cat: "Le sommeil" },
+    { t: "la sieste", en: "the nap", pic: "😴", cat: "Se sentir bien", g: "f" },
+    { t: "être en pleine forme", en: "to be on top form", pic: "💯", cat: "Se sentir bien" },
+    { t: "apaisé(e), relaxé(e), reposé(e)", en: "calm, relaxed, rested", pic: "😌", cat: "Se sentir bien" },
+    { t: "se sentir léger, légère", en: "to feel light", pic: "🪶", cat: "Se sentir bien" },
+    { t: "récupérer = se remettre", en: "to recover", pic: "🔋", cat: "Se sentir bien" },
+    { t: "masser, relâcher ses muscles", en: "to massage, to relax one's muscles", pic: "💆", cat: "Se sentir bien" },
+    { t: "adopter de bonnes habitudes", en: "to adopt good habits", pic: "✅", cat: "Se sentir bien" },
+    { t: "avoir mal, souffrir", en: "to be in pain, to suffer", pic: "🤕", cat: "La douleur" },
+    { t: "la courbature", en: "the ache, stiffness", pic: "😣", cat: "La douleur", g: "f" },
+    { t: "la tension", en: "tension", pic: "😬", cat: "La douleur", g: "f" },
+    { t: "soulager", en: "to relieve", pic: "🫶", cat: "La douleur" },
+    { t: "allongé(e), assis(e), debout", en: "lying down, sitting, standing", pic: "🛌", cat: "Les positions" },
+    { t: "s'étirer, se lever", en: "to stretch, to get up", pic: "🙆", cat: "Les positions" },
+    { t: "le rhume, la toux, le nez bouché", en: "cold, cough, blocked nose", pic: "🤧", cat: "Les maux", g: "m" },
+    { t: "le mal de gorge, la fièvre", en: "sore throat, temperature", pic: "🌡️", cat: "Les maux", g: "m" },
+    { t: "la migraine", en: "the migraine", pic: "🤯", cat: "Les maux", g: "f" },
+    { t: "l'allergie, l'asthme", en: "allergy, asthma", pic: "🌼", cat: "Les maux", g: "f" },
+    { t: "l'infection, l'indigestion", en: "infection, indigestion", pic: "🦠", cat: "Les maux", g: "f" },
+    { t: "l'insomnie, l'anxiété, le stress", en: "insomnia, anxiety, stress", pic: "😰", cat: "Les maux", g: "f" },
+    { t: "consulter un(e) médecin", en: "to see a doctor", pic: "🩺", cat: "Se soigner" },
+    { t: "le traitement, le remède", en: "the treatment, the remedy", pic: "💊", cat: "Se soigner", g: "m" },
+    { t: "le sirop, les gouttes", en: "syrup, drops", pic: "🧴", cat: "Se soigner", g: "m" },
+    { t: "l'antibiotique, l'antiseptique", en: "antibiotic, antiseptic", pic: "💉", cat: "Se soigner", g: "m" },
+    { t: "calmer (une douleur)", en: "to ease (a pain)", pic: "🌿", cat: "Se soigner" },
+    { t: "la tisane = l'infusion", en: "herbal tea", pic: "🍵", cat: "Se soigner", g: "f" },
+    { t: "l'accident, la victime, le / la blessé(e)", en: "accident, victim, injured person", pic: "🚨", cat: "Les urgences", g: "m" },
+    { t: "l'ambulance, l'ambulancier, l'ambulancière", en: "ambulance, paramedic", pic: "🚑", cat: "Les urgences", g: "f" },
+    { t: "le pompier, la pompière", en: "the firefighter", pic: "🚒", cat: "Les urgences" },
+    { t: "le policier, la policière", en: "the police officer", pic: "👮", cat: "Les urgences" },
+    { t: "le SAMU", en: "the emergency medical service", pic: "🏥", cat: "Les urgences", g: "m" },
+    { t: "le numéro d'urgence, l'appel", en: "emergency number, the call", pic: "☎️", cat: "Les urgences", g: "m" },
+    { t: "être patraque", en: "to be under the weather", pic: "🤒", cat: "Expressions" },
+    { t: "donner du tonus", en: "to give energy", pic: "⚡", cat: "Expressions" },
+    { t: "faire le plus grand bien", en: "to do a world of good", pic: "🌞", cat: "Expressions" }
+  ],
+
+  grammar: [
+    {
+      id: "g-conseils",
+      title: "Health advice · the body",
+      body: [
+        "Advice: [[Je vous recommande de dormir sur le côté.]] · [[Je vous déconseille de dormir sur le ventre.]] · [[Il est conseillé / déconseillé de…]] · [[Évitez de…]] · [[Attention à…]] · [[Pensez à…]] · [[Il est important de…]] · [[Le mieux, c'est de…]]",
+        "Recommander / déconseiller <b>à</b> quelqu'un <b>de</b> faire quelque chose: [[Je lui conseille de faire la sieste.]]"
+      ],
+      info: { type: "body", note: "Tap a part of the body. Remember: <b>avoir mal au</b> dos / ventre / pied, <b>à la</b> tête / gorge / jambe, <b>à l'</b>épaule / oreille, <b>aux</b> dents / yeux." }
+    },
+    {
+      id: "g-cod-coi",
+      title: "Direct (COD) and indirect (COI) object pronouns",
+      body: [
+        "<b>COD</b> (answers <i>qui ? quoi ?</i>, no preposition): [[me, te, le / la / l', nous, vous, les]]: [[Tu as acheté l'oreiller parfait ? — Oui, je l'ai acheté.]]",
+        "<b>COI</b> (answers <i>à qui ?</i>, verb + [[à]]): [[me, te, lui, nous, vous, leur]]: [[Tu donnes des conseils à Hamid ? — Oui, je lui conseille de dormir sur le côté.]]",
+        "Verbs with a COI (quelque chose <b>à</b> quelqu'un): [[apporter, conseiller, demander, donner, écrire, expliquer, lire, offrir, prêter, emprunter, répondre, téléphoner]]. Only the 3rd person is different: [[le, la, les]] ≠ [[lui, leur]]."
+      ],
+      info: { type: "compare", title: "🎯 COD or COI?", cols: [
+        { head: "COD · qui ? quoi ?", en: "le, la, l', les", color: "#3a6fd8", lines: [["J'aime la sieste. → Je l'aime.", "I love it."], ["Tu prends ton oreiller ? → Tu le prends ?", "Are you taking it?"], ["Elle met ses gouttes. → Elle les met.", "She puts them in."]] },
+        { head: "COI · à qui ?", en: "lui, leur", color: "#9b4fb0", lines: [["J'écris au médecin. → Je lui écris.", "I write to him/her."], ["J'offre une sieste à mon frère. → Je lui offre une sieste.", "I give him a nap."], ["Elle téléphone à ses parents. → Elle leur téléphone.", "She phones them."]] }
+      ] },
+      widget: {
+        type: "sort", label: "le / la / les or lui / leur?",
+        cols: [{ k: "cod", label: "COD · le, la, les", color: "#3a6fd8" }, { k: "coi", label: "COI · lui, leur", color: "#9b4fb0" }],
+        items: [
+          { t: "J'aime beaucoup faire la sieste.", k: "cod", say: "Je l'aime beaucoup." }, { t: "Vous écrirez un courrier à ce spécialiste.", k: "coi", say: "Vous lui écrirez un courrier." },
+          { t: "J'offre une séance au bar à sieste à mon frère.", k: "coi", say: "Je lui offre une séance au bar à sieste." }, { t: "Béatrice ne téléphone jamais à ses parents le soir.", k: "coi", say: "Béatrice ne leur téléphone jamais le soir." },
+          { t: "Tu emportes ton réveil ?", k: "cod", say: "Tu l'emportes ?" }, { t: "Il prend ses gouttes trois fois par jour.", k: "cod", say: "Il les prend trois fois par jour." }
+        ]
+      }
+    },
+    {
+      id: "g-sante",
+      title: "Talking about health problems",
+      body: [
+        "The pharmacist / doctor: [[Qu'est-ce qui ne va pas ?]] · [[Vous avez consulté votre médecin ?]] · [[Vous toussez ?]] · [[Vous avez mal à la gorge ?]] · [[Vous avez de la fièvre ?]]",
+        "The patient: [[Je suis un peu patraque.]] · [[Je me sens fatigué(e).]] · [[J'ai le nez bouché.]] · [[J'ai mal à la tête.]] · [[Je tousse beaucoup la nuit.]]"
+      ],
+      info: { type: "card", style: "receipt", caption: "🧾 The pharmacist's advice · tap a line", title: "PHARMACIE DU CENTRE", sub: "conseils pour M. Rousseau", rows: [
+        ["Sirop pour la toux", "1 cuillère, matin et soir", "Un sirop pour la toux, une cuillère matin et soir."], ["Gouttes pour le nez", "3 fois par jour", "Des gouttes pour le nez, trois fois par jour."],
+        ["Tisane au thym", "le soir, bien chaude", "Une tisane au thym le soir."], ["Si pas d'amélioration", "consulter dans 3 jours", "S'il n'y a pas d'amélioration dans trois jours, consultez votre médecin."]
+      ], foot: "Bon rétablissement !" }
+    },
+    {
+      id: "g-superlatif",
+      title: "The superlative: [[le plus]], [[le moins]], [[le meilleur]], [[le mieux]]",
+      body: [
+        "Superiority: [[le / la / les plus]] + adjective (+ [[de]] + noun): [[L'eucalyptus est la plus efficace des plantes contre le rhume.]] · [[C'est l'infirmière la plus sympathique de l'hôpital.]]",
+        "Inferiority: [[le / la / les moins]] + adjective: [[C'est la plante la moins connue de cette liste.]]",
+        "[[bon]] → [[le meilleur, la meilleure, les meilleur(e)s]] (adjective, with a noun): [[Ce sont les meilleures plantes pour les tisanes.]] · [[bien]] → [[le mieux]] (adverb, with a verb): [[C'est le romarin qui soulage le mieux les migraines.]]"
+      ],
+      info: { type: "ladder", title: "🌿 Which plant for what? (the book's herbal-tea guide)", levels: [
+        { name: "l'eucalyptus", en: "the most effective against colds and fever", color: "#2f9c8a", ex: ["C'est la plus efficace des plantes contre les rhumes."] },
+        { name: "le romarin", en: "relieves migraines best; memory, concentration", color: "#3a6fd8", ex: ["C'est le romarin qui soulage le mieux les migraines."] },
+        { name: "le thym", en: "sore throat, cough, colds, digestion", color: "#7d9a2e", ex: ["Le thym est un formidable remède."] },
+        { name: "la lavande", en: "helps you fall asleep; skin, insect bites", color: "#9b4fb0", ex: ["La lavande aide à s'endormir."] },
+        { name: "le millepertuis", en: "perhaps the least known: insomnia, anxiety", color: "#e0a526", ex: ["C'est peut-être la plante la moins connue."] },
+        { name: "l'échinacée", en: "immune system, allergies", color: "#e86a2e", ex: ["Elle aide le système immunitaire."] }
+      ] },
+      widget: {
+        type: "combo", label: "Make a superlative",
+        rows: [{ k: "plus", label: "+ le plus / le meilleur" }, { k: "moins", label: "− le moins" }],
+        cols: [{ k: "plante", label: "🌿 cette plante / efficace" }, { k: "livre", label: "📗 ce livre / intéressant" }, { k: "doc", label: "🎬 ce documentaire / bon" }, { k: "lit", label: "🛏️ ce lit / cher" }],
+        out: {
+          "plus|plante": ["C'est la plante la plus efficace contre le rhume.", "It's the most effective plant against colds."], "moins|plante": ["C'est la plante la moins efficace.", "It's the least effective plant."],
+          "plus|livre": ["C'est le livre le plus intéressant sur les plantes.", "It's the most interesting book on plants."], "moins|livre": ["C'est le livre le moins intéressant.", "It's the least interesting book."],
+          "plus|doc": ["C'est le meilleur documentaire sur le corps humain.", "It's the best documentary on the human body.", "bon → le meilleur (not le plus bon)"], "moins|doc": ["C'est le documentaire le moins bon.", "It's the worst documentary."],
+          "plus|lit": ["C'est le lit le plus cher du magasin.", "It's the most expensive bed in the shop."], "moins|lit": ["C'est le lit le moins cher.", "It's the cheapest bed."]
+        }
+      }
+    },
+    {
+      id: "g-avis",
+      title: "Giving your point of view",
+      body: [
+        "[[Pour moi / Pour nous, ce n'est pas suffisant.]] · [[Je crois / pense / trouve que les formations ne sont pas assez nombreuses.]] · [[À mon avis, il faut appeler les secours.]] Agree / disagree: [[Je suis d'accord.]] · [[Je ne suis pas d'accord.]] · [[Tu as raison.]]"
+      ]
+    },
+    {
+      id: "g-lequel",
+      title: "Which one? [[lequel]], [[laquelle]], [[lesquels]], [[lesquelles]]",
+      body: [
+        "[[lequel / laquelle / lesquels / lesquelles]] ask about a person or thing <b>already mentioned</b>, to choose among several. They agree with the noun: [[Voici trois numéros d'urgence : lequel composez-vous ?]] · [[Tu as vu ces tisanes ? Lesquelles choisis-tu ?]]",
+        "Reminder: [[quel, quelle, quels, quelles]] are <b>adjectives</b>, followed by a noun or [[être]]: [[Quelles gouttes tu prends ?]] · [[Quel est le numéro du SAMU ?]]"
+      ],
+      info: { type: "card", style: "board", caption: "❓ quel + noun · lequel alone · tap a line", title: "QUEL… ? / LEQUEL ?", sub: "", rows: [["masc. sing.", "Quel sirop ? → Lequel ?", "Quel sirop ? Lequel ?"], ["fém. sing.", "Quelle tisane ? → Laquelle ?", "Quelle tisane ? Laquelle ?"], ["masc. pl.", "Quels médicaments ? → Lesquels ?", "Quels médicaments ? Lesquels ?"], ["fém. pl.", "Quelles gouttes ? → Lesquelles ?", "Quelles gouttes ? Lesquelles ?"]], foot: "Un de tes enfants est malade ? — Lequel ?" },
+      widget: {
+        type: "sort", label: "quel… or lequel…? Complete the question",
+        cols: [{ k: "quel", label: "quel(s) / quelle(s) + noun", color: "#e0a526" }, { k: "lequel", label: "lequel / laquelle… alone", color: "#2f9c8a" }],
+        items: [
+          { t: "… conseils peux-tu me donner ?", k: "quel", say: "Quels conseils peux-tu me donner ?" }, { t: "Tu as vu ces tisanes ? … choisis-tu ?", k: "lequel", say: "Tu as vu ces tisanes ? Lesquelles choisis-tu ?" },
+          { t: "Un de tes enfants est malade ? … ?", k: "lequel", say: "Un de tes enfants est malade ? Lequel ?" }, { t: "À … heure tu rentres ?", k: "quel", say: "À quelle heure tu rentres ?" },
+          { t: "Il y a beaucoup de traitements. … sont les moins chers ?", k: "lequel", say: "Il y a beaucoup de traitements. Lesquels sont les moins chers ?" }, { t: "… études médicales sont intéressantes ?", k: "quel", say: "Quelles études médicales sont intéressantes ?" }
+        ]
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour parler des problèmes de santé · le pharmacien", fnEn: "the pharmacist asks", icon: "💊", items: [
+      ["Qu'est-ce qui ne va pas ?", "What's wrong?", "std", true],
+      ["Vous avez consulté votre médecin ?", "Have you seen your doctor?", "poli"],
+      ["Vous toussez ? Vous avez mal à la gorge ?", "Are you coughing? Do you have a sore throat?", "poli"],
+      ["Vous avez de la fièvre ?", "Do you have a temperature?", "poli", true]
+    ] },
+    { fn: "… le / la malade", fnEn: "the patient says", icon: "🤒", items: [
+      ["Je suis un peu patraque.", "I'm a bit under the weather.", "fam", true],
+      ["Je me sens fatigué(e).", "I feel tired.", "std"],
+      ["J'ai le nez bouché.", "My nose is blocked.", "std", true],
+      ["J'ai mal à la tête.", "I've got a headache.", "std"]
+    ] },
+    { fn: "Pour donner un conseil, informer des risques", fnEn: "advice and warnings", icon: "🩺", items: [
+      ["Je vous recommande de dormir sur le côté.", "I recommend sleeping on your side.", "poli", true],
+      ["Je vous déconseille de dormir sur le ventre.", "I advise you not to sleep on your front.", "poli"],
+      ["Il est (dé)conseillé de…", "It's (not) advisable to…", "std"],
+      ["Évitez de… · Attention à… · Pensez à…", "Avoid… · Watch out for… · Remember to…", "std"],
+      ["Le mieux, c'est de… · La meilleure manière de…, c'est…", "The best thing is to… · The best way to… is…", "std"]
+    ] },
+    { fn: "Pour exprimer son point de vue", fnEn: "points of view", icon: "💬", items: [
+      ["Pour moi / nous, ce n'est pas suffisant.", "For me / us, it's not enough.", "std", true],
+      ["Je crois / pense / trouve que…", "I believe / think / find that…", "std", true],
+      ["À mon avis, il faut appeler les secours.", "In my opinion, you have to call the emergency services.", "std"]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · at the pharmacy", lanes: ["La pharmacienne", "Le malade"], av: ["f5", "m6"], steps: [
+    { s: 0, fr: "Qu'est-ce qui ne va pas ?", en: "What's wrong?" },
+    { s: 1, fr: "Je suis un peu patraque. J'ai le nez bouché.", en: "I'm under the weather. My nose is blocked." },
+    { s: 0, fr: "Vous toussez ? Vous avez de la fièvre ?", en: "Are you coughing? Any temperature?" },
+    { s: 1, fr: "Je tousse la nuit, mais je n'ai pas de fièvre.", en: "I cough at night, but no temperature." },
+    { s: 0, fr: "Je vous donne ce sirop. Prenez-le matin et soir.", en: "I'll give you this syrup. Take it morning and evening." },
+    { s: 1, fr: "Merci. Et si ça ne va pas mieux ?", en: "Thanks. And if it doesn't get better?" },
+    { s: 0, fr: "Alors, il faudra consulter votre médecin.", en: "Then you'll need to see your doctor." }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: <b>plus</b> has three pronunciations. [ply] in the negative (ne… plus) and before a consonant in comparisons; [plyz] before a vowel (liaison); [plys] at the end of a sentence, in maths, or when it means <i>more</i> after a verb.",
+    letters: [
+      { l: "plus + consonne", name: "[ply]", tip: "Superlative or comparative before a consonant: [[le médecin le plus compétent]], [[le conseil le plus courageux]]. And always in the negative: [[les remèdes que les Français n'utilisent plus]].", ex: ["le plus compétent", "Je ne fume plus.", "le plus calme"] },
+      { l: "plus + voyelle", name: "[plyz]", tip: "Liaison before a vowel or silent h: [[le conseil le plus utile]], [[la plante la plus efficace]].", ex: ["le plus utile", "la plus efficace", "le plus important"] },
+      { l: "plus (fin / « davantage »)", name: "[plys]", tip: "At the end, meaning <i>more</i>: [[les médicaments que les Français achètent le plus]], [[Vous devez dormir plus.]] Also in maths: [[deux plus deux]].", ex: ["Dormez plus !", "C'est ce que j'aime le plus.", "deux plus trois"] }
+    ],
+    pairs: [
+      { a: ["Je n'en veux plus.", "I don't want any more."], b: ["J'en veux plus.", "I want more (casual)."], note: "[ply] / [plys]" },
+      { a: ["le plus calme", "the calmest"], b: ["le plus utile", "the most useful"], note: "[ply] / [plyz]" },
+      { a: ["le meilleur", "the best (adj.)"], b: ["le mieux", "the best (adv.)"], note: "bon / bien" },
+      { a: ["je le donne", "I give it"], b: ["je lui donne", "I give (to) him/her"], note: "COD / COI" },
+      { a: ["lequel ?", "which one? (m.)"], b: ["laquelle ?", "which one? (f.)"], note: "m. / f." },
+      { a: ["le 15", "SAMU"], b: ["le 18", "fire brigade"], note: "urgences" }
+    ]
+  },
+  classify: {
+    label: "➕ [ply], [plyz] ou [plys] ?", q: "Listen: how is plus pronounced?",
+    options: ["[ply]", "[plyz]", "[plys]"],
+    items: [
+      { say: "le médecin le plus compétent", a: 0 }, { say: "le conseil le plus utile", a: 1 }, { say: "Vous devez dormir plus.", a: 2 }, { say: "Je ne fume plus.", a: 0 },
+      { say: "la plante la plus efficace", a: 1 }, { say: "C'est ce que j'aime le plus.", a: 2 }, { say: "la position la plus confortable", a: 0 }, { say: "le remède le plus ancien", a: 1 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "Le coach conseille de dormir sur le ventre.", ok: false, explain: "« Je vous déconseille de dormir sur le ventre. »" },
+    { type: "mcq", tag: "Dialogue 1", q: "Si on dort sur le dos, on met un oreiller…", options: ["sous les genoux", "sous le ventre", "sur la tête"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 2", q: "Après la sieste, Victor se sent…", options: ["léger et reposé", "fatigué", "malade"], answer: 0 },
+    { type: "tf", tag: "Dialogue 3", s: "M. Rousseau a de la fièvre.", ok: false, explain: "« Je n'ai pas de fièvre. »" },
+    { type: "mcq", tag: "Dialogue 3", q: "La pharmacienne lui conseille une tisane…", options: ["au thym", "à la lavande", "à la menthe"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 4", q: "La plante la plus efficace contre le rhume, c'est…", options: ["l'eucalyptus", "le millepertuis", "le romarin"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "Lucas appelle le 112.", ok: true },
+    { type: "tf", tag: "Dialogue 6", s: "Sonia trouve que 20 % de Français formés, c'est suffisant.", ok: false, explain: "« Pour moi, ce n'est pas suffisant ! » (Paul) and she agrees." },
+    { type: "fill", tag: "COD / COI", sentence: "Tu prends ton oreiller ? — Oui, je ___ prends.", options: ["le", "lui", "leur"], answer: 0 },
+    { type: "fill", tag: "COD / COI", sentence: "Tu parles à ton médecin ? — Oui, je ___ parle demain.", options: ["lui", "le", "la"], answer: 0 },
+    { type: "fill", tag: "COD / COI", sentence: "Tu donnes des conseils à tes enfants ? — Oui, je ___ donne des conseils.", options: ["leur", "les", "lui"], answer: 0 },
+    { type: "fill", tag: "COD / COI", sentence: "Mes gouttes ? Je ___ mets trois fois par jour.", options: ["les", "leur", "lui"], answer: 0 },
+    { type: "type", tag: "COD / COI", q: "Replace: « J'emprunte un livre sur le sommeil à Michèle. » (à Michèle)", answers: ["Je lui emprunte un livre sur le sommeil.", "Je lui emprunte un livre sur le sommeil"] },
+    { type: "fill", tag: "Superlatif", sentence: "Après le déjeuner, c'est le ___ moment pour faire la sieste.", options: ["meilleur", "mieux", "plus bon"], answer: 0 },
+    { type: "fill", tag: "Superlatif", sentence: "C'est dans mon canapé que je dors le ___ .", options: ["mieux", "meilleur", "plus bien"], answer: 0 },
+    { type: "fill", tag: "Superlatif", sentence: "Les tisanes, c'est le remède le ___ économique.", options: ["plus", "mieux", "meilleur"], answer: 0 },
+    { type: "fill", tag: "Superlatif", sentence: "Tu dors sur le ventre ? Ce n'est pas la ___ des positions.", options: ["meilleure", "mieux", "meilleur"], answer: 0 },
+    { type: "type", tag: "Superlatif", q: "Superlative (+): « Ce médecin est célèbre. »", answers: ["C'est le médecin le plus célèbre.", "C'est le médecin le plus célèbre"] },
+    { type: "fill", tag: "Interrogatifs", sentence: "Voici trois numéros d'urgence : ___ composez-vous ?", options: ["lequel", "laquelle", "quel"], answer: 0 },
+    { type: "fill", tag: "Interrogatifs", sentence: "Tu as vu ces tisanes ? ___ choisis-tu ?", options: ["Lesquelles", "Lesquels", "Quelles"], answer: 0 },
+    { type: "fill", tag: "Interrogatifs", sentence: "___ gouttes pour le nez tu prends ?", options: ["Quelles", "Lesquelles", "Laquelle"], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Qu'est-ce qui ne va pas ?", options: ["Je suis un peu patraque, j'ai mal à la gorge.", "C'est la plante la plus efficace.", "Lequel ?"], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Je dors mal en ce moment.", options: ["Je te conseille une tisane à la lavande.", "Je te lis.", "C'est le 18."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Il faut enseigner les premiers secours à l'école ?", options: ["Oui, à mon avis, c'est très important.", "Oui, je lui enseigne.", "Oui, le moins."], answer: 0 },
+    { type: "mcq", tag: "Urgences", q: "En France, le SAMU, c'est le…", options: ["15", "17", "18"], answer: 0 },
+    { type: "mcq", tag: "Urgences", q: "Le numéro d'urgence européen, c'est le…", options: ["112", "911", "114"], answer: 0 },
+    { type: "mcq", tag: "Urgences", q: "En cas d'accident, il faut d'abord…", options: ["protéger, alerter, secourir", "secourir, alerter, protéger", "alerter, protéger, secourir"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["le rhume", "la fièvre", "la toux", "l'accident"], answer: 3, explain: "l'accident is an emergency; the others are cold symptoms." },
+    { type: "mcq", tag: "Vocabulaire", q: "Une petite période de repos dans la journée :", options: ["la sieste", "le réveil", "le rêve"], answer: 0 },
+    { type: "order", tag: "Construisez", en: "I recommend you sleep on your side.", words: ["Je", "vous", "recommande", "de", "dormir", "sur", "le", "côté."] },
+    { type: "listen", tag: "Écoute", q: "What are the symptoms?", say: "Je suis un peu patraque : j'ai mal à la gorge et je tousse, mais je n'ai pas de fièvre.", options: ["sore throat and cough, no temperature", "temperature and headache", "backache"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "💊 À la pharmacie (DELF)", brief: "You don't feel well and go to the pharmacy. The pharmacist asks questions; explain your symptoms.", memo: ["Je suis un peu patraque.", "J'ai mal à…", "Je tousse / j'ai le nez bouché", "Qu'est-ce que vous me conseillez ?"], partner: "f5", you: "m6",
+      turns: [
+        { them: "Bonjour ! Qu'est-ce qui ne va pas ?", themEn: "Hello! What's wrong?", hint: "You're under the weather, with a headache and a blocked nose.", you: "Bonjour, je suis un peu patraque. J'ai mal à la tête et le nez bouché.", youEn: "Hello, I'm a bit under the weather. I have a headache and a blocked nose." },
+        { them: "Vous avez de la fièvre ?", themEn: "Do you have a temperature?", hint: "A little, since yesterday.", you: "Un peu, depuis hier.", youEn: "A little, since yesterday." },
+        { them: "Vous avez consulté votre médecin ?", themEn: "Have you seen your doctor?", hint: "No; ask what she recommends.", you: "Non, pas encore. Qu'est-ce que vous me conseillez ?", youEn: "Not yet. What do you recommend?" }
+      ] },
+    { title: "🚑 Appeler les secours", brief: "You witness an accident. Call 112 and give the essential information.", memo: ["Il y a eu un accident…", "L'adresse : …", "Il y a … blessé(s)", "Il / Elle respire / parle"], partner: "f6", you: "m3",
+      turns: [
+        { them: "Cent douze, j'écoute.", themEn: "112, I'm listening.", hint: "Say there's been a car accident with one injured person.", you: "Bonjour, il y a eu un accident de voiture. Il y a un blessé.", youEn: "Hello, there's been a car accident. There's one injured person." },
+        { them: "Où êtes-vous ?", themEn: "Where are you?", hint: "Give an address: 8, avenue de la Gare, Lyon.", you: "Huit, avenue de la Gare, à Lyon.", youEn: "Eight, avenue de la Gare, in Lyon." },
+        { them: "La victime respire ?", themEn: "Is the victim breathing?", hint: "Yes, he's talking, but his arm hurts.", you: "Oui, il me parle, mais il a très mal au bras.", youEn: "Yes, he's talking to me, but his arm hurts a lot." }
+      ] },
+    { title: "💬 Ton avis sur la santé", brief: "A friend asks your opinion on health habits. Give your point of view with superlatives.", memo: ["À mon avis…", "Je trouve que…", "le meilleur / le mieux / le plus…"], partner: "f4", you: "m2",
+      turns: [
+        { them: "Quel est le meilleur sport pour le dos ?", themEn: "What's the best sport for your back?", hint: "In your opinion, swimming.", you: "À mon avis, la natation est le meilleur sport pour le dos.", youEn: "In my opinion, swimming is the best sport for your back." },
+        { them: "Et la sieste, c'est bien ?", themEn: "And naps, are they good?", hint: "You find it does a world of good.", you: "Je trouve que ça fait le plus grand bien !", youEn: "I find it does a world of good!" },
+        { them: "Qu'est-ce qui est le plus important pour être en forme ?", themEn: "What's most important to be fit?", hint: "The best thing is to sleep well.", you: "Le mieux, c'est de bien dormir.", youEn: "The best thing is to sleep well." }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Participer à une campagne de prévention", intro: "In groups, prepare a health prevention campaign for your school or workplace, and present it to the class.",
+      steps: [["Préparation", ["Choose a health topic: food, pollution, road safety, hearing risks, a sedentary lifestyle…", "Research your topic: information, photos, infographics."]], ["Réalisation", ["Pool your information. Did anything surprise you?", "Select what to share. Think about your message and your audience.", "Write a presentation plan (in what order?) and share the speaking turns.", "Prepare a support: slideshow, poster, flyer or video."]], ["Présentation", ["Present your campaign to the class.", "Ask the others to react: what surprised them? What did they learn? Can they add information?"]]],
+      phrases: ["Évitez de…", "Attention à…", "Il est déconseillé de…", "Il est important de…", "Pensez à…", "Le mieux, c'est de…"],
+      model: { type: "card", style: "board", caption: "📣 Example flyer · tap a line", title: "BOUGEZ PLUS !", sub: "campagne contre la sédentarité", rows: [["Le problème", "on reste assis trop longtemps : au bureau, en voiture, devant les écrans", "On reste assis trop longtemps, au bureau ou devant les écrans."], ["Évitez de…", "rester assis plus d'une heure sans bouger", "Évitez de rester assis plus d'une heure sans bouger."], ["Pensez à…", "prendre les escaliers, marcher pendant la pause", "Pensez à prendre les escaliers et à marcher pendant la pause."], ["Le mieux, c'est de…", "faire 30 minutes d'activité physique par jour", "Le mieux, c'est de faire trente minutes d'activité physique par jour."]], foot: "Votre corps vous dira merci !" } }
+  ],
+  delf: {
+    skill: "Compréhension des écrits", title: "DELF A2 reading training: exercise 2 (a message)",
+    about: "In exercise 2 you read a <b>letter or e-mail</b> (personal or administrative) and find the key information. Here: you're a member of the association « Famille et Santé » and receive this e-mail: a family health day on <b>Sunday 2 February</b>. 9:00 meeting at the association · 9:30 two-hour fitness walk · 12:00 lunch (bring a picnic) · 14:00 wild-plant walk (Léa) · 15:00 herbal-tea workshop (Matteo) · 16:00 sports and games with prizes (Livia): cards, balls, marbles · 17:00 return. Confirm by e-mail. The association also needs volunteers to <b>help organise</b> its next events (family yoga, a weekend by the sea, a food evening): call Sophie.",
+    tips: ["Read the subject line and the greeting: who writes, to whom, why?", "Programmes: underline times, names and places.", "Watch the verbs in the questions: <i>participer</i> (take part) ≠ <i>préparer, organiser</i> (organise)."],
+    items: [
+      { type: "mcq", q: "The first activity of the day is…", options: ["a fitness walk", "a herbal-tea workshop", "a picnic"], answer: 0 },
+      { type: "mcq", q: "The event takes place on…", options: ["2 February", "8 February", "2 March"], answer: 0 },
+      { type: "mcq", q: "The sports and games are led by…", options: ["Livia", "Matteo", "Léa"], answer: 0 },
+      { type: "mcq", q: "What can you win?", options: ["cards, balls, marbles", "herbal teas", "a weekend by the sea"], answer: 0 },
+      { type: "mcq", q: "To take part in the first event, you must…", options: ["send an e-mail", "phone Sophie", "go to the association"], answer: 0 },
+      { type: "mcq", q: "The association is also looking for people to…", options: ["prepare the next events", "take part in the next events", "lead the yoga class"], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Quelle tisane ?",
+    intro: "Which plant would you choose? (From the book's herbal-tea guide.)",
+    items: [
+      { type: "mcq", q: "Vous avez une migraine.", options: ["le romarin", "l'échinacée", "le thym"], answer: 0 },
+      { type: "mcq", q: "Vous n'arrivez pas à vous endormir.", options: ["la lavande", "l'eucalyptus", "le romarin"], answer: 0 },
+      { type: "mcq", q: "Vous avez un rhume et de la fièvre.", options: ["l'eucalyptus", "la lavande", "le millepertuis"], answer: 0 },
+      { type: "mcq", q: "Vous avez mal à la gorge et vous toussez.", options: ["le thym", "la lavande", "le millepertuis"], answer: 0 },
+      { type: "mcq", q: "Vous avez une allergie au printemps.", options: ["l'échinacée", "le romarin", "le thym"], answer: 0 },
+      { type: "mcq", q: "Vous êtes étudiant(e) et vous révisez vos examens.", options: ["le romarin (mémoire, concentration)", "la lavande", "l'eucalyptus"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "pics", title: "🚨 Emergency numbers in France · tap to hear", items: [
+      { t: "le 15 · le SAMU", pic: "🚑", en: "medical emergencies" }, { t: "le 17 · police secours", pic: "👮", en: "police" }, { t: "le 18 · les sapeurs-pompiers", pic: "🚒", en: "fire brigade" },
+      { t: "le 112 · le numéro d'urgence européen", pic: "🇪🇺", en: "all emergencies, whole EU" }, { t: "le 114 · par SMS", pic: "💬", en: "for deaf and hard-of-hearing people" }
+    ] },
+    { type: "timeline", title: "🚑 Emergency transport in Québec (from the book's document)", ends: ["1950", "", "aujourd'hui"], items: [
+      { x: 8, fr: "Années 50 : pas d'ambulances municipales à Montréal", en: "no municipal ambulances", pic: "🏙️" },
+      { x: 28, fr: "1959 : 120 policiers conduisent les ambulances", en: "police drive ambulances", pic: "👮" },
+      { x: 50, fr: "1972-1973 : première loi, ambulanciers diplômés", en: "first law, qualified paramedics", pic: "📜" },
+      { x: 72, fr: "1977 : le 911 à Laval, premier numéro central", en: "911, first central number", pic: "☎️" }
+    ] }
+  ],
+  culture: [
+    { icon: "💊", kind: "Oh, le cliché !", t: "« Les Français consomment beaucoup d'antibiotiques. »", d: "True: according to the European Centre for Disease Prevention and Control figures quoted by the book, the French are among the biggest consumers of antibiotics in the world, and third in Europe. Health organisations have been warning about this overconsumption for years." },
+    { icon: "🩹", kind: "Civilisation", t: "Les gestes qui sauvent", d: "According to the first-aid trainers quoted by the book, only <b>20 %</b> of French people are trained in first aid, and they say free courses are too few. The key rule: <b>protéger, alerter, secourir</b> (protect, alert, help)." },
+    { icon: "🛋️", kind: "Au fait !", t: "Les bars à sieste", d: "In big cities, nap bars offer a 20-minute rest in a massage chair, with soft music, during the lunch break: perfect for people who are short of sleep." },
+    { icon: "🌿", kind: "Francophonie", t: "La médecine traditionnelle à La Réunion", d: "On La Réunion, in the Indian Ocean, many people still use medicinal plants (<i>tisanes</i>) passed down from generation to generation, alongside modern medicine." },
+    { icon: "🚑", kind: "Francophonie", t: "Le 911 au Québec", d: "In 1977, the inhabitants of Laval were the first in Québec to have a central emergency number, the 911: calls are sent on to firefighters, paramedics or the police." },
+    { icon: "😴", kind: "Au fait !", t: "Les cycles du sommeil", d: "A night is made of several sleep cycles, each with several phases, from light sleep to deep sleep and dreaming (REM) sleep. Waking at the end of a cycle helps you feel rested." }
+  ],
+  tips: [
+    { icon: "🎯", t: "Is there an à?", d: "Verb + à quelqu'un → [[lui / leur]]. No à → [[le / la / les]]. 1st and 2nd persons are the same: me, te, nous, vous." },
+    { icon: "🏅", t: "meilleur or mieux?", d: "With a noun: [[le meilleur sirop]]. With a verb: [[ce sirop marche le mieux]]." },
+    { icon: "🚨", t: "Protéger, alerter, secourir", d: "In that order. And in the EU, [[le 112]] works everywhere." }
+  ],
+  mistakes: [
+    ["Je le téléphone.", "Je lui téléphone.", "téléphoner à → COI"],
+    ["Je lui aime.", "Je l'aime.", "aimer quelqu'un → COD"],
+    ["Je les donne des conseils.", "Je leur donne des conseils.", "donner à quelqu'un → leur"],
+    ["C'est le plus bon remède.", "C'est le meilleur remède.", "bon → le meilleur"],
+    ["C'est ce sirop qui marche le meilleur.", "C'est ce sirop qui marche le mieux.", "verb → le mieux"],
+    ["la plante la plus efficace de toutes les plantes", "la plus efficace des plantes", "le plus + adj. + de"],
+    ["Lequel tisane ?", "Quelle tisane ? / Laquelle ?", "quel + noun; lequel alone"],
+    ["J'ai mal à le dos.", "J'ai mal au dos.", "à + le = au"]
+  ]
+});
+</script><script>// Unité 8 · Dans les médias (Édito A2, 2e édition, book pp. 111–124)
+// Situations: l'actualité en BD · comment s'informent les jeunes · une chaîne de streaming · les séniors sur les réseaux · la critique d'un film
+// Grammar: la cause et la conséquence · le subjonctif (nécessité, opinion) · la place des pronoms COD et COI
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u08", rubrique: 4, num: 8,
+  title: "In the media",
+  titleFr: "Dans les médias",
+  pages: "Book pp. 111–124",
+  opener: { fr: "C'est passionnant !", en: "It's fascinating!" },
+  hero: { scene: "kiosque", staff: "Le vendeur", people: { "Le vendeur": "m5", "Alix": "f7", "Abel": "m3" } },
+  situations: [
+    ["📰", "L'actualité en BD", "a news magazine in comics: [[une information critique et engagée]]"],
+    ["📱", "Comment tu t'informes ?", "preference: [[J'aime mieux lire la presse en ligne.]] · [[Je préfère les réseaux sociaux aux médias traditionnels.]]"],
+    ["🎮", "Ma chaîne en direct", "cause and consequence: [[grâce à]], [[à cause de]], [[c'est pourquoi]], [[alors]]"],
+    ["👵", "Mamie sur les réseaux", "interest and opinion: [[Ça me passionne !]] · [[C'est bien que tu sois connectée !]]"],
+    ["🎬", "La critique du film", "a review: [[Je l'ai adoré, je vous le conseille !]] · [[Je me suis ennuyé.]]"]
+  ],
+  goals: [
+    "Express a preference: [[J'aime mieux…]], [[Je préfère A à B.]], [[C'est mieux (que…).]]",
+    "Express interest: [[Ça m'intéresse !]], [[Ça me passionne.]], [[C'est fascinant !]], [[Je suis curieux, curieuse de savoir…]]",
+    "Give a cause: [[parce que]], [[car]], [[grâce à]] (positive), [[à cause de]] (negative); a consequence: [[donc]], [[alors]], [[c'est pourquoi]], [[c'est pour ça que]]",
+    "Use the subjunctive after necessity and opinion: [[Il faut que tu regardes…]], [[C'est bien que tu sois…]]",
+    "Place object pronouns correctly in the present, the passé composé and with an infinitive: [[je l'ai vu]], [[je vais le revoir]]",
+    "Write or give a positive or negative review of a film or a medium"
+  ],
+  glance: [
+    ["🗣️", "Communication", "preferences · interest · positive and negative reviews · how we get the news"],
+    ["🧩", "Grammaire", "cause and consequence · the present subjunctive (necessity, opinion) · the position of object pronouns"],
+    ["🗂️", "Vocabulaire", "news and journalism · the press · TV · news sections · radio and podcasts · social networks · communication"],
+    ["🔊", "Phonie-graphie", "final consonants: silent in the masculine, pronounced in the feminine"],
+    ["⭐", "The phrase to learn first", "[[J'aime mieux…]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "The news in comics", titleFr: "Au kiosque · L'actualité en bande dessinée",
+      note: "Abel shows Alix a quarterly magazine where journalists and cartoonists tell the news in comics. Listen to why he likes it.",
+      scene: "kiosque", staff: "Le vendeur", people: { "Le vendeur": "m5", "Abel": "m3", "Alix": "f7" },
+      lines: [
+        ["Abel", "Regarde, le nouveau numéro de ma revue préférée : toute l'actualité est en BD !", "Look, the new issue of my favourite magazine: all the news is in comics!"],
+        ["Alix", "En BD ? Mais c'est sérieux ?", "In comics? But is it serious?"],
+        ["Abel", "Très sérieux ! Chaque enquête est réalisée par un journaliste et un dessinateur. Ils prennent le temps de chercher, c'est pourquoi la revue sort tous les trois mois.", "Very serious! Each investigation is done by a journalist and a cartoonist. They take time to research, which is why the magazine comes out every three months."],
+        ["Alix", "Et ça parle de quoi ?", "And what's it about?"],
+        ["Abel", "De tout : politique, écologie, société, sport… C'est une information critique et engagée.", "Everything: politics, ecology, society, sport… It's critical, committed journalism."],
+        ["Alix", "C'est mieux que les photos ?", "Is it better than photos?"],
+        ["Abel", "Pour moi, oui. Les dessins expliquent les sujets compliqués plus simplement. Grâce à cette revue, j'ai enfin compris l'économie !", "For me, yes. The drawings explain complicated topics more simply. Thanks to this magazine, I finally understood economics!"],
+        ["Le vendeur", "Il vous la faut ? C'est le dernier exemplaire !", "Do you want it? It's the last copy!"]
+      ],
+      glossary: [["la BD = la bande dessinée", "comics"], ["l'enquête", "the investigation"], ["le dessinateur, la dessinatrice", "the cartoonist"], ["engagé(e)", "committed, taking a stand"]]
+    },
+    {
+      id: "d2", n: 2, title: "How do young people get the news?", titleFr: "Micro-trottoir · Comment vous vous informez ?",
+      note: "A radio journalist asks three young people how they keep up with the news. Listen to how they express preferences.",
+      scene: "ville", staff: "Le journaliste", people: { "Le journaliste": "m4", "Alix": "f7", "Floriane": "f8", "Abel": "m3" },
+      lines: [
+        ["Le journaliste", "Bonjour ! Comment vous vous informez ?", "Hello! How do you get the news?"],
+        ["Alix", "Moi, j'aime mieux lire la presse en ligne. Je ne regarde pas le journal télé, à cause des images, qui sont souvent horribles.", "I prefer reading the news online. I don't watch the TV news because of the images, which are often horrible."],
+        ["Floriane", "Je n'ai pas le temps de tout lire, alors je ne lis que les titres sur mon téléphone. Les articles sont trop longs !", "I don't have time to read everything, so I only read the headlines on my phone. The articles are too long!"],
+        ["Abel", "Moi, je préfère les réseaux sociaux aux médias traditionnels. Je reçois les nouvelles sur mon téléphone, alors je n'ai pas besoin de les chercher.", "I prefer social networks to traditional media. I get the news on my phone, so I don't need to look for it."],
+        ["Le journaliste", "Et les fausses nouvelles, les infox ?", "And fake news?"],
+        ["Abel", "C'est vrai, il faut faire attention. Je vérifie toujours la source.", "True, you have to be careful. I always check the source."],
+        ["Le journaliste", "Vous êtes au courant de l'actualité internationale ?", "Do you keep up with international news?"],
+        ["Floriane", "Pas assez… Je devrais m'abonner à un journal. C'est mieux que de lire seulement les titres !", "Not enough… I should subscribe to a newspaper. It's better than just reading the headlines!"]
+      ],
+      glossary: [["J'aime mieux… · Je préfère A à B", "I prefer… · I prefer A to B"], ["être au courant (de)", "to be informed (about)"], ["les infox = les fausses nouvelles", "fake news"], ["s'abonner à", "to subscribe to"]]
+    },
+    {
+      id: "d3", n: 3, title: "My live channel", titleFr: "Chez Léo · Une chaîne de streaming",
+      note: "Léo has started a live-streaming channel about cooking. Listen to the cause words ([[grâce à]], [[à cause de]], [[car]]) and the consequence words ([[donc]], [[alors]], [[c'est pour ça que]]).",
+      scene: "appartement", people: { "Léo": "m5", "Clara": "f3" },
+      lines: [
+        ["Clara", "Tu fais quoi avec cette caméra ?", "What are you doing with that camera?"],
+        ["Léo", "J'ai créé ma chaîne sur une plateforme de diffusion en direct. Je cuisine et les gens me posent des questions dans le tchat.", "I've created my channel on a live-streaming platform. I cook and people ask me questions in the chat."],
+        ["Clara", "Je croyais que c'était seulement pour les jeux vidéo !", "I thought it was only for video games!"],
+        ["Léo", "Au début, oui. Mais aujourd'hui, tout le monde peut parler de cuisine, de musique, d'actualité… Même les médias classiques y vont, car ils veulent toucher un public plus jeune.", "At the start, yes. But now anyone can talk about cooking, music, the news… Even traditional media go there, because they want to reach a younger audience."],
+        ["Clara", "Et ça marche ?", "And is it working?"],
+        ["Léo", "Grâce au tchat, je réponds en direct. Les gens adorent l'interaction, c'est pour ça que j'ai déjà trois cents abonnés !", "Thanks to the chat, I answer live. People love the interaction, that's why I already have three hundred followers!"],
+        ["Clara", "Bravo ! Et hier soir ?", "Well done! And last night?"],
+        ["Léo", "Hier, à cause d'un problème de connexion, l'émission s'est arrêtée. Donc je recommence ce soir !", "Yesterday, because of a connection problem, the show stopped. So I'm starting again tonight!"]
+      ],
+      glossary: [["la diffusion en direct / en streaming", "live streaming"], ["grâce à + nom", "thanks to (positive)"], ["à cause de + nom", "because of (negative)"], ["c'est pour ça que", "that's why (oral)"]]
+    },
+    {
+      id: "d4", n: 4, title: "Grandma on social media", titleFr: "Chez Christine · Ça m'intéresse !",
+      note: "Christine, 72, has just opened a social-media account. Her grandson helps her. Listen to interest ([[Ça me passionne !]]) and to the subjunctive after [[il faut que]] and [[c'est bien que]].",
+      scene: "maison", people: { "Christine": "f6", "Noah": "m3" },
+      lines: [
+        ["Noah", "Alors, Mamie, tu as ouvert ton compte ?", "So, Grandma, have you opened your account?"],
+        ["Christine", "Oui ! Je regarde les vidéos de mes petits-enfants. Je m'intéresse à leur vie, ça me passionne !", "Yes! I watch my grandchildren's videos. I'm interested in their lives, it fascinates me!"],
+        ["Noah", "C'est très bien que tu sois plus connectée !", "It's great that you're more connected!"],
+        ["Christine", "Mais je suis curieuse de comprendre comment ça fonctionne. Comment on poste une photo ?", "But I'm curious to understand how it works. How do you post a photo?"],
+        ["Noah", "Il faut que tu choisisses la photo, et après, tu écris un petit message.", "You have to choose the photo, then you write a little message."],
+        ["Christine", "C'est fascinant ! Mes amies du club aussi, elles sont sur les réseaux.", "It's fascinating! My friends at the club are on social media too."],
+        ["Noah", "C'est normal qu'on soit sur les réseaux à tout âge. Mais attention aux infox : il est important que tu vérifies les informations.", "It's normal to be on social media at any age. But watch out for fake news: it's important that you check information."],
+        ["Christine", "Promis ! Et il faut que tu m'aides à commenter les photos de ta cousine !", "Promise! And you have to help me comment on your cousin's photos!"]
+      ],
+      glossary: [["Ça me passionne.", "It fascinates me."], ["Je suis curieux, curieuse de…", "I'm curious to…"], ["il faut que + subjonctif", "it's necessary that…"], ["c'est bien que + subjonctif", "it's good that…"]]
+    },
+    {
+      id: "d5", n: 5, title: "Leaving the cinema", titleFr: "À la sortie du cinéma · Alors, ce film ?",
+      note: "Two friends give their opinion on a new historical film. Listen to the positive and negative criticism, and to where the pronouns go: [[je l'ai trouvé]], [[je vais le revoir]].",
+      scene: "spectacle", people: { "Samia": "f4", "Hugo": "m2" },
+      lines: [
+        ["Samia", "Alors, ce film, tu l'as aimé ?", "So, this film, did you like it?"],
+        ["Hugo", "Je l'ai adoré ! L'acteur principal joue merveilleusement bien. Le rôle lui va très bien.", "I loved it! The lead actor plays wonderfully. The role suits him perfectly."],
+        ["Samia", "Moi, j'ai trouvé les premières scènes un peu longues. Je les ai trouvées ennuyeuses.", "I found the first scenes a bit long. I found them boring."],
+        ["Hugo", "C'est vrai, le début est lent. Mais après, l'histoire est passionnante, et la musique est magnifique.", "True, the beginning is slow. But afterwards the story is fascinating, and the music is magnificent."],
+        ["Samia", "Les décors sont superbes, je suis d'accord. Mais l'histoire d'amour, je ne l'ai pas crue du tout.", "The sets are superb, I agree. But the love story, I didn't believe it at all."],
+        ["Hugo", "Moi, je vais le revoir avec mes parents. Je suis sûr qu'il va leur plaire.", "I'm going to see it again with my parents. I'm sure they'll like it."],
+        ["Samia", "Bon… je ne le conseille pas à tout le monde, mais pour les fans d'histoire, c'est un bon film.", "Well… I wouldn't recommend it to everyone, but for history fans, it's a good film."]
+      ],
+      glossary: [["je l'ai adoré", "I loved it (pronoun before avoir)"], ["je vais le revoir", "I'm going to see it again (pronoun before the infinitive)"], ["ennuyeux, ennuyeuse ≠ passionnant(e)", "boring ≠ fascinating"], ["les décors", "the sets"]]
+    }
+  ],
+
+  vocab: [
+    { t: "les médias", en: "the media", pic: "📡", cat: "L'information", g: "pl" },
+    { t: "le / la journaliste", en: "the journalist", pic: "🎙️", cat: "L'information" },
+    { t: "le journalisme numérique", en: "digital journalism", pic: "💻", cat: "L'information", g: "m" },
+    { t: "l'enquête = le reportage", en: "the investigation = the report", pic: "🔍", cat: "L'information", g: "f" },
+    { t: "le documentaire", en: "the documentary", pic: "🎞️", cat: "L'information", g: "m" },
+    { t: "la revue de presse", en: "the press review", pic: "🗞️", cat: "L'information", g: "f" },
+    { t: "publier un article", en: "to publish an article", pic: "✍️", cat: "L'information" },
+    { t: "le point de vue", en: "the point of view", pic: "👁️", cat: "L'information", g: "m" },
+    { t: "la plateforme", en: "the platform", pic: "🖥️", cat: "L'information", g: "f" },
+    { t: "la diffusion en direct, en streaming", en: "live broadcast, streaming", pic: "🔴", cat: "L'information", g: "f" },
+    { t: "s'informer, être au courant (de)", en: "to keep informed, to know about", pic: "ℹ️", cat: "S'informer" },
+    { t: "suivre l'actualité", en: "to follow the news", pic: "🌍", cat: "S'informer" },
+    { t: "regarder les nouvelles, les informations", en: "to watch the news", pic: "📺", cat: "S'informer" },
+    { t: "s'abonner (à), l'abonnement", en: "to subscribe (to), subscription", pic: "🔔", cat: "S'informer" },
+    { t: "le journal, la revue = le magazine", en: "the newspaper, the magazine", pic: "📰", cat: "La presse écrite", g: "m" },
+    { t: "l'article, le titre, le numéro", en: "the article, the headline, the issue", pic: "📄", cat: "La presse écrite", g: "m" },
+    { t: "la presse en ligne ≠ la presse papier", en: "online ≠ print press", pic: "🌐", cat: "La presse écrite", g: "f" },
+    { t: "le dessinateur, la dessinatrice", en: "the cartoonist", pic: "✏️", cat: "La presse écrite" },
+    { t: "la chaîne", en: "the channel", pic: "📺", cat: "La télévision", g: "f" },
+    { t: "l'émission", en: "the programme, show", pic: "🎬", cat: "La télévision", g: "f" },
+    { t: "le journal télé(visé) = le JT", en: "the TV news", pic: "🗣️", cat: "La télévision", g: "m" },
+    { t: "le direct", en: "live (broadcast)", pic: "🔴", cat: "La télévision", g: "m" },
+    { t: "l'actualité internationale, nationale, régionale", en: "international, national, regional news", pic: "🌐", cat: "Les rubriques", g: "f" },
+    { t: "la politique, l'économie, la société", en: "politics, the economy, society", pic: "🏛️", cat: "Les rubriques", g: "f" },
+    { t: "l'écologie, la culture, le sport, la météo", en: "ecology, culture, sport, weather", pic: "🌱", cat: "Les rubriques", g: "f" },
+    { t: "l'auditeur, l'auditrice", en: "the listener", pic: "🎧", cat: "La radio, les podcasts" },
+    { t: "l'émission de radio, le programme", en: "the radio show, the programme", pic: "📻", cat: "La radio, les podcasts", g: "f" },
+    { t: "écouter des podcasts, l'épisode", en: "to listen to podcasts, the episode", pic: "🎙️", cat: "La radio, les podcasts" },
+    { t: "les contenus sonores, la voix", en: "audio content, the voice", pic: "🔊", cat: "La radio, les podcasts", g: "pl" },
+    { t: "l'internaute", en: "the Internet user", pic: "🧑‍💻", cat: "Les réseaux sociaux" },
+    { t: "ouvrir un compte, s'inscrire sur un réseau", en: "to open an account, to join a network", pic: "➕", cat: "Les réseaux sociaux" },
+    { t: "fermer son compte, quitter un réseau", en: "to close one's account, to leave a network", pic: "🚪", cat: "Les réseaux sociaux" },
+    { t: "poster des photos, commenter", en: "to post photos, to comment", pic: "📸", cat: "Les réseaux sociaux" },
+    { t: "suivre quelqu'un, être en contact avec", en: "to follow someone, to be in touch with", pic: "👥", cat: "Les réseaux sociaux" },
+    { t: "être connecté(e)", en: "to be online, connected", pic: "📶", cat: "Les réseaux sociaux" },
+    { t: "les fausses nouvelles = les infox", en: "fake news", pic: "🚫", cat: "Les réseaux sociaux", g: "pl" },
+    { t: "diffuser une information", en: "to spread information", pic: "📢", cat: "La communication" },
+    { t: "un outil, un moyen de communication", en: "a means of communication", pic: "🔧", cat: "La communication", g: "m" },
+    { t: "sensibiliser un public", en: "to raise awareness", pic: "💡", cat: "La communication" },
+    { t: "transmettre des connaissances", en: "to pass on knowledge", pic: "🎓", cat: "La communication" },
+    { t: "passionnant(e) ≠ ennuyeux, ennuyeuse", en: "fascinating ≠ boring", pic: "🤩", cat: "La critique" },
+    { t: "un chef-d'œuvre ≠ un navet", en: "a masterpiece ≠ a flop (casual)", pic: "🏆", cat: "La critique", g: "m" },
+    { t: "les décors, les effets spéciaux", en: "the sets, special effects", pic: "🎥", cat: "La critique", g: "pl" },
+    { t: "le rôle, l'acteur principal", en: "the role, the lead actor", pic: "🎭", cat: "La critique", g: "m" }
+  ],
+
+  grammar: [
+    {
+      id: "g-preference",
+      title: "Preference and interest",
+      body: [
+        "Preference: [[J'aime mieux lire la presse en ligne.]] · [[Je préfère les réseaux sociaux aux médias traditionnels.]] (préférer A <b>à</b> B) · [[C'est mieux (que…).]]",
+        "Interest: [[Ça m'intéresse !]] / [[Ça nous intéresse !]] · [[Ça me passionne.]] · [[Je m'intéresse à leur vie !]] · [[C'est fascinant ! C'est passionnant !]] · [[Je suis curieux / curieuse de savoir comment ça fonctionne.]]"
+      ],
+      info: { type: "bars", title: "📻 How the French listen to audio content (figures quoted by the book)", unit: " %", items: [
+        { fr: "la radio (en direct ou en podcast)", en: "radio (live or podcast)", v: 91, pic: "📻" }, { fr: "leur musique personnelle", en: "their own music", v: 58, pic: "🎵" },
+        { fr: "la musique en vidéo", en: "music videos", v: 46, pic: "🎬" }, { fr: "la musique en streaming", en: "music streaming", v: 41, pic: "🎧" },
+        { fr: "des podcasts natifs (pas de la radio)", en: "native podcasts", v: 10, pic: "🎙️" }, { fr: "des livres audio", en: "audiobooks", v: 4, pic: "📚" }
+      ] },
+      widget: {
+        type: "combo", label: "Say what you prefer · pick a structure and two media",
+        rows: [{ k: "mieux", label: "J'aime mieux…" }, { k: "prefere", label: "Je préfère… à…" }, { k: "cest", label: "… c'est mieux que…" }],
+        cols: [{ k: "presse", label: "📰 la presse en ligne / la télé" }, { k: "radio", label: "📻 la radio / les podcasts" }, { k: "bd", label: "✏️ la BD / les photos" }],
+        out: {
+          "mieux|presse": ["J'aime mieux lire la presse en ligne que regarder la télé.", "I'd rather read the news online than watch TV."], "prefere|presse": ["Je préfère la presse en ligne à la télé.", "I prefer the online press to TV.", "préférer A à B"], "cest|presse": ["La presse en ligne, c'est mieux que la télé.", "The online press is better than TV."],
+          "mieux|radio": ["J'aime mieux écouter la radio en direct.", "I prefer listening to live radio."], "prefere|radio": ["Je préfère les podcasts à la radio.", "I prefer podcasts to the radio.", "à + la radio"], "cest|radio": ["Les podcasts, c'est mieux que la radio : on les écoute quand on veut.", "Podcasts are better than radio: you listen when you want."],
+          "mieux|bd": ["J'aime mieux l'actualité en BD.", "I prefer the news in comics."], "prefere|bd": ["Je préfère la BD aux photos.", "I prefer comics to photos.", "à + les = aux"], "cest|bd": ["Pour expliquer, la BD, c'est mieux que les photos.", "To explain things, comics are better than photos."]
+        }
+      }
+    },
+    {
+      id: "g-cause",
+      title: "Cause and consequence",
+      body: [
+        "<b>Cause</b>: [[parce que]] (spoken and written) / [[car]] (mostly written) + clause: [[Des journalistes utilisent Twitch parce que c'est interactif.]] · [[grâce à]] + noun = a <b>positive</b> cause: [[Je suis toujours informée grâce aux réseaux sociaux.]] · [[à cause de]] + noun = a <b>negative</b> cause: [[À cause d'Internet, la presse papier a des difficultés.]]",
+        "<b>Consequence</b>: [[donc]] (mostly written) · [[alors]] (mostly spoken): [[J'adore l'actualité et la BD, alors je me suis abonné.]] · [[c'est pourquoi]] / [[c'est pour cela que]] (written) / [[c'est pour ça que]] (spoken): [[Les articles sont trop longs, c'est pourquoi je ne lis que les titres.]]",
+        "Contractions: [[grâce au / aux]], [[à cause du / des]]."
+      ],
+      info: { type: "compare", title: "➡️ Cause → consequence", cols: [
+        { head: "La cause", en: "why?", color: "#3a6fd8", lines: [["parce que / car + phrase", "because"], ["grâce à + nom (😀)", "thanks to"], ["à cause de + nom (😞)", "because of"]] },
+        { head: "La conséquence", en: "so what?", color: "#e86a2e", lines: [["donc (écrit) · alors (oral)", "so"], ["c'est pourquoi · c'est pour cela que", "that's why (written)"], ["c'est pour ça que", "that's why (spoken)"]] }
+      ] },
+      widget: {
+        type: "sort", label: "grâce à or à cause de?",
+        cols: [{ k: "grace", label: "grâce à 😀", color: "#2f9c8a" }, { k: "cause", label: "à cause de 😞", color: "#e0474f" }],
+        items: [
+          { t: "J'ai appris beaucoup de choses … mon émission préférée.", k: "grace", say: "J'ai appris beaucoup de choses grâce à mon émission préférée." }, { t: "La presse papier va mal … la presse en ligne.", k: "cause", say: "La presse papier va mal à cause de la presse en ligne." },
+          { t: "Cette journaliste est devenue célèbre … ses articles engagés.", k: "grace", say: "Cette journaliste est devenue célèbre grâce à ses articles engagés." }, { t: "Ils ne peuvent pas faire leur reportage … mauvais temps.", k: "cause", say: "Ils ne peuvent pas faire leur reportage à cause du mauvais temps." },
+          { t: "La série est un succès … l'acteur principal.", k: "grace", say: "La série est un succès grâce à l'acteur principal." }, { t: "… réseaux sociaux, il ne sort plus de chez lui.", k: "cause", say: "À cause des réseaux sociaux, il ne sort plus de chez lui." }
+        ]
+      }
+    },
+    {
+      id: "g-subjonctif",
+      title: "The present subjunctive: necessity and opinion",
+      body: [
+        "After expressions of <b>necessity</b> ([[il faut que]], [[il est important que]], [[il ne faut pas que]]) and impersonal <b>opinions</b> ([[c'est bien / normal / important que]]), use the subjunctive: [[Il faut que tu regardes cette vidéo !]] · [[C'est bien qu'elle te montre comment ça marche.]]",
+        "Form: <b>je, tu, il, ils</b>: the stem of <b>ils</b> in the present (ils inform<b>ent</b>) + [[-e, -es, -e, -ent]]. So for -er verbs these forms look like the present! <b>nous, vous</b>: like the imparfait: [[que nous informions]], [[que vous informiez]].",
+        "Irregular: [[être]] → [[que je sois]] · [[avoir]] → [[que j'aie]] · [[aller]] → [[que j'aille]] · [[faire]] → [[que je fasse]] · [[pouvoir]] → [[que je puisse]] · [[savoir]] → [[que je sache]]"
+      ],
+      info: [
+        { type: "conj", title: "🧩 The present subjunctive", verbs: [
+          { inf: "informer", en: "regular -er", forms: ["que j'informe", "que tu informes", "qu'il / elle / on informe", "que nous informions", "que vous informiez", "qu'ils / elles informent"] },
+          { inf: "choisir", en: "stem of ils choisissent", forms: ["que je choisisse", "que tu choisisses", "qu'il / elle / on choisisse", "que nous choisissions", "que vous choisissiez", "qu'ils / elles choisissent"] },
+          { inf: "être", en: "irregular", forms: ["que je sois", "que tu sois", "qu'il / elle / on soit", "que nous soyons", "que vous soyez", "qu'ils / elles soient"] },
+          { inf: "avoir", en: "irregular", forms: ["que j'aie", "que tu aies", "qu'il / elle / on ait", "que nous ayons", "que vous ayez", "qu'ils / elles aient"] },
+          { inf: "aller", en: "irregular", forms: ["que j'aille", "que tu ailles", "qu'il / elle / on aille", "que nous allions", "que vous alliez", "qu'ils / elles aillent"] }
+        ] }
+      ],
+      widget: {
+        type: "combo", label: "Necessity or opinion + subjunctive",
+        rows: [{ k: "faut", label: "Il faut que…" }, { k: "bien", label: "C'est bien que…" }, { k: "important", label: "Il est important que…" }],
+        cols: [{ k: "verifier", label: "✅ tu / vérifier les infos" }, { k: "etre", label: "📶 les séniors / être connectés" }, { k: "aller", label: "🎬 nous / aller voir ce film" }, { k: "avoir", label: "🎓 vous / avoir l'esprit critique" }],
+        out: {
+          "faut|verifier": ["Il faut que tu vérifies les informations.", "You must check the information."], "bien|verifier": ["C'est bien que tu vérifies les informations.", "It's good that you check the information."], "important|verifier": ["Il est important que tu vérifies les informations.", "It's important that you check the information."],
+          "faut|etre": ["Il faut que les séniors soient connectés.", "Older people need to be connected.", "être → soient"], "bien|etre": ["C'est bien que les séniors soient connectés.", "It's good that older people are connected."], "important|etre": ["Il est important que les séniors soient connectés.", "It's important that older people are connected."],
+          "faut|aller": ["Il faut que nous allions voir ce film !", "We must go and see this film!", "aller → allions"], "bien|aller": ["C'est bien que nous allions voir ce film.", "It's good that we're going to see this film."], "important|aller": ["Il est important que nous allions voir ce film.", "It's important that we go and see this film."],
+          "faut|avoir": ["Il faut que vous ayez l'esprit critique.", "You must have a critical mind.", "avoir → ayez"], "bien|avoir": ["C'est bien que vous ayez l'esprit critique.", "It's good that you have a critical mind."], "important|avoir": ["Il est important que vous ayez l'esprit critique.", "It's important that you have a critical mind."]
+        }
+      }
+    },
+    {
+      id: "g-place",
+      title: "Where do object pronouns go?",
+      body: [
+        "<b>Present</b> (and other simple tenses): before the verb: [[Vous la connaissez.]] · [[Vous ne la connaissez pas.]]",
+        "<b>Passé composé</b> (and other compound tenses): before the auxiliary [[avoir]] / [[être]]: [[Je les ai aimés.]] · [[Je ne les ai pas aimés.]] With [[avoir]], the participle agrees with a COD placed before it: [[les premières scènes, je les ai trouvées nulles]].",
+        "<b>Futur proche</b>, passé récent, present continuous: after the conjugated verb, <b>before the infinitive</b>: [[Je vais le regarder.]] · [[Je ne vais pas le regarder.]] · [[Je viens de le voir.]]"
+      ],
+      info: { type: "pattern", title: "📍 Pronoun position: three cases", rows: [
+        ["Ce film, je", "le", { opts: ["conseille.", "regarde ce soir.", "trouve génial."] }],
+        ["Ce film, je", "l'", "ai", { opts: ["adoré.", "vu hier.", "trouvé long."] }],
+        ["Ce film, je vais", "le", { opts: ["revoir.", "conseiller.", "télécharger."] }]
+      ], note: "Present: before the verb · passé composé: before avoir/être · with an infinitive: before the infinitive." },
+      widget: {
+        type: "combo", label: "Replace « ce film » in three tenses",
+        rows: [{ k: "pr", label: "présent" }, { k: "pc", label: "passé composé" }, { k: "fp", label: "futur proche" }],
+        cols: [{ k: "aff", label: "✅ affirmative" }, { k: "neg", label: "❌ negative" }],
+        out: {
+          "pr|aff": ["Je le regarde.", "I'm watching it."], "pr|neg": ["Je ne le regarde pas.", "I'm not watching it."],
+          "pc|aff": ["Je l'ai regardé.", "I watched it.", "before avoir"], "pc|neg": ["Je ne l'ai pas regardé.", "I didn't watch it."],
+          "fp|aff": ["Je vais le regarder.", "I'm going to watch it.", "before the infinitive"], "fp|neg": ["Je ne vais pas le regarder.", "I'm not going to watch it."]
+        }
+      }
+    },
+    {
+      id: "g-critique",
+      title: "A positive or negative review",
+      body: [
+        "Positive: [[J'ai adoré !]] · [[C'est un chef-d'œuvre.]] · [[L'histoire est passionnante.]] · [[L'acteur joue très bien.]] · [[Je vous le conseille !]] · [[Grâce à ce média, on apprend beaucoup.]]",
+        "Negative: [[Je me suis ennuyé(e).]] · [[C'est nul !]] (casual) · [[C'est décevant.]] · [[Il y a trop d'effets spéciaux.]] · [[L'histoire est difficile à suivre.]] · [[Je ne le conseille pas.]] · [[À cause de ce média…]]"
+      ],
+      info: { type: "scale", title: "🎬 From flop to masterpiece", colors: ["#e0474f", "#2f9c8a"], items: [
+        { v: 4, fr: "C'est nul ! Un vrai navet.", en: "rubbish! a real flop", pic: "🍅" }, { v: 26, fr: "Je me suis ennuyé.", en: "I was bored", pic: "😴" },
+        { v: 50, fr: "C'est pas mal, sans plus.", en: "not bad, nothing more", pic: "😐" }, { v: 76, fr: "C'est passionnant, je vous le conseille.", en: "fascinating, I recommend it", pic: "👍" },
+        { v: 96, fr: "C'est un chef-d'œuvre !", en: "a masterpiece!", pic: "🏆" }
+      ], ends: ["−", "+"] }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour exprimer sa préférence", fnEn: "preference", icon: "⚖️", items: [
+      ["J'aime mieux lire la presse en ligne.", "I prefer reading the news online.", "std", true],
+      ["Je préfère les réseaux sociaux aux médias traditionnels.", "I prefer social networks to traditional media.", "std", true],
+      ["C'est mieux (que…).", "It's better (than…).", "std"]
+    ] },
+    { fn: "Pour exprimer son intérêt", fnEn: "interest", icon: "🤩", items: [
+      ["Ça m'intéresse ! · Ça nous intéresse !", "That interests me / us!", "std", true],
+      ["Ça me passionne.", "It fascinates me.", "std"],
+      ["Je m'intéresse à leur vie !", "I'm interested in their lives!", "std"],
+      ["C'est fascinant ! C'est passionnant !", "It's fascinating!", "std", true],
+      ["Je suis curieux / curieuse de savoir comment ça fonctionne.", "I'm curious to know how it works.", "std"]
+    ] },
+    { fn: "Pour faire la critique d'un média, d'un film", fnEn: "reviews", icon: "🎬", items: [
+      ["C'est intéressant d'écouter des podcasts, parce que…", "Listening to podcasts is interesting because…", "std"],
+      ["Nous trouvons les journaux très intéressants, car…", "We find newspapers very interesting, because…", "std"],
+      ["C'est pour ça que le cinéma est un art passionnant.", "That's why cinema is a fascinating art.", "std"],
+      ["Regarder la télévision, ce n'est pas très intéressant pour nous.", "Watching TV isn't very interesting for us.", "std"],
+      ["Les réseaux sociaux, c'est nul, parce que…", "Social networks are rubbish, because…", "fam"],
+      ["Je l'ai adoré, je vous le conseille !", "I loved it, I recommend it to you!", "std", true]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · reviewing a film", lanes: ["Samia", "Hugo"], av: ["f4", "m2"], steps: [
+    { s: 0, fr: "Alors, ce film, tu l'as aimé ?", en: "So, did you like the film?" },
+    { s: 1, fr: "Je l'ai adoré ! L'acteur joue très bien.", en: "I loved it! The actor is very good." },
+    { s: 0, fr: "Moi, j'ai trouvé le début un peu long.", en: "I found the beginning a bit long." },
+    { s: 1, fr: "C'est vrai, mais après, c'est passionnant.", en: "True, but afterwards it's fascinating." },
+    { s: 0, fr: "Tu vas le conseiller à tes amis ?", en: "Will you recommend it to your friends?" },
+    { s: 1, fr: "Oui, je vais le revoir avec eux !", en: "Yes, I'm going to see it again with them!" }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: <b>final consonants</b>. Most final consonants are silent: [[français]], [[premier]], [[grand]]. In the feminine, an <b>e</b> is added and the consonant before it is pronounced: [[française]], [[première]], [[grande]].",
+    letters: [
+      { l: "-s / -se", name: "[z] in the feminine", tip: "[[français]] / [[française]] · [[curieux]] / [[curieuse]] · [[heureux]] / [[heureuse]]: silent s/x → [z].", ex: ["Il est français. Elle est française.", "Je suis curieux. Je suis curieuse."] },
+      { l: "-d / -de · -t / -te", name: "[d] · [t]", tip: "[[grand]] / [[grande]] · [[rond]] / [[ronde]] · [[indépendant]] / [[indépendante]] · [[étudiant]] / [[étudiante]].", ex: ["un grand succès, une grande nouvelle", "un micro rond, la maison ronde"] },
+      { l: "-er / -ère", name: "[e] → [ɛʁ]", tip: "[[premier]] (r silent) / [[première]] (r pronounced).", ex: ["le premier film", "la première série"] },
+      { l: "-en / -enne", name: "[ɛ̃] → [ɛn]", tip: "The nasal opens: [[européen]] / [[européenne]].", ex: ["l'étudiant européen", "l'étudiante européenne"] }
+    ],
+    pairs: [
+      { a: ["français", "French (m.)"], b: ["française", "French (f.)"], note: "silent / [z]" },
+      { a: ["grand", "big (m.)"], b: ["grande", "big (f.)"], note: "silent / [d]" },
+      { a: ["premier", "first (m.)"], b: ["première", "first (f.)"], note: "[e] / [ɛʁ]" },
+      { a: ["je le vois", "I see him/it"], b: ["je l'ai vu", "I saw him/it"], note: "pronoun position" },
+      { a: ["grâce à", "thanks to"], b: ["à cause de", "because of"], note: "😀 / 😞" },
+      { a: ["que tu sois", "that you be"], b: ["que tu aies", "that you have"], note: "être / avoir" }
+    ]
+  },
+  classify: {
+    label: "🔚 Masculin ou féminin ?", q: "Listen: is the final consonant pronounced (feminine) or silent (masculine)?",
+    options: ["masculin (muette)", "féminin (prononcée)"],
+    items: [
+      { say: "français", a: 0 }, { say: "française", a: 1 }, { say: "important", a: 0 }, { say: "importante", a: 1 },
+      { say: "curieux", a: 0 }, { say: "curieuse", a: 1 }, { say: "premier", a: 0 }, { say: "première", a: 1 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "La revue d'Abel sort tous les mois.", ok: false, explain: "Every three months." },
+    { type: "mcq", tag: "Dialogue 1", q: "Chaque enquête est réalisée par…", options: ["un journaliste et un dessinateur", "un photographe", "des lecteurs"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 2", q: "Alix ne regarde pas le journal télé…", options: ["à cause des images", "grâce aux images", "parce qu'elle n'a pas de télé"], answer: 0 },
+    { type: "tf", tag: "Dialogue 2", s: "Floriane ne lit que les titres.", ok: true },
+    { type: "tf", tag: "Dialogue 3", s: "Sur la plateforme de Léo, on ne parle que de jeux vidéo.", ok: false, explain: "Anyone can talk about cooking, music, the news…" },
+    { type: "mcq", tag: "Dialogue 4", q: "Christine utilise les réseaux sociaux pour…", options: ["regarder les vidéos de ses petits-enfants", "vendre des objets", "chercher du travail"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "Samia a trouvé les premières scènes ennuyeuses.", ok: true },
+    { type: "fill", tag: "Préférence", sentence: "Je préfère les réseaux sociaux ___ médias traditionnels.", options: ["aux", "que les", "des"], answer: 0 },
+    { type: "fill", tag: "Préférence", sentence: "J'aime ___ lire la presse en ligne.", options: ["mieux", "meilleur", "plus bien"], answer: 0 },
+    { type: "fill", tag: "Cause / conséquence", sentence: "___ Internet, la presse papier a des difficultés.", options: ["À cause d'", "Grâce à", "Parce qu'"], answer: 0 },
+    { type: "fill", tag: "Cause / conséquence", sentence: "Je suis toujours informée ___ réseaux sociaux.", options: ["grâce aux", "à cause des", "car les"], answer: 0 },
+    { type: "fill", tag: "Cause / conséquence", sentence: "Les articles sont trop longs, ___ je ne lis que les titres.", options: ["c'est pourquoi", "parce que", "grâce à"], answer: 0 },
+    { type: "fill", tag: "Cause / conséquence", sentence: "Il faut se méfier des réseaux sociaux ___ on y trouve de fausses nouvelles.", options: ["car", "donc", "grâce à"], answer: 0 },
+    { type: "type", tag: "Cause / conséquence", q: "Join with c'est pourquoi: « Beaucoup de gens préfèrent la presse en ligne. Ils n'achètent plus le journal. »", answers: ["Beaucoup de gens préfèrent la presse en ligne, c'est pourquoi ils n'achètent plus le journal.", "Beaucoup de gens préfèrent la presse en ligne c'est pourquoi ils n'achètent plus le journal."] },
+    { type: "fill", tag: "Subjonctif", sentence: "Il faut que tu ___ cette vidéo !", options: ["regardes", "regarderas", "regarder"], answer: 0 },
+    { type: "fill", tag: "Subjonctif", sentence: "C'est bien que les personnes âgées ___ plus connectées.", options: ["soient", "sont", "seront"], answer: 0 },
+    { type: "fill", tag: "Subjonctif", sentence: "Il est important que vous ___ l'esprit critique.", options: ["ayez", "avez", "aurez"], answer: 0 },
+    { type: "fill", tag: "Subjonctif", sentence: "Il faut que nous ___ au cinéma ce soir.", options: ["allions", "allons", "irons"], answer: 0 },
+    { type: "type", tag: "Subjonctif", q: "Complete: « Il ne faut pas que tu (utiliser) … ton téléphone en classe. »", answers: ["Il ne faut pas que tu utilises ton téléphone en classe.", "utilises"] },
+    { type: "fill", tag: "Place des pronoms", sentence: "La télé ? Elle ne ___ regarde jamais.", options: ["la", "lui", "les"], answer: 0 },
+    { type: "fill", tag: "Place des pronoms", sentence: "Les journaux, elle préfère ___ lire en ligne.", options: ["les", "leur", "la"], answer: 0 },
+    { type: "type", tag: "Place des pronoms", q: "Replace « ce film »: « Nous allons voir ce film au cinéma. »", answers: ["Nous allons le voir au cinéma.", "Nous allons le voir au cinéma"] },
+    { type: "type", tag: "Place des pronoms", q: "Replace « le dernier épisode »: « Je n'ai pas vu le dernier épisode. »", answers: ["Je ne l'ai pas vu.", "Je ne l'ai pas vu"] },
+    { type: "reply", tag: "Que répondre ?", prompt: "Tu t'intéresses à l'actualité ?", options: ["Oui, ça me passionne !", "Oui, à cause de.", "Oui, que je sois."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Alors, ce film, tu l'as aimé ?", options: ["Non, je me suis ennuyé, c'est décevant.", "Non, je le préfère aux podcasts.", "Non, grâce à lui."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Tu préfères la radio ou la télé ?", options: ["J'aime mieux la radio : je l'écoute en cuisinant.", "Je la regarde demain.", "Il faut que tu préfères."], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Une personne qui écoute la radio :", options: ["un auditeur", "un internaute", "un dessinateur"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "« Être au courant » signifie…", options: ["être informé(e)", "être en retard", "être connecté(e) à l'électricité"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["l'article", "le numéro", "le journal", "le téléviseur"], answer: 3, explain: "le téléviseur is a TV set; the others are about the written press." },
+    { type: "order", tag: "Construisez", en: "I prefer social networks to traditional media.", words: ["Je", "préfère", "les", "réseaux", "sociaux", "aux", "médias", "traditionnels."] },
+    { type: "listen", tag: "Écoute", q: "Why doesn't the speaker watch the TV news?", say: "Je ne regarde pas le journal télé à cause des images, je préfère écouter la radio.", options: ["because of the images", "because it's too long", "because she has no TV"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "📱 Tes habitudes médias (DELF)", brief: "A friend asks how you get the news. Express your preferences and interests, and give reasons.", memo: ["J'aime mieux…", "Je préfère… à…", "parce que / à cause de / grâce à", "Ça m'intéresse…"], partner: "f8", you: "m3",
+      turns: [
+        { them: "Comment tu t'informes ?", themEn: "How do you get the news?", hint: "You prefer the online press to TV.", you: "Je préfère la presse en ligne à la télé.", youEn: "I prefer the online press to TV." },
+        { them: "Pourquoi ?", themEn: "Why?", hint: "Because you choose the articles that interest you.", you: "Parce que je choisis les articles qui m'intéressent.", youEn: "Because I choose the articles that interest me." },
+        { them: "Et quelles rubriques ?", themEn: "And which sections?", hint: "Ecology fascinates you; you're not very interested in sport.", you: "L'écologie, ça me passionne. Le sport, ça ne m'intéresse pas beaucoup.", youEn: "Ecology fascinates me. Sport doesn't interest me much." }
+      ] },
+    { title: "👵 Aide ta grand-mère", brief: "Your grandmother wants to join a social network. Give her advice with il faut que and c'est bien que.", memo: ["Il faut que tu…", "C'est bien que tu…", "Il est important que…"], partner: "f6", you: "m3",
+      turns: [
+        { them: "Je voudrais voir les photos de la famille sur Internet.", themEn: "I'd like to see the family photos online.", hint: "Say it's great that she wants to be connected.", you: "C'est super que tu veuilles être connectée !", youEn: "It's great that you want to be connected!" },
+        { them: "Qu'est-ce que je dois faire ?", themEn: "What do I have to do?", hint: "She must open an account.", you: "Il faut que tu ouvres un compte.", youEn: "You need to open an account." },
+        { them: "Et c'est dangereux ?", themEn: "And is it dangerous?", hint: "It's important that she checks information (infox).", you: "Il est important que tu vérifies les informations : il y a des infox.", youEn: "It's important that you check information: there's fake news." }
+      ] },
+    { title: "🎬 La critique d'un film", brief: "You've just seen a film with a friend. Give a review (positive or negative) and use pronouns.", memo: ["Je l'ai adoré / trouvé…", "Je vais le revoir.", "Je ne le conseille pas…"], partner: "f4", you: "m2",
+      turns: [
+        { them: "Alors, tu l'as aimé ?", themEn: "So, did you like it?", hint: "You loved it; the actress plays very well.", you: "Je l'ai adoré ! L'actrice joue très bien.", youEn: "I loved it! The actress is very good." },
+        { them: "Et l'histoire ?", themEn: "And the story?", hint: "Fascinating, but too many special effects.", you: "Elle est passionnante, mais il y a trop d'effets spéciaux.", youEn: "It's fascinating, but there are too many special effects." },
+        { them: "Tu vas le conseiller ?", themEn: "Will you recommend it?", hint: "Yes, you'll recommend it to your parents.", you: "Oui, je vais le conseiller à mes parents.", youEn: "Yes, I'm going to recommend it to my parents." }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Faire la critique d'un média", intro: "In groups, listen to opinions about a medium, take notes, then record a podcast (or give a talk) with your own positive and/or negative review of a medium.",
+      steps: [["Préparation", ["Each group takes a document (about podcasts, social networks or television) and answers: is the medium presented positively or negatively? Why? With what arguments?", "Pool your answers. Do you agree with the reasons given?", "Note-taking strategy: listen several times; first find the topic; use the title for key words; don't write everything, just key words and main ideas; the speaker's intonation shows key words and where an idea ends."]], ["Réalisation", ["Choose a medium (from the documents or another: celebrity press, science magazines, cinema…).", "Fill in a table: positive points / negative points. Are you for or against?", "Prepare a positive and/or negative review and share out the parts.", "Record a podcast or prepare a slideshow."]], ["Présentation", ["Play or present your review to the class.", "Ask the others to react: do they agree?"]]],
+      phrases: ["Grâce à ce média…", "C'est intéressant d'écouter des podcasts parce que…", "À cause de ce média…", "Les réseaux sociaux, c'est nul, parce que…", "C'est pour ça que…"],
+      model: { type: "card", style: "board", caption: "🎙️ Example review · tap a line", title: "NOTRE CRITIQUE : LES PODCASTS", sub: "points positifs · points négatifs", rows: [["👍 On les écoute partout", "dans les transports, en cuisinant, en faisant du sport", "Grâce aux podcasts, on peut apprendre partout : dans les transports ou en cuisinant."], ["👍 Des sujets variés", "histoire, sciences, langues, faits divers…", "Il y a des podcasts sur tous les sujets, c'est pour ça qu'on les adore."], ["👎 Trop de choix", "difficile de trouver les bons podcasts", "Le problème, c'est qu'il y a trop de choix."], ["👎 Pas d'images", "pour certains sujets, c'est moins clair", "À cause de l'absence d'images, certains sujets sont moins clairs."]], foot: "Notre avis : on recommande !" } }
+  ],
+  delf: {
+    skill: "Production orale", title: "Talking about your media habits and preferences",
+    about: "A DELF A2-style speaking exchange from this unit (book activity B6): with a partner, talk about how you get information and express your preferences. You must say <b>what</b> you use, <b>how often</b>, <b>why</b> (cause), and <b>what you prefer</b>, and react to your partner.",
+    tips: ["Preference: [[J'aime mieux…]] · [[Je préfère A à B.]]", "Reasons: [[parce que]] + clause, [[grâce à]] / [[à cause de]] + noun.", "Frequency: [[tous les jours]], [[souvent]], [[de temps en temps]], [[jamais]].", "React: [[Ah bon ? Pourquoi ?]] · [[Moi aussi !]] · [[Moi non plus.]] · [[Je ne suis pas d'accord.]]"],
+    items: [
+      { type: "mcq", q: "Which sentence expresses a preference?", options: ["J'aime mieux écouter la radio que regarder la télé.", "J'écoute la radio.", "La radio est un média."], answer: 0 },
+      { type: "mcq", q: "Which sentence gives a positive cause?", options: ["Grâce aux podcasts, j'apprends beaucoup.", "À cause des podcasts, je dors mal.", "Les podcasts sont longs."], answer: 0 },
+      { type: "mcq", q: "Your partner says « Je ne regarde jamais la télé. » You agree:", options: ["Moi non plus !", "Moi aussi !", "Moi si !"], answer: 0 },
+      { type: "mcq", q: "You want to know why:", options: ["Ah bon ? Pourquoi ?", "Grâce à quoi ?", "C'est pourquoi."], answer: 0 },
+      { type: "mcq", q: "Which sentence shows interest?", options: ["Les documentaires scientifiques, ça me passionne !", "Les documentaires, je les regarde.", "Il faut que je regarde."], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Info ou infox ?",
+    intro: "Facts from the book's culture pages. True information or fake news?",
+    items: [
+      { type: "mcq", q: "« La tour Eiffel a été le plus haut monument du monde pendant 40 ans, jusqu'au Chrysler Building en 1930. »", options: ["info ✅", "infox ❌"], answer: 0 },
+      { type: "mcq", q: "« La Maison de la Radio, à Paris, est appelée « la maison carrée ». »", options: ["infox ❌ (c'est « la maison ronde »)", "info ✅"], answer: 0 },
+      { type: "mcq", q: "« Les Français font plus confiance à la radio qu'à Internet pour s'informer. »", options: ["info ✅ (52 % contre 28 %)", "infox ❌"], answer: 0 },
+      { type: "mcq", q: "« Au début, la plateforme Twitch était surtout utilisée par les joueurs de jeux vidéo. »", options: ["info ✅", "infox ❌"], answer: 0 },
+      { type: "mcq", q: "« Les podcasts natifs sont plus écoutés que la radio en France. »", options: ["infox ❌ (10 % contre 91 %)", "info ✅"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "bars", title: "📊 Oh, le cliché ! « Les Français ne font pas confiance aux médias. » · Share of French people who trust the news on… (figures quoted by the book)", unit: " %", items: [
+      { fr: "la radio", en: "radio", v: 52, pic: "📻" }, { fr: "les journaux", en: "newspapers", v: 48, pic: "📰" }, { fr: "la télévision", en: "television", v: 42, pic: "📺" }, { fr: "Internet", en: "the Internet", v: 28, pic: "🌐" }
+    ] }
+  ],
+  culture: [
+    { icon: "📻", kind: "Oh, le cliché !", t: "« Les Français ne font pas confiance aux médias. »", d: "Partly: according to the figures quoted by the book, 52 % of French people trust radio news, 48 % newspapers and 42 % TV news, but only 28 % think information on the Internet is credible." },
+    { icon: "⭕", kind: "Civilisation", t: "La Maison de la Radio", d: "In Paris, the round building of Radio France is nicknamed <b>« la maison ronde »</b>. Around 4,000 professionals work there, for several radio stations each with its own colour. A comic-book reporter even told its story in a BD." },
+    { icon: "🗼", kind: "Au fait !", t: "La tour Eiffel grandit !", d: "The Eiffel Tower was the tallest monument in the world for 40 years, until the Chrysler Building was built in 1930. New antennas installed at the top for radio and TV have made it a few metres taller over time." },
+    { icon: "✏️", kind: "Civilisation", t: "L'actualité en BD", d: "Some French magazines tell the news in comics: each long investigation is made by a journalist and a cartoonist, and the magazine comes out only a few times a year to take the time to research." },
+    { icon: "🎙️", kind: "Au fait !", t: "Le succès des podcasts", d: "Podcasts are more and more popular in France: you can listen anywhere, while cooking or on public transport, on every topic. But according to the figures quoted by the book, live radio is still far ahead." },
+    { icon: "🔎", kind: "Langue", t: "Infox", d: "<b>Infox</b> (from <i>information</i> + <i>intox</i>, intoxication) is the official French word for <i>fake news</i>. You also hear <i>fausses nouvelles</i>." }
+  ],
+  tips: [
+    { icon: "😀", t: "grâce à vs à cause de", d: "Both + noun. grâce à = good result, à cause de = bad result." },
+    { icon: "🧩", t: "Subjunctive shortcut", d: "For -er verbs, je/tu/il/ils = present: [[que je regarde]]. nous/vous = imparfait: [[que nous regardions]]." },
+    { icon: "📍", t: "Pronoun + infinitive", d: "When there's an infinitive, the pronoun goes right before it: [[Je vais le voir.]] [[Je veux la lire.]]" }
+  ],
+  mistakes: [
+    ["Je préfère la radio que la télé.", "Je préfère la radio à la télé.", "préférer A à B"],
+    ["Grâce à la pluie, le match est annulé.", "À cause de la pluie, le match est annulé.", "negative cause → à cause de"],
+    ["à cause le mauvais temps", "à cause du mauvais temps", "de + le = du"],
+    ["Il faut que tu es là.", "Il faut que tu sois là.", "subjunctive of être"],
+    ["Il faut que nous allons au cinéma.", "Il faut que nous allions au cinéma.", "subjunctive of aller"],
+    ["Je vais voir le.", "Je vais le voir.", "pronoun before the infinitive"],
+    ["J'ai le vu.", "Je l'ai vu.", "pronoun before the auxiliary"],
+    ["Je les ai trouvé nulles. (les scènes)", "Je les ai trouvées nulles.", "COD before avoir → agreement"]
+  ]
+});
 </script><script>// Révisions: one page to search and revise the whole course (vocabulary, grammar, expressions, common mistakes).
 // Reads window.LESSONS (all units) and the learner's saved word boxes from localStorage. Printable; vocabulary exports to CSV (Anki-friendly).
 (function () {

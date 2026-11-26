@@ -55,9 +55,9 @@ Workflow: `node tools/check.js` → `python3 build.py`.
 - [x] Étape 1 · Parcours et souvenirs: Unité 1 *Nouvelles vies*, Unité 2 *Je me souviens* (book pp. 13–40) + bilan
 - [x] Étape 2 · Chez soi, entre nous: Unité 3 *Comme à la maison*, Unité 4 *Tous pareils, tous différents* (book pp. 41–68) + bilan
 - [x] Étape 3 · Demain, à table !: Unité 5 *En route vers le futur !*, Unité 6 *En cuisine* (book pp. 69–96) + bilan
-- [ ] Étape 4 · Santé et médias: Unités 7–8
+- [x] Étape 4 · Santé et médias: Unité 7 *À votre santé !*, Unité 8 *Dans les médias* (book pp. 97–124) + bilan
 - [ ] Étape 5 · Consommer, voyager: Unités 9–10
 - [ ] Étape 6 · Travail et nature: Unités 11–12
 - [ ] DELF A2 · Épreuve blanche
 
-So far: 33 dialogues, 327 words, 193 activities, 3 étape tests.
+So far: 44 dialogues, 418 words, 255 activities, 4 étape tests.
