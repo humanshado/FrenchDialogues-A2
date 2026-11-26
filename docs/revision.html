@@ -2514,6 +2514,965 @@ LESSONS.push({
     ["Il est 1,80 m.", "Il mesure 1,80 m.", "height → mesurer"]
   ]
 });
+</script><script>// Unité 5 · En route vers le futur ! (Édito A2, 2e édition, book pp. 69–82)
+// Situations: imaginer la vie en 2050 · au salon des innovations · une semaine sans écrans · « Si j'ai un portable… » · la RoboCup
+// Grammar: le futur simple · la condition (si + présent → présent / impératif / futur) et quand + futur · le pronom on
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u05", rubrique: 3, num: 5,
+  title: "On the road to the future!",
+  titleFr: "En route vers le futur !",
+  pages: "Book pp. 69–82",
+  opener: { fr: "Un jour, les robots feront tout à notre place !", en: "One day, robots will do everything for us!" },
+  hero: { scene: "classe", staff: "La maîtresse", people: { "La maîtresse": "f2", "Jules": "k2", "Léa": "k1" } },
+  situations: [
+    ["🚀", "La vie en 2050", "imagining the future: [[Bientôt, il y aura des maisons volantes.]] · [[Dans un avenir proche, des robots nous serviront.]]"],
+    ["🖨️", "Au salon des innovations", "what an object is for: [[Elle sert à créer des plats.]] · [[C'est très pratique !]]"],
+    ["📵", "Une semaine sans écrans", "surprise: [[Sérieux ?]] · [[C'est pas possible !]] · [[Ça alors !]]"],
+    ["📱", "Si j'ai un portable…", "conditions and certainty: [[Si tu as de bonnes notes, je t'achèterai un téléphone.]] · [[Quand tu auras 15 ans…]]"],
+    ["🤖", "La RoboCup", "hope and the pronoun on: [[J'espère que la France gagnera.]] · [[On rêve de battre les champions.]]"]
+  ],
+  goals: [
+    "Imagine the future: [[Bientôt…]], [[Un jour…]], [[Dans le futur…]], [[Dans un avenir proche…]]",
+    "Form and use the futur simple, including irregular verbs: [[il y aura]], [[je ferai]], [[on pourra]], [[ils verront]]",
+    "Explain what an object is for: [[Ça sert à…]], [[Ça permet de…]], [[On l'utilise pour…]], [[C'est très pratique / utile.]]",
+    "Express surprise: [[Ah bon ?]], [[C'est pas possible !]], [[Ça alors !]], [[Sérieux ?]]",
+    "Express hope: [[J'espère que…]] + future, [[On rêve de…]]",
+    "Express a condition: [[si]] + present → present / imperative / futur simple; certainty: [[quand]] + future → future",
+    "Understand the three meanings of [[on]]: quelqu'un, les gens, nous"
+  ],
+  glance: [
+    ["🗣️", "Communication", "imagining the future · describing an object's use · surprise · hope"],
+    ["🧩", "Grammaire", "futur simple · si + présent / futur · quand + futur · the pronoun on"],
+    ["🗂️", "Vocabulaire", "science and progress · machines · technological innovations · how objects work · phones, computers, the Internet"],
+    ["🔊", "Phonie-graphie", "consonant + [ʁ]: br, cr, dr, gr, pr, tr · the future endings"],
+    ["⭐", "The phrase to learn first", "[[Un jour, il y aura…]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "Life in 2050", titleFr: "En classe · Comment seront nos vies en 2050 ?",
+      note: "A primary-school teacher asks her pupils how they imagine the future. Listen to the futur simple, especially [[il y aura]], [[on pourra]], [[ils feront]].",
+      scene: "classe", staff: "La maîtresse", people: { "La maîtresse": "f2", "Jules": "k2", "Léa": "k1" },
+      lines: [
+        ["La maîtresse", "Les enfants, comment vous imaginez la vie en 2050 ?", "Children, how do you imagine life in 2050?"],
+        ["Jules", "Bientôt, il y aura des maisons qui pourront se téléporter jusqu'à la plage ! Elles flotteront dans les airs.", "Soon there'll be houses that can teleport themselves to the beach! They'll float in the air."],
+        ["La maîtresse", "Et à l'intérieur ?", "And inside?"],
+        ["Jules", "Il y aura des robots : un qui fera le ménage, un qui fera la cuisine et un qui nous servira des frites !", "There'll be robots: one that does the housework, one that cooks and one that serves us chips!"],
+        ["Léa", "Moi, je pense qu'un jour, on n'aura plus besoin de conduire. Il y aura de petites navettes individuelles, sous terre, et le GPS conduira tout seul.", "I think one day we won't need to drive any more. There'll be little individual shuttles, underground, and the GPS will drive by itself."],
+        ["La maîtresse", "Et pour manger ?", "And for food?"],
+        ["Léa", "Dans le futur, on mangera peut-être un comprimé quatre fois par jour… Mais j'espère qu'on pourra encore manger du chocolat !", "In the future, we might eat a pill four times a day… But I hope we'll still be able to eat chocolate!"],
+        ["La maîtresse", "Ça paraît loin, la vie dans trente ans… mais vous verrez !", "Life in thirty years seems far away… but you'll see!"]
+      ],
+      glossary: [["il y aura", "there will be (avoir)"], ["une navette", "a shuttle"], ["un comprimé", "a pill, tablet"], ["vous verrez", "you'll see (voir)"]]
+    },
+    {
+      id: "d2", n: 2, title: "At the innovation fair", titleFr: "Au salon des innovations · C'est une invention très utile !",
+      note: "Claire visits a technology fair. A salesman presents two inventions. Listen to how he explains what they're for.",
+      scene: "grandmagasin", staff: "Le vendeur", people: { "Le vendeur": "m3", "Claire": "f3" },
+      lines: [
+        ["Le vendeur", "Madame, venez voir notre imprimante 3D alimentaire ! Elle sert à créer différents types de plats.", "Madam, come and see our 3D food printer! It's used to create different kinds of dishes."],
+        ["Claire", "Ah bon ? Comment ça fonctionne ?", "Really? How does it work?"],
+        ["Le vendeur", "Vous mettez une purée de légumes, et elle permet de faire des formes originales : des étoiles, des animaux…", "You put in a vegetable purée, and it lets you make original shapes: stars, animals…"],
+        ["Claire", "C'est très pratique ! Quand j'aurai cette imprimante, mes enfants mangeront enfin des légumes !", "That's very handy! When I have this printer, my children will finally eat vegetables!"],
+        ["Le vendeur", "Et voici notre bateau intelligent. Il est autonome et fonctionne à l'énergie solaire. Les chercheurs l'utilisent pour étudier les océans.", "And here's our smart boat. It's autonomous and runs on solar power. Researchers use it to study the oceans."],
+        ["Claire", "Et s'il tombe en panne au milieu de la mer ?", "And if it breaks down in the middle of the sea?"],
+        ["Le vendeur", "Pas de problème : il rentrera tout seul au port. C'est une invention très utile pour la planète !", "No problem: it'll come back to port by itself. It's a very useful invention for the planet!"]
+      ],
+      glossary: [["servir à + infinitif", "to be used for"], ["permettre de + infinitif", "to make it possible to"], ["fonctionner = marcher", "to work (machine)"], ["tomber en panne", "to break down"]]
+    },
+    {
+      id: "d3", n: 3, title: "A week without screens", titleFr: "Au café · Accro aux écrans ?",
+      note: "Eva tells Marine she's going to spend a week without her smartphone. Listen to Marine's surprise and to Eva's conditions with [[si]].",
+      scene: "cafe", staff: "Le serveur", people: { "Le serveur": "m7", "Marine": "f8", "Eva": "f4" },
+      lines: [
+        ["Eva", "À partir de lundi, je ne vais plus utiliser mon smartphone ni mon ordinateur pendant sept jours.", "From Monday, I'm not going to use my smartphone or my computer for seven days."],
+        ["Marine", "Quoi ? Sérieux ? C'est pas possible !", "What? Seriously? That's impossible!"],
+        ["Eva", "Si ! J'y passais cinq heures par jour, tu te rends compte ? Si je n'ai plus de batterie, je panique !", "Yes! I spent five hours a day on it, can you imagine? If my battery runs out, I panic!"],
+        ["Marine", "Ça alors ! Et si tu te perds dans la rue ?", "Well I never! And if you get lost in the street?"],
+        ["Eva", "Si je me perds, je demanderai mon chemin à quelqu'un ! Et je regarderai l'itinéraire sur un plan avant de partir.", "If I get lost, I'll ask someone the way! And I'll check the route on a map before I leave."],
+        ["Marine", "Et si ton travail a besoin de toi ?", "And if your work needs you?"],
+        ["Eva", "Si c'est vraiment nécessaire, j'utiliserai l'ordinateur. Tu devrais essayer aussi !", "If it's really necessary, I'll use the computer. You should try too!"],
+        ["Marine", "Moi ? Sans mon portable ? Ah non, pas cette semaine !", "Me? Without my phone? Oh no, not this week!"]
+      ],
+      glossary: [["Sérieux ? · Ça alors !", "Seriously? · Well I never! (casual)"], ["tu te rends compte ?", "can you imagine?"], ["accro à", "hooked on (casual)"], ["si + présent → futur", "if… will…"]]
+    },
+    {
+      id: "d4", n: 4, title: "If I get a phone…", titleFr: "À la maison · Je veux un portable !",
+      note: "Théo, 12, wants a phone. His mother sets conditions. Listen to [[si]] (possible) and [[quand]] (certain) with the future.",
+      scene: "maison", people: { "Théo": "k2", "La mère": "f3" },
+      lines: [
+        ["Théo", "Maman, tous mes copains ont un portable ! Si j'en ai un, je pourrai t'appeler après l'école.", "Mum, all my friends have a phone! If I have one, I'll be able to call you after school."],
+        ["La mère", "Tu peux m'appeler avec le téléphone fixe de la maison.", "You can call me on the home landline."],
+        ["Théo", "Mais si je suis en retard, tu t'inquiéteras !", "But if I'm late, you'll worry!"],
+        ["La mère", "C'est vrai… Bon, si tu as de bonnes notes ce trimestre, on en reparlera.", "True… Well, if you get good marks this term, we'll talk about it again."],
+        ["Théo", "Et si j'ai de bonnes notes, tu m'achèteras un smartphone ?", "And if I get good marks, will you buy me a smartphone?"],
+        ["La mère", "Non : un portable simple, sans Internet. Quand tu auras quinze ans, tu auras un smartphone.", "No: a simple phone, without the Internet. When you're fifteen, you'll have a smartphone."],
+        ["Théo", "Quinze ans ? C'est dans trois ans ! Bon… d'accord.", "Fifteen? That's in three years! Oh well… OK."]
+      ],
+      glossary: [["si + présent", "if (possible condition)"], ["quand + futur → futur", "when (certain future)"], ["le téléphone fixe", "the landline"], ["on en reparlera", "we'll talk about it again"]]
+    },
+    {
+      id: "d5", n: 5, title: "The RoboCup", titleFr: "À la radio · Rendez-vous à la RoboCup !",
+      note: "A radio host interviews an engineer who builds football-playing robots. Listen to [[on]] (= nous, les gens, quelqu'un) and to how he expresses hope.",
+      scene: "amphi", staff: "L'animateur", people: { "L'animateur": "m4", "L'ingénieure": "f5" },
+      lines: [
+        ["L'animateur", "C'est vrai ce qu'on raconte ? Vos robots jouent au foot ?", "Is it true what people say? Your robots play football?"],
+        ["L'ingénieure", "Oui ! La RoboCup est une compétition mondiale de robots footballeurs. Avec mon équipe, on y participe depuis dix ans.", "Yes! The RoboCup is a world competition for football-playing robots. My team and I have been taking part for ten years."],
+        ["L'animateur", "Et vous avez gagné ?", "And have you won?"],
+        ["L'ingénieure", "On a gagné quatre compétitions. Cette année, j'espère que nos robots seront encore plus rapides.", "We've won four competitions. This year, I hope our robots will be even faster."],
+        ["L'animateur", "Un jour, ils pourront battre une vraie équipe de foot ?", "One day, will they be able to beat a real football team?"],
+        ["L'ingénieure", "C'est notre rêve : on rêve de battre l'équipe humaine championne du monde en 2050 !", "That's our dream: we dream of beating the human world champion team in 2050!"],
+        ["L'animateur", "Et en France, on aime ce genre de compétition ?", "And in France, do people like this kind of competition?"],
+        ["L'ingénieure", "Beaucoup ! Si vous venez, vous verrez : les gens crient comme dans un vrai stade.", "A lot! If you come, you'll see: people shout like in a real stadium."]
+      ],
+      glossary: [["on = nous / les gens / quelqu'un", "we / people / someone"], ["J'espère que + futur", "I hope that… will…"], ["rêver de + infinitif", "to dream of"], ["battre", "to beat"]]
+    }
+  ],
+
+  vocab: [
+    { t: "le chercheur, la chercheuse", en: "the researcher", pic: "🔬", cat: "Le progrès" },
+    { t: "la découverte", en: "the discovery", pic: "💡", cat: "Le progrès", g: "f" },
+    { t: "l'invention, inventer", en: "invention, to invent", pic: "⚙️", cat: "Le progrès", g: "f" },
+    { t: "l'inventeur, l'inventrice", en: "the inventor", pic: "🧑‍🔬", cat: "Le progrès" },
+    { t: "l'innovation", en: "innovation", pic: "🚀", cat: "Le progrès", g: "f" },
+    { t: "la nouveauté", en: "the novelty, new product", pic: "🆕", cat: "Le progrès", g: "f" },
+    { t: "la technologie", en: "technology", pic: "🖥️", cat: "Le progrès", g: "f" },
+    { t: "l'évolution", en: "evolution", pic: "📈", cat: "Le progrès", g: "f" },
+    { t: "fabriquer", en: "to make, manufacture", pic: "🏭", cat: "Le progrès" },
+    { t: "l'énergie solaire", en: "solar energy", pic: "☀️", cat: "Le progrès", g: "f" },
+    { t: "l'appareil", en: "the device", pic: "📟", cat: "Les machines", g: "m" },
+    { t: "le moteur", en: "the engine, motor", pic: "🔧", cat: "Les machines", g: "m" },
+    { t: "la navette", en: "the shuttle", pic: "🚀", cat: "Les machines", g: "f" },
+    { t: "le robot", en: "the robot", pic: "🤖", cat: "Les machines", g: "m" },
+    { t: "l'imprimante 3D", en: "the 3D printer", pic: "🖨️", cat: "Les innovations", g: "f" },
+    { t: "l'intelligence artificielle", en: "artificial intelligence", pic: "🧠", cat: "Les innovations", g: "f" },
+    { t: "l'hologramme", en: "the hologram", pic: "👻", cat: "Les innovations", g: "m" },
+    { t: "la reconnaissance faciale", en: "facial recognition", pic: "🙂", cat: "Les innovations", g: "f" },
+    { t: "le logiciel", en: "the software", pic: "💾", cat: "Les innovations", g: "m" },
+    { t: "le GPS", en: "the GPS, satnav", pic: "🧭", cat: "Les innovations", g: "m" },
+    { t: "la tablette", en: "the tablet", pic: "📱", cat: "Les innovations", g: "f" },
+    { t: "la soucoupe volante", en: "the flying saucer", pic: "🛸", cat: "Les innovations", g: "f" },
+    { t: "la téléportation", en: "teleportation", pic: "✨", cat: "Les innovations", g: "f" },
+    { t: "fonctionner = marcher (bien, mal)", en: "to work (well, badly)", pic: "✅", cat: "Le fonctionnement" },
+    { t: "être / tomber en panne", en: "to be broken / break down", pic: "❌", cat: "Le fonctionnement" },
+    { t: "automatique", en: "automatic", pic: "🔁", cat: "Les caractéristiques" },
+    { t: "autonome", en: "autonomous, self-driving", pic: "🚗", cat: "Les caractéristiques" },
+    { t: "électrique", en: "electric", pic: "🔌", cat: "Les caractéristiques" },
+    { t: "futuriste", en: "futuristic", pic: "🌌", cat: "Les caractéristiques" },
+    { t: "indispensable", en: "essential", pic: "❗", cat: "Les caractéristiques" },
+    { t: "pratique", en: "handy, practical", pic: "👌", cat: "Les caractéristiques" },
+    { t: "robotisé(e)", en: "robotised", pic: "🦾", cat: "Les caractéristiques" },
+    { t: "utile ≠ inutile", en: "useful ≠ useless", pic: "🛠️", cat: "Les caractéristiques" },
+    { t: "le téléphone portable", en: "the mobile phone", pic: "📱", cat: "Le téléphone", g: "m", note: "natel (Suisse), gsm (Belgique), cellulaire (Québec)" },
+    { t: "le téléphone fixe", en: "the landline", pic: "☎️", cat: "Le téléphone", g: "m" },
+    { t: "le SMS = le texto", en: "the text message", pic: "💬", cat: "Le téléphone", g: "m" },
+    { t: "l'appel", en: "the call", pic: "📞", cat: "Le téléphone", g: "m" },
+    { t: "la batterie", en: "the battery", pic: "🔋", cat: "Le téléphone", g: "f" },
+    { t: "le selfie", en: "the selfie", pic: "🤳", cat: "Le téléphone", g: "m" },
+    { t: "décrocher ≠ raccrocher", en: "to pick up ≠ hang up", pic: "📴", cat: "Le téléphone" },
+    { t: "allumer ≠ éteindre", en: "to switch on ≠ off", pic: "🔘", cat: "Le téléphone" },
+    { t: "être joignable", en: "to be reachable", pic: "📶", cat: "Le téléphone" },
+    { t: "l'ordinateur = le PC", en: "the computer", pic: "💻", cat: "L'informatique", g: "m" },
+    { t: "l'écran, le clavier, la souris", en: "screen, keyboard, mouse", pic: "🖱️", cat: "L'informatique", g: "m" },
+    { t: "la clé USB", en: "the USB stick", pic: "🔑", cat: "L'informatique", g: "f" },
+    { t: "imprimer", en: "to print", pic: "🖨️", cat: "L'informatique" },
+    { t: "le courriel = le mail = l'e-mail", en: "the e-mail", pic: "📧", cat: "Internet", g: "m" },
+    { t: "l'appli(cation)", en: "the app", pic: "📲", cat: "Internet", g: "f" },
+    { t: "se connecter, en ligne", en: "to log on, online", pic: "🌐", cat: "Internet" },
+    { t: "télécharger", en: "to download", pic: "⬇️", cat: "Internet" },
+    { t: "se désabonner", en: "to unsubscribe", pic: "🚫", cat: "Internet" },
+    { t: "faire une visio(conférence)", en: "to have a video call", pic: "🎥", cat: "Internet" },
+    { t: "le réseau social", en: "the social network", pic: "👥", cat: "Internet", g: "m" }
+  ],
+
+  grammar: [
+    {
+      id: "g-futur",
+      title: "The futur simple",
+      body: [
+        "Use: a <b>prediction</b> or a <b>plan</b> in the future: [[Un jour, les voitures seront autonomes.]] · [[L'année prochaine, j'achèterai une imprimante 3D.]]",
+        "Form: <b>infinitive</b> + [[-ai, -as, -a, -ons, -ez, -ont]] (the endings of <i>avoir</i>!). Infinitives in <b>-re</b> lose the e: [[prendre]] → [[je prendrai]]. [[manger]] → [[je mangerai]].",
+        "Irregular stems (same endings): [[avoir → j'aurai]] · [[être → je serai]] · [[faire → je ferai]] · [[aller → j'irai]] · [[voir → je verrai]] · [[savoir → je saurai]] · [[devoir → je devrai]] · [[pouvoir → je pourrai]] · [[vouloir → je voudrai]] · [[(de)venir → je (de)viendrai]] · [[il faut → il faudra]] · [[il pleut → il pleuvra]]"
+      ],
+      info: [
+        { type: "conj", title: "🔮 The futur simple", verbs: [
+          { inf: "manger", en: "regular -er", forms: ["je mangerai", "tu mangeras", "il / elle / on mangera", "nous mangerons", "vous mangerez", "ils / elles mangeront"] },
+          { inf: "prendre", en: "-re: drop the e", forms: ["je prendrai", "tu prendras", "il / elle / on prendra", "nous prendrons", "vous prendrez", "ils / elles prendront"] },
+          { inf: "avoir", en: "irregular stem aur-", forms: ["j'aurai", "tu auras", "il / elle / on aura", "nous aurons", "vous aurez", "ils / elles auront"] },
+          { inf: "être", en: "irregular stem ser-", forms: ["je serai", "tu seras", "il / elle / on sera", "nous serons", "vous serez", "ils / elles seront"] }
+        ] },
+        { type: "card", style: "board", caption: "🧩 Irregular stems · tap a line", title: "FUTUR : LES RADICAUX IRRÉGULIERS", sub: "same endings: -ai, -as, -a, -ons, -ez, -ont", rows: [
+          ["faire → fer-", "aller → ir-", "Je ferai le ménage. J'irai au salon."], ["voir → verr-", "savoir → saur-", "Vous verrez ! Elles sauront leur chemin."], ["pouvoir → pourr-", "vouloir → voudr-", "On pourra se téléporter. Tu voudras venir ?"],
+          ["devoir → devr-", "venir → viendr-", "Ils devront travailler. Tu viendras avec nous ?"], ["il faut → il faudra", "il pleut → il pleuvra", "Il faudra recharger la batterie. Demain, il pleuvra."]
+        ], foot: "il y a → il y aura" }
+      ],
+      widget: {
+        type: "combo", label: "Predict the future · pick a subject and a verb",
+        rows: [{ k: "on", label: "on" }, { k: "nous", label: "nous" }, { k: "robots", label: "les robots" }],
+        cols: [{ k: "faire", label: "🧹 faire le ménage" }, { k: "pouvoir", label: "✨ pouvoir se téléporter" }, { k: "aller", label: "🏫 aller à l'école en navette" }, { k: "avoir", label: "🛸 avoir une soucoupe volante" }],
+        out: {
+          "on|faire": ["On fera le ménage avec un robot.", "We'll do the housework with a robot."], "on|pouvoir": ["On pourra se téléporter.", "We'll be able to teleport."], "on|aller": ["On ira à l'école en navette.", "We'll go to school by shuttle."], "on|avoir": ["On aura une soucoupe volante.", "We'll have a flying saucer."],
+          "nous|faire": ["Nous ne ferons plus le ménage.", "We won't do the housework any more."], "nous|pouvoir": ["Nous pourrons nous téléporter.", "We'll be able to teleport."], "nous|aller": ["Nous irons à l'école en navette.", "We'll go to school by shuttle.", "aller → ir-"], "nous|avoir": ["Nous aurons une soucoupe volante.", "We'll have a flying saucer.", "avoir → aur-"],
+          "robots|faire": ["Les robots feront le ménage.", "Robots will do the housework.", "faire → fer-"], "robots|pouvoir": ["Les robots pourront se téléporter.", "Robots will be able to teleport."], "robots|aller": ["Les robots iront à l'école en navette.", "Robots will go to school by shuttle."], "robots|avoir": ["Les robots auront une soucoupe volante.", "Robots will have a flying saucer."]
+        }
+      }
+    },
+    {
+      id: "g-avenir",
+      title: "Imagining the future · what an object is for",
+      body: [
+        "The future: [[Bientôt, il y aura des maisons qui pourront se téléporter.]] · [[Un jour, il y aura de petites navettes.]] · [[Dans le futur, on mangera un comprimé.]] · [[Dans un avenir proche, des robots nous serviront.]] · [[Ça paraît loin, la vie dans trente ans !]]",
+        "Usefulness: [[Elle sert à créer différents types de plats.]] (servir <b>à</b> + infinitive) · [[Elle permet de faire des formes originales.]] (permettre <b>de</b>) · [[Les chercheurs l'utilisent pour étudier les océans.]] · [[C'est très pratique !]] · [[C'est une invention très utile pour la planète.]]"
+      ],
+      info: { type: "timeline", title: "🚀 From today to 2050 (the children's ideas)", ends: ["aujourd'hui", "", "2050"], items: [
+        { x: 10, fr: "Bientôt, les voitures seront autonomes.", en: "Soon cars will drive themselves.", pic: "🚗" },
+        { x: 32, fr: "Dans un avenir proche, des robots nous serviront.", en: "In the near future, robots will serve us.", pic: "🤖" },
+        { x: 58, fr: "Un jour, il y aura des navettes sous terre.", en: "One day there'll be underground shuttles.", pic: "🚇" },
+        { x: 86, fr: "Dans le futur, les maisons flotteront dans les airs.", en: "In the future houses will float in the air.", pic: "🏠" }
+      ] },
+      widget: {
+        type: "combo", label: "What is it for? · pick an object and an expression",
+        rows: [{ k: "sert", label: "Ça sert à…" }, { k: "permet", label: "Ça permet de…" }, { k: "utilise", label: "On l'utilise pour…" }],
+        cols: [{ k: "gps", label: "🧭 le GPS" }, { k: "imprimante", label: "🖨️ l'imprimante 3D" }, { k: "robot", label: "🤖 le robot-aspirateur" }],
+        out: {
+          "sert|gps": ["Le GPS sert à trouver son chemin.", "The GPS is for finding your way."], "permet|gps": ["Le GPS permet de s'orienter sans carte.", "The GPS lets you find your way without a map."], "utilise|gps": ["On l'utilise pour aller dans un endroit inconnu.", "You use it to go somewhere new."],
+          "sert|imprimante": ["L'imprimante 3D sert à fabriquer de petits objets.", "The 3D printer is for making small objects."], "permet|imprimante": ["Elle permet de créer des formes originales.", "It lets you create original shapes."], "utilise|imprimante": ["On l'utilise pour réparer des objets cassés.", "You use it to repair broken objects."],
+          "sert|robot": ["Le robot-aspirateur sert à nettoyer la maison.", "The robot vacuum is for cleaning the house."], "permet|robot": ["Il permet de gagner du temps.", "It lets you save time."], "utilise|robot": ["On l'utilise pour ne plus faire le ménage !", "You use it so you never clean again!"]
+        }
+      }
+    },
+    {
+      id: "g-surprise",
+      title: "Surprise and hope",
+      body: [
+        "Surprise: [[Ah bon ?]] · [[C'est pas possible !]] · and casual: [[Ça alors !]] · [[C'est pas vrai !]] · [[Quoi ?]] · [[Sérieux ?]] (in casual speech, the <i>ne</i> of the negative disappears: <i>C'est pas…</i>).",
+        "Hope: [[J'espère que la France gagnera.]] ([[espérer que]] + future or present) · [[On rêve de battre l'équipe championne du monde.]] · [[Pourvu que ça marche !]]"
+      ],
+      info: { type: "scale", title: "😮 How surprised are you?", colors: ["#e0a526", "#e0474f"], items: [
+        { v: 10, fr: "Ah bon ?", en: "Really?", pic: "🤨" }, { v: 34, fr: "C'est pas vrai !", en: "No way!", pic: "😯" }, { v: 58, fr: "Sérieux ?", en: "Seriously?", pic: "😳" },
+        { v: 78, fr: "Ça alors !", en: "Well I never!", pic: "😲" }, { v: 96, fr: "C'est pas possible !", en: "That's impossible!", pic: "🤯" }
+      ], ends: ["un peu", "très"] }
+    },
+    {
+      id: "g-si-quand",
+      title: "Conditions with [[si]] · certainty with [[quand]]",
+      body: [
+        "[[si]] + present → present (general truth): [[Si quelqu'un m'appelle, je réponds.]] · → imperative (advice): [[Si vous voulez passer moins de temps sur votre téléphone, lisez un livre !]] · → futur simple (a future result): [[Si tu passes une semaine sans écran, tu perdras l'habitude.]]",
+        "⚠️ Never the future right after [[si]]: <s>si tu passeras</s>.",
+        "[[quand]] + <b>future</b> → <b>future</b> for something <b>certain</b>: [[Quand tu auras 18 ans, je t'achèterai un ordinateur.]] (English uses the present after <i>when</i>; French uses the future.)"
+      ],
+      info: { type: "compare", title: "🤔 si (maybe) vs quand (sure)", cols: [
+        { head: "si + présent", en: "maybe it will happen", color: "#9b4fb0", lines: [["Si tu as de bonnes notes, tu auras un portable.", "If you get good marks…"], ["S'il tombe en panne, il rentrera au port.", "If it breaks down…"], ["Si tu te perds, demande ton chemin !", "If you get lost, ask the way!"]] },
+        { head: "quand + futur", en: "it will happen", color: "#2f9c8a", lines: [["Quand tu auras quinze ans, tu auras un smartphone.", "When you're fifteen…"], ["Quand je serai grand, je serai ingénieur.", "When I grow up…"], ["Quand tu seras disponible, on s'appellera en visio.", "When you're free…"]] }
+      ] },
+      widget: {
+        type: "combo", label: "Build the sentence · pick a condition and a result",
+        rows: [{ k: "si", label: "Si + présent" }, { k: "quand", label: "Quand + futur" }],
+        cols: [{ k: "bac", label: "🎓 Thomas / avoir son bac → faire des études d'ingénieur" }, { k: "panne", label: "💻 l'ordinateur / tomber en panne → appeler le réparateur" }, { k: "grand", label: "🧒 je / être grand → devenir inventeur" }],
+        out: {
+          "si|bac": ["Si Thomas a son bac, il fera des études d'ingénieur.", "If Thomas passes his bac, he'll study engineering."], "quand|bac": ["Quand Thomas aura son bac, il fera des études d'ingénieur.", "When Thomas passes his bac, he'll study engineering."],
+          "si|panne": ["Si l'ordinateur tombe en panne, j'appellerai le réparateur.", "If the computer breaks down, I'll call the repairer."], "quand|panne": ["Quand l'ordinateur tombera en panne, j'appellerai le réparateur.", "When the computer breaks down, I'll call the repairer.", "certain: it will break one day!"],
+          "si|grand": ["Si je suis grand, je deviendrai inventeur.", "If I'm tall, I'll become an inventor.", "odd! For growing up, use quand"], "quand|grand": ["Quand je serai grand, je deviendrai inventeur.", "When I grow up, I'll become an inventor."]
+        }
+      }
+    },
+    {
+      id: "g-on",
+      title: "The pronoun [[on]]: three meanings",
+      body: [
+        "[[on]] always takes a <b>3rd person singular</b> verb, but it can mean: <b>quelqu'un</b> (someone): [[On a volé mon téléphone.]] · <b>les gens</b> (people in general): [[Dans ce pays, on aime beaucoup les nouvelles technologies.]] · <b>nous</b> (casual): [[On va au salon des innovations.]]",
+        "When [[on]] = nous, the participle can agree: [[On est allés à la RoboCup.]]"
+      ],
+      widget: {
+        type: "sort", label: "on = quelqu'un, les gens or nous?",
+        cols: [{ k: "qq", label: "quelqu'un", color: "#e0474f" }, { k: "gens", label: "les gens", color: "#3a6fd8" }, { k: "nous", label: "nous", color: "#2f9c8a" }],
+        items: [
+          { t: "On est entré chez moi pour voler mon ordinateur.", k: "qq", say: "Quelqu'un est entré chez moi pour voler mon ordinateur." }, { t: "Dans les grandes entreprises, on utilise des technologies performantes.", k: "gens", say: "Dans les grandes entreprises, les gens utilisent des technologies performantes." },
+          { t: "On va acheter une imprimante pour Noël.", k: "nous", say: "Nous allons acheter une imprimante pour Noël." }, { t: "L'année dernière, on est allés à la RoboCup.", k: "nous", say: "L'année dernière, nous sommes allés à la RoboCup." },
+          { t: "Quand on vit sans téléphone, on est plus libre.", k: "gens", say: "Quand les gens vivent sans téléphone, ils sont plus libres." }, { t: "On frappe à la porte !", k: "qq", say: "Quelqu'un frappe à la porte !" }
+        ]
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour parler du futur, imaginer l'avenir", fnEn: "imagining the future", icon: "🚀", items: [
+      ["Bientôt, il y aura des maisons qui pourront se téléporter.", "Soon there'll be houses that can teleport.", "std", true],
+      ["Un jour, il y aura de petites navettes.", "One day there'll be little shuttles.", "std"],
+      ["Dans le futur, on mangera un comprimé.", "In the future we'll eat a pill.", "std"],
+      ["Dans un avenir proche, des robots nous serviront.", "In the near future robots will serve us.", "std", true],
+      ["Ça paraît loin, la vie dans trente ans !", "Life in thirty years seems so far away!", "std"]
+    ] },
+    { fn: "Pour décrire l'utilité d'un objet", fnEn: "what it's for", icon: "🛠️", items: [
+      ["Elle sert à créer différents types de plats.", "It's used to create different dishes.", "std", true],
+      ["Elle permet de faire des formes originales.", "It lets you make original shapes.", "std", true],
+      ["C'est très pratique !", "It's very handy!", "std"],
+      ["Les chercheurs l'utilisent pour étudier les océans.", "Researchers use it to study the oceans.", "std"],
+      ["C'est une invention très utile pour la planète.", "It's a very useful invention for the planet.", "std"]
+    ] },
+    { fn: "Pour exprimer sa surprise", fnEn: "surprise", icon: "😲", items: [
+      ["Ah bon ?", "Really?", "std", true],
+      ["C'est pas possible !", "That's impossible!", "fam", true],
+      ["Ça alors !", "Well I never!", "fam"],
+      ["C'est pas vrai ! · Quoi ? · Sérieux ?", "No way! · What? · Seriously?", "fam"]
+    ] },
+    { fn: "Pour exprimer un espoir", fnEn: "hope", icon: "🤞", items: [
+      ["J'espère que la France gagnera.", "I hope France will win.", "std", true],
+      ["On rêve de battre l'équipe championne du monde.", "We dream of beating the world champions.", "std"]
+    ] },
+    { fn: "Pour présenter une invention (atelier)", fnEn: "presenting an invention", icon: "🎤", items: [
+      ["Cette invention sert à…", "This invention is used for…", "std"],
+      ["Cette découverte est révolutionnaire parce que…", "This discovery is revolutionary because…", "std"],
+      ["Dans le futur, cette invention permettra de…", "In the future this invention will make it possible to…", "std"]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · negotiating with si and quand", lanes: ["Théo", "Sa mère"], av: ["k2", "f3"], steps: [
+    { s: 0, fr: "Si j'ai un portable, je pourrai t'appeler !", en: "If I have a phone, I'll be able to call you!" },
+    { s: 1, fr: "Si tu as de bonnes notes, on en reparlera.", en: "If you get good marks, we'll talk about it." },
+    { s: 0, fr: "Et si j'ai de bonnes notes, tu m'achèteras un smartphone ?", en: "And if I get good marks, will you buy me a smartphone?" },
+    { s: 1, fr: "Non. Quand tu auras quinze ans, tu auras un smartphone.", en: "No. When you're fifteen, you'll have a smartphone." },
+    { s: 0, fr: "Bon… d'accord !", en: "Oh well… OK!" }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: <b>consonant + [ʁ]</b>. Say the two consonants together, with no vowel between them: [[bras]], [[cri]], [[droit]], [[gris]], [[pris]], [[tri]]. You hear these groups in many future forms: [[je vivrai]], [[tu vendras]], [[il viendra]].",
+    letters: [
+      { l: "br · pr", name: "[bʁ] · [pʁ]", tip: "Lips closed, then the throaty [ʁ] straight away: [[libre]], [[bravo]], [[pris]], [[appris]].", ex: ["libre", "bravo", "appris", "le prix"] },
+      { l: "tr · dr", name: "[tʁ] · [dʁ]", tip: "Tongue behind the teeth, then [ʁ]: [[trois]], [[autre]], [[à droite]], [[entendre]], [[il viendra]].", ex: ["trois", "à droite", "il viendra", "tu vendras"] },
+      { l: "cr · gr", name: "[kʁ] · [gʁ]", tip: "Both at the back of the mouth, like [ʁ]: [[le sucre]], [[le cri]], [[gris]], [[le degré]].", ex: ["le sucre", "gris", "le degré", "écrire"] },
+      { l: "-rai · -ras · -ra", name: "the future endings", tip: "[[je vivrai]] [ʁe] · [[tu vendras]] · [[il viendra]] [ʁa] · [[nous travaillerons]] [ʁɔ̃] · [[vous répondrez]] [ʁe] · [[elles offriront]] [ʁɔ̃].", ex: ["Je vivrai à Rio.", "Tu vendras un robot.", "Nous travaillerons.", "Elles offriront un ordinateur."] }
+    ],
+    pairs: [
+      { a: ["je mangerai", "I will eat"], b: ["je mangerais", "I would eat"], note: "futur / conditionnel (same sound in many accents)" },
+      { a: ["il fera", "he will do"], b: ["il fait", "he does"], note: "futur / présent" },
+      { a: ["tu iras", "you will go"], b: ["tu vas", "you go"], note: "futur / présent" },
+      { a: ["si tu viens", "if you come"], b: ["quand tu viendras", "when you come"], note: "si / quand" },
+      { a: ["le prix", "the price"], b: ["le pli", "the fold"], note: "[pʁ] / [pl]" },
+      { a: ["trois", "three"], b: ["droit", "right, straight"], note: "[tʁ] / [dʁ]" }
+    ]
+  },
+  classify: {
+    label: "⏩ Futur ou présent ?", q: "Listen: is the verb in the future or the present?",
+    options: ["futur", "présent"],
+    items: [
+      { say: "Il fera beau.", a: 0 }, { say: "Il fait beau.", a: 1 }, { say: "Tu iras au salon.", a: 0 }, { say: "Tu vas au salon.", a: 1 },
+      { say: "Nous aurons un robot.", a: 0 }, { say: "Nous avons un robot.", a: 1 }, { say: "Elles seront là.", a: 0 }, { say: "Elles sont là.", a: 1 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "D'après Jules, les maisons flotteront dans les airs.", ok: true },
+    { type: "mcq", tag: "Dialogue 1", q: "Léa imagine que les navettes seront…", options: ["autonomes, sous terre", "collectives, dans le ciel", "gratuites"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 2", q: "L'imprimante 3D alimentaire sert à…", options: ["créer des plats", "imprimer des livres", "étudier les océans"], answer: 0 },
+    { type: "tf", tag: "Dialogue 2", s: "Le bateau intelligent fonctionne à l'énergie solaire.", ok: true },
+    { type: "tf", tag: "Dialogue 3", s: "Marine va aussi arrêter son smartphone.", ok: false, explain: "« Ah non, pas cette semaine ! »" },
+    { type: "mcq", tag: "Dialogue 4", q: "Théo aura un smartphone…", options: ["quand il aura quinze ans", "s'il a de bonnes notes", "à Noël"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "L'équipe a gagné quatre compétitions.", ok: true },
+    { type: "fill", tag: "Futur simple", sentence: "Demain, je ___ ma voiture pour aller au travail.", options: ["prendrai", "prendra", "prendre"], answer: 0 },
+    { type: "fill", tag: "Futur simple", sentence: "Quand nous ___ au salon, tu viendras avec nous ?", options: ["irons", "iront", "allons"], answer: 0 },
+    { type: "fill", tag: "Futur simple", sentence: "Les robots ___ toutes les tâches ménagères.", options: ["feront", "ferons", "fera"], answer: 0 },
+    { type: "fill", tag: "Futur simple", sentence: "Dans le futur, il y ___ des robots partout.", options: ["aura", "sera", "a"], answer: 0 },
+    { type: "fill", tag: "Futur simple", sentence: "Un jour, nous nous ___ en voiture autonome.", options: ["déplacerons", "déplaçons", "déplacerez"], answer: 0 },
+    { type: "type", tag: "Futur simple", q: "Futur simple: « Les gens peuvent se téléporter. » (Un jour…)", answers: ["Un jour, les gens pourront se téléporter.", "Un jour les gens pourront se téléporter.", "Les gens pourront se téléporter."] },
+    { type: "fill", tag: "Utilité", sentence: "Ce robot sert ___ faire le ménage.", options: ["à", "de", "pour le"], answer: 0 },
+    { type: "fill", tag: "Utilité", sentence: "Cette appli permet ___ trouver un restaurant.", options: ["de", "à", "pour"], answer: 0 },
+    { type: "fill", tag: "si / quand", sentence: "Si tu ___ ce smartphone, tu pourras installer des applis.", options: ["achètes", "achèteras", "achetais"], answer: 0 },
+    { type: "fill", tag: "si / quand", sentence: "Quand tu ___ 18 ans, je t'achèterai un ordinateur.", options: ["auras", "as", "aurais"], answer: 0 },
+    { type: "fill", tag: "si / quand", sentence: "Si tu veux écouter de la musique, ___ cette application !", options: ["télécharge", "téléchargeras", "télécharges"], answer: 0 },
+    { type: "fill", tag: "si / quand", sentence: "En général, si je dois aller dans un endroit inconnu, je ___ mon GPS.", options: ["mets", "mettrai", "mettrais"], answer: 0 },
+    { type: "type", tag: "si / quand", q: "Complete with the future: « Si l'ordinateur tombe en panne, j'(appeler) … le réparateur. »", answers: ["Si l'ordinateur tombe en panne, j'appellerai le réparateur.", "j'appellerai", "appellerai"] },
+    { type: "mcq", tag: "Le pronom on", q: "« On a volé mon téléphone ! » Ici, on =", options: ["quelqu'un", "nous", "les gens"], answer: 0 },
+    { type: "mcq", tag: "Le pronom on", q: "« On va au cinéma ce soir ? » Ici, on =", options: ["nous", "quelqu'un", "les gens"], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Je vais vivre une semaine sans téléphone !", options: ["Sérieux ? C'est pas possible !", "Il sert à téléphoner.", "J'espère que tu as faim."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "À quoi sert cet appareil ?", options: ["Il permet de recharger le téléphone avec le soleil.", "Il y aura des robots.", "Ah bon ?"], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Notre équipe joue la finale demain.", options: ["J'espère que vous gagnerez !", "Ça sert à jouer.", "On a volé."], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "« Tomber en panne », c'est…", options: ["arrêter de fonctionner", "tomber par terre", "être très pratique"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Le contraire de « allumer » :", options: ["éteindre", "décrocher", "télécharger"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "En Belgique, un téléphone portable s'appelle…", options: ["un gsm", "un natel", "un cellulaire"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["le clavier", "la souris", "l'écran", "la navette"], answer: 3, explain: "la navette is a vehicle; the others are computer parts." },
+    { type: "order", tag: "Construisez", en: "One day, robots will do the housework.", words: ["Un", "jour,", "les", "robots", "feront", "le", "ménage."] },
+    { type: "listen", tag: "Écoute", q: "When will the speaker buy a 3D printer?", say: "L'année prochaine, j'achèterai une imprimante 3D pour fabriquer des jouets.", options: ["next year", "this year", "when it's cheaper"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "🚀 Ma ville en 2050", brief: "A friend asks how you imagine your city in 2050. Use the futur simple.", memo: ["Bientôt…", "Un jour…", "Dans le futur…", "il y aura…"], partner: "f8", you: "m2",
+      turns: [
+        { them: "Comment tu imagines notre ville en 2050 ?", themEn: "How do you imagine our city in 2050?", hint: "There will be no more cars; we'll take autonomous shuttles.", you: "Il n'y aura plus de voitures : on prendra des navettes autonomes.", youEn: "There'll be no more cars: we'll take autonomous shuttles." },
+        { them: "Et les maisons ?", themEn: "And the houses?", hint: "They'll work on solar energy.", you: "Elles fonctionneront à l'énergie solaire.", youEn: "They'll run on solar energy." },
+        { them: "Et le travail ?", themEn: "And work?", hint: "Robots will do the boring tasks; we'll have more free time.", you: "Les robots feront les tâches ennuyeuses et nous aurons plus de temps libre.", youEn: "Robots will do the boring tasks and we'll have more free time." }
+      ] },
+    { title: "🖨️ Présente ton invention", brief: "At an innovation fair, you present an invention to a curious visitor.", memo: ["Ça sert à…", "Ça permet de…", "C'est très pratique !", "Si…, il…"], partner: "f3", you: "m3",
+      turns: [
+        { them: "Bonjour ! Qu'est-ce que c'est ?", themEn: "Hello! What's this?", hint: "A solar charger; it's used to charge your phone during walks.", you: "C'est un chargeur solaire. Il sert à recharger votre téléphone pendant vos balades.", youEn: "It's a solar charger. It's used to charge your phone on your walks." },
+        { them: "Ah bon ? Et s'il n'y a pas de soleil ?", themEn: "Really? And if there's no sun?", hint: "If there's no sun, it will use its battery.", you: "S'il n'y a pas de soleil, il utilisera sa batterie.", youEn: "If there's no sun, it'll use its battery." },
+        { them: "C'est pratique !", themEn: "That's handy!", hint: "Say it's very useful for the planet too.", you: "Oui, et c'est une invention très utile pour la planète !", youEn: "Yes, and it's a very useful invention for the planet!" }
+      ] },
+    { title: "📱 Je voudrais un portable", brief: "You're a teenager negotiating a phone with your parent. Use si and quand.", memo: ["Si j'ai…, je pourrai…", "Quand j'aurai…", "Si tu…, tu…"], partner: "f3", you: "k2",
+      turns: [
+        { them: "Pourquoi tu veux un portable ?", themEn: "Why do you want a phone?", hint: "If you have one, you'll be able to call when you're late.", you: "Si j'ai un portable, je pourrai t'appeler quand je serai en retard.", youEn: "If I have a phone, I'll be able to call you when I'm late." },
+        { them: "Tu vas passer ta vie sur les jeux…", themEn: "You'll spend your life on games…", hint: "Promise: if you play too much, she can take it.", you: "Si je joue trop, tu pourras le reprendre !", youEn: "If I play too much, you can take it back!" },
+        { them: "Bon. Quand tu auras ton brevet, on verra.", themEn: "OK. When you get your school certificate, we'll see.", hint: "Thank her and say you'll work hard.", you: "Merci ! Je travaillerai beaucoup, promis !", youEn: "Thanks! I'll work hard, I promise!" }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Faire l'interview d'un(e) scientifique", intro: "In groups, read about a scientist and their invention or discovery, then act out a TV interview in front of the class.",
+      steps: [["Préparation", ["Choose a scientist (for example: Arthur Zang, Marie Curie, the Montgolfier brothers) and read the key facts.", "You can look for more information and pictures of the invention or discovery."]], ["Réalisation", ["Write the journalists' questions and the scientist's answers from the facts.", "Share the roles: journalist 1 asks about the key moments (how did you get the idea?), journalist 2 about the invention (what's it for? what are its features?), the scientist answers."]], ["Présentation", ["Act out the interview in front of the class, with pictures if you like.", "Then the other groups can ask new questions.", "Strategy: explain clearly and simply, avoid technical words, and speak naturally without reading your notes."]]],
+      phrases: ["Comment avez-vous eu cette idée ?", "Cette invention sert à…", "Elle est révolutionnaire parce que…", "Dans le futur, elle permettra de…"],
+      model: { type: "card", style: "board", caption: "🔬 Three scientists · tap a line", title: "INTERVIEW D'UN(E) SCIENTIFIQUE", sub: "les informations clés", rows: [["Arthur Zang", "ingénieur et informaticien camerounais · le CardioPad, une tablette pour examiner le cœur à distance · aujourd'hui vendue en Afrique et en Asie", "Arthur Zang est un ingénieur camerounais. Il a inventé le CardioPad, une tablette qui sert à examiner le cœur à distance."], ["Marie Curie", "physicienne polonaise, naturalisée française · découverte du radium et du polonium · prix Nobel de physique (1903) et de chimie (1911)", "Marie Curie est la seule femme avec deux prix Nobel dans deux domaines scientifiques."], ["Les frères Montgolfier", "inventeurs français · la montgolfière, un ballon à air chaud · 1783 : premier vol avec deux hommes à bord, à Paris", "En mille sept cent quatre-vingt-trois, la montgolfière a fait son premier vol avec deux hommes à bord."]], foot: "Préparez des explications claires et simples !" } }
+  ],
+  delf: {
+    skill: "Compréhension des écrits", title: "The DELF A2 reading paper: strategies",
+    about: "The DELF A2 <b>compréhension des écrits</b> lasts 30 minutes and has 4 exercises on everyday documents: <b>1.</b> precise information in a short public document (ad, advert, menu, sign…); <b>2.</b> the key information in a letter or message (personal or administrative); <b>3.</b> instructions in a practical document (safety rules, user guide…); <b>4.</b> an informative document (newspaper article, tourist guide…). Here: exercise 1 · you want to give your French friends a tech present.",
+    tips: ["Read each instruction carefully before you start.", "Identify the type of document and ask: <b>Who</b> is writing? To <b>whom</b>? <b>When</b>? <b>Why</b>?", "The questions follow the order of the documents.", "In matching tasks, there are more people than documents: cross out each document once used."],
+    items: [
+      { type: "mcq", q: "« Restez connecté(e) pendant vos activités sportives ! Cette montre indique les kilomètres parcourus. » C'est pour…", options: ["Amalia, très sportive", "Charles, qui n'aime pas le ménage", "Oscar, très gourmand"], answer: 0 },
+      { type: "mcq", q: "« Vous détestez nettoyer ? Ce robot-aspirateur le fait à votre place ! » C'est pour…", options: ["Charles, qui n'aime pas faire le ménage", "Nadia, stressée par son travail", "Vincent, qui apprend à conduire"], answer: 0 },
+      { type: "mcq", q: "« Ce chargeur solaire, pratique et écologique, sera votre meilleur ami pendant vos promenades. » C'est pour…", options: ["Jérémy, qui aime la nature et déteste gaspiller", "Sophie, qui passe du temps sur les écrans", "Oscar, très gourmand"], answer: 0 },
+      { type: "mcq", q: "« En 30 minutes, ce coussin de massage vous offrira une détente complète. » C'est pour…", options: ["Nadia, stressée par son travail", "Amalia, très sportive", "François, qui adore les animaux"], answer: 0 },
+      { type: "mcq", q: "« Cet assistant d'aide à la conduite vous indiquera les meilleurs chemins. » C'est pour…", options: ["Vincent, qui apprend à conduire", "Jérémy, qui aime la nature", "Charles, qui n'aime pas le ménage"], answer: 0 },
+      { type: "mcq", q: "In a DELF A2 reading paper, the questions are…", options: ["in the order of the documents", "in random order", "always about the last document"], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Des inventions et des découvertes",
+    intro: "Who invented or discovered what? (Facts from the book's atelier, plus two famous French inventions.)",
+    items: [
+      { type: "mcq", q: "La montgolfière (ballon à air chaud, premier vol habité en 1783) a été inventée par…", options: ["les frères Montgolfier", "Marie Curie", "Arthur Zang"], answer: 0 },
+      { type: "mcq", q: "Le radium et le polonium ont été découverts par…", options: ["Marie Curie (et Pierre Curie)", "les frères Montgolfier", "Louis Braille"], answer: 0 },
+      { type: "mcq", q: "Le CardioPad, une tablette pour examiner le cœur à distance, a été inventé par…", options: ["Arthur Zang, ingénieur camerounais", "Marie Curie", "un robot"], answer: 0 },
+      { type: "mcq", q: "L'alphabet en relief pour les personnes aveugles a été inventé par…", options: ["Louis Braille", "Arthur Zang", "les frères Lumière"], answer: 0 },
+      { type: "mcq", q: "Le cinématographe (1895) a été inventé par…", options: ["les frères Lumière", "les frères Montgolfier", "Marie Curie"], answer: 0 },
+      { type: "mcq", q: "Le concours Lépine récompense…", options: ["des inventeurs", "des cuisiniers", "des footballeurs"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "pics", title: "📱 « Portable » in the French-speaking world · tap to hear", items: [
+      { t: "le portable", pic: "🇫🇷", en: "France" }, { t: "le natel", pic: "🇨🇭", en: "Switzerland" }, { t: "le gsm", pic: "🇧🇪", en: "Belgium" }, { t: "le cellulaire, le cell", pic: "🇨🇦", en: "Québec" }
+    ] }
+  ],
+  culture: [
+    { icon: "🗣️", kind: "Oh, le cliché !", t: "« Les Français sont mauvais en langues étrangères. »", d: "According to the Education First English-proficiency ranking quoted by the book (source: actu.fr), France only comes 28th. Yet French pupils learn at least <b>two</b> foreign languages at school." },
+    { icon: "🧑‍🚀", kind: "Civilisation", t: "Un Français dans l'espace", d: "<b>Thomas Pesquet</b> is a French astronaut of the European Space Agency (ESA) who has stayed on the International Space Station (ISS). From space he shared selfies and views of the Earth on social media: he chooses the messages, and his communication team on the ground posts them. The documentary <i>16 levers de soleil</i> refers to the 16 sunrises astronauts see every day." },
+    { icon: "⚽", kind: "Au fait !", t: "La RoboCup", d: "A world competition where teams of engineers make robots play football. The organisers' dream: a robot team able to beat the human world champions by 2050." },
+    { icon: "💡", kind: "Au fait !", t: "Le concours Lépine", d: "A famous French competition for inventors, created in 1901 and held every year in Paris. The book mentions it: <i>Si tu gagnes le concours Lépine, ton invention deviendra célèbre !</i>" },
+    { icon: "🫀", kind: "Francophonie", t: "Arthur Zang et le CardioPad", d: "A Cameroonian engineer and computer scientist who created the CardioPad, a tablet to examine the heart remotely, so patients far from cardiologists can be diagnosed. His company now sells it in several countries in Africa and Asia." },
+    { icon: "📵", kind: "Civilisation", t: "La « détox digitale »", d: "More and more people try to use their phones less: planning routes in advance, reading during breaks, leaving the phone at home for short errands, telling contacts they'll answer more slowly." }
+  ],
+  tips: [
+    { icon: "🔮", t: "Future = infinitive + avoir endings", d: "parler + ai = [[je parlerai]]. Learn the 12 irregular stems by heart: aur-, ser-, fer-, ir-, verr-…" },
+    { icon: "🚫", t: "No future after si", d: "[[Si tu viens, je serai content.]] Never <s>si tu viendras</s>." },
+    { icon: "⏳", t: "quand + future", d: "English: <i>when you are 18</i>. French: [[quand tu auras 18 ans]]." }
+  ],
+  mistakes: [
+    ["Si tu viendras, on ira au salon.", "Si tu viens, on ira au salon.", "si + présent"],
+    ["Quand tu as 18 ans, tu auras une voiture.", "Quand tu auras 18 ans, tu auras une voiture.", "quand + futur"],
+    ["Je prendreai le train.", "Je prendrai le train.", "-re: drop the e"],
+    ["Nous allerons au salon.", "Nous irons au salon.", "aller → ir-"],
+    ["Il y sera des robots.", "Il y aura des robots.", "il y a → il y aura"],
+    ["Ça sert de créer des plats.", "Ça sert à créer des plats.", "servir à"],
+    ["Ça permet à faire des formes.", "Ça permet de faire des formes.", "permettre de"],
+    ["On sont allés au cinéma.", "On est allés au cinéma.", "on + 3rd person singular"]
+  ]
+});
+</script><script>// Unité 6 · En cuisine (Édito A2, 2e édition, book pp. 83–96)
+// Situations: les légumes du jardin · une recette de clafoutis · la charte d'une appli de cuisine · on mange où ? · au restaurant antillais · les avis
+// Grammar: les quantités et le pronom en · l'obligation et l'interdiction · la restriction ne… que
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u06", rubrique: 3, num: 6,
+  title: "In the kitchen",
+  titleFr: "En cuisine",
+  pages: "Book pp. 83–96",
+  opener: { fr: "C'est la spécialité de la maison.", en: "It's the house speciality." },
+  hero: { scene: "restaurant", staff: "La serveuse", people: { "La serveuse": "f5", "Mathis": "m2", "Nadia": "f4" } },
+  situations: [
+    ["🥕", "Les légumes du jardin", "quantities and en: [[Des tomates ? J'en consomme beaucoup.]]"],
+    ["🍒", "Le clafoutis", "following a recipe: [[Mélangez le lait avec la crème.]] · [[Faites cuire 35 minutes.]]"],
+    ["⚠️", "Les règles en cuisine", "obligation and prohibition: [[Il faut se laver les mains.]] · [[Il est interdit de…]] · [[Attention !]]"],
+    ["🍽️", "Au restaurant", "ordering: [[Quel est le plat du jour ?]] · [[Qu'est-ce que vous me conseillez ?]]"],
+    ["⭐", "Ça vous a plu ?", "satisfaction: [[Un régal !]] · [[C'est scandaleux !]] · [[Je ne mets qu'une étoile.]]"]
+  ],
+  goals: [
+    "Understand and give cooking instructions: [[Lavez…]], [[Coupez…]], [[Mélangez…]], [[Versez…]], [[Faites cuire…]]",
+    "Talk about quantities: [[une barquette de]], [[une botte de]], [[une pincée de]], [[beaucoup de]], and replace them with [[en]]",
+    "Warn someone: [[Faites attention à…]], [[Attention ! C'est dangereux.]]",
+    "Express obligation and prohibition: [[Il faut…]], [[Il est indispensable de…]], [[Il est interdit de…]], [[Ne… pas]] + imperative",
+    "Order in a restaurant and ask for advice: [[En entrée, je voudrais…]], [[Qu'est-ce que vous me conseillez ?]]",
+    "Express satisfaction and dissatisfaction: [[Un régal !]], [[Je suis ravi(e).]] ≠ [[C'est une honte !]], [[C'est scandaleux !]]",
+    "Express restriction with [[ne… que]] (= seulement): [[Je ne mets que quatre étoiles.]]"
+  ],
+  glance: [
+    ["🗣️", "Communication", "recipes · warnings · rules · at the restaurant · satisfaction and dissatisfaction"],
+    ["🧩", "Grammaire", "quantities and the pronoun en · obligation and prohibition · ne… que"],
+    ["🗂️", "Vocabulaire", "vegetables, fruit, pulses, fish, meat, herbs and spices · quantities · cooking verbs · restaurants, dishes, tastes · how you like your meat"],
+    ["🔊", "Phonie-graphie", "intonation: surprise, joy, anger, disappointment"],
+    ["⭐", "The phrase to learn first", "[[Qu'est-ce que vous me conseillez ?]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "Vegetables from the garden", titleFr: "Au potager · Manger les légumes du jardin",
+      note: "Annie shows her neighbour Karim her vegetable garden. Listen to the pronoun [[en]] with quantities.",
+      scene: "jardin", staff: "Annie", people: { "Annie": "f6", "Karim": "m1" },
+      lines: [
+        ["Karim", "Quel beau potager ! Tu produis tous tes légumes ?", "What a lovely vegetable garden! Do you grow all your vegetables?"],
+        ["Annie", "Non, pas tous. J'achète encore les pommes de terre et les bottes d'oignons. Mais la salade, j'ai arrêté d'en acheter : j'en ai mis dans le jardin.", "No, not all. I still buy potatoes and bunches of onions. But lettuce, I've stopped buying it: I've planted some in the garden."],
+        ["Karim", "Et des tomates ?", "And tomatoes?"],
+        ["Annie", "J'en cultive beaucoup, parce que j'en consomme beaucoup ! Des courges et des haricots aussi.", "I grow lots, because I eat lots! Squash and beans too."],
+        ["Karim", "Et en hiver ?", "And in winter?"],
+        ["Annie", "De juillet à septembre, je plante des poireaux, des choux, des carottes, des betteraves… Ils restent dans la terre jusqu'en mars.", "From July to September, I plant leeks, cabbages, carrots, beetroot… They stay in the ground until March."],
+        ["Karim", "Moi, j'habite en ville, je n'ai pas de jardin…", "I live in town, I don't have a garden…"],
+        ["Annie", "Alors, achète des produits de saison et cuisine toi-même. Tiens, des courgettes : tu en veux deux ?", "Then buy seasonal produce and cook for yourself. Here, courgettes: do you want two?"]
+      ],
+      glossary: [["en = de + noun (quantity)", "some, of it / of them"], ["j'en consomme beaucoup", "I eat a lot of them"], ["une botte d'oignons", "a bunch of onions"], ["les produits de saison", "seasonal produce"]]
+    },
+    {
+      id: "d2", n: 2, title: "Making a clafoutis", titleFr: "Dans la cuisine · Une recette sucrée",
+      note: "Lucie and her son Léo make a red-fruit clafoutis. Listen to the recipe instructions (imperative) and the quantities.",
+      scene: "maison", people: { "Lucie": "f3", "Léo": "k2" },
+      lines: [
+        ["Lucie", "Bon, d'abord, préchauffe le four à deux cents degrés. Ensuite, lave et sèche les fruits rouges.", "Right, first, preheat the oven to two hundred degrees. Then wash and dry the red fruit."],
+        ["Léo", "Il y a combien de framboises ?", "How many raspberries are there?"],
+        ["Lucie", "Une barquette de cent cinquante grammes. Et une barquette de mûres et une de myrtilles.", "A 150-gram punnet. And a punnet of blackberries and one of blueberries."],
+        ["Léo", "Je mélange quoi dans le saladier ?", "What do I mix in the bowl?"],
+        ["Lucie", "Le lait avec la crème, la farine, le sucre en poudre et une pincée de sel. Mets les fruits dans un plat beurré et verse la pâte dessus.", "The milk with the cream, the flour, the caster sugar and a pinch of salt. Put the fruit in a buttered dish and pour the batter over it."],
+        ["Léo", "Et le beurre ?", "And the butter?"],
+        ["Lucie", "Coupe-le en petits morceaux et pose-les sur la pâte. Puis on enfourne : trente-cinq à quarante minutes. Attention, le four est très chaud !", "Cut it into small pieces and put them on the batter. Then into the oven: thirty-five to forty minutes. Careful, the oven is very hot!"],
+        ["Léo", "On le mange avec de la glace à la vanille ?", "Shall we eat it with vanilla ice cream?"],
+        ["Lucie", "Oui, servi tiède avec une boule de glace. Et quelques feuilles de menthe pour décorer !", "Yes, served warm with a scoop of ice cream. And a few mint leaves to decorate!"]
+      ],
+      glossary: [["préchauffer le four", "to preheat the oven"], ["une barquette, une pincée", "a punnet, a pinch"], ["verser la pâte", "to pour the batter"], ["enfourner", "to put in the oven"]]
+    },
+    {
+      id: "d3", n: 3, title: "The home-cooks' charter", titleFr: "Sur l'appli · Les règles à respecter",
+      note: "Sofia wants to sell homemade dishes on a neighbourhood app. Her flatmate reads her the rules. Listen to obligation, prohibition and warnings.",
+      scene: "appartement", people: { "Sofia": "f8", "Tom": "m3" },
+      lines: [
+        ["Sofia", "Je vais vendre mes plats sur l'application ! Il y a des règles ?", "I'm going to sell my dishes on the app! Are there rules?"],
+        ["Tom", "Oui, une charte. D'abord, tu ne dois pas être cuisinière de métier. Et tu as l'obligation de préparer uniquement des plats faits maison.", "Yes, a charter. First, you mustn't be a professional cook. And you're required to prepare only homemade dishes."],
+        ["Sofia", "Pas de problème. Je peux vendre tous les jours ?", "No problem. Can I sell every day?"],
+        ["Tom", "Non, il est interdit de vendre de manière régulière. La vente doit rester occasionnelle.", "No, it's forbidden to sell regularly. Sales must stay occasional."],
+        ["Sofia", "Et pour l'hygiène ?", "And hygiene?"],
+        ["Tom", "Il est indispensable de cuisiner des produits frais. Porte un tablier propre, attache-toi les cheveux et lave-toi souvent les mains.", "It's essential to cook fresh produce. Wear a clean apron, tie your hair back and wash your hands often."],
+        ["Sofia", "Et le chat ? Il adore la cuisine…", "And the cat? He loves the kitchen…"],
+        ["Tom", "Attention ! Ne laisse pas entrer d'animal dans la cuisine, c'est dangereux. Il est défendu de cuisiner dans des conditions non hygiéniques !", "Careful! Don't let any animal into the kitchen, it's dangerous. Cooking in unhygienic conditions is forbidden!"]
+      ],
+      glossary: [["avoir l'obligation de", "to be required to"], ["il est interdit / défendu de", "it is forbidden to"], ["il est indispensable de", "it is essential to"], ["lave-toi les mains", "wash your hands (pronominal imperative)"]]
+    },
+    {
+      id: "d4", n: 4, title: "Where shall we eat?", titleFr: "Dans la rue · On mange où ?",
+      note: "Mathis, Nadia and Hugo can't agree where to eat. Listen to the types of restaurant and to Mathis, who is a gourmet… or just difficult?",
+      scene: "rue", people: { "Nadia": "f4", "Mathis": "m2", "Hugo": "m3" },
+      lines: [
+        ["Hugo", "J'ai faim ! On va au fast-food ?", "I'm hungry! Shall we go to the fast-food place?"],
+        ["Mathis", "Ah non, c'est trop gras et c'est fade.", "Oh no, it's too greasy and it's bland."],
+        ["Nadia", "Il y a un traiteur libanais au coin de la rue : on peut prendre des plats à emporter et faire un pique-nique au parc.", "There's a Lebanese deli on the corner: we can get takeaway dishes and have a picnic in the park."],
+        ["Mathis", "Pas de pique-nique, il fait trop froid ! Je préfère manger sur place.", "No picnic, it's too cold! I'd rather eat in."],
+        ["Hugo", "Tu es vraiment difficile !", "You're so fussy!"],
+        ["Mathis", "Je ne suis pas difficile, je suis un gourmet ! Allons au restaurant antillais : c'est épicé, c'est goûteux, et le service est rapide.", "I'm not fussy, I'm a gourmet! Let's go to the West Indian restaurant: it's spicy, it's tasty, and the service is fast."],
+        ["Nadia", "D'accord, mais attention : moi, je suis allergique aux crevettes !", "OK, but careful: I'm allergic to prawns!"]
+      ],
+      glossary: [["à emporter ≠ sur place", "takeaway ≠ eat in"], ["le traiteur", "the deli, caterer"], ["gras · fade · épicé · goûteux", "greasy · bland · spicy · tasty"], ["difficile ≠ gourmet", "fussy ≠ food lover"]]
+    },
+    {
+      id: "d5", n: 5, title: "At the West Indian restaurant", titleFr: "Au restaurant antillais · Vous avez choisi ?",
+      note: "The three friends order. Listen to the restaurant phrases: the dish of the day, advice, the house speciality, the dessert.",
+      scene: "restaurant", staff: "La serveuse", people: { "La serveuse": "f5", "Nadia": "f4", "Mathis": "m2" },
+      lines: [
+        ["La serveuse", "Bonsoir ! Vous avez choisi ?", "Good evening! Have you chosen?"],
+        ["Nadia", "Quel est le plat du jour ?", "What's the dish of the day?"],
+        ["La serveuse", "Le plat du jour, c'est un poisson grillé avec du riz et des légumes.", "The dish of the day is grilled fish with rice and vegetables."],
+        ["Mathis", "Qu'est-ce que vous me conseillez ?", "What do you recommend?"],
+        ["La serveuse", "Le colombo de poulet, c'est la spécialité de la maison. Il est un peu épicé.", "The chicken colombo, it's the house speciality. It's a bit spicy."],
+        ["Mathis", "Parfait. En entrée, je voudrais des accras de morue, et ensuite le colombo.", "Perfect. As a starter I'd like salt-cod fritters, and then the colombo."],
+        ["Nadia", "Pour moi, le plat du jour, sans entrée. Il n'y a pas de crevettes dedans ?", "For me, the dish of the day, no starter. There are no prawns in it?"],
+        ["La serveuse", "Non, il n'y a que du poisson. Vous prendrez des desserts ?", "No, there's only fish. Will you have desserts?"],
+        ["Mathis", "C'est quoi, le tourment d'amour ?", "What's the tourment d'amour?"],
+        ["La serveuse", "Une petite tarte à la noix de coco, typique des Saintes, en Guadeloupe. Mais attention, il ne m'en reste qu'une !", "A little coconut tart, typical of Les Saintes in Guadeloupe. But careful, I've only got one left!"]
+      ],
+      glossary: [["le plat du jour", "the dish of the day"], ["la spécialité de la maison", "the house speciality"], ["Qu'est-ce que vous me conseillez ?", "What do you recommend?"], ["il ne m'en reste qu'une", "I've only got one left"]]
+    },
+    {
+      id: "d6", n: 6, title: "Did you enjoy it?", titleFr: "À la sortie · Ça vous a plu ?",
+      note: "Leaving the restaurant, the friends give their opinion. Listen to satisfaction, dissatisfaction and [[ne… que]].",
+      scene: "rue", people: { "Hugo": "m3", "Nadia": "f4", "Mathis": "m2" },
+      lines: [
+        ["Hugo", "Alors, ça vous a plu ?", "So, did you enjoy it?"],
+        ["Mathis", "Un régal, de l'entrée jusqu'au dessert ! J'ai eu un coup de cœur pour ce restaurant.", "A treat, from the starter to the dessert! I fell in love with this restaurant."],
+        ["Nadia", "Moi, je suis ravie : le poisson était délicieux et les prix sont très corrects.", "I'm delighted: the fish was delicious and the prices are very reasonable."],
+        ["Hugo", "Moi, j'ai trouvé le colombo un peu trop épicé… Et il a fallu attendre une demi-heure entre chaque plat !", "I found the colombo a bit too spicy… And we had to wait half an hour between each course!"],
+        ["Mathis", "C'est vrai, le service était lent. Mais ce n'est pas scandaleux !", "True, the service was slow. But it's not outrageous!"],
+        ["Hugo", "Bon. Sur l'appli, je ne mets que quatre étoiles sur cinq.", "Well. On the app, I'm only giving four stars out of five."],
+        ["Nadia", "Et moi, je ne peux en dire que du bien. Cinq étoiles !", "And I can only say good things about it. Five stars!"]
+      ],
+      glossary: [["Un régal !", "A real treat!"], ["un coup de cœur", "love at first sight (for a place, a thing)"], ["Je suis ravi(e).", "I'm delighted."], ["ne… que = seulement", "only"]]
+    }
+  ],
+
+  vocab: [
+    { t: "l'aubergine", en: "the aubergine", pic: "🍆", cat: "Les légumes", g: "f" },
+    { t: "l'avocat", en: "the avocado", pic: "🥑", cat: "Les légumes", g: "m" },
+    { t: "la betterave", en: "the beetroot", pic: "🟣", cat: "Les légumes", g: "f" },
+    { t: "la carotte", en: "the carrot", pic: "🥕", cat: "Les légumes", g: "f" },
+    { t: "la courge", en: "the squash", pic: "🎃", cat: "Les légumes", g: "f" },
+    { t: "l'endive", en: "the chicory", pic: "🥬", cat: "Les légumes", g: "f" },
+    { t: "le poireau", en: "the leek", pic: "🥬", cat: "Les légumes", g: "m" },
+    { t: "le radis", en: "the radish", pic: "🔴", cat: "Les légumes", g: "m" },
+    { t: "l'oignon", en: "the onion", pic: "🧅", cat: "Les légumes", g: "m" },
+    { t: "la farine", en: "flour", pic: "🌾", cat: "Les légumes secs et les céréales", g: "f" },
+    { t: "le riz, la semoule", en: "rice, semolina", pic: "🍚", cat: "Les légumes secs et les céréales", g: "m" },
+    { t: "les lentilles, les pois chiches", en: "lentils, chickpeas", pic: "🫘", cat: "Les légumes secs et les céréales", g: "pl" },
+    { t: "la framboise", en: "the raspberry", pic: "🍓", cat: "Les fruits", g: "f" },
+    { t: "la mûre, la myrtille", en: "the blackberry, the blueberry", pic: "🫐", cat: "Les fruits", g: "f" },
+    { t: "la groseille", en: "the redcurrant", pic: "🍒", cat: "Les fruits", g: "f" },
+    { t: "la poire, la prune", en: "the pear, the plum", pic: "🍐", cat: "Les fruits", g: "f" },
+    { t: "l'amande, les raisins secs", en: "almond, raisins", pic: "🌰", cat: "Les fruits", g: "f" },
+    { t: "le saumon, le colin", en: "salmon, hake", pic: "🐟", cat: "Poissons, fruits de mer, viandes", g: "m" },
+    { t: "les crevettes", en: "prawns", pic: "🦐", cat: "Poissons, fruits de mer, viandes", g: "pl" },
+    { t: "le bœuf, le mouton, le poulet", en: "beef, mutton, chicken", pic: "🍗", cat: "Poissons, fruits de mer, viandes", g: "m" },
+    { t: "la cannelle, la muscade", en: "cinnamon, nutmeg", pic: "🟤", cat: "Les herbes et les épices", g: "f" },
+    { t: "le cumin, le curcuma, le safran", en: "cumin, turmeric, saffron", pic: "🌶️", cat: "Les herbes et les épices", g: "m" },
+    { t: "le gingembre", en: "ginger", pic: "🫚", cat: "Les herbes et les épices", g: "m" },
+    { t: "la coriandre, la menthe", en: "coriander, mint", pic: "🌿", cat: "Les herbes et les épices", g: "f" },
+    { t: "une barquette de framboises", en: "a punnet of raspberries", pic: "🧺", cat: "Les quantités" },
+    { t: "une botte d'oignons", en: "a bunch of onions", pic: "🧅", cat: "Les quantités" },
+    { t: "une boule de glace", en: "a scoop of ice cream", pic: "🍨", cat: "Les quantités" },
+    { t: "un bouquet, une feuille de menthe", en: "a bunch, a leaf of mint", pic: "🌿", cat: "Les quantités" },
+    { t: "une pincée de sel", en: "a pinch of salt", pic: "🧂", cat: "Les quantités" },
+    { t: "une tablette de chocolat", en: "a bar of chocolate", pic: "🍫", cat: "Les quantités" },
+    { t: "laver, couper (en morceaux)", en: "to wash, to cut (into pieces)", pic: "🔪", cat: "Les actions" },
+    { t: "mélanger, ajouter, verser", en: "to mix, to add, to pour", pic: "🥣", cat: "Les actions" },
+    { t: "préchauffer le four", en: "to preheat the oven", pic: "🌡️", cat: "Les actions" },
+    { t: "mettre au four = enfourner", en: "to put in the oven", pic: "🔥", cat: "Les actions" },
+    { t: "(faire) cuire, (laisser) refroidir", en: "to cook, to (leave to) cool", pic: "⏲️", cat: "Les actions" },
+    { t: "sortir du four, servir", en: "to take out of the oven, to serve", pic: "🍽️", cat: "Les actions" },
+    { t: "le bistrot = la brasserie", en: "the bistro, brasserie", pic: "🍷", cat: "Les lieux", g: "m" },
+    { t: "le fast-food", en: "the fast-food restaurant", pic: "🍔", cat: "Les lieux", g: "m" },
+    { t: "le restaurant étoilé, gastronomique", en: "the Michelin-starred, gourmet restaurant", pic: "⭐", cat: "Les lieux", g: "m" },
+    { t: "le restaurant végétarien, végan", en: "the vegetarian, vegan restaurant", pic: "🥗", cat: "Les lieux", g: "m" },
+    { t: "le traiteur", en: "the deli, caterer", pic: "🥡", cat: "Les lieux", g: "m" },
+    { t: "à emporter ≠ sur place", en: "takeaway ≠ eat in", pic: "🛍️", cat: "La restauration" },
+    { t: "fait maison", en: "homemade", pic: "🏠", cat: "La restauration" },
+    { t: "le pourboire", en: "the tip", pic: "🪙", cat: "La restauration", g: "m" },
+    { t: "la nappe, le tablier", en: "the tablecloth, the apron", pic: "🧑‍🍳", cat: "La restauration", g: "f" },
+    { t: "l'ambiance, le service", en: "atmosphere, service", pic: "🎶", cat: "La restauration", g: "f" },
+    { t: "acide, amer, amère", en: "sour, bitter", pic: "🍋", cat: "Les goûts" },
+    { t: "épicé(e) = pimenté(e)", en: "spicy, hot", pic: "🌶️", cat: "Les goûts" },
+    { t: "fade ≠ goûteux, goûteuse", en: "bland ≠ tasty", pic: "😐", cat: "Les goûts" },
+    { t: "gras, grasse · salé(e) · sucré(e)", en: "greasy · salty · sweet", pic: "🍟", cat: "Les goûts" },
+    { t: "déguster, goûter, grignoter", en: "to savour, to taste, to nibble", pic: "😋", cat: "Manger" },
+    { t: "se régaler", en: "to really enjoy one's food", pic: "🤤", cat: "Manger" },
+    { t: "allergique (à)", en: "allergic (to)", pic: "⚠️", cat: "Les personnes" },
+    { t: "difficile ≠ gourmand(e), gourmet", en: "fussy ≠ greedy, food lover", pic: "🧐", cat: "Les personnes" },
+    { t: "végétarien(ne), végan(e)", en: "vegetarian, vegan", pic: "🌱", cat: "Les personnes" },
+    { t: "saignant · à point · bien cuit", en: "rare · medium · well done", pic: "🥩", cat: "La cuisson de la viande" },
+    { t: "le bœuf bourguignon, le pot-au-feu", en: "beef stew, boiled beef with vegetables", pic: "🍲", cat: "Les plats" },
+    { t: "la choucroute, la tartiflette", en: "sauerkraut with meats, potato-cheese bake", pic: "🥘", cat: "Les plats" },
+    { t: "le couscous, la ratatouille", en: "couscous, ratatouille", pic: "🍛", cat: "Les plats" },
+    { t: "le clafoutis, le fondant au chocolat", en: "clafoutis, chocolate fondant", pic: "🍰", cat: "Les plats" }
+  ],
+
+  grammar: [
+    {
+      id: "g-recette",
+      title: "Cooking instructions · warnings",
+      body: [
+        "Recipes use the <b>imperative</b> (vous) or the <b>infinitive</b>: [[Mélangez le lait avec la crème.]] · [[Coupez le beurre en petits morceaux.]] · [[Versez la pâte sur les fruits.]] · [[Faites cuire pendant 35-40 minutes.]] · [[Ajoutez des feuilles de menthe.]]",
+        "Warnings: [[Faites attention aux températures de conservation.]] · [[Attention ! C'est dangereux.]] · [[Attention, le four est très chaud !]]"
+      ],
+      info: { type: "card", style: "menu", caption: "🍒 Clafoutis aux fruits rouges · tap a step", title: "CLAFOUTIS AUX FRUITS ROUGES", sub: "pour 4 personnes · 35-40 min", rows: [
+        ["1. Préchauffez le four à 200 °C.", "🌡️", "Préchauffez le four à deux cents degrés."], ["2. Lavez et séchez les fruits rouges.", "🫐", "Lavez et séchez les fruits rouges."],
+        ["3. Mélangez le lait, la crème, la farine, le sucre et une pincée de sel.", "🥣", "Dans un saladier, mélangez le lait avec la crème, la farine, le sucre et une pincée de sel."], ["4. Mettez les fruits dans un plat beurré.", "🍓", "Mettez les framboises, les mûres et les myrtilles dans un plat beurré."],
+        ["5. Versez la pâte sur les fruits.", "🫗", "Versez la pâte sur les fruits."], ["6. Coupez le beurre en morceaux et posez-les dessus.", "🧈", "Coupez le beurre en petits morceaux et posez-les dessus."],
+        ["7. Enfournez et faites cuire 35 à 40 minutes.", "🔥", "Enfournez le clafoutis et faites-le cuire pendant trente-cinq à quarante minutes."], ["8. Laissez refroidir, servez tiède.", "🍨", "Laissez refroidir et servez tiède avec une boule de glace."]
+      ], foot: "Variantes : poires, prunes, kiwis ou bananes" },
+      widget: {
+        type: "sort", label: "Put the recipe in order: before or after the oven?",
+        cols: [{ k: "avant", label: "avant le four", color: "#3a6fd8" }, { k: "apres", label: "après le four", color: "#e86a2e" }],
+        items: [
+          { t: "Préchauffez le four.", k: "avant", say: "Préchauffez le four." }, { t: "Mélangez la farine et le sucre.", k: "avant", say: "Mélangez la farine et le sucre." }, { t: "Laissez refroidir.", k: "apres", say: "Laissez refroidir." },
+          { t: "Versez la pâte sur les fruits.", k: "avant", say: "Versez la pâte sur les fruits." }, { t: "Ajoutez des feuilles de menthe pour décorer.", k: "apres", say: "Ajoutez des feuilles de menthe pour décorer." }, { t: "Servez avec une boule de glace.", k: "apres", say: "Servez avec une boule de glace." }
+        ]
+      }
+    },
+    {
+      id: "g-en",
+      title: "Quantities and the pronoun [[en]]",
+      body: [
+        "[[en]] replaces a noun introduced by: a <b>partitive</b> ([[du, de la, de l', des]]): [[Tu manges de la viande ? — Non, je n'en mange pas.]] · an <b>indefinite article</b> ([[un, une, des]]): [[Tu as une grande poêle ? — Oui, j'en ai une.]] · a <b>precise quantity</b>: [[Vous proposez trois plats ? — Non, j'en propose quatre.]] · an <b>imprecise quantity</b>: [[Vous consommez beaucoup de fruits ? — Oui, j'en consomme beaucoup.]]",
+        "Note: with un, une or a number, you repeat it at the end: [[j'en ai une]], [[j'en veux deux]].",
+        "Position: before the verb (or the auxiliary): [[J'en mange.]] · [[J'en ai mangé.]] Negative: [[Je n'en mange pas.]] · [[Je n'en ai pas mangé.]] (In speech, people often say <i>j'en ai pas</i>.)"
+      ],
+      info: { type: "pattern", title: "🥕 Replace the food with en", rows: [
+        ["Des tomates ?", "J'", "en", { opts: ["cultive beaucoup.", "achète un kilo.", "mange tous les jours."] }],
+        ["De la salade ?", "Je n'", "en", { opts: ["achète plus.", "mange pas.", "ai pas mis."] }],
+        ["Des courgettes ?", "Tu", "en", { opts: ["veux deux ?", "as une ?", "prends trois ?"] }]
+      ], note: "With a number or un / une, repeat it after the verb: j'en veux deux." },
+      widget: {
+        type: "combo", label: "Answer with en · pick an answer and a food",
+        rows: [{ k: "oui", label: "✅ oui" }, { k: "non", label: "❌ non" }, { k: "nb", label: "🔢 a number" }],
+        cols: [{ k: "viande", label: "🥩 Tu manges de la viande ?" }, { k: "oeufs", label: "🥚 Tu as des œufs ?" }, { k: "fruits", label: "🍎 Tu manges beaucoup de fruits ?" }],
+        out: {
+          "oui|viande": ["Oui, j'en mange.", "Yes, I eat it."], "non|viande": ["Non, je n'en mange pas. Je suis végétarien.", "No, I don't eat it. I'm vegetarian."], "nb|viande": ["J'en mange deux fois par semaine.", "I eat it twice a week."],
+          "oui|oeufs": ["Oui, j'en ai.", "Yes, I have some."], "non|oeufs": ["Non, je n'en ai plus.", "No, I haven't got any left."], "nb|oeufs": ["Oui, j'en ai six.", "Yes, I have six.", "repeat the number"],
+          "oui|fruits": ["Oui, j'en mange beaucoup.", "Yes, I eat a lot.", "repeat beaucoup"], "non|fruits": ["Non, je n'en mange pas beaucoup.", "No, I don't eat many."], "nb|fruits": ["J'en mange trois par jour.", "I eat three a day."]
+        }
+      }
+    },
+    {
+      id: "g-obligation",
+      title: "Obligation and prohibition",
+      body: [
+        "Obligation: [[Il faut]] / [[Il est nécessaire de]] / [[Il est indispensable de]] / [[Vous avez l'obligation de]] + infinitive · or the affirmative imperative: [[Faites attention !]] With pronominal verbs, the pronoun goes <b>after</b> the verb: [[se laver les mains]] → [[Lavez-vous les mains !]] / [[Lave-toi les mains !]]",
+        "Prohibition: [[Il ne faut pas]] / [[Il est interdit de]] / [[Il est défendu de]] / [[Vous ne devez pas]] + infinitive · or the negative imperative: [[Ne faites pas entrer d'animal.]]"
+      ],
+      info: [
+        { type: "compare", title: "✅ / ⛔ In the kitchen", cols: [
+          { head: "Obligation", en: "you must", color: "#2f9c8a", lines: [["Il faut avoir une bonne hygiène.", "You must have good hygiene."], ["Il est indispensable de cuisiner des produits frais.", "It's essential to cook fresh produce."], ["Lavez-vous souvent les mains.", "Wash your hands often."]] },
+          { head: "Interdiction", en: "you mustn't", color: "#e0474f", lines: [["Il est interdit de vendre vos plats tous les jours.", "It's forbidden to sell every day."], ["Il est défendu de cuisiner sans hygiène.", "Cooking without hygiene is forbidden."], ["Ne laissez pas entrer d'animal.", "Don't let animals in."]] }
+        ] },
+        { type: "signs", title: "🚸 Restaurant signs · red = forbidden, blue = compulsory", items: [
+          { type: "no", pic: "🚭", fr: "Il est interdit de fumer.", en: "No smoking." }, { type: "no", pic: "🐕", fr: "Les animaux ne sont pas acceptés.", en: "No animals." },
+          { type: "yes", pic: "🧼", fr: "Lavez-vous les mains.", en: "Wash your hands." }, { type: "no", pic: "📱", fr: "Il ne faut pas téléphoner à table.", en: "No phones at the table." }
+        ] }
+      ],
+      widget: {
+        type: "sort", label: "Obligation or prohibition?",
+        cols: [{ k: "oblig", label: "obligation ✅", color: "#2f9c8a" }, { k: "interdit", label: "interdiction ⛔", color: "#e0474f" }],
+        items: [
+          { t: "Il est défendu de cuisiner dans des conditions non hygiéniques.", k: "interdit", say: "Il est défendu de cuisiner dans des conditions non hygiéniques." }, { t: "Vous avez l'obligation de préparer des plats faits maison.", k: "oblig", say: "Vous avez l'obligation de préparer des plats faits maison." },
+          { t: "Il est indispensable de cuisiner des produits frais.", k: "oblig", say: "Il est indispensable de cuisiner des produits frais." }, { t: "Vous ne devez pas être cuisinier de métier.", k: "interdit", say: "Vous ne devez pas être cuisinier de métier." },
+          { t: "Attachez-vous les cheveux.", k: "oblig", say: "Attachez-vous les cheveux." }, { t: "Ne laissez pas entrer d'animal.", k: "interdit", say: "Ne laissez pas entrer d'animal." }
+        ]
+      }
+    },
+    {
+      id: "g-restaurant",
+      title: "At the restaurant · satisfied or not?",
+      body: [
+        "The waiter: [[Vous avez choisi ?]] · [[Vous prendrez des desserts ?]] · [[Ça vous a plu ?]] You: [[En entrée, je voudrais…]] · [[Quel est le plat du jour ?]] · [[Qu'est-ce que vous me conseillez ?]] · [[C'est quoi, le tourment d'amour ?]] · Meat: [[saignant]], [[à point]], [[bien cuit]].",
+        "Satisfied: [[Un régal !]] · [[C'est délicieux !]] · [[J'ai eu un coup de cœur.]] · [[Je suis ravi(e).]] Not satisfied: [[C'est une honte !]] · [[C'est scandaleux !]] · [[Les plats étaient un peu trop épicés.]] · [[Le service est trop lent.]]"
+      ],
+      info: { type: "scale", title: "⭐ How many stars?", colors: ["#e0474f", "#2f9c8a"], items: [
+        { v: 4, fr: "C'est une honte ! C'est scandaleux !", en: "★ disgraceful!", pic: "😡" }, { v: 30, fr: "C'était mauvais et le service était lent.", en: "★★ bad, slow", pic: "😒" },
+        { v: 56, fr: "C'était correct, sans plus.", en: "★★★ OK, nothing special", pic: "😐" }, { v: 78, fr: "C'était très bon, un peu trop épicé.", en: "★★★★ very good", pic: "🙂" }, { v: 96, fr: "Un régal ! Je suis ravie !", en: "★★★★★ a treat!", pic: "🤩" }
+      ], ends: ["★", "★★★★★"] }
+    },
+    {
+      id: "g-neque",
+      title: "Restriction: [[ne… que]] (= seulement)",
+      body: [
+        "[[ne… que]] = <b>seulement, uniquement, juste</b>. [[ne / n']] goes before the verb and [[que / qu']] before the word it limits: [[Je ne mets que quatre étoiles sur cinq.]] · [[Il ne m'en reste qu'un.]] · [[Je ne peux en dire que du bien.]]",
+        "It's <b>not</b> a negative: the article stays ([[Il ne mange que du poulet]], not <s>de poulet</s>). Careful: [[Elle n'achète pas que des produits sains]] = she doesn't buy only healthy food. [[Il ne mange plus que du poulet]] = now he only eats chicken."
+      ],
+      widget: {
+        type: "combo", label: "Say it with ne… que",
+        rows: [{ k: "nq", label: "ne… que" }],
+        cols: [{ k: "riz", label: "🍚 Ce restaurant propose uniquement des plats à base de riz." }, { k: "potager", label: "🥬 Elle mange seulement les légumes de son potager." }, { k: "oeufs", label: "🥚 Je suis juste allergique aux œufs." }, { k: "chef", label: "👨‍🍳 Ce chef a eu seulement de bonnes critiques." }],
+        out: {
+          "nq|riz": ["Ce restaurant ne propose que des plats à base de riz.", "This restaurant only offers rice-based dishes."], "nq|potager": ["Elle ne mange que les légumes de son potager.", "She only eats vegetables from her garden."],
+          "nq|oeufs": ["Je ne suis allergique qu'aux œufs.", "I'm only allergic to eggs.", "que before the limited word"], "nq|chef": ["Ce chef n'a eu que de bonnes critiques.", "This chef has had only good reviews.", "passé composé: ne + auxiliary… que"]
+        }
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour comprendre des instructions de cuisine", fnEn: "recipes", icon: "🍳", items: [
+      ["Mélangez le lait avec la crème.", "Mix the milk with the cream.", "std", true],
+      ["Coupez le beurre en petits morceaux.", "Cut the butter into small pieces.", "std"],
+      ["Versez la pâte sur les fruits.", "Pour the batter over the fruit.", "std"],
+      ["Faites cuire pendant 35-40 minutes.", "Cook for 35–40 minutes.", "std", true],
+      ["Ajoutez des feuilles de menthe.", "Add some mint leaves.", "std"]
+    ] },
+    { fn: "Pour mettre en garde", fnEn: "warnings", icon: "⚠️", items: [
+      ["Faites attention aux températures de conservation.", "Be careful with storage temperatures.", "std"],
+      ["Attention ! C'est dangereux.", "Careful! It's dangerous.", "std", true]
+    ] },
+    { fn: "Pour communiquer au restaurant", fnEn: "at the restaurant", icon: "🍽️", items: [
+      ["— Vous avez choisi ? — En entrée, je voudrais…", "— Have you chosen? — As a starter I'd like…", "poli", true],
+      ["Quel est le plat du jour ?", "What's the dish of the day?", "poli", true],
+      ["Qu'est-ce que vous me conseillez ?", "What do you recommend?", "poli", true],
+      ["Le colombo, c'est la spécialité de la maison.", "The colombo is the house speciality.", "std"],
+      ["— Vous prendrez des desserts ? — C'est quoi, le tourment d'amour ?", "— Will you have dessert? — What's the tourment d'amour?", "std"],
+      ["— Ça vous a plu ? — Oui, c'était très bon !", "— Did you enjoy it? — Yes, it was very good!", "std"]
+    ] },
+    { fn: "Pour exprimer sa satisfaction", fnEn: "satisfaction", icon: "😋", items: [
+      ["Un régal !", "A treat!", "std", true],
+      ["J'ai eu un coup de cœur pour ce restaurant.", "I fell in love with this restaurant.", "std"],
+      ["Je suis ravi(e) de cette expérience.", "I'm delighted with this experience.", "std", true],
+      ["Je ne peux en dire que du bien.", "I can only say good things about it.", "std"]
+    ] },
+    { fn: "… et son insatisfaction", fnEn: "dissatisfaction", icon: "😡", items: [
+      ["C'est une honte !", "It's a disgrace!", "std", true],
+      ["C'est scandaleux de payer aussi cher !", "It's outrageous to pay so much!", "std", true],
+      ["Le service est trop lent.", "The service is too slow.", "std"],
+      ["Les plats étaient un peu trop épicés.", "The dishes were a bit too spicy.", "std"]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · ordering", lanes: ["La serveuse", "Le client"], av: ["f5", "m2"], steps: [
+    { s: 0, fr: "Bonsoir ! Vous avez choisi ?", en: "Good evening! Have you chosen?" },
+    { s: 1, fr: "Qu'est-ce que vous me conseillez ?", en: "What do you recommend?" },
+    { s: 0, fr: "Le colombo, c'est la spécialité de la maison.", en: "The colombo is the house speciality." },
+    { s: 1, fr: "Parfait. En entrée, je voudrais des accras, et ensuite le colombo.", en: "Perfect. As a starter, fritters, then the colombo." },
+    { s: 0, fr: "Vous prendrez un dessert ?", en: "Will you have dessert?" },
+    { s: 1, fr: "Oui. C'est quoi, le tourment d'amour ?", en: "Yes. What's the tourment d'amour?" },
+    { s: 0, fr: "Ça vous a plu ?", en: "Did you enjoy it?" },
+    { s: 1, fr: "Un régal !", en: "A treat!" }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: <b>intonation and emotions</b>. In French, the melody of the sentence carries the emotion: surprise rises at the end, joy is lively and high, anger is strong and falls hard, disappointment is low and slow. Listen and repeat with the same melody.",
+    letters: [
+      { l: "😲", name: "la surprise", tip: "The voice rises at the end: [[C'est étonnant de découvrir tous ces plats épicés !]] · [[Les plats ont des saveurs très particulières, c'est incroyable !]]", ex: ["C'est incroyable !", "Ah bon ? Il n'y a que du poisson ?"] },
+      { l: "🤩", name: "la joie", tip: "Lively, high and quick: [[Un régal, de l'apéritif jusqu'au dessert !]] · [[Il y a une très bonne ambiance, c'est génial !]]", ex: ["Un régal !", "C'est génial !"] },
+      { l: "😡", name: "la colère", tip: "Strong, stressed syllables, falling hard: [[Il faut patienter plus d'une demi-heure entre chaque plat. C'est une honte !]]", ex: ["C'est une honte !", "C'est scandaleux de payer aussi cher !"] },
+      { l: "😞", name: "la déception", tip: "Low, slow and falling: [[Je n'ai pas pu goûter certains plats, c'est dommage.]]", ex: ["C'est dommage.", "J'ai trouvé que les plats étaient mauvais."] }
+    ],
+    pairs: [
+      { a: ["Je n'en mange pas.", "I don't eat any."], b: ["Je ne mange que ça.", "I only eat that."], note: "négation / restriction" },
+      { a: ["J'en ai un.", "I have one."], b: ["J'en ai.", "I have some."], note: "en + number / en" },
+      { a: ["saignant", "rare"], b: ["bien cuit", "well done"], note: "la cuisson" },
+      { a: ["à emporter", "takeaway"], b: ["sur place", "eat in"], note: "restauration" },
+      { a: ["Il faut…", "You must…"], b: ["Il ne faut pas…", "You mustn't…"], note: "obligation / interdiction" },
+      { a: ["Lavez-vous les mains !", "Wash your hands!"], b: ["Ne vous lavez pas…", "Don't wash…"], note: "pronominal imperative" }
+    ]
+  },
+  classify: {
+    label: "🎭 Quelle émotion ?", q: "Listen to the sentence: which emotion does it express?",
+    options: ["la joie", "la colère", "la déception", "la surprise"],
+    items: [
+      { say: "Un régal, de l'apéritif jusqu'au dessert !", a: 0 }, { say: "C'est une honte ! Le service est beaucoup trop lent !", a: 1 }, { say: "Je n'ai pas pu goûter le dessert, c'est dommage.", a: 2 },
+      { say: "Ah bon ? Ce restaurant est végan ?", a: 3 }, { say: "Il y a une très bonne ambiance, c'est génial !", a: 0 }, { say: "C'est scandaleux de payer aussi cher !", a: 1 },
+      { say: "Les plats étaient un peu fades, je suis déçue.", a: 2 }, { say: "C'est incroyable, toutes ces saveurs !", a: 3 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "Annie produit tous ses légumes.", ok: false, explain: "She still buys potatoes and onions." },
+    { type: "mcq", tag: "Dialogue 1", q: "Annie cultive beaucoup de tomates parce qu'elle…", options: ["en consomme beaucoup", "en vend au marché", "n'aime pas la salade"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 2", q: "On préchauffe le four à…", options: ["200 °C", "100 °C", "350 °C"], answer: 0 },
+    { type: "tf", tag: "Dialogue 3", s: "Sur l'appli, on peut vendre ses plats tous les jours.", ok: false, explain: "Sales must stay occasional." },
+    { type: "tf", tag: "Dialogue 4", s: "Nadia est allergique aux crevettes.", ok: true },
+    { type: "mcq", tag: "Dialogue 5", q: "La spécialité de la maison, c'est…", options: ["le colombo de poulet", "le poisson grillé", "le tourment d'amour"], answer: 0 },
+    { type: "tf", tag: "Dialogue 6", s: "Hugo met cinq étoiles au restaurant.", ok: false, explain: "« Je ne mets que quatre étoiles. »" },
+    { type: "fill", tag: "Recette", sentence: "___ le four à 200 °C.", options: ["Préchauffez", "Préchauffer à", "Préchauffé"], answer: 0 },
+    { type: "fill", tag: "Recette", sentence: "Coupez le beurre ___ petits morceaux.", options: ["en", "à", "dans"], answer: 0 },
+    { type: "fill", tag: "Quantités", sentence: "Une ___ de sel.", options: ["pincée", "botte", "barquette"], answer: 0 },
+    { type: "fill", tag: "Quantités", sentence: "Une ___ de framboises.", options: ["barquette", "pincée", "tablette"], answer: 0 },
+    { type: "fill", tag: "Quantités", sentence: "Une ___ de glace à la vanille.", options: ["boule", "botte", "feuille"], answer: 0 },
+    { type: "fill", tag: "Le pronom en", sentence: "Tu manges de la viande ? — Non, je n'___ mange pas.", options: ["en", "y", "la"], answer: 0 },
+    { type: "fill", tag: "Le pronom en", sentence: "Tu as une grande poêle ? — Oui, j'en ai ___.", options: ["une", "la", "—"], answer: 0 },
+    { type: "fill", tag: "Le pronom en", sentence: "Vous n'avez pas acheté de beurre ? — Non, nous n'___ avons pas acheté.", options: ["en", "y", "le"], answer: 0 },
+    { type: "type", tag: "Le pronom en", q: "Replace with en: « Je ne consomme pas beaucoup de légumes. »", answers: ["Je n'en consomme pas beaucoup.", "Je n'en consomme pas beaucoup"] },
+    { type: "fill", tag: "Obligation / interdiction", sentence: "Il est interdit ___ fumer dans les restaurants.", options: ["de", "à", "—"], answer: 0 },
+    { type: "fill", tag: "Obligation / interdiction", sentence: "Avant de cuisiner, ___ les mains !", options: ["lavez-vous", "vous lavez", "lavez-les vous"], answer: 0 },
+    { type: "fill", tag: "Obligation / interdiction", sentence: "Il ___ pas laisser entrer les animaux.", options: ["ne faut", "faut", "n'est"], answer: 0 },
+    { type: "type", tag: "Obligation / interdiction", q: "Make it a prohibition: « On peut fumer dans les restaurants. »", answers: ["Il est interdit de fumer dans les restaurants.", "On ne doit pas fumer dans les restaurants.", "Il ne faut pas fumer dans les restaurants.", "Il est défendu de fumer dans les restaurants."] },
+    { type: "fill", tag: "Ne… que", sentence: "Je ___ consomme que des fruits de saison.", options: ["ne", "n'en", "—"], answer: 0 },
+    { type: "fill", tag: "Ne… que", sentence: "Il ne m'en reste ___ un.", options: ["qu'", "que", "pas"], answer: 0 },
+    { type: "type", tag: "Ne… que", q: "With ne… que: « Elle mange seulement les légumes de son potager. »", answers: ["Elle ne mange que les légumes de son potager.", "Elle ne mange que les légumes de son potager"] },
+    { type: "reply", tag: "Que répondre ?", prompt: "Vous avez choisi ?", options: ["Oui. En entrée, je voudrais une salade.", "Un régal !", "Il est interdit de choisir."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Vous voulez votre steak comment ?", options: ["À point, s'il vous plaît.", "Sucré, merci.", "À emporter."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Ça vous a plu ?", options: ["Oui, c'était délicieux ! Un régal !", "Je n'en mange pas.", "Préchauffez le four."], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Le contraire de « fade » :", options: ["goûteux", "gras", "acide"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Un restaurant où on peut acheter de bons plats à emporter :", options: ["un traiteur", "un fast-food", "un bistrot"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["la cannelle", "la muscade", "le safran", "le clafoutis"], answer: 3, explain: "le clafoutis is a dessert; the others are spices." },
+    { type: "mcq", tag: "Vocabulaire", q: "« Grignoter », c'est…", options: ["manger un peu entre les repas", "faire la cuisine", "boire beaucoup"], answer: 0 },
+    { type: "order", tag: "Construisez", en: "What do you recommend?", words: ["Qu'est-ce", "que", "vous", "me", "conseillez", "?"] },
+    { type: "listen", tag: "Écoute", q: "What does the customer order?", say: "En entrée, je voudrais une soupe de légumes, et comme plat, le poulet avec des frites.", options: ["vegetable soup, then chicken and chips", "a salad, then fish", "only a dessert"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "🍽️ Au restaurant (DELF)", brief: "You're at a restaurant. Ask about the dishes, order a starter and a main course, then a dessert.", memo: ["Quel est le plat du jour ?", "Qu'est-ce que vous me conseillez ?", "En entrée, je voudrais…", "C'est quoi… ?"], partner: "f5", you: "m2",
+      turns: [
+        { them: "Bonsoir ! Vous avez choisi ?", themEn: "Good evening! Have you chosen?", hint: "Ask what the dish of the day is.", you: "Bonsoir. Quel est le plat du jour ?", youEn: "Good evening. What's the dish of the day?" },
+        { them: "C'est un bœuf bourguignon avec de la purée.", themEn: "It's beef bourguignon with mashed potatoes.", hint: "Take it, with a leek vinaigrette starter.", you: "Je vais prendre ça. Et en entrée, je voudrais des poireaux-vinaigrette.", youEn: "I'll have that. And as a starter I'd like leeks vinaigrette." },
+        { them: "Vous prendrez un dessert ?", themEn: "Will you have dessert?", hint: "Ask what she recommends.", you: "Oui. Qu'est-ce que vous me conseillez ?", youEn: "Yes. What do you recommend?" },
+        { them: "Le fondant au chocolat, c'est la spécialité de la maison.", themEn: "The chocolate fondant is the house speciality.", hint: "Accept it.", you: "Parfait, je prends le fondant !", youEn: "Perfect, I'll have the fondant!" }
+      ] },
+    { title: "🍒 Donne ta recette", brief: "A friend asks how to make your favourite dish. Give the steps with the imperative and the quantities.", memo: ["D'abord…", "Coupez / Mélangez / Versez…", "Faites cuire…", "Attention !"], partner: "m3", you: "f3",
+      turns: [
+        { them: "Comment tu fais ta ratatouille ?", themEn: "How do you make your ratatouille?", hint: "First, wash and cut the vegetables into pieces.", you: "D'abord, lave et coupe les légumes en morceaux.", youEn: "First, wash the vegetables and cut them into pieces." },
+        { them: "Quels légumes ?", themEn: "Which vegetables?", hint: "Aubergines, courgettes, tomatoes, peppers and an onion.", you: "Des aubergines, des courgettes, des tomates, des poivrons et un oignon.", youEn: "Aubergines, courgettes, tomatoes, peppers and an onion." },
+        { them: "Et après ?", themEn: "And then?", hint: "Cook for one hour; careful, stir often.", you: "Fais cuire pendant une heure. Attention, mélange souvent !", youEn: "Cook for an hour. Careful, stir often!" }
+      ] },
+    { title: "⭐ Ton avis sur le restaurant", brief: "A friend asks what you thought of a restaurant. You weren't satisfied with everything. Use ne… que.", memo: ["Un régal ! / C'est une honte !", "trop lent / trop épicé", "Je ne mets que…"], partner: "f4", you: "m3",
+      turns: [
+        { them: "Alors, ce nouveau restaurant, ça t'a plu ?", themEn: "So, did you like this new restaurant?", hint: "The food was delicious, but the service was too slow.", you: "La cuisine était délicieuse, mais le service était trop lent.", youEn: "The food was delicious, but the service was too slow." },
+        { them: "Ah bon ?", themEn: "Really?", hint: "You had to wait half an hour between each course.", you: "Oui, il a fallu attendre une demi-heure entre chaque plat !", youEn: "Yes, we had to wait half an hour between each course!" },
+        { them: "Tu mets combien d'étoiles ?", themEn: "How many stars are you giving?", hint: "Only three.", you: "Je ne mets que trois étoiles.", youEn: "I'm only giving three stars." }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Réaliser un sondage", intro: "Read an infographic about French eating habits, then carry out the same survey in your class and present the results as a chart.",
+      steps: [["Préparation", ["Look at an infographic on eating habits (theme, date, who carried out the study, how many people, which generation).", "Strategy: to interpret a chart, first understand its context: the main theme, the publication date and the organisation behind it.", "Find which chart is about: meat and fish, homemade or ready meals, sharing food photos online, where recipes come from."]], ["Réalisation", ["In groups, choose one theme and write 2 questions about it.", "Ask the rest of the class, gather and analyse the answers.", "Make a chart of your results."]], ["Présentation", ["Each group presents its chart and results. Are you surprised?"]]],
+      phrases: ["Manger de la viande ≠ être végétarien(ne)", "Manger des plats préparés ≠ faits maison", "Partager des photos de plats en ligne", "Suivre une recette de cuisine", "La majorité de la classe…"],
+      model: { type: "bars", title: "📊 Example: our class survey (invented results)", unit: " élèves", items: [
+        { fr: "cuisinent des plats faits maison", en: "cook homemade meals", v: 11, pic: "🏠" }, { fr: "mangent souvent des plats préparés", en: "often eat ready meals", v: 6, pic: "📦" },
+        { fr: "postent des photos de plats", en: "post food photos", v: 8, pic: "📸" }, { fr: "sont végétariens", en: "are vegetarian", v: 3, pic: "🌱" }
+      ] } }
+  ],
+  delf: {
+    skill: "Production orale", title: "Part 3 · Dialogue simulé: at the restaurant",
+    about: "In the DELF A2 speaking test, the third part is a role-play with the examiner (about 3–4 minutes). Example: <i>you are in a restaurant; ask the waiter about the dishes, order, and react to the meal.</i> You must greet, ask questions, make choices, react politely (and perhaps complain), then pay and say goodbye.",
+    tips: ["Ask for information: [[Quel est le plat du jour ?]] · [[C'est quoi, … ?]] · [[Il y a des crevettes dedans ?]]", "Ask for advice: [[Qu'est-ce que vous me conseillez ?]]", "Order clearly: [[En entrée, je voudrais… Comme plat… En dessert…]]", "React: [[C'était délicieux !]] or politely complain: [[Excusez-moi, mon plat est froid.]] Then: [[L'addition, s'il vous plaît.]]"],
+    items: [
+      { type: "mcq", q: "You want to know what's in a dish. You say:", options: ["C'est quoi, le colombo ?", "Le colombo, c'est scandaleux.", "Je ne mange que le colombo."], answer: 0 },
+      { type: "mcq", q: "You're allergic to nuts. You say:", options: ["Attention, je suis allergique aux noix. Il y en a dans ce dessert ?", "J'adore les noix !", "Il est interdit de manger."], answer: 0 },
+      { type: "mcq", q: "Your meat is too cooked. You complain politely:", options: ["Excusez-moi, j'ai demandé ma viande saignante, elle est bien cuite.", "C'est une honte, je pars !", "Un régal !"], answer: 0 },
+      { type: "mcq", q: "At the end of the meal, you ask:", options: ["L'addition, s'il vous plaît.", "Le pourboire, s'il vous plaît.", "La nappe, s'il vous plaît."], answer: 0 },
+      { type: "mcq", q: "The waiter asks « Ça vous a plu ? ». You were happy:", options: ["Oui, c'était un régal, merci !", "Non, c'est une honte.", "Je n'en mange pas."], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Le tour de France des plats",
+    intro: "Each region has its speciality (as the book's bistro page says). Where does each dish come from?",
+    items: [
+      { type: "mcq", q: "Les crêpes sont une spécialité de…", options: ["la Bretagne", "l'Alsace", "la montagne"], answer: 0 },
+      { type: "mcq", q: "La tartiflette (pommes de terre, fromage, lardons) se mange à…", options: ["la montagne (Savoie)", "la mer", "Paris"], answer: 0 },
+      { type: "mcq", q: "La choucroute et les saucisses sont des spécialités de…", options: ["l'Alsace", "la Bretagne", "la Corse"], answer: 0 },
+      { type: "mcq", q: "Le confit de canard est une spécialité du…", options: ["Sud-Ouest", "Nord", "Québec"], answer: 0 },
+      { type: "mcq", q: "Le colombo et le tourment d'amour viennent…", options: ["des Antilles (Guadeloupe, Martinique)", "de Normandie", "de Belgique"], answer: 0 },
+      { type: "mcq", q: "Le couscous vient…", options: ["d'Afrique du Nord", "de Bretagne", "d'Alsace"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "card", style: "menu", caption: "🍷 Au bistrot · tap a dish", title: "BISTROT · MENU DU JOUR", sub: "nappes à carreaux, service rapide, ambiance populaire", rows: [
+      ["Entrée : poireaux-vinaigrette", "6 €", "En entrée, des poireaux-vinaigrette."], ["Entrée : pâté de campagne", "7 €", "Ou un pâté de campagne."],
+      ["Plat : poulet rôti, frites ou purée", "15 €", "Comme plat, un poulet rôti avec des frites ou de la purée."], ["Plat : bœuf bourguignon", "17 €", "Ou un bœuf bourguignon."],
+      ["Dessert : fondant au chocolat", "7 €", "En dessert, un fondant au chocolat."]
+    ], foot: "Service compris · pourboire apprécié" }
+  ],
+  culture: [
+    { icon: "🍽️", kind: "Oh, le cliché !", t: "« Les Français vont beaucoup au restaurant. »", d: "According to the RTBF / AFP figures quoted by the book, the French eat out on average <b>twice a week</b>." },
+    { icon: "🍷", kind: "Civilisation", t: "Le bistrot parisien", d: "Café, bar and restaurant at once (also called a <i>brasserie</i>): red-and-white checked tablecloths, fast service, a friendly atmosphere and simple, tasty dishes: pâté, croque-monsieur, roast chicken and chips, bœuf bourguignon, pot-au-feu, choucroute, leeks vinaigrette." },
+    { icon: "🍲", kind: "Au fait !", t: "Le couscous", d: "A North African dish inscribed on UNESCO's list of the intangible cultural heritage of humanity, and one of the French people's favourite dishes. There are many recipes for it." },
+    { icon: "🌱", kind: "Au fait !", t: "Les étoiles Michelin", d: "Michelin stars reward high-quality restaurants. Since 2020, eco-responsible restaurants can also receive a <b>green star</b>. The book presents chef Claire Vallée and her vegan restaurant ONA, which received a Michelin star." },
+    { icon: "🚚", kind: "Francophonie", t: "Les roulottes de Tahiti", d: "In Tahiti, <i>roulottes</i> (food trucks) are a tradition: in the evening, people of all kinds gather around them to eat simple, fresh dishes, like raw fish or the poké (raw fish in cubes, from Hawaiian tradition)." },
+    { icon: "🥘", kind: "Civilisation", t: "Les spécialités régionales", d: "Crêpes in Brittany, tartiflette in the mountains, sausages and choucroute in Alsace, confit de canard in the South-West, colombo in the West Indies… French cuisine is a mosaic of regions." }
+  ],
+  tips: [
+    { icon: "🔢", t: "en + number: say the number again", d: "[[Tu as des œufs ? — J'en ai six.]] [[Tu as une poêle ? — J'en ai une.]]" },
+    { icon: "🧼", t: "Pronominal imperative", d: "se laver → [[Lavez-vous les mains !]] (pronoun after, with a hyphen). Negative: [[Ne vous lavez pas…]]" },
+    { icon: "☝️", t: "ne… que isn't a negative", d: "Keep the article: [[Je ne mange que des légumes.]] (not <s>de légumes</s>)." }
+  ],
+  mistakes: [
+    ["Je mange en pas.", "Je n'en mange pas.", "ne + en + verb + pas"],
+    ["J'ai une poêle ? — Oui, j'en ai.", "Oui, j'en ai une.", "repeat une"],
+    ["Il est interdit fumer.", "Il est interdit de fumer.", "interdit de"],
+    ["Vous lavez les mains !", "Lavez-vous les mains !", "pronominal imperative"],
+    ["Je ne mange que de légumes.", "Je ne mange que des légumes.", "ne… que keeps the article"],
+    ["Je ne mets qu'étoile quatre.", "Je ne mets que quatre étoiles.", "que before the limited word"],
+    ["Je voudrais mon steak cuit bien.", "Je voudrais mon steak bien cuit.", "bien cuit"],
+    ["Qu'est-ce que vous me conseiller ?", "Qu'est-ce que vous me conseillez ?", "vous → -ez"]
+  ]
+});
 </script><script>// Révisions: one page to search and revise the whole course (vocabulary, grammar, expressions, common mistakes).
 // Reads window.LESSONS (all units) and the learner's saved word boxes from localStorage. Printable; vocabulary exports to CSV (Anki-friendly).
 (function () {
