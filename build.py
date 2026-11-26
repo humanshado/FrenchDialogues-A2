@@ -40,9 +40,21 @@ TOC = [
 ]
 
 
+import base64, shutil
+_FAV = (SRC / "favicon.svg").read_text(encoding="utf-8")
+ICONS = ('<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">'
+         f'<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,{base64.b64encode(_FAV.encode()).decode()}">'
+         '<link rel="apple-touch-icon" href="apple-touch-icon.png">')
+
+
+def copy_icons(out):
+    for n in ("favicon.svg", "favicon.png", "favicon.ico", "apple-touch-icon.png"):
+        shutil.copy(SRC / n, out / n)
+
+
 def page(title, body, lang="en"):
     return f"""<!DOCTYPE html>
-<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{ICONS}
 <title>{html.escape(title)}</title><style>{css}</style></head>
 <body>{body}</body></html>
 """
@@ -134,3 +146,5 @@ a.querySelector(".prog").textContent="bilan "+b("book")+" · mastery "+b("master
 </script>"""
     (OUT / "index.html").write_text(page("Édito A2 · Interactive French course", body), encoding="utf-8")
     print("built", OUT / "index.html")
+
+copy_icons(OUT)
