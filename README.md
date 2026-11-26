@@ -53,11 +53,11 @@ Workflow: `node tools/check.js` → `python3 build.py`.
 ## Progress
 
 - [x] Étape 1 · Parcours et souvenirs: Unité 1 *Nouvelles vies*, Unité 2 *Je me souviens* (book pp. 13–40) + bilan
-- [ ] Étape 2 · Chez soi, entre nous: Unités 3–4
+- [x] Étape 2 · Chez soi, entre nous: Unité 3 *Comme à la maison*, Unité 4 *Tous pareils, tous différents* (book pp. 41–68) + bilan
 - [ ] Étape 3 · Demain, à table !: Unités 5–6
 - [ ] Étape 4 · Santé et médias: Unités 7–8
 - [ ] Étape 5 · Consommer, voyager: Unités 9–10
 - [ ] Étape 6 · Travail et nature: Unités 11–12
 - [ ] DELF A2 · Épreuve blanche
 
-So far: 11 dialogues, 102 words, 66 activities, 1 étape test.
+So far: 22 dialogues, 214 words, 130 activities, 2 étape tests.
