@@ -115,11 +115,12 @@ if not standalone:
             else:
                 cards.append(f'<div class="card lesson-link soon" style="border-left:6px solid {col}"><span class="n" style="background:{col};color:#fff">{n}</span><span style="flex:1"><span class="frt">{html.escape(tfr)}</span><br>'
                              f'<span style="font-size:14px">{html.escape(ten)}</span><br><span class="muted" style="font-size:12px">{html.escape(sit)} · {html.escape(gram)} · {pages} · coming soon</span></span></div>')
-            for t in [t for t in tests if t["after"] == n]:
+            for t in sorted([t for t in tests if t["after"] == n], key=lambda t: t["id"].startswith("delf")):
                 cards.append(f'<a class="card lesson-link test-link" href="{t["id"]}.html" data-test="{t["id"]}"><span class="n">📝</span><span style="flex:1"><span class="frt">{html.escape(t["titleFr"])}</span><br>'
                              f'<span style="font-size:14px">{html.escape(t["title"])}</span><br><span class="muted" style="font-size:12px">{html.escape(t["pages"])} · bilan + mastery test</span><br><span class="prog muted" style="font-size:12px"></span></span></a>')
-            if delf and not [t for t in tests if t["after"] == n]:
-                cards.append(f'<div class="card lesson-link soon"><span class="n">🎓</span><span style="flex:1"><span class="frt">DELF A2 · {html.escape(delf)}</span><br><span class="muted" style="font-size:12px">stratégies et entraînement · coming soon</span></span></div>')
+            if delf and n in lessons and delf != "Épreuve blanche":
+                cards.append(f'<a class="card lesson-link" href="{lessons[n]["id"]}.html#ateliers" style="border-left:6px solid {col}"><span class="n" style="background:{col};color:#fff">🎓</span><span style="flex:1"><span class="frt">DELF A2 · {html.escape(delf)}</span><br>'
+                             f'<span style="font-size:14px">Exam strategies, tips and practice questions</span><br><span class="muted" style="font-size:12px">in Unité {n} · Ateliers &amp; DELF tab</span></span></a>')
         parts.append(f'<section class="rubrique"><h2><span class="rnum" style="background:{UCOL[units[-1]]}">{e}</span> Étape {e} · {html.escape(efr)} <span class="muted" style="font-size:16px;font-weight:400">· {html.escape(een)}</span></h2><div class="chapters">{"".join(cards)}</div></section>')
     built = len(lessons)
     nv = sum(l["nv"] for l in lessons.values()); nq = sum(l["nq"] for l in lessons.values()); nd = sum(l["nd"] for l in lessons.values())
