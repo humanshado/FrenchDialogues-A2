@@ -58,6 +58,6 @@ Workflow: `node tools/check.js` → `python3 build.py`.
 - [x] Étape 4 · Santé et médias: Unité 7 *À votre santé !*, Unité 8 *Dans les médias* (book pp. 97–124) + bilan
 - [x] Étape 5 · Consommer, voyager: Unités 9–10
 - [x] Étape 6 · Travail et nature: Unités 11–12
-- [ ] DELF A2 · Épreuve blanche
+- [x] DELF A2 · Épreuve blanche: an original mock exam (4 papers /100, timers, self-marked writing and speaking with model answers)
 
 All 12 units are done: 68 dialogues, 580 words, 376 activities, 6 étape tests.

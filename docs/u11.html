@@ -565,6 +565,13 @@ body:not(.no-gc) .ft-m .ftc{color:var(--m)} body:not(.no-gc) .ft-f .ftc{color:va
   .rv-sec{break-inside:auto}.rv-voc tr{break-inside:avoid}
   b.say{text-decoration:none}
 }
+
+.wtext{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:10px;border-radius:10px;border:2px solid var(--line);background:var(--panel);color:var(--ink);margin:8px 0}
+.task{font-size:16px;line-height:1.5}
+.model{border-left:4px solid var(--good);background:var(--good-soft);padding:8px 12px;border-radius:8px;margin:8px 0}
+.rubric{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+.rrow{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:3px 0;font-size:14px} .rrow span:first-child{flex:1}
+.paperh{margin:26px 0 10px;padding:8px 12px;border-radius:10px;background:var(--accent);color:#fff}
 </style></head>
 <body><script>window.LESSONS=[];window.COURSE_HOME="index.html";</script><script>// Unité 11 · De jolis parcours (Édito A2, 2e édition, book pp. 153–166)
 // Situations: raconter son parcours · remercier un ancien prof · un CV original · un premier contact professionnel · une reconversion · un espace de coworking
@@ -2520,7 +2527,7 @@ LESSONS.push({
     const lessonLink = (id, area) => window.COURSE_HOME ? `<a href="${id}.html#${area || "grammar"}">${esc(lessonName(id))} ↗</a>` : esc(lessonName(id));
     const fmt = n => (Math.round(n * 2) / 2).toString();
     document.title = `${T.title} · Édito A2`;
-    document.body.innerHTML = header(`${BOOK} · Étape ${T.rubrique} · ${esc(T.pages)}`, esc(T.title), `<button class="chip" id="t-en">EN</button><button class="chip" id="t-gc"><span class="gdot m"></span><span class="gdot f"></span> Genre</button><button class="chip" id="t-rate">🐢 Speed</button>`) + `
+    document.body.innerHTML = header(`${BOOK} · ${T.label ? esc(T.label) : "Étape " + T.rubrique} · ${esc(T.pages)}`, esc(T.title), `<button class="chip" id="t-en">EN</button><button class="chip" id="t-gc"><span class="gdot m"></span><span class="gdot f"></span> Genre</button><button class="chip" id="t-rate">🐢 Speed</button>`) + `
       <nav class="tabs" id="tabs"><a href="#book" data-tab="book">📘 Bilan</a><a href="#mastery" data-tab="mastery">🎯 Mastery test</a><a href="#results" data-tab="results">📈 Résultats</a></nav>
     </header><main id="main"></main>
     <footer>Original test covering the units of this étape · answers explained item by item.</footer>`;
@@ -2611,8 +2618,45 @@ LESSONS.push({
         return { score: sc * sec.marks / sec.items.length, wrong };
       } };
     };
-    const SECNAME = { listen: "Écoutez", match: "Associez", dialogue: "Complétez le dialogue", type: "Écrivez", tf: "Vrai ou faux", choose: "Choisissez" };
+    /* self-assessed productions (DELF mock): write and speak */
+    const rubricEl = (sec) => `<div class="rubric"><b>Auto-évaluation</b> <span class="muted" style="font-size:13px">· compare with the model, then mark yourself honestly</span>${sec.rubric.map(([lab, mx], k) => `<div class="rrow"><span>${tz(esc(lab))}</span><select data-r="${k}">${Array.from({ length: mx * 2 + 1 }, (_, v) => `<option value="${v / 2}">${fmt(v / 2)}</option>`).join("")}</select><span class="muted">/ ${mx}</span></div>`).join("")}</div>`;
+    const rubricScore = (el, sec) => { let t = 0; el.querySelectorAll("select[data-r]").forEach(x => { t += +x.value; x.disabled = true; }); return Math.min(t, sec.marks); };
+    const modelEl = (it) => `<div class="model" hidden><div class="muted" style="font-size:13px;margin-bottom:4px">Model answer (one possible answer)</div>${it.model.map(p => `<p>${fr(p)} ${playBtn(p)}</p>`).join("")}${it.note ? `<p class="muted" style="font-size:13px">💡 ${tz(esc(it.note))}</p>` : ""}</div>`;
+    W.write = (sec) => {
+      const it = sec.items[0];
+      const el = h(`<div><div class="task">${fr(it.task)}</div>${it.en ? `<div class="en" style="font-size:13px">${esc(it.en)}</div>` : ""}
+        <textarea class="wtext" rows="7" placeholder="Écrivez ici… (${it.min || 60} mots minimum)" spellcheck="false"></textarea>
+        <div class="row" style="justify-content:space-between"><span class="muted wc">0 mot</span><button class="btn small showm">👀 Show the model answer</button></div>${modelEl(it)}${rubricEl(sec)}</div>`);
+      const ta = $(".wtext", el), wc = $(".wc", el);
+      ta.addEventListener("input", () => { const n = (ta.value.match(/[^\s'’]+/g) || []).length; wc.textContent = `${n} mot${n > 1 ? "s" : ""}${n && n < (it.min || 60) ? " · too short" : ""}`; });
+      $(".showm", el).onclick = () => { $(".model", el).hidden = false; };
+      return { el, check() { ta.disabled = true; $(".model", el).hidden = false; const score = rubricScore(el, sec);
+        return { score, wrong: score < sec.marks * 0.6 ? [{ lesson: it.lesson }] : [] }; } };
+    };
+    W.speak = (sec) => {
+      const el = h(`<div>${sec.items.length > 1 ? `<p class="muted" style="font-size:14px">Choose <b>one</b> subject.</p>` : ""}${sec.items.map((it, i) => `<div class="card subj" data-s="${i}" style="margin:8px 0"><b>${sec.items.length > 1 ? "Sujet " + "AB"[i] + " · " : ""}</b>${fr(it.task)}${it.en ? `<div class="en" style="font-size:13px">${esc(it.en)}</div>` : ""}
+        ${it.prep ? `<div class="muted" style="font-size:13px;margin-top:6px">Ideas: ${it.prep.map(x => fr(x)).join(" · ")}</div>` : ""}
+        <div class="row" style="margin-top:8px"><button class="btn small rec" data-s="${i}">🎙️ Record myself</button><audio class="aud" controls hidden></audio><button class="btn small showm" data-s="${i}">👀 Model answer</button></div>${modelEl(it)}</div>`).join("")}${rubricEl(sec)}</div>`);
+      el.addEventListener("click", async e => {
+        const sm = e.target.closest(".showm"); if (sm) { sm.closest(".subj").querySelector(".model").hidden = false; return; }
+        const rb = e.target.closest(".rec"); if (!rb) return;
+        if (rb._mr) { rb._mr.stop(); return; }
+        try {
+          const st = await navigator.mediaDevices.getUserMedia({ audio: true }); const mr = new MediaRecorder(st), ch = [];
+          mr.ondataavailable = ev => ch.push(ev.data);
+          mr.onstop = () => { st.getTracks().forEach(t => t.stop()); const a = rb.parentNode.querySelector(".aud"); a.src = URL.createObjectURL(new Blob(ch)); a.hidden = false; rb._mr = null; rb.textContent = "🎙️ Record again"; };
+          mr.start(); rb._mr = mr; rb.textContent = "⏹ Stop";
+        } catch (err) { rb.textContent = "🎙️ Microphone not available: speak aloud"; rb.disabled = true; }
+      });
+      return { el, check() { el.querySelectorAll(".model").forEach(x => x.hidden = false); const score = rubricScore(el, sec);
+        return { score, wrong: score < sec.marks * 0.6 ? [{ lesson: sec.items[0].lesson }] : [] }; } };
+    };
+    const SECNAME = { listen: "Écoutez", match: "Associez", dialogue: "Complétez le dialogue", type: "Écrivez", tf: "Vrai ou faux", choose: "Choisissez", write: "Production écrite", speak: "Production orale" };
 
+    const paperReport = (rs) => { const P = {}; rs.forEach(([sec, r]) => { P[sec.paper] = P[sec.paper] || { got: 0, max: 0 }; P[sec.paper].got += r.score; P[sec.paper].max += sec.marks; });
+      const tot = Object.values(P).reduce((a, p) => a + p.got, 0), min = T.papers.minEach || 5, pass = tot >= T.papers.pass && Object.values(P).every(p => p.got >= min);
+      return `<table class="g" style="max-width:420px;margin:0 auto 12px">${Object.entries(P).map(([k, p]) => `<tr><td>${esc(k)}</td><td style="text-align:right"><b>${fmt(p.got)}</b> / ${p.max}${p.got < min ? " ⚠️" : ""}</td></tr>`).join("")}</table>
+        <p style="font-size:18px">${pass ? "🎓 <b>Réussi !</b> You'd pass the DELF A2 (50/100 or more, at least " + min + "/25 in each paper)." : "📚 <b>Not yet:</b> you need " + T.papers.pass + "/100 in total and at least " + min + "/25 in each paper."}</p>`; };
     const views = {};
     views.book = (m) => {
       const start = Date.now(), results = {};
@@ -2621,8 +2665,12 @@ LESSONS.push({
       const widgets = [];
       T.sections.forEach((sec, n) => {
         const w = W[sec.type](sec); widgets.push([sec, w]);
-        const card = h(`<div class="card tsec" style="margin-bottom:14px"><div class="row" style="justify-content:space-between;align-items:flex-start"><div style="flex:1"><div style="font-size:18px;font-weight:600">${n + 1}. ${fr(sec.instr)}</div><div class="muted" style="font-size:14px">${tz(esc(sec.instrEn))}</div></div><div class="markbox"><span class="got">—</span><span class="of">${sec.marks}</span></div></div><div class="tbody"></div><div class="row" style="justify-content:space-between;margin-top:10px"><span class="secfb muted"></span><button class="btn small chk">Check this section</button></div></div>`);
+        const card = h(`<div class="card tsec" style="margin-bottom:14px"><div class="row" style="justify-content:space-between;align-items:flex-start"><div style="flex:1"><div style="font-size:18px;font-weight:600">${n + 1}. ${fr(sec.instr)}</div><div class="muted" style="font-size:14px">${tz(esc(sec.instrEn))}</div></div><div class="markbox"><span class="got">—</span><span class="of">${sec.marks}</span></div></div>${sec.time ? `<div class="row" style="margin:6px 0"><button class="btn small tmr">⏱ Start the ${sec.time}-minute timer</button></div>` : ""}<div class="tbody"></div><div class="row" style="justify-content:space-between;margin-top:10px"><span class="secfb muted"></span><button class="btn small chk">Check this section</button></div></div>`);
         if (sec.doc) [].concat(sec.doc).forEach(d => $(".tbody", card).appendChild(infoEl(d)));
+        if (sec.time) $(".tmr", card).onclick = (e) => { const b = e.target; if (b._t) return; let left = sec.time * 60;
+          const tick = () => { const mm = Math.floor(left / 60), ss = left % 60; b.textContent = left > 0 ? `⏱ ${mm}:${String(ss).padStart(2, "0")} left` : "⏰ Temps écoulé ! Time's up"; if (left-- <= 0) { clearInterval(b._t); b.classList.add("primary"); } };
+          tick(); b._t = setInterval(tick, 1000); };
+        if (sec.paper && sec.paper !== (T.sections[n - 1] || {}).paper) m.appendChild(h(`<h3 class="paperh">${esc(sec.paper)}</h3>`));
         $(".tbody", card).appendChild(w.el);
         const doCheck = () => { if (results[sec.id]) return results[sec.id]; const r = w.check(); results[sec.id] = r;
           $(".got", card).textContent = fmt(r.score); card.classList.add(r.score === sec.marks ? "full" : "part"); $(".chk", card).disabled = true;
@@ -2638,9 +2686,9 @@ LESSONS.push({
         const pct = Math.round(100 * total / max);
         saveAttempt({ mode: "book", score: total, max, pct, secs: Math.round((Date.now() - start) / 1000), weak: wrong.map(w => w.lesson) });
         $("#finish", fin).remove();
-        $("#summary", fin).innerHTML = `<div class="score">${fmt(total)} / ${max}</div><p>${pct >= 90 ? "Excellent ! 🌟 You're ready for the next units." : pct >= 70 ? "Très bien 👍 Revise the units below, then retake the test." : "Revise the words and practise a bit more before moving on 💪"}</p>
+        $("#summary", fin).innerHTML = `<div class="score">${fmt(total)} / ${max}</div><p>${T.papers ? "" : pct >= 90 ? "Excellent ! 🌟 You're ready for the next units." : pct >= 70 ? "Très bien 👍 Revise the units below, then retake the test." : "Revise the words and practise a bit more before moving on 💪"}</p>
           <table class="g" style="max-width:420px;margin:0 auto 12px">${rs.map(([sec, r], i) => `<tr><td>${i + 1}. ${SECNAME[sec.type] || sec.type}</td><td style="text-align:right"><b>${fmt(r.score)}</b> / ${sec.marks}</td></tr>`).join("")}</table>
-          <div style="text-align:left">${weakReport(wrong)}</div><button class="btn" id="retake">↻ Retake the bilan</button> <a class="btn" href="#mastery" style="text-decoration:none">🎯 Try the mastery test</a>`;
+          ${T.papers ? paperReport(rs) : ""}<div style="text-align:left">${weakReport(wrong)}</div><button class="btn" id="retake">↻ Retake the bilan</button> <a class="btn" href="#mastery" style="text-decoration:none">🎯 Try the mastery test</a>`;
         $("#retake", fin).onclick = () => route();
       };
       if (T.selfCheck) m.appendChild(h(`<div class="card" style="margin-top:14px"><b>Auto-évaluation · self-assessment</b><p class="muted" style="font-size:14px">Can you do these in French? Rate yourself from 1 (not yet) to 5 (easily).</p><ol>${T.selfCheck.map(s => `<li>${fr(s[0])} <span class="muted">· ${esc(s[1])}</span></li>`).join("")}</ol></div>`));

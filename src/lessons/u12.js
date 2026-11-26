@@ -405,8 +405,8 @@ LESSONS.push({
       { type: "mcq", q: "Each paper is marked out of…", options: ["25", "10", "100"], answer: 0 },
       { type: "mcq", q: "In the listening paper, you hear each document…", options: ["twice", "once", "three times"], answer: 0 },
       { type: "mcq", q: "The writing paper lasts…", options: ["45 minutes", "10 minutes", "2 hours"], answer: 0 },
-      { type: "listen", q: "Mock listening: what must you do?", say: "Attention, mesdames et messieurs : le tramway est en panne. Merci de descendre et de prendre le bus.", options: ["get off the tram and take the bus", "stay in the tram", "buy a ticket"], answer: 0 },
-      { type: "mcq", q: "Mock reading: « Le Potager de Magali : produits bio, tous les plats sont végétariens. » Who will like it?", options: ["a friend who doesn't eat meat", "a friend who loves seafood", "a family looking for a games room"], answer: 0 }
+      { type: "listen", q: "Mock listening: what must you do?", say: "Attention, mesdames et messieurs : suite à un problème technique, ce métro s'arrête ici. Merci de descendre et de prendre le bus 12.", options: ["get off and take bus 12", "stay on the metro", "buy a ticket"], answer: 0 },
+      { type: "mcq", q: "Mock reading: « Chez Lina : cuisine maison, 100 % légumes, aucun plat avec de la viande. » Who will like it?", options: ["a friend who doesn't eat meat", "a friend who loves seafood", "a family looking for a games room"], answer: 0 }
     ]
   },
   detente: {
