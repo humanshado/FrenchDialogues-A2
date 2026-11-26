@@ -5322,6 +5322,942 @@ LESSONS.push({
     ["Le petit-déjeuner est inclu.", "Le petit-déjeuner est inclus.", "inclus ends in -s"]
   ]
 });
+</script><script>// Unité 11 · De jolis parcours (Édito A2, 2e édition, book pp. 153–166)
+// Situations: raconter son parcours · remercier un ancien prof · un CV original · un premier contact professionnel · une reconversion · un espace de coworking
+// Grammar: la mise en relief · le discours rapporté au présent · le pronom COI y
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u11", rubrique: 6, num: 11,
+  title: "Fine career paths",
+  titleFr: "De jolis parcours",
+  pages: "Book pp. 153–166",
+  opener: { fr: "C'est ce métier qui m'a toujours fait rêver !", en: "It's this job that has always made me dream!" },
+  hero: { scene: "bureau", people: { "Nour": "f4", "Bastien": "m2" } },
+  situations: [
+    ["🎓", "Raconter son parcours", "studies: [[J'ai passé mon bac scientifique.]] · [[J'ai fait une année de césure.]]"],
+    ["💌", "Remercier un professeur", "thanks: [[Je vous remercie pour tout.]] · [[Merci pour votre enseignement.]]"],
+    ["📄", "Faire son CV", "reported speech: [[Elle me demande ce que je sais faire.]]"],
+    ["✉️", "Un message formel", "[[Bonjour Madame,]] · [[Merci d'avance.]] · [[Bien cordialement,]]"],
+    ["🔄", "Changer de métier", "projects: [[Je vais me former pour devenir pâtissier.]] · [[J'y pense depuis longtemps.]]"]
+  ],
+  goals: [
+    "Talk about your studies: [[J'ai obtenu mon bac en…]], [[Je me suis inscrit(e) en…]], [[J'ai raté / réussi mes examens.]]",
+    "Thank someone: [[Je vous remercie pour…]], [[Merci pour…]], [[Je vous dis merci.]]",
+    "Write a formal message: greeting, polite request, closing formula",
+    "Talk about your career plans and say something is obvious: [[Évidemment !]], [[C'est sûr.]], [[C'est certain.]]",
+    "Highlight a word with [[C'est… qui / que]], [[Ce qui…, c'est…]] (la mise en relief)",
+    "Report what someone says or asks in the present: [[Il dit que…]], [[Elle demande si / ce que / ce qui / où…]] · Use [[y]] for [[à + chose]]"
+  ],
+  glance: [
+    ["🗣️", "Communication", "your studies · thanking · formal messages · career plans · stating the obvious"],
+    ["🧩", "Grammaire", "highlighting (c'est… qui/que) · reported speech in the present · the pronoun y"],
+    ["🗂️", "Vocabulaire", "the French school system · studies · exams · diplomas · sectors · jobs · the CV"],
+    ["🔊", "Phonie-graphie", "[ø] (bleu), [o] (mot) and [u] (cours)"],
+    ["⭐", "The phrase to learn first", "[[C'est ce qui me plaît dans ce métier.]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "My path so far", titleFr: "À la cafétéria · Les anciens élèves racontent",
+      note: "A student journalist interviews Bastien, a former pupil of a French lycée abroad, for the school website. Listen to the vocabulary of studies and to the mise en relief.",
+      scene: "cafe", staff: "Le serveur", people: { "Le serveur": "m7", "Nour": "f4", "Bastien": "m2" },
+      lines: [
+        ["Nour", "Bastien, tu peux nous raconter ton parcours ?", "Bastien, can you tell us about your path?"],
+        ["Bastien", "Bien sûr. J'ai passé mon bac scientifique au lycée français de Dakar, avec mention bien.", "Of course. I took my science baccalaureate at the French lycée in Dakar, with a 'bien' grade."],
+        ["Nour", "Qu'est-ce que tu as préféré au lycée ?", "What did you like most at the lycée?"],
+        ["Bastien", "L'ambiance, c'est ce que j'ai préféré. Et les maths : ce sont des matières que j'ai toujours aimées.", "The atmosphere is what I liked best. And maths: it's a subject I've always loved."],
+        ["Nour", "Et après le bac ?", "And after the bac?"],
+        ["Bastien", "Je me suis inscrit en informatique à l'université de Lyon. Mais j'ai raté ma première année…", "I enrolled in computer science at the University of Lyon. But I failed my first year…"],
+        ["Nour", "Tu as redoublé ?", "Did you repeat the year?"],
+        ["Bastien", "Non. J'ai fait une année de césure : j'ai travaillé dans une association au Sénégal. C'est une expérience que je ne regrette pas !", "No. I took a gap year: I worked for an association in Senegal. It's an experience I don't regret!"],
+        ["Nour", "Et aujourd'hui ?", "And today?"],
+        ["Bastien", "Je suis en troisième année de licence et j'ai réussi tous mes examens. Ce qui est le plus difficile, c'est l'organisation du travail.", "I'm in the third year of my degree and I've passed all my exams. What's hardest is organising my work."]
+      ],
+      glossary: [["passer / obtenir son bac", "to take / get one's baccalaureate"], ["rater ≠ réussir un examen", "to fail ≠ to pass an exam"], ["redoubler", "to repeat a year"], ["l'année de césure", "the gap year"]]
+    },
+    {
+      id: "d2", n: 2, title: "A thank-you letter", titleFr: "À la maison · Lettre à une ancienne prof",
+      note: "Nour is writing a letter to the teacher who changed her life. She reads her draft to her brother. Listen to how she thanks her teacher.",
+      scene: "maison", people: { "Nour": "f4", "Karim": "m5" },
+      lines: [
+        ["Karim", "Tu écris à qui ?", "Who are you writing to?"],
+        ["Nour", "À Mme Ferrand, ma prof d'histoire au collège. C'est elle qui m'a donné envie de devenir journaliste.", "To Mrs Ferrand, my history teacher at secondary school. She's the one who made me want to become a journalist."],
+        ["Karim", "Lis-moi ta lettre !", "Read me your letter!"],
+        ["Nour", "« Chère Madame Ferrand, je vous remercie pour tout ce que vous m'avez apporté. Merci pour votre enseignement et pour vos conseils de lecture. »", "'Dear Mrs Ferrand, thank you for everything you gave me. Thank you for your teaching and for your reading suggestions.'"],
+        ["Karim", "C'est joli. Elle était sévère, non ?", "That's nice. She was strict, wasn't she?"],
+        ["Nour", "Un peu ! Mais ce sont ses commentaires qui m'ont permis d'avancer. Alors j'ajoute : « Merci aussi pour vos notes parfois sévères ! »", "A bit! But it was her comments that helped me move forward. So I'm adding: 'Thank you also for your sometimes strict marks!'"],
+        ["Karim", "Et pour finir ?", "And to finish?"],
+        ["Nour", "« Je ne vous oublierai jamais. Je vous dis merci. » Et je signe.", "'I'll never forget you. I say thank you.' And I sign."]
+      ],
+      glossary: [["Je vous remercie pour…", "Thank you for…"], ["Merci pour votre enseignement", "Thank you for your teaching"], ["c'est elle qui…", "she's the one who…"], ["permettre d'avancer", "to help (someone) move forward"]]
+    },
+    {
+      id: "d3", n: 3, title: "Is the CV dead?", titleFr: "Au bureau · Ça sert encore, un CV ?",
+      note: "Bastien is looking for a work-study place (alternance). A careers adviser helps him with his CV. Listen to the reported speech: [[Ils disent que…]], [[Je me demande si…]].",
+      scene: "bureau", staff: "La conseillère", people: { "La conseillère": "f6", "Bastien": "m2" },
+      lines: [
+        ["Bastien", "Je me demande si le CV est encore utile. Tout le monde est sur les réseaux professionnels !", "I wonder whether a CV is still useful. Everyone's on professional networks!"],
+        ["La conseillère", "Oui, il est utile ! Les recruteurs disent qu'ils regardent un CV en moins d'une minute.", "Yes, it's useful! Recruiters say they look at a CV in less than a minute."],
+        ["Bastien", "Alors je fais une seule page ?", "So I do a single page?"],
+        ["La conseillère", "Exactement. Les jeunes diplômés me demandent souvent ce qu'ils doivent mettre quand ils n'ont pas d'expérience.", "Exactly. Young graduates often ask me what they should put when they have no experience."],
+        ["Bastien", "C'est mon problème ! Qu'est-ce que je mets ?", "That's my problem! What do I put?"],
+        ["La conseillère", "Ta formation, tes stages, tes compétences, tes langues… et tes centres d'intérêt. Ton année de césure, c'est ce qui va intéresser les entreprises.", "Your education, your internships, your skills, your languages… and your interests. Your gap year is what will interest companies."],
+        ["Bastien", "Et si je fais un CV original, comme une affiche ?", "And if I make an original CV, like a poster?"],
+        ["La conseillère", "Pourquoi pas, pour la communication ! Mais pour l'informatique, un CV clair et précis, c'est ce qui marche le mieux.", "Why not, for communications! But for IT, a clear and precise CV is what works best."]
+      ],
+      glossary: [["Je me demande si…", "I wonder whether…"], ["Ils disent que…", "They say that…"], ["ce qu'ils doivent mettre", "what they should put"], ["la formation en alternance", "work-study training"]]
+    },
+    {
+      id: "d4", n: 4, title: "A first professional contact", titleFr: "Sur un réseau professionnel · Premier message",
+      note: "Bastien writes to a company manager on a professional network. Listen to the formulas of a formal message.",
+      scene: "bureau", people: { "Bastien": "m2", "Mme Garnier": "f1" },
+      lines: [
+        ["Bastien", "« Bonjour Madame, je suis étudiant en troisième année d'informatique. Je voudrais faire partie de votre réseau. »", "'Hello Madam, I'm a third-year computer-science student. I'd like to join your network.'"],
+        ["Mme Garnier", "« Bonjour Bastien, j'accepte votre invitation avec plaisir. Quel poste vous intéresse ? »", "'Hello Bastien, I'm pleased to accept your invitation. Which position interests you?'"],
+        ["Bastien", "« Merci pour votre réponse. Je cherche une alternance en développement web à partir de septembre. »", "'Thank you for your reply. I'm looking for a work-study placement in web development from September.'"],
+        ["Mme Garnier", "« Nous recrutons justement deux alternants. Pouvez-vous m'envoyer votre CV ? »", "'We happen to be recruiting two work-study students. Could you send me your CV?'"],
+        ["Bastien", "« Avec plaisir, je vous l'envoie aujourd'hui. Acceptez-vous de me rencontrer pour un entretien ? »", "'With pleasure, I'll send it today. Would you agree to meet me for an interview?'"],
+        ["Mme Garnier", "« Bien sûr. Je vous propose jeudi à 10 heures. Bien cordialement, Hélène Garnier. »", "'Of course. I suggest Thursday at 10. Kind regards, Hélène Garnier.'"],
+        ["Bastien", "« Merci d'avance. Bien à vous, Bastien Mendy. »", "'Thank you in advance. Yours, Bastien Mendy.'"]
+      ],
+      glossary: [["Bonjour Madame, / Madame,", "formal greeting"], ["Acceptez-vous de… ? Pouvez-vous… ?", "Would you agree to…? Could you…?"], ["Merci d'avance.", "Thanks in advance."], ["Bien à vous, / Bien cordialement,", "Yours, / Kind regards,"]]
+    },
+    {
+      id: "d5", n: 5, title: "A new job, a new life", titleFr: "À la pâtisserie · La reconversion",
+      note: "Thomas was a consultant; now he's training to become a pastry chef. A former colleague visits him. Listen to how he talks about his plans, and to the pronoun [[y]].",
+      scene: "boulangerie", people: { "Élodie": "f3", "Thomas": "m4" },
+      lines: [
+        ["Élodie", "Thomas ! Tu as vraiment quitté ton poste de consultant ?", "Thomas! Did you really leave your consultant job?"],
+        ["Thomas", "Oui ! J'ai mis un terme à ma carrière pour devenir pâtissier.", "Yes! I ended my career to become a pastry chef."],
+        ["Élodie", "Tu y pensais depuis longtemps ?", "Had you been thinking about it for a long time?"],
+        ["Thomas", "Depuis toujours ! Enfant, je voulais travailler avec mes mains. J'y ai bien réfléchi, et je me suis lancé.", "Forever! As a child, I wanted to work with my hands. I thought it through carefully, and I took the plunge."],
+        ["Élodie", "Et tu as besoin d'un diplôme ?", "And do you need a qualification?"],
+        ["Thomas", "Oui, je fais une formation en alternance : je vais obtenir mon CAP de pâtissier dans un an.", "Yes, I'm doing work-study training: I'll get my pastry qualification in a year."],
+        ["Élodie", "Ce n'est pas trop dur ?", "Isn't it too hard?"],
+        ["Thomas", "Je gagne moins d'argent, c'est sûr. Mais je passe plus de temps en famille, et voir les clients contents, c'est ce qui me plaît dans ce métier !", "I earn less money, that's for sure. But I spend more time with my family, and seeing happy customers is what I like about this job!"],
+        ["Élodie", "Évidemment, tu as l'air heureux !", "Obviously, you look happy!"]
+      ],
+      glossary: [["mettre un terme à sa carrière", "to end one's career"], ["se reconvertir, la reconversion", "to retrain, career change"], ["y penser, y réfléchir", "to think about it"], ["Évidemment ! C'est sûr.", "Obviously! That's for sure."]]
+    },
+    {
+      id: "d6", n: 6, title: "A day at the coworking space", titleFr: "Dans un coworking · Travailler autrement",
+      note: "Nour, now a freelance journalist, visits a coworking space. The manager explains how it works. Listen to the vocabulary of work.",
+      scene: "bureau", staff: "Le gérant", people: { "Le gérant": "m6", "Nour": "f4" },
+      lines: [
+        ["Nour", "Bonjour ! Je suis travailleuse indépendante et je travaille à distance. Je cherche un local pour ne plus être seule chez moi.", "Hello! I'm self-employed and I work remotely. I'm looking for a space so I'm no longer alone at home."],
+        ["Le gérant", "Vous êtes au bon endroit ! Ici, il y a des graphistes, des formateurs, des ingénieurs… C'est un vrai réseau.", "You've come to the right place! Here there are graphic designers, trainers, engineers… It's a real network."],
+        ["Nour", "Quels sont les horaires ?", "What are the opening hours?"],
+        ["Le gérant", "On est ouvert de 8 heures à 20 heures. Le matériel est compris : imprimante, salle de réunion, café…", "We're open from 8 am to 8 pm. Equipment is included: printer, meeting room, coffee…"],
+        ["Nour", "Et le tarif ?", "And the price?"],
+        ["Le gérant", "Cent cinquante euros par mois, ou quinze euros la journée. Vous voulez essayer ?", "One hundred and fifty euros a month, or fifteen euros a day. Would you like to try?"],
+        ["Nour", "Oui ! L'ambiance de travail, c'est ce qui compte le plus pour moi.", "Yes! The working atmosphere is what matters most to me."],
+        ["Le gérant", "Alors venez demain. Et le vendredi, on déjeune tous ensemble !", "Then come tomorrow. And on Fridays, we all have lunch together!"]
+      ],
+      glossary: [["le travail à distance ≠ en présentiel", "remote work ≠ on site"], ["le travailleur / la travailleuse indépendant(e)", "the self-employed worker"], ["le local, le matériel, le tarif", "the premises, the equipment, the price"], ["l'ambiance de travail", "the working atmosphere"]]
+    }
+  ],
+
+  vocab: [
+    { t: "l'école primaire, maternelle", en: "primary school, nursery school", pic: "🏫", cat: "Le système scolaire", g: "f" },
+    { t: "le collège", en: "lower secondary school (11–15)", pic: "🎒", cat: "Le système scolaire", g: "m", note: "not a university college!" },
+    { t: "le lycée", en: "upper secondary school (15–18)", pic: "📚", cat: "Le système scolaire", g: "m" },
+    { t: "l'université, la fac", en: "the university, uni", pic: "🎓", cat: "Le système scolaire", g: "f" },
+    { t: "l'élève", en: "the pupil (school)", pic: "🧒", cat: "Le système scolaire" },
+    { t: "l'étudiant(e)", en: "the student (higher education)", pic: "🧑‍🎓", cat: "Le système scolaire" },
+    { t: "l'enseignant(e), le / la prof", en: "the teacher", pic: "🧑‍🏫", cat: "Le système scolaire" },
+    { t: "la matière, le cours", en: "the subject, the class", pic: "📐", cat: "Les études", g: "f" },
+    { t: "apprendre ≠ enseigner", en: "to learn ≠ to teach", pic: "📖", cat: "Les études" },
+    { t: "faire des études (littéraires…)", en: "to study (literature…)", pic: "✍️", cat: "Les études" },
+    { t: "être en première année", en: "to be in first year", pic: "1️⃣", cat: "Les études" },
+    { t: "l'année de césure", en: "the gap year", pic: "🌍", cat: "Les études", g: "f" },
+    { t: "la formation en alternance", en: "work-study training", pic: "🔁", cat: "Les études", g: "f" },
+    { t: "passer un examen, le bac", en: "to take an exam, the bac", pic: "📝", cat: "L'évaluation" },
+    { t: "réussir ≠ rater un examen", en: "to pass ≠ to fail an exam", pic: "✅", cat: "L'évaluation" },
+    { t: "redoubler", en: "to repeat a year", pic: "🔂", cat: "L'évaluation" },
+    { t: "une bonne / mauvaise note", en: "a good / bad mark", pic: "💯", cat: "L'évaluation", g: "f" },
+    { t: "la mention (assez bien, bien, très bien)", en: "the grade / honours", pic: "🏅", cat: "L'évaluation", g: "f" },
+    { t: "le baccalauréat, le bac", en: "the school-leaving exam", pic: "📜", cat: "Les diplômes", g: "m" },
+    { t: "la licence (bac +3)", en: "the bachelor's degree", pic: "🎓", cat: "Les diplômes", g: "f" },
+    { t: "le master (bac +5)", en: "the master's degree", pic: "🎓", cat: "Les diplômes", g: "m" },
+    { t: "le doctorat", en: "the PhD", pic: "🔬", cat: "Les diplômes", g: "m" },
+    { t: "la beauté, le bien-être", en: "beauty, well-being", pic: "💅", cat: "Les secteurs", g: "f" },
+    { t: "l'informatique, le numérique", en: "IT, digital", pic: "💻", cat: "Les secteurs", g: "f" },
+    { t: "la restauration, le nettoyage", en: "catering, cleaning", pic: "🍽️", cat: "Les secteurs", g: "f" },
+    { t: "la communication, le marketing", en: "communications, marketing", pic: "📣", cat: "Les secteurs", g: "f" },
+    { t: "l'agent(e) d'entretien", en: "the cleaner", pic: "🧹", cat: "Les professions" },
+    { t: "le coiffeur, la coiffeuse", en: "the hairdresser", pic: "💇", cat: "Les professions" },
+    { t: "le formateur, la formatrice", en: "the trainer", pic: "👩‍🏫", cat: "Les professions" },
+    { t: "l'ingénieur(e)", en: "the engineer", pic: "👷", cat: "Les professions" },
+    { t: "le / la chef(fe) d'entreprise", en: "the business owner", pic: "💼", cat: "Les professions" },
+    { t: "l'emploi, le poste, le job", en: "the job, the position", pic: "🪪", cat: "Le travail", g: "m" },
+    { t: "l'employé(e), le / la salarié(e)", en: "the employee", pic: "🧑‍💼", cat: "Le travail" },
+    { t: "l'entreprise, la société", en: "the company", pic: "🏢", cat: "Le travail", g: "f" },
+    { t: "le travail à distance ≠ en présentiel", en: "remote ≠ on-site work", pic: "🏠", cat: "Le travail", g: "m" },
+    { t: "le travail en équipe", en: "teamwork", pic: "🤝", cat: "Le travail", g: "m" },
+    { t: "le coworking", en: "the coworking space", pic: "🪑", cat: "Le travail", g: "m" },
+    { t: "le CV, le parcours", en: "the CV, the career path", pic: "📄", cat: "Le CV et la recherche d'emploi", g: "m" },
+    { t: "les compétences, l'expérience", en: "the skills, the experience", pic: "🧠", cat: "Le CV et la recherche d'emploi", g: "f" },
+    { t: "les centres d'intérêt", en: "the interests, hobbies", pic: "⚽", cat: "Le CV et la recherche d'emploi", g: "m" },
+    { t: "l'offre d'emploi, l'annonce", en: "the job offer, the ad", pic: "📌", cat: "Le CV et la recherche d'emploi", g: "f" },
+    { t: "le / la candidat(e), l'entretien", en: "the candidate, the interview", pic: "🗨️", cat: "Le CV et la recherche d'emploi" },
+    { t: "le recrutement, recruter", en: "recruitment, to recruit", pic: "🔎", cat: "Le CV et la recherche d'emploi", g: "m" }
+  ],
+
+  grammar: [
+    {
+      id: "g-formation",
+      title: "Talking about your studies",
+      body: [
+        "[[J'ai passé mon bac scientifique.]] · [[J'ai obtenu mon baccalauréat au lycée français de…]] · [[Je me suis inscrit(e) en informatique.]] · [[J'ai raté ma première année.]] · [[J'ai fait une année de césure.]] · [[J'ai réussi mes examens.]] · [[Je suis étudiant(e) en droit.]]",
+        "The French system: <b>école maternelle</b> (3–6) → <b>école élémentaire</b> (6–11) → <b>collège</b> (11–15) → <b>lycée</b> (15–18, bac) → <b>université</b>: licence (bac +3) → master (bac +5) → doctorat."
+      ],
+      info: { type: "timeline", title: "🎓 Bastien's path", ends: ["lycée", "", "aujourd'hui"], items: [
+        { x: 8, fr: "Il a passé son bac à Dakar.", en: "He took his bac in Dakar.", pic: "📜" },
+        { x: 30, fr: "Il a raté sa première année.", en: "He failed his first year.", pic: "❌" },
+        { x: 52, fr: "Il a fait une année de césure.", en: "He took a gap year.", pic: "🌍" },
+        { x: 74, fr: "Il a réussi ses examens.", en: "He passed his exams.", pic: "✅" },
+        { x: 88, fr: "Il cherche une alternance.", en: "Work-study next.", pic: "🔎" }
+      ] }
+    },
+    {
+      id: "g-relief",
+      title: "Highlighting: [[C'est… qui / que]], [[Ce qui…, c'est…]]",
+      body: [
+        "To insist on the <b>subject</b>: [[C'est / Ce sont + nom + qui…]]: [[C'est un prof qui a changé ma vie.]] · with a stressed pronoun: [[C'est vous qui m'avez fait découvrir le théâtre.]] · [[Ce sont eux qui m'ont permis d'avancer.]]",
+        "To insist on the <b>object</b>: [[C'est / Ce sont + nom + que…]]: [[C'est une expérience que je ne regrette pas.]] · [[Ce sont des matières que j'ai toujours aimées.]]",
+        "With [[ce]]: [[C'est ce qui me plaît.]] · [[C'est ce que j'ai préféré.]] · or at the start: [[Ce qui est le plus difficile, c'est l'organisation.]] · [[Ce que j'ai préféré, ce sont les fêtes.]] Note: [[que]] → [[qu']] before a vowel; in speech, people often say [[c'est]] even with a plural."
+      ],
+      info: { type: "compare", title: "🔦 qui or que?", cols: [
+        { head: "… qui + verbe", en: "the highlighted word is the subject", color: "#3a6fd8", lines: [["C'est la prof qui m'a motivée.", "The teacher motivated me."], ["C'est ce qui me plaît.", "That's what I like."], ["Ce sont eux qui m'ont aidé.", "They helped me."]] },
+        { head: "… que + sujet + verbe", en: "the highlighted word is the object", color: "#9b4fb0", lines: [["C'est le métier que je veux faire.", "I want to do this job."], ["C'est ce que j'ai préféré.", "That's what I liked best."], ["C'est l'examen que j'ai raté.", "I failed that exam."]] }
+      ] },
+      widget: {
+        type: "sort", label: "qui or que (qu')?",
+        cols: [{ k: "qui", label: "… qui", color: "#3a6fd8" }, { k: "que", label: "… que / qu'", color: "#9b4fb0" }],
+        items: [
+          { t: "C'est l'université ___ a les meilleurs résultats.", k: "qui", say: "C'est l'université qui a les meilleurs résultats." }, { t: "C'est la littérature ___ il étudie.", k: "que", say: "C'est la littérature qu'il étudie." },
+          { t: "Ce sont les matières ___ l'intéressent.", k: "qui", say: "Ce sont les matières qui l'intéressent." }, { t: "C'est l'examen ___ j'ai raté.", k: "que", say: "C'est l'examen que j'ai raté." },
+          { t: "___ est formidable, c'est l'ambiance. (Ce…)", k: "qui", say: "Ce qui est formidable, c'est l'ambiance." }, { t: "___ il faut faire, c'est un CV clair. (Ce…)", k: "que", say: "Ce qu'il faut faire, c'est un CV clair." },
+          { t: "C'est toi ___ as eu la meilleure note !", k: "qui", say: "C'est toi qui as eu la meilleure note !" }, { t: "C'est le poste ___ je préfère.", k: "que", say: "C'est le poste que je préfère." }
+        ]
+      }
+    },
+    {
+      id: "g-remercier",
+      title: "Thanking and writing a formal message",
+      body: [
+        "Thanking: [[Je vous remercie pour tout.]] · [[Merci pour votre enseignement.]] · [[Merci pour votre réponse.]] · [[Je vous dis merci.]] · [[Merci d'avance.]]",
+        "Formal message: greet → [[Madame, / Monsieur,]] or [[Bonjour Madame,]] · ask → [[Je voudrais + infinitif]], [[Pouvez-vous… ?]], [[Acceptez-vous de… ?]], [[Je me demande comment…]] · close → [[Merci d'avance.]] [[Bien à vous,]] [[Bien cordialement,]]"
+      ],
+      info: { type: "card", style: "board", caption: "✉️ A formal message · tap a line", title: "NOUVEAU MESSAGE", sub: "À : Hélène Garnier · Objet : alternance en développement web", rows: [
+        ["Saluer", "Bonjour Madame,", "Bonjour Madame,"],
+        ["Se présenter", "Je suis étudiant en troisième année d'informatique.", "Je suis étudiant en troisième année d'informatique."],
+        ["Dire ce qu'on veut", "Je voudrais faire une alternance dans votre entreprise.", "Je voudrais faire une alternance dans votre entreprise."],
+        ["Demander poliment", "Acceptez-vous de me rencontrer ?", "Acceptez-vous de me rencontrer ?"],
+        ["Conclure", "Merci d'avance. Bien cordialement, Bastien Mendy", "Merci d'avance. Bien cordialement."]
+      ], foot: "Pièce jointe : CV_Bastien_Mendy.pdf" }
+    },
+    {
+      id: "g-rapporte",
+      title: "Reported speech in the present",
+      body: [
+        "To report a statement: [[dire, répondre, affirmer, ajouter, annoncer, expliquer, répéter]] + [[que]]: « C'est plus facile pour nous. » → [[Ils disent que c'est plus facile pour eux.]] Don't forget to change the pronouns!",
+        "To report a question: [[demander, vouloir savoir, se demander]] + the question word ([[où, quand, comment, pourquoi, qui…]]): « Pourquoi ce poste vous intéresse ? » → [[Elle me demande pourquoi ce poste m'intéresse.]]",
+        "Changes: [[est-ce que]] / no question word → [[si]] · [[qu'est-ce que]] → [[ce que]] · [[qu'est-ce qui]] → [[ce qui]]."
+      ],
+      info: { type: "merge", title: "🔁 Direct → indirect", rows: [
+        { a: "« Est-ce que le CV est utile ? »", b: "si", g: "x", r: "Il se demande si le CV est utile.", ex: "Il se demande si le CV est utile.", en: "est-ce que → si" },
+        { a: "« Qu'est-ce que vous savez faire ? »", b: "ce que", g: "x", r: "Elle demande ce que je sais faire.", ex: "Elle demande ce que je sais faire.", en: "qu'est-ce que → ce que" },
+        { a: "« Qu'est-ce qui est important ? »", b: "ce qui", g: "x", r: "Ils se demandent ce qui est important.", ex: "Ils se demandent ce qui est important.", en: "qu'est-ce qui → ce qui" },
+        { a: "« Où as-tu étudié ? »", b: "où", g: "x", r: "Elle veut savoir où tu as étudié.", ex: "Elle veut savoir où tu as étudié.", en: "question word stays" },
+        { a: "« Je n'ai pas d'expérience. »", b: "que", g: "x", r: "Il dit qu'il n'a pas d'expérience.", ex: "Il dit qu'il n'a pas d'expérience.", en: "je → il" }
+      ] },
+      widget: {
+        type: "combo", label: "Report it · pick a reporting verb and what was said",
+        rows: [{ k: "dit", label: "Il dit…" }, { k: "demande", label: "Elle demande…" }],
+        cols: [{ k: "exp", label: "💬 « J'ai de l'expérience. »" }, { k: "poste", label: "❓ « Est-ce que le poste est libre ? »" }, { k: "faire", label: "❓ « Qu'est-ce que tu veux faire ? »" }, { k: "diff", label: "❓ « Qu'est-ce qui est difficile ? »" }],
+        out: {
+          "dit|exp": ["Il dit qu'il a de l'expérience.", "He says he has experience."], "demande|exp": ["Elle dit qu'elle a de l'expérience.", "She says she has experience.", "a statement → dire que"],
+          "dit|poste": ["Il demande si le poste est libre.", "He asks if the position is free.", "a question → demander si"], "demande|poste": ["Elle demande si le poste est libre.", "She asks if the position is free."],
+          "dit|faire": ["Il demande ce que je veux faire.", "He asks what I want to do.", "tu → je"], "demande|faire": ["Elle me demande ce que je veux faire.", "She asks me what I want to do."],
+          "dit|diff": ["Il demande ce qui est difficile.", "He asks what's difficult."], "demande|diff": ["Elle veut savoir ce qui est difficile.", "She wants to know what's difficult."]
+        }
+      }
+    },
+    {
+      id: "g-projets",
+      title: "Career plans and stating the obvious",
+      body: [
+        "Plans: [[Je vais mettre un terme à ma carrière pour devenir…]] · [[Je vais devoir me former et obtenir un diplôme de…]] · [[Après deux ans de formation, je vais…]] · [[Ce qui me plaît dans ce métier, c'est…]]",
+        "The obvious: [[Évidemment !]] · [[C'est sûr.]] · [[C'est évident.]] · [[C'est certain.]]"
+      ]
+    },
+    {
+      id: "g-y",
+      title: "The pronoun [[y]] (COI): [[à + chose]]",
+      body: [
+        "[[y]] replaces the complement of a verb followed by [[à]] when it's a <b>thing or an idea</b>: [[Tu réponds à ce message ? — Oui, j'y réponds tout de suite !]] · [[penser à, réfléchir à, s'intéresser à, répondre à, faire attention à, s'habituer à, jouer à, arriver à]]",
+        "Place: <b>before</b> the verb (also in the negative and the passé composé): [[J'y ai bien réfléchi.]] · [[Je ne m'y intéresse pas.]] · <b>after</b> the verb in the affirmative imperative: [[Pensez-y !]]",
+        "⚠️ For <b>people</b>, use [[à + pronom tonique]]: [[Il pense à son collègue. → Il pense à lui.]] but [[Il pense à ses vacances. → Il y pense.]]"
+      ],
+      info: { type: "pattern", title: "💭 y = à + quelque chose", rows: [
+        ["Ta reconversion ?", "J'", { opts: ["y pense depuis longtemps.", "y ai bien réfléchi.", "y suis arrivé !"] }],
+        ["Ce message urgent ?", "Je", { opts: ["n'y réponds pas.", "y réponds tout de suite.", "y fais attention."] }],
+        ["Le nouveau logiciel ?", "On", { opts: ["s'y habitue vite.", "s'y intéresse beaucoup.", "y travaille."] }]
+      ], note: "person → à lui / à elle / à eux" },
+      widget: {
+        type: "sort", label: "y or à + pronom tonique?",
+        cols: [{ k: "y", label: "y (chose, idée)", color: "#2f9c8a" }, { k: "ton", label: "à lui / à elle… (personne)", color: "#e86a2e" }],
+        items: [
+          { t: "Je réponds aux mails. → J'___ réponds.", k: "y", say: "J'y réponds." }, { t: "Je pense à mes collègues. → Je pense ___.", k: "ton", say: "Je pense à eux." },
+          { t: "Il s'intéresse au marketing. → Il s'___ intéresse.", k: "y", say: "Il s'y intéresse." }, { t: "Elle fait attention à sa santé. → Elle ___ fait attention.", k: "y", say: "Elle y fait attention." },
+          { t: "Tu penses à ta prof ? → Tu penses ___ ?", k: "ton", say: "Tu penses à elle ?" }, { t: "Pensez à votre CV ! → Pensez-___ !", k: "y", say: "Pensez-y !" }
+        ]
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour parler de sa formation", fnEn: "your studies", icon: "🎓", items: [
+      ["J'ai passé mon bac scientifique.", "I took a science bac.", "std", true],
+      ["Je me suis inscrit(e) en informatique.", "I enrolled in computer science.", "std", true],
+      ["J'ai raté / réussi mes examens.", "I failed / passed my exams.", "std"],
+      ["J'ai fait une année de césure.", "I took a gap year.", "std"],
+      ["Je suis étudiant(e) en droit.", "I'm a law student.", "std"]
+    ] },
+    { fn: "Pour remercier", fnEn: "thanking", icon: "🙏", items: [
+      ["Je vous remercie pour tout.", "Thank you for everything.", "poli", true],
+      ["Merci pour votre enseignement.", "Thank you for your teaching.", "poli"],
+      ["Merci pour votre réponse.", "Thank you for your reply.", "poli"],
+      ["Je vous dis merci.", "I say thank you.", "std"]
+    ] },
+    { fn: "Pour écrire un message formel", fnEn: "formal messages", icon: "✉️", items: [
+      ["Madame, / Monsieur,", "Dear Madam, / Dear Sir,", "poli", true],
+      ["Pouvez-vous m'envoyer… ?", "Could you send me…?", "poli"],
+      ["Acceptez-vous de me rencontrer ?", "Would you agree to meet me?", "poli"],
+      ["Merci d'avance.", "Thanks in advance.", "poli", true],
+      ["Bien à vous, / Bien cordialement,", "Yours, / Kind regards,", "poli", true]
+    ] },
+    { fn: "Pour parler de ses projets / une évidence", fnEn: "plans · the obvious", icon: "🚀", items: [
+      ["Je vais me former pour devenir…", "I'm going to train to become…", "std", true],
+      ["Ce qui me plaît dans ce métier, c'est…", "What I like about this job is…", "std", true],
+      ["Évidemment ! · C'est sûr.", "Obviously! · That's for sure.", "std"],
+      ["C'est évident. · C'est certain.", "It's obvious. · It's certain.", "std"]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · a job interview", lanes: ["La recruteuse", "Le candidat"], av: ["f1", "m2"], steps: [
+    { s: 0, fr: "Bonjour ! Pouvez-vous me parler de votre parcours ?", en: "Hello! Can you tell me about your background?" },
+    { s: 1, fr: "J'ai passé mon bac à Dakar, puis je me suis inscrit en informatique.", en: "I took my bac in Dakar, then enrolled in computer science." },
+    { s: 0, fr: "Qu'est-ce qui vous intéresse dans ce poste ?", en: "What interests you in this position?" },
+    { s: 1, fr: "C'est le travail en équipe qui m'intéresse le plus.", en: "It's the teamwork that interests me most." },
+    { s: 0, fr: "Vous avez pensé à vos horaires en alternance ?", en: "Have you thought about your work-study hours?" },
+    { s: 1, fr: "Oui, j'y ai bien réfléchi. Je serai en entreprise trois semaines par mois.", en: "Yes, I've thought it through. I'll be at the company three weeks a month." }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: three rounded vowels. [ø] (bleu): lips rounded, tongue forward. [o] (mot): lips rounded, tongue back. [u] (cours): lips very rounded and pushed forward. Compare [[deux]], [[dos]], [[doux]].",
+    letters: [
+      { l: "eu · œu · e(u)", name: "[ø] · bleu", tip: "[[deux]], [[il veut]], [[ma sœur]], [[peu]], [[sérieux]].", ex: ["ma sœur veut", "un peu sérieux", "deux jeux"] },
+      { l: "o · au · eau · ô", name: "[o] · mot", tip: "[[le mot]], [[l'auto]], [[un bureau]], [[le diplôme]], [[le réseau]].", ex: ["un beau diplôme", "le réseau professionnel", "un bureau"] },
+      { l: "ou · où · oû", name: "[u] · cours", tip: "[[le cours]], [[où]], [[nous]], [[trouver]], [[le goût]].", ex: ["trouver du travail", "où chercher ?", "tous les cours"] }
+    ],
+    pairs: [
+      { a: ["deux", "two"], b: ["doux", "soft"], note: "[ø] / [u]" },
+      { a: ["le dos", "the back"], b: ["deux", "two"], note: "[o] / [ø]" },
+      { a: ["le mot", "the word"], b: ["la moue", "the pout"], note: "[o] / [u]" },
+      { a: ["C'est lui qui…", "He's the one who…"], b: ["C'est lui que…", "He's the one whom…"], note: "mise en relief" },
+      { a: ["il dit que", "he says that"], b: ["il demande si", "he asks whether"], note: "discours rapporté" },
+      { a: ["j'y pense", "I think about it"], b: ["je pense à lui", "I think about him"], note: "y / à + pronom" }
+    ]
+  },
+  classify: {
+    label: "🔊 [ø], [o] ou [u] ?", q: "Listen: which sound do you hear: [ø] (bleu), [o] (mot) or [u] (cours)?",
+    options: ["[ø] bleu", "[o] mot", "[u] cours"],
+    items: [
+      { say: "deux", a: 0 }, { say: "le bureau", a: 1 }, { say: "le cours", a: 2 }, { say: "il veut", a: 0 },
+      { say: "le diplôme", a: 1 }, { say: "nous", a: 2 }, { say: "sérieux", a: 0 }, { say: "le réseau", a: 1 }, { say: "trouver", a: 2 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "Bastien a passé un bac littéraire.", ok: false, explain: "un bac scientifique" },
+    { type: "mcq", tag: "Dialogue 1", q: "Après sa première année ratée, Bastien…", options: ["a fait une année de césure", "a redoublé", "a arrêté ses études"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 1", q: "Pour Bastien, le plus difficile, c'est…", options: ["l'organisation du travail", "les maths", "l'ambiance"], answer: 0 },
+    { type: "tf", tag: "Dialogue 2", s: "Mme Ferrand était la professeure de français de Nour.", ok: false, explain: "She was her history teacher." },
+    { type: "mcq", tag: "Dialogue 3", q: "D'après la conseillère, le CV de Bastien doit faire…", options: ["une page", "trois pages", "une affiche"], answer: 0 },
+    { type: "tf", tag: "Dialogue 4", s: "Mme Garnier propose un entretien jeudi à 10 heures.", ok: true },
+    { type: "mcq", tag: "Dialogue 5", q: "Thomas est devenu…", options: ["apprenti pâtissier", "consultant", "boulanger"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "Thomas gagne plus d'argent qu'avant.", ok: false, explain: "He earns less, but spends more time with his family." },
+    { type: "mcq", tag: "Dialogue 6", q: "Au coworking, une journée coûte…", options: ["15 €", "150 €", "50 €"], answer: 0 },
+    { type: "fill", tag: "Mise en relief", sentence: "C'est elle ___ m'a donné envie d'être journaliste.", options: ["qui", "que", "ce que"], answer: 0 },
+    { type: "fill", tag: "Mise en relief", sentence: "C'est une expérience ___ je ne regrette pas.", options: ["que", "qui", "ce qui"], answer: 0 },
+    { type: "fill", tag: "Mise en relief", sentence: "___ me plaît, c'est le travail en équipe.", options: ["Ce qui", "Ce que", "Qui"], answer: 0 },
+    { type: "fill", tag: "Mise en relief", sentence: "___ j'ai préféré au lycée, ce sont les fêtes.", options: ["Ce que", "Ce qui", "Que"], answer: 0 },
+    { type: "type", tag: "Mise en relief", q: "Highlight the subject: « Nous étudions le droit. » → C'est…", answers: ["C'est nous qui étudions le droit."] },
+    { type: "fill", tag: "Discours rapporté", sentence: "« Est-ce que tu as un CV ? » → Il me demande ___ j'ai un CV.", options: ["si", "que", "ce que"], answer: 0 },
+    { type: "fill", tag: "Discours rapporté", sentence: "« Qu'est-ce que vous savez faire ? » → Elle demande ___ je sais faire.", options: ["ce que", "ce qui", "qu'est-ce que"], answer: 0 },
+    { type: "fill", tag: "Discours rapporté", sentence: "« Qu'est-ce qui est difficile ? » → Il veut savoir ___ est difficile.", options: ["ce qui", "ce que", "si"], answer: 0 },
+    { type: "fill", tag: "Discours rapporté", sentence: "« Ce poste m'intéresse. » → Il affirme que ce poste ___ intéresse.", options: ["l'", "m'", "t'"], answer: 0 },
+    { type: "type", tag: "Discours rapporté", q: "Report: « Je vais créer un profil. » → Elle annonce…", answers: ["Elle annonce qu'elle va créer un profil.", "qu'elle va créer un profil"] },
+    { type: "fill", tag: "Pronom y", sentence: "Tu penses à ta reconversion ? — Oui, j'___ pense tous les jours.", options: ["y", "en", "lui"], answer: 0 },
+    { type: "fill", tag: "Pronom y", sentence: "Tu penses à ton ancien prof ? — Oui, je pense souvent ___ .", options: ["à lui", "y", "lui"], answer: 0 },
+    { type: "fill", tag: "Pronom y", sentence: "Ce message est important : réponds-___ vite !", options: ["y", "en", "le"], answer: 0 },
+    { type: "type", tag: "Pronom y", q: "Replace with y: « Je ne m'intéresse pas à la politique. »", answers: ["Je ne m'y intéresse pas."] },
+    { type: "reply", tag: "Que répondre ?", prompt: "Tu crois qu'il faut un diplôme pour ce métier ?", options: ["Évidemment ! C'est sûr.", "J'y ai bien raté.", "Bien cordialement."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Qu'est-ce qui vous plaît dans ce poste ?", options: ["C'est le contact avec les clients qui me plaît.", "Je vous dis merci.", "C'est un collège."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "(e-mail formel) Comment terminer ?", options: ["Merci d'avance. Bien cordialement,", "Bisous, à plus !", "Salut !"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "En France, les élèves de 11 à 15 ans vont…", options: ["au collège", "au lycée", "à l'université"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Une licence, c'est…", options: ["bac +3", "bac +5", "le bac"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["la candidate", "le CV", "l'entretien", "le nettoyage"], answer: 3, explain: "le nettoyage is a sector; the others are about recruitment." },
+    { type: "order", tag: "Construisez", en: "It's this teacher who changed my life.", words: ["C'est", "cette", "professeure", "qui", "a", "changé", "ma", "vie."] },
+    { type: "listen", tag: "Écoute", q: "What does the speaker say?", say: "J'ai raté ma première année de droit, alors j'ai fait une année de césure en Espagne.", options: ["she failed her first year and took a gap year", "she passed her first year in Spain", "she repeated her year"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "🎓 Présente ton parcours (DELF PO ex. 1)", brief: "The examiner asks about your studies or career. Answer simply.", memo: ["J'ai passé / obtenu…", "Je me suis inscrit(e)…", "Ce que j'ai préféré, c'est…"], partner: "f6", you: "m2",
+      turns: [
+        { them: "Vous avez fait quelles études ?", themEn: "What did you study?", hint: "You got your bac in 2020, then enrolled in economics.", you: "J'ai obtenu mon bac en 2020, puis je me suis inscrit en économie.", youEn: "I got my bac in 2020, then enrolled in economics." },
+        { them: "Qu'est-ce que vous avez préféré ?", themEn: "What did you like best?", hint: "Highlight: the internships are what you liked best.", you: "Ce que j'ai préféré, ce sont les stages.", youEn: "What I liked best were the internships." },
+        { them: "Et vos projets ?", themEn: "And your plans?", hint: "You're going to do a master's, then work in marketing.", you: "Je vais faire un master, puis je voudrais travailler dans le marketing.", youEn: "I'm going to do a master's, then I'd like to work in marketing." }
+      ] },
+    { title: "🏫 Entretien dans une école (DELF PO ex. 3)", brief: "You are in France and want to study at a vocational school. Introduce yourself to the director and explain why.", memo: ["Je voudrais…", "Ce qui me plaît, c'est…", "J'y pense depuis…"], partner: "m6", you: "f3",
+      turns: [
+        { them: "Bonjour, asseyez-vous. Pourquoi voulez-vous étudier ici ?", themEn: "Hello, sit down. Why do you want to study here?", hint: "You want to become a hairdresser; your school has a very good reputation.", you: "Je voudrais devenir coiffeuse, et votre école a une très bonne réputation.", youEn: "I'd like to become a hairdresser, and your school has a very good reputation." },
+        { them: "Vous y pensez depuis longtemps ?", themEn: "Have you been thinking about it for long?", hint: "Yes, you've thought about it since you were a child.", you: "Oui, j'y pense depuis que je suis enfant.", youEn: "Yes, I've been thinking about it since I was a child." },
+        { them: "Qu'est-ce qui vous plaît dans ce métier ?", themEn: "What do you like about this job?", hint: "Highlight: working with your hands and the contact with clients.", you: "Ce qui me plaît, c'est travailler avec mes mains et le contact avec les clients.", youEn: "What I like is working with my hands and the contact with customers." }
+      ] },
+    { title: "📞 Rapporte un message", brief: "Your colleague missed a call from a client. Report what the client said and asked.", memo: ["Il dit que…", "Il demande si…", "Il veut savoir ce que / quand…"], partner: "m4", you: "f4",
+      turns: [
+        { them: "M. Roux a appelé ? Qu'est-ce qu'il a dit ?", themEn: "Mr Roux called? What did he say?", hint: "He says he received your e-mail.", you: "Il dit qu'il a reçu ton e-mail.", youEn: "He says he got your e-mail." },
+        { them: "Il a une question ?", themEn: "Does he have a question?", hint: "He asks if the meeting is on Monday.", you: "Oui, il demande si la réunion est lundi.", youEn: "Yes, he's asking if the meeting is on Monday." },
+        { them: "C'est tout ?", themEn: "Is that all?", hint: "He also wants to know what he must bring.", you: "Il veut aussi savoir ce qu'il doit apporter.", youEn: "He also wants to know what he has to bring." }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Une enquête sur le travail idéal", intro: "Survey your group on the ideal job, make a top 10 of criteria and draw the class's 'identikit' of the perfect job.",
+      steps: [["Préparation", ["In groups, read the survey results (see the culture tab): for whom is this study? What's necessary in a job? In what order?"]], ["Réalisation", ["Discuss each criterion: is it important for you too? What other criteria are necessary?", "Note all the group's criteria and rank them: make a 'top 10' of the ideal job."]], ["Présentation", ["Present your top 10 to the class. Take notes on the other groups' answers.", "Do you agree with their rankings? Discuss, then summarise the class's ideal job."]]],
+      phrases: ["L'important, c'est de…", "Le plus important, c'est de…", "Ce qui est important, c'est…", "… c'est ce qui est important.", "avoir un travail utile, créatif · travailler en équipe", "profiter de sa famille · gagner de l'argent · se former"],
+      model: { type: "card", style: "board", caption: "🏆 A group's top 5 · tap a line", title: "NOTRE TRAVAIL IDÉAL", sub: "groupe 2 · top 5", rows: [
+        ["1", "Le plus important, c'est d'avoir de bonnes relations avec ses collègues.", "Le plus important, c'est d'avoir de bonnes relations avec ses collègues."],
+        ["2", "Ce qui compte aussi, c'est l'équilibre entre vie privée et vie professionnelle.", "Ce qui compte aussi, c'est l'équilibre entre vie privée et vie professionnelle."],
+        ["3", "Faire un travail utile, c'est ce qui nous motive.", "Faire un travail utile, c'est ce qui nous motive."],
+        ["4", "L'important, c'est de pouvoir se former.", "L'important, c'est de pouvoir se former."],
+        ["5", "Et un temps de transport réduit !", "Et un temps de transport réduit !"]
+      ], foot: "Vous êtes d'accord avec nous ?" } }
+  ],
+  delf: {
+    skill: "Production orale", title: "The DELF A2 speaking paper: strategies",
+    about: "The DELF A2 <b>production orale</b> lasts 6 to 8 minutes, after 10 minutes of preparation (for exercises 2 and 3). <b>Exercise 1, entretien dirigé</b> (about 1 min 30): you introduce yourself and answer simple questions about your daily life, a past experience or your plans. <b>Exercise 2, monologue suivi</b> (about 2 min): you talk about a person, an event or an activity, then answer the examiner's questions. <b>Exercise 3, exercice en interaction</b> (about 3 min 30): you play a role with the examiner to organise something or solve an everyday situation. For exercises 2 and 3 you draw two topics and choose <b>one</b>.",
+    tips: ["Read both topics carefully before choosing: you can't change your mind.", "During preparation, write only ideas and key words, not full sentences.", "For exercise 2, use the questions given to structure your talk; link ideas with et, mais, alors, donc.", "For exercise 3, ask yourself: what's my role? the examiner's role? what must I do?", "If you don't know a word, explain it with other words."],
+    items: [
+      { type: "mcq", q: "How long do you have to prepare?", options: ["10 minutes, for exercises 2 and 3", "30 minutes for all exercises", "no preparation"], answer: 0 },
+      { type: "mcq", q: "In exercise 1 (entretien dirigé), the examiner asks about…", options: ["your daily life, past experiences or plans", "a newspaper article", "a role play at the bank"], answer: 0 },
+      { type: "mcq", q: "Topic: « Parlez de votre professeur(e) préféré(e). » A good start:", options: ["Ma professeure préférée, c'était Mme Diop, ma prof de maths au collège.", "Bonjour, je voudrais un café.", "Le collège, c'est de 11 à 15 ans."], answer: 0 },
+      { type: "mcq", q: "During preparation, you should write…", options: ["key words and ideas", "the whole text, word for word", "nothing at all"], answer: 0 },
+      { type: "mcq", q: "You don't know the word « tondeuse ». You say…", options: ["« la machine pour couper l'herbe »", "nothing and stop talking", "the English word"], answer: 0 },
+      { type: "mcq", q: "Exercise 3, topic: a francophone friend asks about work in your country. Your role is…", options: ["to answer his questions about job offers, salaries, holidays", "to ask him for a job", "to describe your favourite teacher"], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Le bon diplôme",
+    intro: "Match each level with the French diploma.",
+    items: [
+      { type: "mcq", q: "À la fin du lycée, on passe…", options: ["le bac", "la licence", "le master"], answer: 0 },
+      { type: "mcq", q: "Bac +3 à l'université :", options: ["la licence", "le doctorat", "le CAP"], answer: 0 },
+      { type: "mcq", q: "Bac +5 :", options: ["le master", "le bac", "la licence"], answer: 0 },
+      { type: "mcq", q: "Après le master, on peut faire…", options: ["un doctorat", "un collège", "une maternelle"], answer: 0 },
+      { type: "mcq", q: "« Mention très bien » veut dire…", options: ["une excellente note globale", "on a raté", "on a redoublé"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "bars", title: "💼 What makes the ideal job? (PageGroup survey, 2018, quoted by the book)", unit: " %", items: [
+      { fr: "la reconnaissance du travail accompli", en: "recognition of work done", v: 91, pic: "👏" },
+      { fr: "l'équilibre vie privée / vie professionnelle", en: "work–life balance", v: 81, pic: "⚖️" },
+      { fr: "travailler dans une entreprise socialement responsable", en: "a socially responsible company", v: 74.5, pic: "🌱" },
+      { fr: "un temps de transport réduit", en: "a short commute", v: 52, pic: "🚇" }
+    ] }
+  ],
+  culture: [
+    { icon: "🏖️", kind: "Oh, le cliché !", t: "« Les Français ne travaillent pas beaucoup. »", d: "French employees have 25 days of paid holiday and 11 public holidays: 36 days off a year, according to the book. That's a lot, but in Austria, Malta, Greece or Bolivia, employees in principle have 37 or 38." },
+    { icon: "🔁", kind: "Au fait !", t: "La formation en alternance", d: "Work-study lets you learn a trade while working: the student studies one or two weeks a month and works the rest of the time in a company." },
+    { icon: "🌴", kind: "Francophonie", t: "Coworking en Martinique", d: "The book presents a coworking space in the marina of Le Marin, in Martinique: shared offices, a network of entrepreneurs and trainers, and restaurants, beaches and hiking trails nearby for balanced days." },
+    { icon: "📄", kind: "Francophonie", t: "Le CV au Québec et en Suisse", d: "In <b>Québec</b>, you don't put personal information on your CV (age, marital status, photo…). In <b>Switzerland</b>, each job is presented precisely: company, place, dates, role, concrete achievements." },
+    { icon: "💇", kind: "Au fait !", t: "Les coworkings de la beauté", d: "Coworking isn't just for computers: some spaces welcome hairdressers, beauticians, manicurists or masseurs, so customers can get all their treatments in the same place." },
+    { icon: "🔄", kind: "Civilisation", t: "Changer de vie", d: "Many French people retrain (se reconvertir): to work with their hands, follow a childhood dream or spend more time with family. Bakers, cheesemakers and pastry chefs are popular second careers." }
+  ],
+  tips: [
+    { icon: "🏫", t: "Faux ami: collège", d: "[[le collège]] = school for 11–15-year-olds, not a university college. University = [[l'université]], [[la fac]]." },
+    { icon: "🔦", t: "qui or que?", d: "After [[qui]] comes a <b>verb</b> ([[c'est lui qui part]]); after [[que]] comes a <b>subject</b> ([[c'est lui que je vois]])." },
+    { icon: "💭", t: "y for things, à lui for people", d: "[[J'y pense]] (à mon projet) · [[Je pense à elle]] (à ma prof)." }
+  ],
+  mistakes: [
+    ["C'est elle que m'a aidé.", "C'est elle qui m'a aidée.", "subject → qui"],
+    ["Ce que me plaît, c'est…", "Ce qui me plaît, c'est…", "ce qui = subject"],
+    ["Il demande qu'est-ce que je fais.", "Il demande ce que je fais.", "qu'est-ce que → ce que"],
+    ["Elle demande est-ce que tu viens.", "Elle demande si tu viens.", "est-ce que → si"],
+    ["Je pense à mon prof. → J'y pense.", "Je pense à lui.", "people → à + pronom tonique"],
+    ["Pense y !", "Penses-y !", "imperative: hyphen, and -s before y"],
+    ["Je suis au collège à Lyon (= university).", "Je suis à l'université de Lyon.", "faux ami"],
+    ["J'ai passé mon examen (= I passed).", "J'ai réussi mon examen.", "passer = to take; réussir = to pass"]
+  ]
+});
+</script><script>// Unité 12 · Soif de nature (Édito A2, 2e édition, book pp. 167–180)
+// Situations: un défi de nettoyage · une fête de l'environnement · les bons gestes pour la biodiversité · des animaux surprenants · protester pour les arbres · le co-jardinage
+// Grammar: l'impératif et les pronoms · l'expression du but (pour / pour que) · la forme passive
+// Dialogues and activities are original, built on the book's themes, communication goals, grammar and vocabulary.
+LESSONS.push({
+  id: "u12", rubrique: 6, num: 12,
+  title: "Thirsty for nature",
+  titleFr: "Soif de nature",
+  pages: "Book pp. 167–180",
+  opener: { fr: "Ce sont les petits gestes qui comptent : multiplions-les !", en: "It's the small actions that count: let's multiply them!" },
+  hero: { scene: "campagne", people: { "Zoé": "f2", "Malik": "m3" } },
+  situations: [
+    ["🗑️", "Un défi de nettoyage", "fear and worry: [[Cela nous fait peur.]] · [[Nous sommes inquiets.]]"],
+    ["🌿", "Agir pour la biodiversité", "capacity: [[Nous sommes capables d'agir.]] · [[Chacun a un rôle à jouer.]]"],
+    ["🐝", "Des animaux surprenants", "purpose: [[Les abeilles dansent pour que les autres comprennent.]]"],
+    ["🐅", "De bonnes nouvelles", "approval: [[Bravo !]] · [[Nous approuvons cette décision.]]"],
+    ["🌳", "Sauver les arbres", "protest: [[Nous ne sommes pas d'accord !]] · [[Nous disons non !]]"]
+  ],
+  goals: [
+    "Express fear and worry: [[Ça me fait peur.]], [[Je suis inquiet / inquiète.]], [[J'ai peur pour…]], [[Je m'inquiète de…]]",
+    "Express the ability to do something: [[Nous sommes capables de…]], [[Chacun peut aider à…]] · Say what you can do: [[Je sais…]], [[Je suis bon(ne) en…]], [[Je connais bien…]]",
+    "Approve and protest: [[Bravo !]], [[Nous sommes pour…]] · [[Nous protestons contre…]], [[Nous disons non à…]]",
+    "Use pronouns with the imperative: [[Multiplions-les !]], [[Mobilise-toi !]], [[Ne leur faites pas peur.]]",
+    "Express purpose: [[pour + infinitif]] (same subject) · [[pour que + subjonctif]] (different subjects)",
+    "Use the passive: [[Le site a été créé par…]] · [[Les photos seront publiées.]]"
+  ],
+  glance: [
+    ["🗣️", "Communication", "fear · ability · approval · protest · saying what you can do"],
+    ["🧩", "Grammaire", "imperative + pronouns · pour / pour que · the passive voice"],
+    ["🗂️", "Vocabulaire", "natural spaces · environment · acting · pollution · animals"],
+    ["🔊", "Phonie-graphie", "the 'e' [ə]: pronounced or silent?"],
+    ["⭐", "The phrase to learn first", "[[Chacun a un rôle à jouer.]]"]
+  ],
+
+  dialogues: [
+    {
+      id: "d1", n: 1, title: "The clean-up challenge", titleFr: "Au bureau · Le défi « Nettoyons ! »",
+      note: "Zoé suggests her team join a challenge: clean a dirty place and post before/after photos. Listen to the expressions of fear and to the imperative with pronouns.",
+      scene: "bureau", people: { "Zoé": "f2", "Malik": "m3", "Inès": "f5" },
+      lines: [
+        ["Zoé", "Vous avez vu toutes les bouteilles en plastique au bord de la rivière ? Ça me fait peur.", "Have you seen all the plastic bottles by the river? It frightens me."],
+        ["Malik", "Moi aussi, je suis inquiet. Des milliers d'animaux meurent à cause des déchets.", "I'm worried too. Thousands of animals die because of the rubbish."],
+        ["Zoé", "Alors mobilisons-nous ! Notre entreprise participe à un défi : on nettoie un endroit sale et on poste des photos avant/après.", "So let's get moving! Our company is taking part in a challenge: we clean a dirty place and post before/after photos."],
+        ["Inès", "Bonne idée ! Les sacs poubelles, on les apporte ?", "Good idea! Shall we bring the bin bags?"],
+        ["Zoé", "Oui, apportez-les ! Et des gants. Mais ne prenez pas de bouteilles d'eau en plastique : prenez des gourdes.", "Yes, bring them! And gloves. But don't take plastic water bottles: take reusable flasks."],
+        ["Malik", "Et les photos, on les publie où ?", "And where do we post the photos?"],
+        ["Zoé", "Publiez-les sur nos réseaux. Un jury choisira les meilleures !", "Post them on our networks. A jury will choose the best ones!"],
+        ["Inès", "Ce sont les petits gestes qui comptent. Et le meilleur déchet, c'est celui qu'on ne produit pas !", "It's the small actions that count. And the best rubbish is the rubbish you don't produce!"]
+      ],
+      glossary: [["Ça me fait peur. Je suis inquiet.", "It frightens me. I'm worried."], ["Mobilisons-nous !", "Let's get moving!"], ["apportez-les ! publiez-les !", "bring them! post them!"], ["le déchet, la gourde", "the waste, the reusable bottle"]]
+    },
+    {
+      id: "d2", n: 2, title: "The environment festival", titleFr: "Au téléphone · La fête de l'environnement",
+      note: "Malik phones a friend in New Caledonia, who is volunteering for an environment festival. Listen to the vocabulary of natural spaces.",
+      scene: "plage", staff: "Léa", phone: ["Malik", "Léa"], people: { "Malik": "m3", "Léa": "f8" },
+      lines: [
+        ["Malik", "Alors, ta fête de l'environnement, c'est quand ?", "So, your environment festival, when is it?"],
+        ["Léa", "Samedi ! Ici, en Nouvelle-Calédonie, on vit sur un territoire exceptionnel : le lagon, la forêt tropicale, des espèces qu'on ne trouve nulle part ailleurs…", "Saturday! Here in New Caledonia we live in an exceptional place: the lagoon, the tropical forest, species you don't find anywhere else…"],
+        ["Malik", "Et pourquoi une fête ?", "And why a festival?"],
+        ["Léa", "Pour que les gens découvrent la nature et apprennent à la protéger. Le matin, on nettoie les plages.", "So that people discover nature and learn to protect it. In the morning we clean the beaches."],
+        ["Malik", "Et l'après-midi ?", "And in the afternoon?"],
+        ["Léa", "Des balades dans la nature avec des guides, et des ateliers pour apprendre à économiser l'eau.", "Walks in nature with guides, and workshops to learn how to save water."],
+        ["Malik", "Bravo ! J'aimerais bien être avec vous.", "Well done! I'd love to be with you."],
+        ["Léa", "Viens l'année prochaine ! Chacun a un rôle à jouer.", "Come next year! Everyone has a role to play."]
+      ],
+      glossary: [["le lagon, l'archipel", "the lagoon, the archipelago"], ["la forêt tropicale", "the rainforest"], ["l'espèce (f.)", "the species"], ["pour que + subjonctif", "so that"]]
+    },
+    {
+      id: "d3", n: 3, title: "The right actions", titleFr: "À la maison · Les bons gestes",
+      note: "Zoé's flatmate isn't very eco-friendly. Zoé gives him advice with the imperative and pronouns. Listen to the place of the pronouns.",
+      scene: "appartement", people: { "Zoé": "f2", "Hugo": "m4" },
+      lines: [
+        ["Hugo", "Mon téléphone ne marche plus. Je le jette et j'en achète un nouveau.", "My phone doesn't work any more. I'll throw it away and buy a new one."],
+        ["Zoé", "Non, ne le jette pas ! Répare-le, ou donne-le à un réparateur.", "No, don't throw it away! Repair it, or give it to a repairer."],
+        ["Hugo", "Bon… Et ces produits ménagers, ils sont bien ?", "OK… And these cleaning products, are they good?"],
+        ["Zoé", "Ils sont pleins de produits chimiques : n'en achète plus ! Fabriques-en toi-même avec du vinaigre et du citron.", "They're full of chemicals: don't buy any more! Make some yourself with vinegar and lemon."],
+        ["Hugo", "Et mes déchets ? Je mets tout dans la même poubelle…", "And my rubbish? I put everything in the same bin…"],
+        ["Zoé", "Trie-les ! Le plastique et le papier, mets-les dans la poubelle jaune.", "Sort it! Plastic and paper, put them in the yellow bin."],
+        ["Hugo", "D'accord, d'accord… Je suis capable de changer, tu sais !", "OK, OK… I'm capable of changing, you know!"],
+        ["Zoé", "J'en suis sûre. Pense-y chaque jour !", "I'm sure of it. Think about it every day!"]
+      ],
+      glossary: [["répare-le, ne le jette pas", "repair it, don't throw it away"], ["n'en achète plus, fabriques-en", "don't buy any more, make some"], ["trier, la poubelle jaune", "to sort, the yellow (recycling) bin"], ["être capable de", "to be able to"]]
+    },
+    {
+      id: "d4", n: 4, title: "Strange animal behaviour", titleFr: "Au parc · Pourquoi le chat fait ça ?",
+      note: "Malik and his niece Lila talk about strange animal behaviour from a book Lila is reading. Listen to [[pour]] + infinitive and [[pour que]] + subjunctive.",
+      scene: "jardin", people: { "Lila": "k1", "Malik": "m3" },
+      lines: [
+        ["Lila", "Tonton, tu sais pourquoi mon chat boit l'eau du robinet et pas l'eau de son bol ?", "Uncle, do you know why my cat drinks tap water and not the water in his bowl?"],
+        ["Malik", "Non, pourquoi ?", "No, why?"],
+        ["Lila", "Dans mon livre, ils disent que ses ancêtres ne buvaient pas d'eau qui ne bouge pas, pour ne pas s'empoisonner !", "In my book they say his ancestors didn't drink still water, so as not to poison themselves!"],
+        ["Malik", "Intéressant ! Et les abeilles, elles dansent, c'est vrai ?", "Interesting! And bees dance, is that true?"],
+        ["Lila", "Oui, elles dansent pour que les autres abeilles sachent où sont les fleurs.", "Yes, they dance so that the other bees know where the flowers are."],
+        ["Malik", "Et le coq ? Il chante juste pour nous réveiller ?", "And the rooster? Does it crow just to wake us up?"],
+        ["Lila", "Non ! Il change son chant pour informer les autres en cas de danger.", "No! It changes its crow to warn the others in case of danger."],
+        ["Malik", "Alors, pour que ton chat soit content, mets son bol d'eau loin de sa gamelle !", "So, for your cat to be happy, put his water bowl far from his food dish!"]
+      ],
+      glossary: [["pour + infinitif", "(in order) to"], ["pour que + subjonctif", "so that"], ["s'empoisonner", "to poison oneself"], ["la gamelle", "the (pet) food bowl"]]
+    },
+    {
+      id: "d5", n: 5, title: "No to cutting down the trees!", titleFr: "Sur la place · Sauvons les arbres !",
+      note: "The town wants to cut down trees to build a car park. Residents protest. A journalist interviews Zoé. Listen to how she protests and approves, and to the passive voice.",
+      scene: "ville", staff: "Le journaliste", people: { "Le journaliste": "m6", "Zoé": "f2" },
+      lines: [
+        ["Le journaliste", "Pourquoi êtes-vous ici ce matin ?", "Why are you here this morning?"],
+        ["Zoé", "Nous protestons contre la destruction des arbres de la place. Ils vont être coupés pour construire un parking !", "We're protesting against the destruction of the trees in the square. They're going to be cut down to build a car park!"],
+        ["Le journaliste", "La décision a été prise par la mairie ?", "Was the decision made by the town hall?"],
+        ["Zoé", "Oui, et nous ne sommes pas d'accord avec cela. Un arbre est un être vivant, il doit être respecté !", "Yes, and we don't agree with it. A tree is a living being, it must be respected!"],
+        ["Le journaliste", "Qu'est-ce que vous proposez ?", "What do you suggest?"],
+        ["Zoé", "Une mini-forêt ! Trois cents arbres peuvent être plantés sur l'équivalent de six places de parking.", "A mini-forest! Three hundred trees can be planted on the equivalent of six parking spaces."],
+        ["Le journaliste", "Et vous êtes nombreux ?", "And are there many of you?"],
+        ["Zoé", "Notre pétition a été signée par deux mille habitants. Nous disons non à la violence contre la nature !", "Our petition has been signed by two thousand residents. We say no to violence against nature!"]
+      ],
+      glossary: [["protester contre", "to protest against"], ["ne pas être d'accord avec", "to disagree with"], ["a été prise / signée par", "was taken / signed by (passive)"], ["un être vivant", "a living being"]]
+    },
+    {
+      id: "d6", n: 6, title: "Gardening together", titleFr: "Au jardin · Le co-jardinage",
+      note: "Malik has a garden but no time. Through a co-gardening website, he meets Nadia, who has no garden but knows plants very well. Listen to how they say what they can do.",
+      scene: "jardin", people: { "Malik": "m3", "Nadia": "f6" },
+      lines: [
+        ["Malik", "Bonjour, vous êtes Nadia ? Merci d'avoir répondu à mon annonce !", "Hello, are you Nadia? Thanks for answering my ad!"],
+        ["Nadia", "Avec plaisir ! J'habite en appartement, je n'ai pas de jardin. Mais je connais très bien les plantes.", "With pleasure! I live in a flat, I don't have a garden. But I know plants very well."],
+        ["Malik", "Moi, je ne sais pas jardiner du tout. Je suis bon en informatique, c'est tout !", "Me, I can't garden at all. I'm good at computers, that's all!"],
+        ["Nadia", "Pas de problème. Je sais faire un potager, et je n'utilise pas de pesticides.", "No problem. I know how to make a vegetable patch, and I don't use pesticides."],
+        ["Malik", "Parfait ! Et les légumes ?", "Perfect! And the vegetables?"],
+        ["Nadia", "On les partage ! Moitié pour vous, moitié pour moi. C'est le principe du site.", "We share them! Half for you, half for me. That's how the website works."],
+        ["Malik", "J'approuve ! Et en échange, je peux vous aider avec votre ordinateur.", "I approve! And in exchange, I can help you with your computer."],
+        ["Nadia", "Marché conclu ! Mon ordinateur a été réparé l'an dernier, mais il est encore lent…", "Deal! My computer was repaired last year, but it's still slow…"]
+      ],
+      glossary: [["Je sais + infinitif", "I can, I know how to"], ["Je suis bon(ne) en…", "I'm good at…"], ["Je connais bien…", "I know … well"], ["le potager, les pesticides", "the vegetable patch, pesticides"]]
+    }
+  ],
+
+  vocab: [
+    { t: "l'archipel, l'île", en: "the archipelago, the island", pic: "🏝️", cat: "Les milieux naturels", g: "m" },
+    { t: "le désert", en: "the desert", pic: "🏜️", cat: "Les milieux naturels", g: "m" },
+    { t: "la forêt (tropicale)", en: "the (tropical) forest", pic: "🌴", cat: "Les milieux naturels", g: "f" },
+    { t: "le lagon", en: "the lagoon", pic: "🌊", cat: "Les milieux naturels", g: "m" },
+    { t: "l'océan, la rivière", en: "the ocean, the river", pic: "🌊", cat: "Les milieux naturels", g: "m" },
+    { t: "le parc naturel, le site naturel", en: "the nature park, natural site", pic: "🏞️", cat: "Les milieux naturels", g: "m" },
+    { t: "la planète", en: "the planet", pic: "🌍", cat: "Les milieux naturels", g: "f" },
+    { t: "la biodiversité", en: "biodiversity", pic: "🦋", cat: "L'environnement", g: "f" },
+    { t: "l'écologie, écologique", en: "ecology, ecological", pic: "♻️", cat: "L'environnement", g: "f" },
+    { t: "l'espèce protégée", en: "the protected species", pic: "🛡️", cat: "L'environnement", g: "f" },
+    { t: "la faune et la flore", en: "wildlife and plants", pic: "🌺", cat: "L'environnement", g: "f" },
+    { t: "se mobiliser, agir", en: "to mobilise, to act", pic: "✊", cat: "Agir pour l'environnement" },
+    { t: "préserver, protéger", en: "to preserve, to protect", pic: "🤲", cat: "Agir pour l'environnement" },
+    { t: "recycler, trier", en: "to recycle, to sort", pic: "♻️", cat: "Agir pour l'environnement" },
+    { t: "sauver la planète", en: "to save the planet", pic: "🌏", cat: "Agir pour l'environnement" },
+    { t: "le changement climatique", en: "climate change", pic: "🌡️", cat: "La pollution", g: "m" },
+    { t: "le déchet, la poubelle", en: "the waste, the bin", pic: "🗑️", cat: "La pollution", g: "m" },
+    { t: "la destruction, disparaître", en: "destruction, to disappear", pic: "🪓", cat: "La pollution", g: "f" },
+    { t: "être en danger", en: "to be in danger", pic: "⚠️", cat: "La pollution" },
+    { t: "le gaspillage", en: "waste (wastefulness)", pic: "🚰", cat: "La pollution", g: "m" },
+    { t: "les pesticides, polluant(e)", en: "pesticides, polluting", pic: "☠️", cat: "La pollution", g: "m" },
+    { t: "le plastique", en: "plastic", pic: "🧴", cat: "La pollution", g: "m" },
+    { t: "le chat, le chien", en: "the cat, the dog", pic: "🐈", cat: "Les animaux domestiques", g: "m" },
+    { t: "le cheval (les chevaux)", en: "the horse", pic: "🐎", cat: "Les animaux domestiques", g: "m" },
+    { t: "la chèvre, le mouton, la vache", en: "the goat, the sheep, the cow", pic: "🐐", cat: "Les animaux domestiques", g: "f" },
+    { t: "le lapin, le poisson", en: "the rabbit, the fish", pic: "🐇", cat: "Les animaux domestiques", g: "m" },
+    { t: "l'abeille", en: "the bee", pic: "🐝", cat: "Les animaux du jardin", g: "f" },
+    { t: "l'araignée", en: "the spider", pic: "🕷️", cat: "Les animaux du jardin", g: "f" },
+    { t: "l'escargot, la libellule", en: "the snail, the dragonfly", pic: "🐌", cat: "Les animaux du jardin", g: "m" },
+    { t: "le serpent, la tortue", en: "the snake, the tortoise", pic: "🐍", cat: "Les animaux du jardin", g: "m" },
+    { t: "le caméléon", en: "the chameleon", pic: "🦎", cat: "Les animaux du jardin", g: "m" },
+    { t: "le dauphin", en: "the dolphin", pic: "🐬", cat: "Les mammifères sauvages", g: "m" },
+    { t: "l'hippopotame", en: "the hippopotamus", pic: "🦛", cat: "Les mammifères sauvages", g: "m" },
+    { t: "le singe, le tigre, la panthère", en: "the monkey, the tiger, the panther", pic: "🐒", cat: "Les mammifères sauvages", g: "m" },
+    { t: "le rat", en: "the rat", pic: "🐀", cat: "Les mammifères sauvages", g: "m" },
+    { t: "l'aigle, la chouette", en: "the eagle, the owl", pic: "🦅", cat: "Les oiseaux", g: "m" },
+    { t: "le canard, le canari", en: "the duck, the canary", pic: "🦆", cat: "Les oiseaux", g: "m" },
+    { t: "le coq, la poule", en: "the rooster, the hen", pic: "🐓", cat: "Les oiseaux", g: "m" }
+  ],
+
+  grammar: [
+    {
+      id: "g-peur",
+      title: "Fear, worry and ability",
+      body: [
+        "Fear and worry: [[Cela / Ça me fait peur.]] · [[Je suis inquiet / inquiète.]] · [[J'ai peur pour notre faune et notre flore.]] · [[Je m'inquiète de l'avenir de la Terre.]]",
+        "Ability: [[Nous sommes capables d'agir.]] · [[Chacun(e) a un rôle à jouer.]] · [[Chacun(e) peut aider à préserver la biodiversité.]]",
+        "What you can do: [[Je sais faire beaucoup de choses.]] · [[Je sais animer un réseau.]] · [[Je suis bon(ne) en informatique.]] · [[Je connais très bien les plantes.]]"
+      ],
+      info: { type: "compare", title: "😟 Worried or 💪 capable?", cols: [
+        { head: "La peur, l'inquiétude", en: "fear, worry", color: "#e0474f", lines: [["Ça me fait peur.", "It frightens me."], ["Je suis inquiète.", "I'm worried."], ["J'ai peur pour les animaux.", "I'm afraid for the animals."]] },
+        { head: "La capacité", en: "ability", color: "#2f9c8a", lines: [["Nous sommes capables d'agir.", "We're able to act."], ["Chacun peut aider.", "Everyone can help."], ["Je sais trier mes déchets.", "I know how to sort my rubbish."]] }
+      ] }
+    },
+    {
+      id: "g-imperatif",
+      title: "The imperative and pronouns",
+      body: [
+        "<b>Affirmative</b> imperative: the pronoun goes <b>after</b> the verb, with a hyphen: [[Multiplions-les !]] · [[Répare-le !]] · [[Donne-leur de l'argent !]] · [[me]] and [[te]] become [[moi]] and [[toi]]: [[Mobilise-toi !]] · [[Dis-moi !]]",
+        "With [[en]] and [[y]], -er verbs keep the <b>-s</b> in the tu form, for the sound: [[Fabriques-en toi-même.]] · [[Penses-y !]]",
+        "<b>Negative</b> imperative: the pronoun stays <b>before</b> the verb, nothing changes: [[Ne le jette pas !]] · [[Ne leur faites pas peur.]] · [[N'en achète pas.]]"
+      ],
+      info: { type: "compare", title: "📢 Affirmative or negative?", cols: [
+        { head: "Affirmatif · verbe-pronom", en: "pronoun after, hyphen", color: "#2f9c8a", lines: [["Répare-le !", "Repair it!"], ["Trie-les !", "Sort them!"], ["Mobilisons-nous !", "Let's mobilise!"], ["Fabriques-en !", "Make some!"]] },
+        { head: "Négatif · ne + pronom + verbe + pas", en: "pronoun before", color: "#e0474f", lines: [["Ne le jette pas !", "Don't throw it away!"], ["Ne les mélange pas !", "Don't mix them!"], ["Ne nous décourageons pas !", "Let's not get discouraged!"], ["N'en achète pas !", "Don't buy any!"]] }
+      ] },
+      widget: {
+        type: "combo", label: "Give an eco-tip · pick a form and an object",
+        rows: [{ k: "aff", label: "✅ affirmatif" }, { k: "neg", label: "❌ négatif" }],
+        cols: [{ k: "tel", label: "📱 ton vieux téléphone (le)" }, { k: "dechets", label: "🗑️ tes déchets (les)" }, { k: "plastique", label: "🧴 du plastique (en)" }, { k: "animaux", label: "🦌 aux animaux (leur)" }],
+        out: {
+          "aff|tel": ["Répare-le !", "Repair it!"], "neg|tel": ["Ne le jette pas !", "Don't throw it away!"],
+          "aff|dechets": ["Trie-les !", "Sort them!"], "neg|dechets": ["Ne les laisse pas dans la nature !", "Don't leave them in nature!"],
+          "aff|plastique": ["Recycles-en le plus possible !", "Recycle as much of it as possible!", "-s before en"], "neg|plastique": ["N'en achète plus !", "Don't buy any more!"],
+          "aff|animaux": ["Laisse-leur de l'espace !", "Leave them some space!"], "neg|animaux": ["Ne leur fais pas peur !", "Don't frighten them!"]
+        }
+      }
+    },
+    {
+      id: "g-but",
+      title: "Expressing purpose: [[pour]] / [[pour que]]",
+      body: [
+        "Same subject in both parts → [[pour + infinitif]] (negative: [[pour ne pas + infinitif]]): [[Le coq chante pour informer en cas d'urgence.]] · [[Ils ne buvaient pas d'eau stagnante pour ne pas s'empoisonner.]]",
+        "Different subjects → [[pour que + subjonctif]]: [[La poule crie pour que ses camarades sachent qu'il y a un danger.]] · [[Pour que votre chat se sente bien, éloignez la gamelle du bol d'eau !]]"
+      ],
+      info: { type: "merge", title: "🎯 One subject or two?", rows: [
+        { a: "Elle lit un livre.", b: "pour", g: "x", r: "pour comprendre les abeilles", ex: "Elle lit un livre pour comprendre les abeilles.", en: "same subject → infinitive" },
+        { a: "Les abeilles dansent.", b: "pour que", g: "x", r: "pour que les autres comprennent", ex: "Les abeilles dansent pour que les autres comprennent.", en: "different subjects → subjunctive" },
+        { a: "Je travaille chez moi.", b: "pour ne pas", g: "x", r: "pour ne pas laisser mon chien seul", ex: "Je travaille chez moi pour ne pas laisser mon chien seul.", en: "negative infinitive" },
+        { a: "Il faut protéger la nature.", b: "pour que", g: "x", r: "pour que les espèces ne disparaissent pas", ex: "Il faut protéger la nature pour que les espèces ne disparaissent pas.", en: "negative subjunctive" }
+      ] },
+      widget: {
+        type: "sort", label: "pour or pour que?",
+        cols: [{ k: "pour", label: "pour + infinitif", color: "#3a6fd8" }, { k: "que", label: "pour que + subjonctif", color: "#9b4fb0" }],
+        items: [
+          { t: "On célèbre la journée des animaux ___ améliorer leur vie.", k: "pour", say: "On célèbre la journée des animaux pour améliorer leur vie." }, { t: "Elle laisse sortir son chat ___ il rencontre d'autres chats.", k: "que", say: "Elle laisse sortir son chat pour qu'il rencontre d'autres chats." },
+          { t: "Je ne fais pas de bruit ___ ne pas déranger les oiseaux.", k: "pour", say: "Je ne fais pas de bruit pour ne pas déranger les oiseaux." }, { t: "___ ton rat s'amuse, offre-lui une petite voiture !", k: "que", say: "Pour que ton rat s'amuse, offre-lui une petite voiture !" },
+          { t: "Vous pouvez adopter une poule ___ avoir des œufs.", k: "pour", say: "Vous pouvez adopter une poule pour avoir des œufs." }, { t: "Promenez votre chien ___ il soit en forme.", k: "que", say: "Promenez votre chien pour qu'il soit en forme." }
+        ]
+      }
+    },
+    {
+      id: "g-approbation",
+      title: "Approving and protesting",
+      body: [
+        "Approval: [[Bravo !]] · [[Heureusement !]] · [[Nous sommes pour les bonnes nouvelles !]] · [[Ils sont d'accord pour le protéger.]] · [[Nous approuvons cette décision.]] · [[J'approuve !]]",
+        "Protest: [[Nous ne sommes pas d'accord avec cela.]] · [[Nous protestons contre la destruction des arbres.]] · [[Nous disons non à la violence contre la nature.]] · [[Je suis contre !]]"
+      ],
+      info: { type: "scale", title: "👍 From protest to approval", colors: ["#e0474f", "#2f9c8a"], items: [
+        { v: 6, fr: "Nous disons non !", en: "we say no!", pic: "✋" }, { v: 24, fr: "Nous protestons contre ce projet.", en: "we protest against this", pic: "📢" },
+        { v: 42, fr: "Nous ne sommes pas d'accord.", en: "we disagree", pic: "🙅" }, { v: 72, fr: "Nous sommes pour !", en: "we're for it!", pic: "🙌" },
+        { v: 94, fr: "Bravo ! Nous approuvons cette décision.", en: "well done! we approve", pic: "👏" }
+      ], ends: ["contre", "pour"] }
+    },
+    {
+      id: "g-passif",
+      title: "The passive voice",
+      body: [
+        "The passive insists on the <b>result</b> or on <b>who</b> did the action. Active: [[Un botaniste développe la méthode.]] → Passive: [[La méthode est développée par un botaniste.]]",
+        "Form: <b>être</b> (at the right tense) + <b>past participle</b>, which agrees with the subject; the agent comes after [[par]]. Present: [[Mon jardin est cultivé par Nadia.]] · Passé composé: [[Le site a été créé par une jardinière.]] · Futur: [[Les photos seront publiées par le jury.]]"
+      ],
+      info: { type: "pattern", title: "🌳 être + participe passé (+ par…)", rows: [
+        ["Les arbres", "sont", { opts: ["coupés par la mairie.", "protégés par l'association.", "plantés par les habitants."] }],
+        ["La pétition", "a été", { opts: ["signée par 2 000 habitants.", "écrite par des étudiants.", "envoyée au maire."] }],
+        ["Les meilleures photos", "seront", { opts: ["publiées sur nos réseaux.", "choisies par un jury.", "exposées à la mairie."] }]
+      ], note: "agreement: la pétition → signée · les arbres → coupés" },
+      widget: {
+        type: "combo", label: "Make it passive · pick a tense and an action",
+        rows: [{ k: "pres", label: "présent" }, { k: "pc", label: "passé composé" }, { k: "fut", label: "futur" }],
+        cols: [{ k: "dechets", label: "🗑️ Les bénévoles ramassent les déchets." }, { k: "espece", label: "🦎 Un biologiste découvre une espèce." }, { k: "campagne", label: "📣 Le collectif réalise une campagne." }],
+        out: {
+          "pres|dechets": ["Les déchets sont ramassés par les bénévoles.", "The rubbish is collected by the volunteers."], "pc|dechets": ["Les déchets ont été ramassés par les bénévoles.", "The rubbish was collected by the volunteers."], "fut|dechets": ["Les déchets seront ramassés par les bénévoles.", "The rubbish will be collected by the volunteers."],
+          "pres|espece": ["Une espèce est découverte par un biologiste.", "A species is discovered by a biologist."], "pc|espece": ["Une nouvelle espèce a été découverte par un biologiste.", "A new species was discovered by a biologist.", "feminine → découverte"], "fut|espece": ["Une espèce sera découverte par un biologiste.", "A species will be discovered by a biologist."],
+          "pres|campagne": ["Une campagne est réalisée par le collectif.", "A campaign is carried out by the group."], "pc|campagne": ["Une campagne a été réalisée par le collectif.", "A campaign was carried out by the group."], "fut|campagne": ["Une campagne sera réalisée par le collectif.", "A campaign will be carried out by the group."]
+        }
+      }
+    }
+  ],
+
+  expressions: [
+    { fn: "Pour exprimer la peur, l'inquiétude", fnEn: "fear, worry", icon: "😟", items: [
+      ["Cela nous fait peur.", "It frightens us.", "std", true],
+      ["Nous sommes inquiets.", "We're worried.", "std", true],
+      ["J'ai peur pour notre faune et notre flore.", "I'm afraid for our wildlife and plants.", "std"],
+      ["Vous vous inquiétez de l'avenir de la Terre ?", "Are you worried about the future of the Earth?", "std"]
+    ] },
+    { fn: "Pour exprimer sa capacité / ce qu'on sait faire", fnEn: "ability · skills", icon: "💪", items: [
+      ["Nous sommes capables d'agir.", "We're able to act.", "std", true],
+      ["Chacun a un rôle à jouer.", "Everyone has a role to play.", "std", true],
+      ["Je sais faire beaucoup de choses.", "I can do lots of things.", "std"],
+      ["Je suis bon(ne) en informatique.", "I'm good at IT.", "std"],
+      ["Je connais très bien les plantes.", "I know plants very well.", "std"]
+    ] },
+    { fn: "Pour exprimer son approbation", fnEn: "approval", icon: "👏", items: [
+      ["Bravo !", "Well done!", "std", true],
+      ["Nous sommes pour les bonnes nouvelles !", "We're all for good news!", "std"],
+      ["Nous approuvons cette décision.", "We approve of this decision.", "poli", true],
+      ["Ils sont d'accord pour le protéger.", "They agree to protect it.", "std"]
+    ] },
+    { fn: "Pour protester", fnEn: "protesting", icon: "📢", items: [
+      ["Nous ne sommes pas d'accord avec cela.", "We don't agree with that.", "std", true],
+      ["Nous protestons contre la destruction des arbres.", "We protest against the destruction of the trees.", "std", true],
+      ["Nous disons non à la violence contre la nature.", "We say no to violence against nature.", "std"],
+      ["Je vote contre !", "I vote against!", "std"]
+    ] }
+  ],
+  flow: { type: "flow", title: "🗺️ Conversation map · convincing a friend to join an action", lanes: ["Toi", "Ton ami(e)"], av: ["f2", "m4"], steps: [
+    { s: 0, fr: "Tu as vu les déchets sur la plage ? Ça me fait peur.", en: "Have you seen the rubbish on the beach? It frightens me." },
+    { s: 1, fr: "Oui, je suis inquiet aussi. Mais qu'est-ce qu'on peut faire ?", en: "Yes, I'm worried too. But what can we do?" },
+    { s: 0, fr: "On est capables d'agir ! Samedi, on nettoie la plage. Viens avec nous !", en: "We're able to act! On Saturday we're cleaning the beach. Come with us!" },
+    { s: 1, fr: "Pourquoi pas. Qu'est-ce que j'apporte ?", en: "Why not. What shall I bring?" },
+    { s: 0, fr: "Des gants et une gourde. Ne prends pas de bouteille en plastique !", en: "Gloves and a reusable bottle. Don't take a plastic bottle!" },
+    { s: 1, fr: "D'accord. Bravo pour l'idée !", en: "OK. Well done for the idea!" }
+  ] },
+
+  sounds: {
+    intro: "Phonie-graphie: the letter <b>e</b> without an accent [ə] is sometimes pronounced, sometimes silent. Silent: at the end of a word ([[la Terre]]) and often between two consonant sounds ([[sam(e)di]], [[maint(e)nant]]). Pronounced: at the start of a word ([[demain]], [[le]]) and when it's needed to avoid three consonant sounds together ([[notr(e) planète]] → [[notre planète]]).",
+    letters: [
+      { l: "e muet (silent)", name: "[ə] → ∅", tip: "End of a word: [[la Terre]], [[une poule]]. Between two consonant sounds: [[sam(e)di]], [[la bouch(e)rie]], [[ach(e)ter]].", ex: ["la Terre", "samedi", "acheter"] },
+      { l: "e prononcé", name: "[ə] · le", tip: "Start of a word: [[demain]], [[le]], [[recycler]]. With three consonant sounds: [[des entreprises]] [ʁəp], [[notre planète]].", ex: ["demain", "recycler", "une entreprise"] }
+    ],
+    pairs: [
+      { a: ["tu protégeras", "you will protect"], b: ["tu trieras", "you will sort"], note: "silent e in the future" },
+      { a: ["répare-le !", "repair it!"], b: ["ne le jette pas !", "don't throw it away!"], note: "impératif" },
+      { a: ["pour comprendre", "to understand"], b: ["pour qu'il comprenne", "so that he understands"], note: "but" },
+      { a: ["il protège", "he protects"], b: ["il est protégé", "he is protected"], note: "actif / passif" },
+      { a: ["le coq", "the rooster"], b: ["la poule", "the hen"], note: "les oiseaux" },
+      { a: ["le lagon", "the lagoon"], b: ["l'archipel", "the archipelago"], note: "milieux naturels" }
+    ]
+  },
+  classify: {
+    label: "🔊 Do you hear the [ə]?", q: "Listen to the bold e: do you hear [ə], or is it silent?",
+    options: ["[ə] I hear it", "∅ silent"],
+    items: [
+      { say: "demain", a: 0 }, { say: "samedi", a: 1 }, { say: "le recyclage", a: 0 }, { say: "la Terre", a: 1 },
+      { say: "acheter", a: 1 }, { say: "responsable", a: 1 }, { say: "le coq", a: 0 }, { say: "maintenant", a: 1 }
+    ]
+  },
+
+  practice: [
+    { type: "tf", tag: "Dialogue 1", s: "Malik n'est pas inquiet pour les animaux.", ok: false, explain: "« Moi aussi, je suis inquiet. »" },
+    { type: "mcq", tag: "Dialogue 1", q: "Pour le défi, il faut…", options: ["nettoyer un endroit et poster des photos avant/après", "photographier des animaux", "acheter des bouteilles d'eau"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 2", q: "Léa vit…", options: ["en Nouvelle-Calédonie", "au Québec", "en Bretagne"], answer: 0 },
+    { type: "tf", tag: "Dialogue 2", s: "Le matin de la fête, on nettoie les plages.", ok: true },
+    { type: "mcq", tag: "Dialogue 3", q: "Zoé conseille à Hugo de…", options: ["réparer son téléphone", "acheter un nouveau téléphone", "jeter ses produits dans la rivière"], answer: 0 },
+    { type: "mcq", tag: "Dialogue 4", q: "Pourquoi les abeilles dansent-elles ?", options: ["pour que les autres sachent où sont les fleurs", "pour s'amuser", "pour faire peur aux oiseaux"], answer: 0 },
+    { type: "tf", tag: "Dialogue 5", s: "La pétition a été signée par deux mille habitants.", ok: true },
+    { type: "mcq", tag: "Dialogue 6", q: "Nadia…", options: ["n'a pas de jardin mais connaît bien les plantes", "a un grand jardin", "est bonne en informatique"], answer: 0 },
+    { type: "fill", tag: "Impératif", sentence: "Tes déchets ? Trie-___ !", options: ["les", "leur", "en"], answer: 0 },
+    { type: "fill", tag: "Impératif", sentence: "Ton téléphone ? Ne ___ jette pas !", options: ["le", "lui", "y"], answer: 0 },
+    { type: "fill", tag: "Impératif", sentence: "Il faut agir : mobilise-___ !", options: ["toi", "te", "tu"], answer: 0 },
+    { type: "fill", tag: "Impératif", sentence: "Les produits naturels ? Fabrique___ -en toi-même !", options: ["s", "z", "∅"], answer: 0, explain: "Fabriques-en: -s before en." },
+    { type: "type", tag: "Impératif", q: "Replace with a pronoun: « Ne donne pas à manger aux animaux sauvages ! »", answers: ["Ne leur donne pas à manger !"] },
+    { type: "fill", tag: "But", sentence: "Le coq chante ___ informer les autres.", options: ["pour", "pour que", "parce que"], answer: 0 },
+    { type: "fill", tag: "But", sentence: "Promenez votre chien pour qu'il ___ en forme.", options: ["soit", "est", "être"], answer: 0 },
+    { type: "fill", tag: "But", sentence: "Il faut protéger la biodiversité pour que les espèces ne ___ pas.", options: ["disparaissent", "disparaissent pas", "disparaître"], answer: 0 },
+    { type: "type", tag: "But", q: "Conjugate if necessary: « Salma lit un livre pour (comprendre) … les abeilles. »", answers: ["Salma lit un livre pour comprendre les abeilles.", "comprendre"] },
+    { type: "fill", tag: "Passif", sentence: "Le site ___ créé par une jardinière.", options: ["a été", "a", "était être"], answer: 0 },
+    { type: "fill", tag: "Passif", sentence: "Les meilleures photos seront ___ par le jury.", options: ["publiées", "publié", "publier"], answer: 0 },
+    { type: "fill", tag: "Passif", sentence: "La biodiversité ___ menacée par la pollution.", options: ["est", "a", "sera été"], answer: 0 },
+    { type: "type", tag: "Passif", q: "Passive: « Un biologiste a découvert une nouvelle espèce. »", answers: ["Une nouvelle espèce a été découverte par un biologiste."] },
+    { type: "reply", tag: "Que répondre ?", prompt: "L'Inde a 30 % de tigres en plus en cinq ans !", options: ["Bravo ! C'est une bonne nouvelle.", "Nous protestons contre les tigres.", "Ça me fait rire."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "La mairie veut couper tous les arbres du parc.", options: ["Nous ne sommes pas d'accord avec cela !", "Bravo, j'approuve !", "Pour que coupe."], answer: 0 },
+    { type: "reply", tag: "Que répondre ?", prompt: "Qu'est-ce que vous savez faire ?", options: ["Je sais jardiner et je connais bien les plantes.", "Je suis inquiète.", "Elle a été créée."], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "L'ensemble des animaux d'une région, c'est…", options: ["la faune", "la flore", "le lagon"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Un oiseau qui vit la nuit :", options: ["la chouette", "le canari", "la poule"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "« Poser un lapin » veut dire…", options: ["ne pas aller à un rendez-vous", "dormir tôt", "être très lent"], answer: 0 },
+    { type: "mcq", tag: "Vocabulaire", q: "Trouvez l'intrus :", options: ["trier", "recycler", "valoriser", "disparaître"], answer: 3, explain: "disparaître = to disappear; the others are positive actions." },
+    { type: "order", tag: "Construisez", en: "The trees were planted by the residents.", words: ["Les", "arbres", "ont", "été", "plantés", "par", "les", "habitants."] },
+    { type: "listen", tag: "Écoute", q: "Why is the speaker worried?", say: "Je suis inquiète : il y a du plastique partout dans l'océan, et beaucoup d'animaux meurent.", options: ["plastic in the ocean is killing animals", "her cat is ill", "the trees are being planted"], answer: 0 }
+  ],
+
+  roleplays: [
+    { title: "🌿 Présente une action pour la nature (DELF)", brief: "You're a member of an environmental centre. A friend wants to help: present the environment festival and explain why to take part.", memo: ["C'est une fête pour que…", "Le matin… L'après-midi…", "Chacun a un rôle à jouer."], partner: "m4", you: "f2",
+      turns: [
+        { them: "J'aimerais faire quelque chose pour la nature. Tu as une idée ?", themEn: "I'd like to do something for nature. Any ideas?", hint: "Present the environment festival on Saturday.", you: "Oui ! Samedi, il y a la fête de l'environnement. Viens !", youEn: "Yes! On Saturday there's the environment festival. Come!" },
+        { them: "Qu'est-ce qu'on y fait ?", themEn: "What do people do there?", hint: "In the morning you clean the beach; in the afternoon there are walks with guides.", you: "Le matin, on nettoie la plage. L'après-midi, on fait des balades avec des guides.", youEn: "In the morning we clean the beach. In the afternoon there are walks with guides." },
+        { them: "Et pourquoi c'est important ?", themEn: "And why is it important?", hint: "So that people learn to protect nature: everyone has a role to play.", you: "Pour que les gens apprennent à protéger la nature. Chacun a un rôle à jouer !", youEn: "So that people learn to protect nature. Everyone has a role to play!" }
+      ] },
+    { title: "📢 Proteste contre un projet", brief: "A journalist interviews you at a protest against a project that destroys a natural space.", memo: ["Nous protestons contre…", "Nous ne sommes pas d'accord…", "La décision a été prise par…"], partner: "m6", you: "m3",
+      turns: [
+        { them: "Pourquoi manifestez-vous ?", themEn: "Why are you protesting?", hint: "You protest against the destruction of the forest for a shopping centre.", you: "Nous protestons contre la destruction de la forêt pour un centre commercial.", youEn: "We're protesting against the destruction of the forest for a shopping centre." },
+        { them: "Qui a pris cette décision ?", themEn: "Who made this decision?", hint: "Passive: the decision was taken by the region.", you: "La décision a été prise par la région, et nous ne sommes pas d'accord.", youEn: "The decision was taken by the region, and we don't agree." },
+        { them: "Qu'est-ce que vous demandez ?", themEn: "What are you asking for?", hint: "Say no to the project; protect the forest so that the animals don't disappear.", you: "Nous disons non à ce projet ! Protégeons la forêt pour que les animaux ne disparaissent pas.", youEn: "We say no to this project! Let's protect the forest so that the animals don't disappear." }
+      ] },
+    { title: "🌱 Propose tes compétences (co-jardinage)", brief: "You answer an ad on a co-gardening website. Say what you can do.", memo: ["Je sais…", "Je suis bon(ne) en…", "Je connais bien…"], partner: "f6", you: "m2",
+      turns: [
+        { them: "Bonjour ! Vous avez de l'expérience en jardinage ?", themEn: "Hello! Do you have any gardening experience?", hint: "You know how to grow vegetables and know plants well.", you: "Oui, je sais faire pousser des légumes et je connais bien les plantes.", youEn: "Yes, I know how to grow vegetables and I know plants well." },
+        { them: "Vous utilisez des pesticides ?", themEn: "Do you use pesticides?", hint: "Never; you use natural products.", you: "Jamais ! J'utilise seulement des produits naturels.", youEn: "Never! I only use natural products." },
+        { them: "Parfait. Et pour les légumes ?", themEn: "Perfect. And the vegetables?", hint: "Suggest sharing them half and half.", you: "On les partage : moitié pour vous, moitié pour moi !", youEn: "We share them: half for you, half for me!" }
+      ] }
+  ],
+
+  ateliers: [
+    { title: "Atelier médiation · Présenter des œuvres pour un festival", intro: "For a 'Literature and Ecology' festival, each group presents a text about nature and the class chooses the five works for the programme.",
+      steps: [["Préparation", ["In three groups, choose a text about nature (the book offers a 19th-century poem, an essay about dinosaurs and a swimmer's account of plastic pollution).", "Discuss: who's the author? What's it about? Do you like it? Why?"]], ["Réalisation", ["Prepare an oral presentation of the work (author, theme, your opinion).", "Look for other works or press titles, francophone or not, for the festival programme."]], ["Présentation", ["Each group presents its suggestions.", "As a class, discuss and vote for the five works of the festival."]]],
+      phrases: ["Ce texte est extrait de…", "Il a été écrit par… en…", "Il parle de…", "J'aime bien ce texte parce que…", "Ce texte me fait rire, réfléchir, rêver…", "Je vote pour / contre !", "Nous nous sommes mis(es) d'accord."],
+      model: { type: "card", style: "board", caption: "🗳️ The class vote · tap a line", title: "FESTIVAL LITTÉRATURE ET ÉCOLOGIE", sub: "notre sélection · 5 œuvres", rows: [
+        ["Poème", "Il a été écrit au XIXe siècle. Il me fait rêver.", "Ce poème a été écrit au dix-neuvième siècle. Il me fait rêver."],
+        ["Essai", "Il parle des dinosaures. Il nous fait réfléchir.", "Cet essai parle des dinosaures. Il nous fait réfléchir."],
+        ["Récit", "Un nageur traverse une zone de plastique pour alerter le public.", "Un nageur traverse une zone de plastique pour alerter le public."],
+        ["Vote", "Un grand oui pour ces trois textes !", "Un grand oui pour ces trois textes !"]
+      ], foot: "Nous nous sommes mis d'accord !" } }
+  ],
+  delf: {
+    skill: "Épreuve blanche", title: "The four DELF A2 papers: are you ready?",
+    about: "After Unit 12, the book offers a full mock DELF A2 exam (p. 181). The four papers: <b>1. Compréhension de l'oral</b> (about 25 min, /25): questions on short everyday recordings (announcements, radio, phone messages, dialogues), heard twice. <b>2. Compréhension des écrits</b> (30 min, /25): questions on short everyday texts (reviews, e-mails, notices, articles). <b>3. Production écrite</b> (45 min, /25): describe an event or experience, and write a message to invite, thank, apologise, ask, inform… <b>4. Production orale</b> (6–8 min + 10 min preparation, /25): entretien dirigé, monologue suivi, exercice en interaction. You need 50/100 in total, with at least 5/25 in each paper.",
+    tips: ["Do the mock exam in real conditions: timed, without a dictionary.", "Read every question before you listen or read.", "In writing, respect the word count and the type of text.", "In speaking, use what you've learnt: linking words, the past tenses, the conditionnel for polite requests."],
+    items: [
+      { type: "mcq", q: "How many papers are there in the DELF A2?", options: ["4", "2", "6"], answer: 0 },
+      { type: "mcq", q: "Each paper is marked out of…", options: ["25", "10", "100"], answer: 0 },
+      { type: "mcq", q: "In the listening paper, you hear each document…", options: ["twice", "once", "three times"], answer: 0 },
+      { type: "mcq", q: "The writing paper lasts…", options: ["45 minutes", "10 minutes", "2 hours"], answer: 0 },
+      { type: "listen", q: "Mock listening: what must you do?", say: "Attention, mesdames et messieurs : le tramway est en panne. Merci de descendre et de prendre le bus.", options: ["get off the tram and take the bus", "stay in the tram", "buy a ticket"], answer: 0 },
+      { type: "mcq", q: "Mock reading: « Le Potager de Magali : produits bio, tous les plats sont végétariens. » Who will like it?", options: ["a friend who doesn't eat meat", "a friend who loves seafood", "a family looking for a games room"], answer: 0 }
+    ]
+  },
+  detente: {
+    title: "Expressions animales",
+    intro: "French loves animal idioms. What do these mean?",
+    items: [
+      { type: "mcq", q: "Se coucher avec les poules", options: ["aller dormir très tôt", "dormir dehors", "ne pas dormir"], answer: 0 },
+      { type: "mcq", q: "Poser un lapin à quelqu'un", options: ["ne pas venir à un rendez-vous", "offrir un cadeau", "faire un gâteau"], answer: 0 },
+      { type: "mcq", q: "Avancer comme une tortue", options: ["être très lent", "être très rapide", "nager"], answer: 0 },
+      { type: "mcq", q: "Devinette : elle a huit pattes mais pas d'ailes.", options: ["l'araignée", "l'abeille", "la libellule"], answer: 0 },
+      { type: "mcq", q: "Devinette : c'est un reptile qui peut changer de couleur.", options: ["le caméléon", "le serpent", "la tortue"], answer: 0 },
+      { type: "mcq", q: "Devinette : elle fait du miel.", options: ["l'abeille", "la poule", "la vache"], answer: 0 }
+    ]
+  },
+
+  cultureInfo: [
+    { type: "bars", title: "🐾 Oh, le cliché ! « Les Français, fous de leurs animaux » · pets in France, 2020 (FACCO, quoted by the book)", unit: " M", items: [
+      { fr: "les poissons", en: "fish", v: 26, pic: "🐟" },
+      { fr: "les chats", en: "cats", v: 15, pic: "🐈" },
+      { fr: "les chiens", en: "dogs", v: 7.5, pic: "🐕" }
+    ] }
+  ],
+  culture: [
+    { icon: "🐈", kind: "Oh, le cliché !", t: "« Les Français, fous de leurs animaux de compagnie. »", d: "True! In 2020 there were about 75 million pets in France for about 67 million inhabitants, according to FACCO figures quoted by the book: including 15 million cats, 7.5 million dogs and 26 million fish." },
+    { icon: "🦎", kind: "Au fait !", t: "De bonnes nouvelles", d: "Scientists discovered in Madagascar the world's smallest known reptile, <i>Brookesia nana</i>, a chameleon: the male measures 13.5 mm. India now has about 3,000 wild tigers, 30 % more in five years. And fourteen countries agreed to reduce fishing so that fish stocks can renew." },
+    { icon: "🌳", kind: "Civilisation", t: "Les mini-forêts", d: "Japanese botanist <b>Akira Miyawaki</b> developed a method to grow dense micro-forests: about 300 trees on the space of six parking places, growing faster, thirty times denser and with a hundred times more biodiversity than a traditional forest, according to the article in the book. Nantes has adopted it." },
+    { icon: "📜", kind: "Civilisation", t: "Les droits de l'arbre", d: "In France, trees are still legally considered objects. The association A.R.B.R.E.S wrote a 'declaration of the rights of the tree': a tree is a living being and must be respected, and some trees should be 'natural monuments'." },
+    { icon: "🏝️", kind: "Francophonie", t: "La Nouvelle-Calédonie", d: "This French archipelago in the Pacific has one of the largest lagoons in the world and many species found nowhere else. An environment festival there invites residents to clean beaches and discover nature." },
+    { icon: "🌱", kind: "Francophonie", t: "Reboiser la Côte d'Ivoire", d: "The book presents a reforestation campaign in Côte d'Ivoire: with 500 CFA francs, you plant five forest trees." }
+  ],
+  tips: [
+    { icon: "📢", t: "Imperative: look at the sign", d: "Affirmative → pronoun after with a hyphen ([[fais-le]]). Negative → pronoun before ([[ne le fais pas]])." },
+    { icon: "🎯", t: "pour or pour que?", d: "Count the subjects: one → [[pour + infinitif]]; two → [[pour que + subjonctif]]." },
+    { icon: "🔄", t: "Passive = être + participle", d: "The tense is carried by [[être]]: [[est créé]], [[a été créé]], [[sera créé]]. The participle agrees like an adjective." }
+  ],
+  mistakes: [
+    ["Le jette pas !", "Ne le jette pas !", "negative imperative: ne… pas, pronoun before"],
+    ["Mobilise-te !", "Mobilise-toi !", "te → toi after the verb"],
+    ["Fabrique-en !", "Fabriques-en !", "-s before en / y"],
+    ["Elle danse pour que les autres comprendre.", "Elle danse pour que les autres comprennent.", "pour que + subjonctif"],
+    ["Je travaille pour que je gagne de l'argent.", "Je travaille pour gagner de l'argent.", "same subject → pour + infinitif"],
+    ["La pétition a été signé.", "La pétition a été signée.", "passive: agreement with the subject"],
+    ["Le site a créé par Nadia.", "Le site a été créé par Nadia.", "passive needs être"],
+    ["Je suis bon en jardiner.", "Je sais jardiner. / Je suis bon en jardinage.", "bon en + noun; savoir + verb"]
+  ]
+});
 </script><script>// Révisions: one page to search and revise the whole course (vocabulary, grammar, expressions, common mistakes).
 // Reads window.LESSONS (all units) and the learner's saved word boxes from localStorage. Printable; vocabulary exports to CSV (Anki-friendly).
 (function () {

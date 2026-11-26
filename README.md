@@ -57,7 +57,7 @@ Workflow: `node tools/check.js` → `python3 build.py`.
 - [x] Étape 3 · Demain, à table !: Unité 5 *En route vers le futur !*, Unité 6 *En cuisine* (book pp. 69–96) + bilan
 - [x] Étape 4 · Santé et médias: Unité 7 *À votre santé !*, Unité 8 *Dans les médias* (book pp. 97–124) + bilan
 - [x] Étape 5 · Consommer, voyager: Unités 9–10
-- [ ] Étape 6 · Travail et nature: Unités 11–12
+- [x] Étape 6 · Travail et nature: Unités 11–12
 - [ ] DELF A2 · Épreuve blanche
 
-So far: 56 dialogues, 499 words, 315 activities, 5 étape tests.
+All 12 units are done: 68 dialogues, 580 words, 376 activities, 6 étape tests.
